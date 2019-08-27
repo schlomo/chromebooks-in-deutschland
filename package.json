@@ -1,0 +1,22 @@
+{
+  "name": "chromebooks-in-deutschland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "GIT_VERSION=$(git describe --tags --always --dirty) gulp build",
+    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp apimocker"
+  },
+  "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-apimocker": "^0.1.0",
+    "gulp-footer": "^2.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-replace": "^0.4.4"
+  }
+}

@@ -1,9 +1,9 @@
 steps:
-- name: gcr.io/cloud-builders/git
-  args: ['fetch', '--unshallow']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
+  env:
+  - 'VERSION=$REVISION_ID'
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'deploy']

@@ -19,12 +19,21 @@ html, body {
   font-weight: bold;
   font-size: 160%;
 }
+#logo img {
+  height: 1em;
+  vertical-align: middle;
+}
 
-#version {
+#links {
   float: right;
   margin-left: 1em;
   font-style: italic;
 }
+
+#version {
+  color: lightgrey;
+}
+
 
 #main {
   background-color: lightyellow;

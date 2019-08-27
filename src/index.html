@@ -4,19 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chromebooks in Deutschland</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div id="header">
     <div id="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M14 8.77v-1.6l-1.94-.64-.45-1.09.88-1.84-1.13-1.13-1.81.91-1.09-.45-.69-1.92h-1.6l-.63 1.94-1.11.45-1.84-.88-1.13 1.13.91 1.81-.45 1.09L0 7.23v1.59l1.94.64.45 1.09-.88 1.84 1.13 1.13 1.81-.91 1.09.45.69 1.92h1.59l.63-1.94 1.11-.45 1.84.88 1.13-1.13-.92-1.81.47-1.09L14 8.75v.02zM7 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+    <img src="Chromebooks-in-Deuschland-logo.svg">
     Chromebooks in Deutschland
     </div>
-    <a target="_blank" href="http://www.schapiro.org/impressum">Impressum</a>
-    <div id="version"></div>
+    <div id="links">
+      <a target="_blank" href="https://forms.gle/TJAk3EWVfzZs5wrd7">Feedback</a>
+      <a target="_blank" href="http://www.schapiro.org/impressum">Impressum</a>
+      <span id="version"></span>
+    </div>
   </div>
-  <div id="main">Hello World</div>
+  <div id="main">
+    <table id="chromebooks" class="table table-condensed table-striped"></table>
+    <div id="notices">
+        Alle Angaben ohne Gewähr, bitte vor dem Kauf überprüfen, ob sich hinter der Verlinkung auch tatsächlich das gewünschte Gerät befindet und ob der Preis sich eventuell geändert hat.
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/6.4.2/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.4.2/firebase-database.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <script src="chromebooks-in-deutschland.js"></script>
+
 </body>
 </html>

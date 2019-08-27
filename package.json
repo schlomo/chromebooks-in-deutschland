@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "GIT_VERSION=$(git describe --tags --always --dirty) gulp build",
-    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp apimocker"
+    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp dev"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "del": "^5.1.0",
+    "firebase-tools": "^7.3.0",
     "gulp": "^4.0.2",
     "gulp-apimocker": "^0.1.0",
     "gulp-footer": "^2.0.2",

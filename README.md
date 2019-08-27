@@ -1,2 +1,1 @@
 # Chromebooks in Deutschland
-

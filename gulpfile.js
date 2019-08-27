@@ -13,7 +13,7 @@ const versioncss = `
 
 /* appended by gulp */
 #version::after {
-  content: "${ process.env.GIT_VERSION || "unknown GIT_VERSION" }";
+  content: " (${ process.env.GIT_VERSION || "unknown GIT_VERSION" })";
 }
 /*
 #version:hover::after {

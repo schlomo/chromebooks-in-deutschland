@@ -30,7 +30,7 @@ html, body {
   font-style: italic;
 }
 
-#version {
+#version::after {
   color: lightgrey;
 }
 

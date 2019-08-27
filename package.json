@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "GIT_VERSION=$(git describe --tags --always --dirty) gulp build",
-    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp dev"
+    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp dev",
+    "deploy": "firebase deploy"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",

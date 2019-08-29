@@ -13,6 +13,7 @@ function getGitVersion(fallback="not-git-repo-and-VERSION-not-set") {
     version = gitDescribeSync(dir).raw;
   } catch (error) {
     console.warn(`${dir} is not a git repository, using ${version} as version`)
+    console.warn(process.env);
   }
   return version;
 }

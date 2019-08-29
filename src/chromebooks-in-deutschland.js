@@ -63,6 +63,7 @@ $(document).ready(function(){
             search: {
                 smart: false
             },
+            initComplete: function() { $('#chromebooks_filter input').focus();  },
         });
     });
 });

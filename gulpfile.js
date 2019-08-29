@@ -28,11 +28,11 @@ const versioncss = `
   content: " ${version}";
 }
 
-/*
+
 #version:hover::after {
-  content: "${ process.env.GIT_VERSION || "unknown GIT_VERSION" }";
+  content: " ${ new Date().toISOString() }";
 }
-*/
+
 `
 
 function clean(cb) {

@@ -39,3 +39,8 @@ html, body {
   background-color: lightyellow;
   padding: 1em;
 }
+
+.dataTables_wrapper .dataTables_filter {
+  float: none;
+  text-align: center;
+}

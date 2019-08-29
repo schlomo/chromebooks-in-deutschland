@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "chromebooks-in-deutschland"
+    "default": "chromebooks-in-deutschland-dev",
+    "dev": "chromebooks-in-deutschland-dev",
+    "prod": "chromebooks-in-deutschland"
   }
 }

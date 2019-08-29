@@ -1,9 +1,12 @@
 steps:
+- name: gcr.io/cloud-builders/git
+  args: ['fetch', '--unshallow']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
-  env:
-  - 'VERSION=$TAG_NAME-$SHORT_SHA'
-- name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'deploy']
+  env:
+  - 'ENVIRONMENT=${_ENVIRONMENT}'
+
+substitutions:
+    _ENVIRONMENT: dev

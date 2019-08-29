@@ -1,4 +1,5 @@
 const
+  environment = process.env.ENVIRONMENT || "dev",
   outDir = "public",
   { series, src, dest, watch } = require('gulp'),
   $ = require('gulp-load-plugins')(),
@@ -18,18 +19,19 @@ function getGitVersion(fallback="not-git-repo-and-VERSION-not-set") {
   return version;
 }
 
-console.warn(process.env);
-
+if (process.env.HOME === '/builder/home') {
+  console.warn(process.env); // debug env only on GCP builder
+}
 
 const version = getGitVersion();
 console.log(`Version: ${version}`);
+console.log(`Using environment ${environment}`);
 const versioncss = `
 
 /* appended by gulp */
 #version::after {
   content: " ${version}";
 }
-
 
 #version:hover::after {
   content: " ${ new Date().toISOString() }";
@@ -66,5 +68,18 @@ function dev(cb) {
   });
 }
 exports.dev = series(clean, build, dev);
+
+function deploy(cb) {
+  fb.deploy({
+    project: environment,
+    force: true,
+  }).then(function(){
+    console.log(`Deployed Firebase project to ${environment}`);
+    cb();
+  }).catch(function(err){
+    cb(new Error(err));
+  });
+}
+exports.deploy = series(clean, build, deploy);
 
 exports.default = series(clean, build);

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "GIT_VERSION=$(git describe --tags --always --dirty) gulp build",
-    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp dev",
+    "build": "gulp build",
+    "dev": "gulp dev",
     "deploy": "firebase deploy"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "del": "^5.1.0",
     "firebase-tools": "^7.3.0",
+    "git-describe": "^4.0.4",
     "gulp": "^4.0.2",
     "gulp-apimocker": "^0.1.0",
     "gulp-footer": "^2.0.2",

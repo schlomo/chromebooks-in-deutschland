@@ -20,6 +20,21 @@ $(document).ready(function(){
         }
         return data;
     };
+
+    var stage2setup = function () {
+        var search_field = $('#chromebooks_filter input');
+        search_field.focus();
+        var dt = $('#chromebooks').DataTable();
+        var search_term = window.location.hash.split('#')[1];
+        if (search_term) {
+            dt.search(search_term, false, false).draw();
+            search_field.val(search_term);
+        }
+        search_field.keyup(function() {
+            window.location.hash = encodeURIComponent(search_field.val());
+        });
+    }
+
     firebase.database().ref('/data').once('value').then(function(snapshot) {
         var data = snapshot.val();
 
@@ -63,7 +78,7 @@ $(document).ready(function(){
             search: {
                 smart: false
             },
-            initComplete: function() { $('#chromebooks_filter input').focus();  },
+            initComplete: stage2setup,
         });
     });
 });

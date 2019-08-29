@@ -18,6 +18,8 @@ function getGitVersion(fallback="not-git-repo-and-VERSION-not-set") {
   return version;
 }
 
+console.warn(process.env);
+
 
 const version = getGitVersion();
 console.log(`Version: ${version}`);

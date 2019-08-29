@@ -11,10 +11,17 @@ function getGitVersion(fallback="not-git-repo-and-VERSION-not-set") {
   var version = process.env.VERSION || fallback;
   var dir = __dirname;
   try {
-    version = gitDescribeSync(dir).raw;
+    const git = gitDescribeSync(dir);
+    if (! git.dirty && git.distance == 0) { // releases should have a plain vXX version
+      version = git.tag;
+    } else {
+      version = git.raw;
+    }
   } catch (error) {
-    console.warn(`${dir} is not a git repository, using ${version} as version`)
-    console.warn(process.env);
+    console.warn(error + "\n" +
+                 `${dir} is not a git repository, using ${version} as version` + "\n" +
+                 JSON.stringify(process.env, undefined, 2)
+                );
   }
   return version;
 }

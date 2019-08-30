@@ -21,18 +21,41 @@ $(document).ready(function(){
         return data;
     };
 
+    var search_field = undefined;
+    var dt = undefined;
+    
+    function persistSearch(search_term) {
+        console.log(`persisting ${search_term}`);
+        window.location.hash = encodeURIComponent(search_term);
+    };
+    
+    function setSearch(search_term) {
+        search_term = decodeURIComponent(search_term);
+        console.log(`Setting search to ${search_term}`);
+        search_field.val(search_term);
+        persistSearch(search_term);
+        dt.search(search_term, false, false).draw();
+    };
+
+    function setSearchExampleClickHandler(e) {
+        setSearch($( this ).text());
+        e.preventDefault();
+    };
+
     var stage2setup = function () {
-        var search_field = $('#chromebooks_filter input');
+        search_field = $('#chromebooks_filter input');
+        dt = $('#chromebooks').DataTable();
         search_field.focus();
-        var dt = $('#chromebooks').DataTable();
         var search_term = window.location.hash.split('#')[1];
         if (search_term) {
-            dt.search(search_term, false, false).draw();
-            search_field.val(search_term);
+            setSearch(search_term);
         }
         search_field.keyup(function() {
-            window.location.hash = encodeURIComponent(search_field.val());
+            persistSearch($( this ).val());
         });
+        search_field_div = search_field.parent().parent();
+        search_field_div.on("click", "a", setSearchExampleClickHandler);
+        search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">16 GB</a> RAM oder Updates bis <a href="#">2025</a>`);
     }
 
     firebase.database().ref('/data').once('value').then(function(snapshot) {
@@ -41,6 +64,7 @@ $(document).ready(function(){
         $('#chromebooks').DataTable({
             paging: false,
             info: false,
+            responsive: true,
             data: data,
             columns: [
                 { 

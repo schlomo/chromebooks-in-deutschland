@@ -44,3 +44,8 @@ html, body {
   float: none;
   text-align: center;
 }
+
+#chromebooks_filter a, #chromebooks_filter a:visited, #chromebooks_filter a:hover, #chromebooks_filter a:active {
+  /* the links for search examples shouldn't change after clicking */
+  color: blue;
+}

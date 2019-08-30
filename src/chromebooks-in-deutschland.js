@@ -65,6 +65,7 @@ $(document).ready(function(){
             paging: false,
             info: false,
             responsive: true,
+            autoWidth: false,
             data: data,
             columns: [
                 { 

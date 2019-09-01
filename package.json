@@ -7,6 +7,7 @@
     "url": "https://github.com/schlomo/chromebooks-in-deutschland.git"
   },
   "scripts": {
+    "postinstall": "cd functions && npm install",
     "build": "gulp build",
     "dev": "gulp dev",
     "deploy": "gulp deploy"

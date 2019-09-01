@@ -4,6 +4,9 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 - name: 'gcr.io/cloud-builders/npm'
+  dir: 'functions'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'deploy']
   env:
   - 'ENVIRONMENT=${_ENVIRONMENT}'

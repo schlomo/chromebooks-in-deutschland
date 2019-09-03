@@ -14,7 +14,8 @@ steps:
   - ENVIRONMENT=${_ENVIRONMENT}
 - name: gcr.io/cloud-builders/git
   args: [status, --verbose]
-
+- name: gcr.io/cloud-builders/git
+  args: [diff]
 substitutions:
     _ENVIRONMENT: dev
 

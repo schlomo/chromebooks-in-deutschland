@@ -80,7 +80,7 @@ function writeChromebookExpirationData(data) {
     ]);
 }
 
-exports.updateChromebookExpirationData = functions.pubsub.schedule('every 7 minutes').onRun((context) => {
+exports.updateChromebookExpirationData = functions.pubsub.schedule('every 1 day').onRun((context) => {
         return getChromebookExpirationData(writeChromebookExpirationData);
     });
 

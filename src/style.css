@@ -4,13 +4,11 @@ html, body {
 }
 
 #header {
-  padding: 0 0 0.5em 0;
+  padding: 0.1em 0.2em 0.5em 0.2em;
   border-bottom: 1px solid black;
   overflow: auto;
-}
-
-#logo svg {
-  vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #logo {
@@ -25,8 +23,9 @@ html, body {
 }
 
 #links {
-  float: right;
-  margin-left: 1em;
+  text-align: right;
+  flex-grow: 1;
+  margin: auto;
   font-style: italic;
 }
 

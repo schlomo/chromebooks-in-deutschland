@@ -12,10 +12,10 @@ steps:
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
-- name: gcr.io/cloud-builders/git
-  args: [status, --verbose]
-- name: gcr.io/cloud-builders/git
-  args: [diff]
+# - name: gcr.io/cloud-builders/git
+#   args: [status, --verbose]
+# - name: gcr.io/cloud-builders/git
+#   args: [diff]
 substitutions:
     _ENVIRONMENT: dev
 

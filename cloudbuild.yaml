@@ -1,15 +1,22 @@
 steps:
-- name: gcr.io/cloud-builders/git
-  args: ['fetch', '--unshallow', '--tags']
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
-  dir: 'functions'
-  args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'deploy']
+- name: gcr.io/cloud-builders/gcloud
+  args: [config, get-value, account]
+ - name: gcr.io/cloud-builders/git
+   args: [fetch, --unshallow, --tags]
+- name: gcr.io/cloud-builders/npm
+  args: [install]
+- name: gcr.io/cloud-builders/npm
+  dir: functions
+  args: [install]
+- name: gcr.io/cloud-builders/npm
+  args: [run, deploy]
   env:
-  - 'ENVIRONMENT=${_ENVIRONMENT}'
+  - ENVIRONMENT=${_ENVIRONMENT}
 
 substitutions:
     _ENVIRONMENT: dev
+
+# artifacts:
+#   objects:
+#     location: gs://chromebooks-in-deutschland-logs/$BUILD_ID
+#     paths: [/builder/home/.npm/_logs/*]

@@ -3,12 +3,12 @@ steps:
   args: [config, get-value, account]
 - name: gcr.io/cloud-builders/git
   args: [fetch, --unshallow, --tags]
-- name: gcr.io/cloud-builders/npm
+- name: gcr.io/cloud-builders/npm@current
   args: [install]
-- name: gcr.io/cloud-builders/npm
+- name: gcr.io/cloud-builders/npm@current
   dir: functions
   args: [install]
-- name: gcr.io/cloud-builders/npm
+- name: gcr.io/cloud-builders/npm@current
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}

@@ -168,7 +168,7 @@ function updateChromebookEntry(entry) {
     return priceFunction(entry.productId).then((price) => {
         entry.price = price;
         entry.priceUpdated = new Date().toISOString();
-        console.log(entry);
+        console.debug(entry);
         return admin.database().ref(`/devices/${id}`).set(entry);
     }).catch((error) => {
         if ("statusCode" in error) {

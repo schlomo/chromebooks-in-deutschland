@@ -40,15 +40,14 @@ $(document).ready(function(){
     var dt = undefined;
     
     function persistSearch(search_term) {
-        console.log(`persisting ${search_term}`);
+        console.log(`persisting >${search_term}<`);
         window.location.hash = encodeURIComponent(search_term);
     };
     
     function setSearch(search_term) {
         search_term = decodeURIComponent(search_term);
-        console.log(`Setting search to ${search_term}`);
+        console.log(`Setting search to >${search_term}<`);
         search_field.val(search_term);
-        persistSearch(search_term);
         dt.search(search_term, false, false).draw();
     };
 
@@ -60,15 +59,15 @@ $(document).ready(function(){
     var stage2setup = function () {
         search_field = $('#chromebooks_filter input');
         dt = $('#chromebooks').DataTable();
+        dt.on( 'search.dt', function () {
+            persistSearch(dt.search());
+        } );
         search_field.focus();
         var search_term = window.location.hash.split('#')[1];
         if (search_term) {
             setSearch(search_term);
         }
-        search_field.keyup(function() {
-            persistSearch($( this ).val());
-        });
-        search_field_div = search_field.parent().parent();
+        let search_field_div = search_field.parent().parent();
         search_field_div.on("click", "a", setSearchExampleClickHandler);
         search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">16 GB</a> RAM oder Updates bis <a href="#">2025</a>`);
     }
@@ -176,5 +175,6 @@ $(document).ready(function(){
             },
             initComplete: stage2setup,
         });
+        $('#AUP_updated').html(`AUP Daten vom ${new Date(data.expiration_timestamp).toLocaleString()}.`);
     });
 });

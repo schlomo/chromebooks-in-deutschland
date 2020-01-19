@@ -1,5 +1,5 @@
 /.firebase
 node_modules
 /public
-*debug.log
+*.log
 package-lock.json

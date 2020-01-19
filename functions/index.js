@@ -1,15 +1,27 @@
+'use strict';
 const
+    Promise = require('bluebird'),
     functions = require('firebase-functions'),
     admin = require('firebase-admin'),
     rp = require('request-promise-native'),
-    cheerio = require('cheerio');
-
+    cheerio = require('cheerio'),
+    https = require('https'), // Or use ‘http’ if you do insecure requests
+    httpsAgent = new https.Agent({ keepAlive: true });
+    
 admin.initializeApp();
 
 // return string formatted as DB key
 function getDbKey(t) {
     return t.replace(/[.#$/[\]]/g,'_');
 }
+
+
+/*
+
+updateChromebookExpirationData
+
+
+*/
 
 function getDateFromMonthYear(input) {
     var parts = input.split("(");
@@ -47,7 +59,12 @@ function getExpirationDataFromSection(html) {
 }
 
 function getChromebookExpirationData(callback) {
-    return rp('https://support.google.com/chrome/a/answer/6220366?hl=en').then((rawData) => {
+    console.time('getChromebookExpirationData');
+    let options = {
+        uri: 'https://support.google.com/chrome/a/answer/6220366?hl=en',
+        pool: httpsAgent
+    }
+    return rp(options).then((rawData) => {
         var sections = rawData.split('<h2 class="zippy">');
         sections.shift(); // get rid of HTML boilerplate
         var results = {};
@@ -65,6 +82,7 @@ function getChromebookExpirationData(callback) {
                 };
             });
         });
+        console.timeEnd('getChromebookExpirationData');
         return callback(results);
     }).catch((error) => {
         console.error(new Error(error));
@@ -80,9 +98,91 @@ function writeChromebookExpirationData(data) {
     ]);
 }
 
+async function getChromebookData() {
+    return admin.database().ref('/devices').once('value').then( (snapshot) => {
+        let devices = snapshot.val();
+        if (! devices) {
+            devices = {};
+        }
+        console.log(devices);
+
+
+        let entries = [];
+        // set the id property of an entry to the key in the devices map
+        Object.entries(devices).forEach(([id, entry]) => { entry.id = id ; entries.push(entry) });
+        console.log(entries);
+        return entries;
+    });
+}
+
 exports.updateChromebookExpirationData = functions.pubsub.schedule('every 23 hours').onRun((context) => {
         return getChromebookExpirationData(writeChromebookExpirationData);
     });
+
+
+/*
+
+updateChromebookPriceData
+
+
+*/
+
+async function getIdealoPrice(productId) {
+    let options = {
+        uri: `https://www.idealo.de/offerpage/pricechart/api/${productId}?period=P1M`,
+        pool: httpsAgent,
+        json: true
+    };
+    return rp(options).then((jsonData) => {
+        console.debug(jsonData);
+        var data = jsonData.data;
+        var lastPrice = data.pop().y;
+        console.debug(`Idealo ${productId} = ${lastPrice}`);
+        return lastPrice;
+    });
+}
+
+async function getMetacompPrice(productId) {
+    let options = {
+        uri: `https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`,
+        pool: httpsAgent,
+    };
+    return rp(options).then((rawData) => {
+        console.debug(rawData);
+        var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
+        console.debug(`Metacomp ${productId} = ${price}`);
+        return Number(price);
+    });
+}
+
+function updateChromebookEntry(entry) {
+    let id = entry.id;
+    console.log(`Processing ${id}`);
+    entry.expirationId = getDbKey(`${entry.brand} ${entry.model}`);
+    let priceFunction = undefined;
+    switch (entry.productProvider) {
+        case "idealo": priceFunction = getIdealoPrice; break;
+        case "metacomp": priceFunction = getMetacompPrice; break;
+        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
+    }
+    return priceFunction(entry.productId).then((price) => {
+        entry.price = price;
+        entry.priceUpdated = new Date().toISOString();
+        console.log(entry);
+        return admin.database().ref(`/devices/${id}`).set(entry);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
+    });
+
+}
+
+exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
+    return Promise.map(getChromebookData(),updateChromebookEntry,{concurrency:20});
+});
 
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //     response.send("fgoo");

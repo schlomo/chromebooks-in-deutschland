@@ -33,6 +33,11 @@ function toNumber(num) {
     return num.toLocaleString("de-DE", { maximumFractionDigits: 2});
 }
 
+
+function toEuro(num) {
+    return num.toLocaleString("de-DE", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) + "&nbsp;€";
+}
+
 function cpuToText(cpu, notfound="") {
     try {
         return `${cpus[cpu].cores}x ${toNumber(cpus[cpu].frequency)} GHz`;
@@ -84,6 +89,13 @@ $(document).ready(function(){
         return data;
     };
 
+    var renderPricePerMonth = function ( data, type, row ) {
+        if ( type === 'display') {
+            data = `${toEuro(data)} (${toEuro(data * 12)})`;
+        }
+        return data;
+    };
+
     var search_field = undefined;
     var dt = undefined;
     
@@ -117,7 +129,7 @@ $(document).ready(function(){
         }
         let search_field_div = search_field.parent().parent();
         search_field_div.on("click", "a", setSearchExampleClickHandler);
-        search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">16 GB</a> RAM oder Updates bis <a href="#">2025</a>`);
+        search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">16 GB</a> RAM oder Updates bis <a href="#">2026</a>`);
     }
 
 
@@ -151,10 +163,6 @@ $(document).ready(function(){
         return result;
     }
 
-    function toEuro(num) {
-        return num.toLocaleString("de-DE", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) + " €";
-    }
-
     firebase.database().ref('/').once('value').then(function(snapshot) {
         var data = snapshot.val();
         console.log(data);
@@ -183,21 +191,16 @@ $(document).ready(function(){
                     render: renderPrice,
                 },
                 {
+                    title: "Preis / Monat (/&nbsp;Jahr)",
+                    data: 'pricePerMonth',
+                    render: renderPricePerMonth,
+                },
+                {
                     title: "Updates bis",
                     data: 'expiration'
                 },
-                {
-                    title: "Preis / Monat",
-                    data: 'pricePerMonth',
-                    render: toEuro,
-                },
-                {
-                    title: "Preis / Jahr",
-                    data: 'pricePerYear',
-                    render: toEuro,
-                }
             ],
-            order: [[ 4, "asc" ]],
+            order: [[ 3, "asc" ]],
             language: {
                 search: "Suche _INPUT_ in allen Feldern",
             },

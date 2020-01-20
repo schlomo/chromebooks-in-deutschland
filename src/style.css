@@ -39,6 +39,12 @@ html, body {
   padding: 1em;
 }
 
+#notices {
+  margin-top: 2px;
+  text-align: justify;
+  font-style: italic;
+}
+
 .dataTables_wrapper .dataTables_filter {
   float: none;
   text-align: center;

@@ -161,7 +161,6 @@ async function getMetacompPrice(productId) {
 function updateChromebookEntry(entry) {
     let id = entry.id;
     console.log(`Processing ${id}`);
-    entry.expirationId = getDbKey(`${entry.brand} ${entry.model}`);
     let priceFunction = undefined;
     switch (entry.productProvider) {
         case "idealo": priceFunction = getIdealoPrice; break;

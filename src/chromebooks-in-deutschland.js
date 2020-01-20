@@ -4,6 +4,7 @@ const cpus = {
     "AMD A4 9120C":         {"cores":2, "frequency":1.6,    "burst":2.4 },
     "AMD A6 9220C":         {"cores":2, "frequency":1.8,    "burst":2.7 },
     "Intel Celeron 3865U":  {"cores":2, "frequency":1.8 },
+    "Intel Celeron N3350":  {"cores":2, "frequency":1.1,    "burst":2.4 },
     "Intel Celeron N4000":  {"cores":2, "frequency":1.1,    "burst":2.6 },
     "Intel Celeron N4100":  {"cores":4, "frequency":1.1,    "burst":2.4 },
     "Intel Core i3-7100U":  {"cores":2, "frequency":2.4 },
@@ -12,13 +13,15 @@ const cpus = {
     "Intel Core i5-8250U":  {"cores":4, "frequency":1.6,    "burst":3.4 },
     "Intel Core i5-8350U":  {"cores":4, "frequency":1.7,    "burst":3.6 },
     "Intel Core i7-8550U":  {"cores":4, "frequency":1.8,    "burst":4   },
+    "Intel Core i7-8650U":  {"cores":4, "frequency":1.9,    "burst":4.2 },
+    "Intel Core m3-8100Y":  {"cores":2, "frequency":1.1,    "burst":3.4 },
     "Intel Pentium 4415U":  {"cores":2, "frequency":2.3 },
+    "Intel Pentium 4415Y":  {"cores":2, "frequency":1.6 },
+    "Intel Pentium 4417U":  {"cores":2, "frequency":2.3 },
+    "Intel Pentium N4200":  {"cores":4, "frequency":1.1,    "burst":2.5 },
+    "Intel Pentium N5000":  {"cores":4, "frequency":1.1,    "burst":2.7 },
     "MediaTek MT8173C":     {"cores":4, "frequency":2.1 },
     "Rockship RK3399":      {"cores":6, "frequency":2   },
-    "Intel Core i7-8650U":  {"cores":4, "frequency":1.9,    "burst":4.2 },
-    "Intel Celeron N3350":  {"cores":2, "frequency":1.1,    "burst":2.4 },
-    "Intel Pentium 4417U":  {"cores":2, "frequency":2.3 },
-    "Intel Pentium N5000":  {"cores":4, "frequency":1.1,    "burst":2.7 }
 };
 
 /*
@@ -111,7 +114,7 @@ $(document).ready(function(){
 
     var renderPrice = function ( data, type, row ) {
         if ( type === 'display') {
-            data = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + $('<div/>').text(data).html() + ' €</a>';
+            data = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(data) + '</a>';
         }
         return data;
     };
@@ -119,6 +122,13 @@ $(document).ready(function(){
     var renderPricePerMonth = function ( data, type, row ) {
         if ( type === 'display') {
             data = `${toEuro(data)} (${toEuro(data * 12)})`;
+        }
+        return data;
+    };
+
+    var renderExpiration = function ( data, type, row ) {
+        if ( type === 'display') {
+            data = `<a title="${row.expirationId}">${data}</a>`;
         }
         return data;
     };
@@ -234,7 +244,8 @@ $(document).ready(function(){
                 },
                 {
                     title: "Updates bis",
-                    data: 'expiration'
+                    data: 'expiration',
+                    render: renderExpiration,
                 },
             ],
             order: [[ 3, "asc" ]],

@@ -1,5 +1,53 @@
 'use strict';
 
+const cpus = {
+    "AMD A4 9120C":         {"cores":2, "frequency":1.6 },
+    "AMD A6 9220C":         {"cores":2, "frequency":1.8 },
+    "Intel Celeron 3865U":  {"cores":2, "frequency":1.8 },
+    "Intel Celeron N4000":  {"cores":2, "frequency":1.1 },
+    "Intel Celeron N4100":  {"cores":4, "frequency":1.1 },
+    "Intel Core i3-7100U":  {"cores":2, "frequency":2.4 },
+    "Intel Core i3-8130U":  {"cores":2, "frequency":2.2 },
+    "Intel Core i5-7300U":  {"cores":2, "frequency":2.6 },
+    "Intel Core i5-8250U":  {"cores":4, "frequency":1.6 },
+    "Intel Core i5-8350U":  {"cores":4, "frequency":1.7 },
+    "Intel Core i7-8550U":  {"cores":4, "frequency":1.8 },
+    "Intel Pentium 4415U":  {"cores":2, "frequency":2.3 },
+    "MediaTek MT8173C":     {"cores":4, "frequency":2.1 },
+    "Rockship RK3399":      {"cores":6, "frequency":2   },
+    "Intel Core i7-8650U":  {"cores":4, "frequency":1.9 },
+    "Intel Celeron N3350":  {"cores":2, "frequency":1.1 },
+    "Intel Pentium 4417U":  {"cores":2, "frequency":2.3 }
+};
+
+function screenResToText(res) {
+    switch (res) {
+        case "1366x768": return "HD" ;
+        case "1920x1080":
+        case "1920x1200": return "FHD" ;
+        default: return res;
+    }
+}
+
+function toNumber(num) {
+    return num.toLocaleString("de-DE", { maximumFractionDigits: 2});
+}
+
+function cpuToText(cpu, notfound="") {
+    try {
+        return `${cpus[cpu].cores}x ${toNumber(cpus[cpu].frequency)} GHz`;
+    } catch(err) {
+        console.error(err);
+        return notfound;
+    }
+}
+
+function monthDiff(dateFrom, dateTo) {
+    // from https://stackoverflow.com/a/4312956/2042547 with some known inprecisions
+    return dateTo.getMonth() - dateFrom.getMonth() + 
+      (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
+
 $(document).ready(function(){
 
     function getProductLink(entry) {
@@ -72,24 +120,6 @@ $(document).ready(function(){
         search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">16 GB</a> RAM oder Updates bis <a href="#">2025</a>`);
     }
 
-    function monthDiff(dateFrom, dateTo) {
-        // from https://stackoverflow.com/a/4312956/2042547 with some known inprecisions
-        return dateTo.getMonth() - dateFrom.getMonth() + 
-          (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
-    }
-    
-    function screenResToText(res) {
-        switch (res) {
-            case "1366x768": return "HD" ;
-            case "1920x1080":
-            case "1920x1200": return "FHD" ;
-            default: return res;
-        }
-    }
-
-    function toNumber(num) {
-        return num.toLocaleString("de-DE", { maximumFractionDigits: 2});
-    }
 
     function prepareTableData(data) {
         let now = new Date();
@@ -112,7 +142,8 @@ $(document).ready(function(){
                 : entry.type) +
                 (entry.biometricUnlock ? "biometrisch " : "") +
                 "\n" + 
-                entry.memory + " GB RAM " + entry.cpu
+                entry.memory + " GB RAM" + "\n" +
+                entry.cpu + " " + cpuToText(entry.cpu)
 
             ;
             result.push(entry);

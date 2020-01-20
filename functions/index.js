@@ -15,6 +15,9 @@ function getDbKey(t) {
     return t.replace(/[.#$/[\]]/g,'_');
 }
 
+function debug(...args) { 
+    //console.debug(...args); 
+}
 
 /*
 
@@ -43,7 +46,7 @@ function getExpirationDataFromSection(html) {
         var model = modelparts.shift().trim();
         var junk = modelparts.pop(); // some models have multiple submodels separated by /, sadly without system
         if (junk) {
-            console.debug(`${columns[1]} has model ${model} and extra ${junk}, ignoring`);
+            debug(`${columns[1]} has model ${model} and extra ${junk}, ignoring`);
         }
         var expiration = getDateFromMonthYear(columns[2].trim());
         if (modelparts.length === 0) {
@@ -104,13 +107,13 @@ async function getChromebookData() {
         if (! devices) {
             devices = {};
         }
-        console.log(devices);
+        debug(devices);
 
 
         let entries = [];
         // set the id property of an entry to the key in the devices map
         Object.entries(devices).forEach(([id, entry]) => { entry.id = id ; entries.push(entry) });
-        console.log(entries);
+        debug(entries);
         return entries;
     });
 }
@@ -134,10 +137,10 @@ async function getIdealoPrice(productId) {
         json: true
     };
     return rp(options).then((jsonData) => {
-        console.debug(jsonData);
+        debug(jsonData);
         var data = jsonData.data;
         var lastPrice = data.pop().y;
-        console.debug(`Idealo ${productId} = ${lastPrice}`);
+        debug(`Idealo ${productId} = ${lastPrice}`);
         return lastPrice;
     });
 }
@@ -148,9 +151,9 @@ async function getMetacompPrice(productId) {
         pool: httpsAgent,
     };
     return rp(options).then((rawData) => {
-        console.debug(rawData);
+        debug(rawData);
         var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
-        console.debug(`Metacomp ${productId} = ${price}`);
+        debug(`Metacomp ${productId} = ${price}`);
         return Number(price);
     });
 }
@@ -168,7 +171,7 @@ function updateChromebookEntry(entry) {
     return priceFunction(entry.productId).then((price) => {
         entry.price = price;
         entry.priceUpdated = new Date().toISOString();
-        console.debug(entry);
+        debug(entry);
         return admin.database().ref(`/devices/${id}`).set(entry);
     }).catch((error) => {
         if ("statusCode" in error) {

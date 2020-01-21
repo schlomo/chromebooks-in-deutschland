@@ -72,7 +72,7 @@ function cpuToText(cpu, notfound="") {
         let burstinfo = ("burst" in cpus[cpu] ? `-${cpus[cpu].burst}` : "");
         return `${cpus[cpu].cores}x ${toNumber(cpus[cpu].frequency)}${burstinfo} GHz`;
     } catch(err) {
-        console.error(err);
+        console.error(`ERROR looking up CPU >${cpu}<`, err);
         return notfound;
     }
 }
@@ -81,6 +81,10 @@ function monthDiff(dateFrom, dateTo) {
     // from https://stackoverflow.com/a/4312956/2042547 with some known inprecisions
     return dateTo.getMonth() - dateFrom.getMonth() + 
       (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
+
+function encodeEntities(text) {
+    return document.createElement( 'div' ).appendChild( document.createTextNode( text ) ).parentNode.innerHTML;
 }
 
 $(document).ready(function(){
@@ -100,14 +104,20 @@ $(document).ready(function(){
 
     var renderModel = function ( data, type, row ) {
         if ( type === 'display') {
-            data = '<a href="' + getProductLink(row) + '" target="_blank">' + $('<div/>').text(data).html() + '</a>';
+            data = encodeEntities(data);
+            data += '<div class="devicelinks">' + 
+                    `<a href="${getProductLink(row)}" target="_blank" class="material-icons-two-tone">shopping_cart</a>`;
+            if (row.specLink.startsWith("http")) {
+                data += `&nbsp;&nbsp;<a href="${row.specLink}" target="_blank" class="material-icons-two-tone">info</a>`;
+            }
+            data += '</div>';
         }
         return data;
     };
 
     var renderFeatures = function ( data, type, row ) {
         if ( type === 'display') {
-            data = $('<div/>').text(data).html().replace(/[\n\r]+/g,"<br>");
+            data = encodeEntities(data).replace(/[\n\r]+/g,"<br>");
         }
         return data;
     };
@@ -121,7 +131,7 @@ $(document).ready(function(){
 
     var renderPricePerMonth = function ( data, type, row ) {
         if ( type === 'display') {
-            data = `${toEuro(data)} (${toEuro(data * 12)})`;
+            data = `<a title="${row.supportMonths} Monate">${toEuro(data)} (${toEuro(data * 12)})</a>`;
         }
         return data;
     };

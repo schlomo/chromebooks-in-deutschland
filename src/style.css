@@ -39,6 +39,16 @@ html, body {
   padding: 1em;
 }
 
+.devicelinks a, .devicelinks a:visited, .devicelinks a:active {
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.devicelinks a:hover {
+  background-color: lightblue;
+}
+
+
 #notices {
   margin-top: 2px;
   text-align: justify;
@@ -48,6 +58,10 @@ html, body {
 .dataTables_wrapper .dataTables_filter {
   float: none;
   text-align: center;
+}
+
+table.dataTable tbody td {
+  outline: none;
 }
 
 #chromebooks_filter a, #chromebooks_filter a:visited, #chromebooks_filter a:hover, #chromebooks_filter a:active {

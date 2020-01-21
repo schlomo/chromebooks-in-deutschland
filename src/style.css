@@ -64,7 +64,15 @@ table.dataTable tbody td {
   outline: none;
 }
 
+table#chromebooks tr.even {
+  background-color: #fafafa;
+}
+
 #chromebooks_filter a, #chromebooks_filter a:visited, #chromebooks_filter a:hover, #chromebooks_filter a:active {
   /* the links for search examples shouldn't change after clicking */
   color: blue;
+}
+
+h1 {
+  font-size: 150%;
 }

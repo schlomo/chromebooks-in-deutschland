@@ -34,7 +34,7 @@ html, body {
 
 
 #main {
-  background-color: lightyellow;
+  background-color: rgba(255, 255, 224, 0.4);
   padding: 1em;
 }
 
@@ -96,6 +96,6 @@ p {
   padding: 0.5em;
   margin-top: 0.3em;
   padding-top: 0;
-  border: 0.5em solid lightyellow;
+  border: 0.5em solid rgb(236, 246, 250);
   border-top: 1px solid black;
 }

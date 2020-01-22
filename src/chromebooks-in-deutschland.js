@@ -189,7 +189,7 @@ $(document).ready(function(){
         }
         let search_field_div = search_field.parent().parent();
         search_field_div.on("click", "a", setSearchExampleClickHandler);
-        search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">16 GB</a> RAM oder Updates bis <a href="#">2026</a>`);
+        search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">8 GB</a> RAM, <a href="#">Intel Core</a> CPU oder Updates bis <a href="#">2026</a>`);
     }
 
 
@@ -285,7 +285,53 @@ $(document).ready(function(){
         $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${Object.keys(tableData).length} Geräte.`);
 
         $('#dump').click(function(e) {
-            $(this).replaceWith($("<pre>").html(dataDump));
+            // transform expiration list into list of model by year
+            let expirationModelsByYear = {};
+            Object.entries(data.expiration).forEach(([id, entry]) => {
+                let year = entry.expiration.substr(0,4);
+                if (!(year in expirationModelsByYear)) {
+                    expirationModelsByYear[year] = {};
+                }
+                expirationModelsByYear[year][id] = true;
+            });
+            
+            // remove listed devices
+            Object.entries(data.devices).forEach(([id, entry]) => {
+                let expirationId = entry.expirationId;
+                let year = entry.expiration.substr(0,4);
+                if (expirationId in expirationModelsByYear[year]) {
+                    delete expirationModelsByYear[year][expirationId];
+                }
+            });
+            
+            console.log("expirationModelsByYear", expirationModelsByYear);
+
+            // add last 2 years to dump output
+            let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-2);
+            let result = [$("<h1>", { text: "Additional Devices"})];
+            interestingYears.forEach((year) => {
+                let yearContainer = $("<ul>");
+                result.push($("<h2>", {text: `Supported till ${year}`}));
+                Object.keys(expirationModelsByYear[year]).forEach((id) => {
+                    let li = $("<li>")
+                    li.append($("<a>",{
+                        text: id,
+                        target: "_blank",
+                        href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
+                        title: `Idealo search for $id`
+                    }))
+                    yearContainer.append(li);
+                });
+                result.push(yearContainer);
+            });
+            result.push(
+                $("<h1>", {text: "Data Dump"}),
+                $("<pre>").html(dataDump)
+            );
+            let dumpElement = $(this);
+            let footer = dumpElement.parent().parent();
+            dumpElement.remove();
+            footer.after($("<div>", {class: "dumpzone", html: result}));
         });
     });
 });

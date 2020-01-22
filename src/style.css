@@ -22,11 +22,10 @@ html, body {
   vertical-align: middle;
 }
 
-#links {
+.box-right {
   text-align: right;
   flex-grow: 1;
   margin: auto;
-  font-style: italic;
 }
 
 #version::after {
@@ -37,6 +36,14 @@ html, body {
 #main {
   background-color: lightyellow;
   padding: 1em;
+}
+
+#footer {
+  padding: 0.5em 0.2em 0.1em 0.2em;
+  border-top: 1px solid black;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .devicelinks a, .devicelinks a:visited, .devicelinks a:active {
@@ -75,4 +82,8 @@ table#chromebooks tr.even {
 
 h1 {
   font-size: 150%;
+}
+
+p {
+  text-align: justify;
 }

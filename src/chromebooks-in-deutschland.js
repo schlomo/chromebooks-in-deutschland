@@ -4,6 +4,7 @@ const cpus = {
     "AMD A4 9120C":         {"cores":2, "frequency":1.6,    "burst":2.4 },
     "AMD A6 9220C":         {"cores":2, "frequency":1.8,    "burst":2.7 },
     "Intel Celeron 3865U":  {"cores":2, "frequency":1.8 },
+    "Intel Celeron 3867U":  {"cores":2, "frequency":1.8 },
     "Intel Celeron N3350":  {"cores":2, "frequency":1.1,    "burst":2.4 },
     "Intel Celeron N4000":  {"cores":2, "frequency":1.1,    "burst":2.6 },
     "Intel Celeron N4100":  {"cores":4, "frequency":1.1,    "burst":2.4 },
@@ -52,8 +53,9 @@ const devices_defaults = {
 function screenResToText(res) {
     switch (res) {
         case "1366x768": return "HD" ;
-        case "1920x1080":
-        case "1920x1200": return "FHD" ;
+        case "1920x1080": return "FHD" ;
+        case "1920x1200": return "FHD 16:10" ;
+        case "2256x1504": return "2K 3:2" ;
         default: return res;
     }
 }
@@ -88,6 +90,17 @@ function encodeEntities(text) {
 }
 
 $(document).ready(function(){
+
+    $('.scroll_to').click(function(e){
+        var jump = $(this).attr('href');
+        var new_position = $(jump).offset();
+        $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
+        e.preventDefault();
+    });
+
+    $('h1').each(function() {
+        $(this).append('<button onclick="$(\'html, body\').stop().animate({ scrollTop: 0 }, 500);return false;" style="float:right;font-size:80%;">⬆</button>');
+    });
 
     function getProductLink(entry) {
         let provider = entry.productProvider;
@@ -198,19 +211,20 @@ $(document).ready(function(){
                 entry.pricePerYear = entry.pricePerMonth * 12;
 
                 entry.ausstattung = 
-                    (entry.type == "chromebook" ?
+                    (entry.screenSize > 0 ?
                         // screen info only for chromebooks, else show type
                         toNumber(entry.screenSize) + '" ' + 
                         (entry.screenGlare ? "spiegelnd " : "matt ") + 
                         screenResToText(entry.screenResolution) + " " +
                         (entry.screenTouch ? "touch " : "") +
                         (entry.flip ? "flip " : "" ) +
-                        (entry.stylus ? "stylus " : "" )
-                    : entry.type) +
-                    (entry.biometricUnlock ? "biometrisch " : "") +
-                    "\n" + 
-                    entry.memory + " GB RAM" + "\n" +
-                    entry.cpu + " " + cpuToText(entry.cpu)
+                        (entry.stylus ? "stylus " : "" ) +
+                        (entry.biometricUnlock ? "biometrisch " : "") +
+                        "\n"
+                    : "") +
+                    entry.memory + " GB RAM " + 
+                    entry.cpu + " " + cpuToText(entry.cpu) +
+                    ("extraInfo" in entry ? "\n" + entry.extraInfo + " " : "")
                 ;
                 result.push(entry);
             } catch(err) {
@@ -222,6 +236,7 @@ $(document).ready(function(){
 
     firebase.database().ref('/').once('value').then(function(snapshot) {
         var data = snapshot.val();
+        const dataDump = JSON.stringify(data, null, 2);
         console.debug("Read data from database:", data);
         let tableData = prepareTableData(data);
         console.debug("Table data:", tableData);
@@ -267,6 +282,10 @@ $(document).ready(function(){
             },
             initComplete: stage2setup,
         });
-        $('#AUP_updated').html(`AUP Daten vom ${new Date(data.expiration_timestamp).toLocaleString()}.`);
+        $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${Object.keys(tableData).length} Geräte.`);
+
+        $('#dump').click(function(e) {
+            $(this).replaceWith($("<pre>").html(dataDump));
+        });
     });
 });

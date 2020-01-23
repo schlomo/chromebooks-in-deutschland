@@ -89,8 +89,110 @@ function encodeEntities(text) {
     return document.createElement( 'div' ).appendChild( document.createTextNode( text ) ).parentNode.innerHTML;
 }
 
+
+function getProductLink(entry) {
+    let provider = entry.productProvider;
+    let id = entry.productId;
+    let url = "";
+    switch (provider) {
+      case "idealo": url = "http://idealo.de/preisvergleich/OffersOfProduct/" + id; break;
+      case "geizhals": url = "https://geizhals.de/-a" + id + ".html"; break;
+      case "metacomp": url = "https://shop.metacomp.de/Shop-DE/Produkt-1_" + id; break;
+      default: url = "";
+    }
+    return url;
+}
+
+var renderModel = function ( data, type, row ) {
+    if ( type === 'display') {
+        data = encodeEntities(data);
+        data += '<div class="devicelinks">' + 
+                `<a href="${getProductLink(row)}" target="_blank" class="material-icons-two-tone">shopping_cart</a>`;
+        if (row.specLink.startsWith("http")) {
+            data += `&nbsp;&nbsp;<a href="${row.specLink}" target="_blank" class="material-icons-two-tone">info</a>`;
+        }
+        data += '</div>';
+    }
+    return data;
+};
+
+var renderFeatures = function ( data, type, row ) {
+    if ( type === 'display') {
+        data = encodeEntities(data).replace(/[\n\r]+/g,"<br>");
+    }
+    return data;
+};
+
+var renderPrice = function ( data, type, row ) {
+    if ( type === 'display') {
+        data = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(data) + '</a>';
+    }
+    return data;
+};
+
+var renderPricePerMonth = function ( data, type, row ) {
+    if ( type === 'display') {
+        data = `<a title="${row.supportMonths} Monate">${toEuro(data)} (${toEuro(data * 12)})</a>`;
+    }
+    return data;
+};
+
+var renderExpiration = function ( data, type, row ) {
+    if ( type === 'display') {
+        data = `<a title="${row.expirationId}">${data}</a>`;
+    }
+    return data;
+};
+
+function prepareTableData(data) {
+    let now = new Date();
+    let result = [];
+    Object.entries(data.devices).forEach(([id, entry]) => {
+        try {
+            if (! (entry.expirationId in data.expiration)) {
+                throw `Invalid Expiration ID >${entry.expirationId}<!`;
+            }
+            // use YYYY-MM from ISO date string as display date, can be improved
+            entry.expiration = data.expiration[entry.expirationId].expiration.substr(0,7);
+            entry.supportMonths = monthDiff(now, new Date(entry.expiration));
+            if (! (entry.price && entry.price > 0 && entry.price < 9999) ) {
+                throw `Invalid price >${entry.price}<!`;
+            }
+            entry.pricePerMonth = entry.price / entry.supportMonths;
+            entry.pricePerYear = entry.pricePerMonth * 12;
+
+            entry.ausstattung = 
+                (entry.screenSize > 0 ?
+                    // screen info only for chromebooks, else show type
+                    toNumber(entry.screenSize) + '" ' + 
+                    (entry.screenGlare ? "spiegelnd " : "matt ") + 
+                    screenResToText(entry.screenResolution) + " " +
+                    (entry.screenTouch ? "touch " : "") +
+                    (entry.flip ? "flip " : "" ) +
+                    (entry.stylus ? "stylus " : "" ) +
+                    (entry.biometricUnlock ? "biometrisch " : "") +
+                    "\n"
+                : "") +
+                entry.memory + " GB RAM " + 
+                entry.cpu + " " + cpuToText(entry.cpu) +
+                ("extraInfo" in entry ? "\n" + entry.extraInfo + " " : "")
+            ;
+            result.push(entry);
+        } catch(err) {
+            console.error(`ERROR loading >${id}<`, entry, err);
+        }
+    });
+    return result;
+}
+
 $(document).ready(function(){
 
+    var search_field = undefined;
+    var last_search_term = undefined;
+    var dt = undefined;
+    const html_body = $('html, body');
+
+    // on-page links implemented via scrolling
     $('.scroll_to').click(function(e){
         var jump = $(this).attr('href');
         var new_position = $(jump).offset();
@@ -98,90 +200,10 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    // h1 get a scroll-to-top button
     $('h1').each(function() {
         $(this).append('<button onclick="$(\'html, body\').stop().animate({ scrollTop: 0 }, 500);return false;" style="float:right;font-size:80%;">⬆</button>');
     });
-
-    function getProductLink(entry) {
-        let provider = entry.productProvider;
-        let id = entry.productId;
-        let url = "";
-        switch (provider) {
-          case "idealo": url = "http://idealo.de/preisvergleich/OffersOfProduct/" + id; break;
-          case "geizhals": url = "https://geizhals.de/-a" + id + ".html"; break;
-          case "metacomp": url = "https://shop.metacomp.de/Shop-DE/Produkt-1_" + id; break;
-          default: url = "";
-        }
-        return url;
-    }
-
-    var renderModel = function ( data, type, row ) {
-        if ( type === 'display') {
-            data = encodeEntities(data);
-            data += '<div class="devicelinks">' + 
-                    `<a href="${getProductLink(row)}" target="_blank" class="material-icons-two-tone">shopping_cart</a>`;
-            if (row.specLink.startsWith("http")) {
-                data += `&nbsp;&nbsp;<a href="${row.specLink}" target="_blank" class="material-icons-two-tone">info</a>`;
-            }
-            data += '</div>';
-        }
-        return data;
-    };
-
-    var renderFeatures = function ( data, type, row ) {
-        if ( type === 'display') {
-            data = encodeEntities(data).replace(/[\n\r]+/g,"<br>");
-        }
-        return data;
-    };
-
-    var renderPrice = function ( data, type, row ) {
-        if ( type === 'display') {
-            data = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(data) + '</a>';
-        }
-        return data;
-    };
-
-    var renderPricePerMonth = function ( data, type, row ) {
-        if ( type === 'display') {
-            data = `<a title="${row.supportMonths} Monate">${toEuro(data)} (${toEuro(data * 12)})</a>`;
-        }
-        return data;
-    };
-
-    var renderExpiration = function ( data, type, row ) {
-        if ( type === 'display') {
-            data = `<a title="${row.expirationId}">${data}</a>`;
-        }
-        return data;
-    };
-
-    var search_field = undefined;
-    var dt = undefined;
-    
-    function persistSearch(search_term) {
-        console.log(`persisting >${search_term}<`);
-        window.location.hash = encodeURIComponent(search_term);
-    };
-    
-    function setSearch(search_term) {
-        search_term = decodeURIComponent(search_term);
-        console.log(`Setting search to >${search_term}<`);
-        search_field.val(search_term);
-        dt.search(search_term, false, false).draw();
-    };
-
-    function setSearchExampleClickHandler(e) {
-        let el = $(this);
-        let href = el.attr("href");
-        let text = el.text();
-        console.log(href,text, e.data);
-        setSearch(href != "" ? href : text);
-        if (e.data && "scroll" in e.data) {
-            $('html, body').stop().animate({ scrollTop: search_field.offset().top }, 500);
-        }
-        e.preventDefault();
-    };
 
     var stage2setup = function () {
         search_field = $('#chromebooks_filter input');
@@ -190,59 +212,78 @@ $(document).ready(function(){
             persistSearch(dt.search());
         } );
         search_field.focus();
-        var search_term = window.location.hash.split('#')[1];
+
+        // take state from history API or from URL hash
+        let search_term = history.state ? 
+            history.state.search : 
+            window.location.hash.split('#')[1];
         if (search_term) {
+            console.log("Restoring saved search", search_term);
             setSearch(search_term);
         }
+
         let search_field_div = search_field.parent().parent();
         search_field_div.on("click", "a", setSearchExampleClickHandler);
         search_field_div.append(`, z.B. Geräte mit <a href="">14"</a> Bildschirm, mit <a href="">8 GB</a> RAM, <a href="">Intel Core</a> CPU, einem <a href="stylus">Stift</a> oder Updates bis <a href="">2026</a>`);
         $(".search").on("click", {scroll: true}, setSearchExampleClickHandler);
     }
 
-
-    function prepareTableData(data) {
-        let now = new Date();
-        let result = [];
-        Object.entries(data.devices).forEach(([id, entry]) => {
-            try {
-                if (! (entry.expirationId in data.expiration)) {
-                    throw `Invalid Expiration ID >${entry.expirationId}<!`;
-                }
-                // use YYYY-MM from ISO date string as display date, can be improved
-                entry.expiration = data.expiration[entry.expirationId].expiration.substr(0,7);
-                entry.supportMonths = monthDiff(now, new Date(entry.expiration));
-                if (! (entry.price && entry.price > 0 && entry.price < 9999) ) {
-                    throw `Invalid price >${entry.price}<!`;
-                }
-                entry.pricePerMonth = entry.price / entry.supportMonths;
-                entry.pricePerYear = entry.pricePerMonth * 12;
-
-                entry.ausstattung = 
-                    (entry.screenSize > 0 ?
-                        // screen info only for chromebooks, else show type
-                        toNumber(entry.screenSize) + '" ' + 
-                        (entry.screenGlare ? "spiegelnd " : "matt ") + 
-                        screenResToText(entry.screenResolution) + " " +
-                        (entry.screenTouch ? "touch " : "") +
-                        (entry.flip ? "flip " : "" ) +
-                        (entry.stylus ? "stylus " : "" ) +
-                        (entry.biometricUnlock ? "biometrisch " : "") +
-                        "\n"
-                    : "") +
-                    entry.memory + " GB RAM " + 
-                    entry.cpu + " " + cpuToText(entry.cpu) +
-                    ("extraInfo" in entry ? "\n" + entry.extraInfo + " " : "")
-                ;
-                result.push(entry);
-            } catch(err) {
-                console.error(`ERROR loading >${id}<`, entry, err);
+    function persistSearch(search_term) {
+        console.log(`Persisting >${search_term}<`);
+        if (search_term) {
+            if (search_term != last_search_term) {
+                console.log(`Persisting >${search_term} to browser`);
+                //window.location.hash = encodeURIComponent(search_term);
+                history.replaceState(
+                    {search:search_term}, 
+                    document.title,
+                    window.location.pathname + "#" + encodeURI(search_term)
+                );
+                last_search_term = search_term;
+            } else {
+                console.log("Ignoring repeat persistSearch call for " + search_term);
             }
-        });
-        return result;
-    }
+        } else {
+            console.log("Clearing search persistance");
+            history.replaceState(
+                {search:""},
+                document.title,
+                window.location.pathname
+            );
+            last_search_term = "";
+        }
+    };
 
-    firebase.database().ref('/').once('value').then(function(snapshot) {
+    function setSearch(search_term) {
+        search_term = decodeURIComponent(search_term);
+        console.log(`Setting search to >${search_term}<`);
+        search_field.val(search_term);
+        dt.search(search_term, false, false).draw();
+        if (search_term) {
+            console.log("Scrolling to search");
+            html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
+        } else {
+            console.log("setSearch not scrolling to top");
+        }
+    };
+
+    window.onpopstate = function(event) {
+        //console.log("last_search_term", last_search_term, "window-hash", window.location.hash, "location: " + document.location + ", state: " + JSON.stringify(event.state));
+        console.log("onpopstate", event.state);
+        //if (event.state && event.state.search && event.state.search != last_search_term) {
+            setSearch(event.state.search);
+        //}
+      };
+    
+    function setSearchExampleClickHandler(e) {
+        let el = $(this);
+        let href = el.attr("href");
+        let text = el.text();
+        setSearch(href != "" ? href : text);
+        e.preventDefault();
+    };
+
+    firebase.database().ref('/').once('value').then((snapshot) => {
         var data = snapshot.val();
         const dataDump = JSON.stringify(data, null, 2);
         console.debug("Read data from database:", data);

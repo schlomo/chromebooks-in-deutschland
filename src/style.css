@@ -92,6 +92,29 @@ p {
   text-align: justify;
 }
 
+.quote {
+  margin: 0 2em 0 2em;
+  font-size: 120%;
+  font-style: italic;
+  box-shadow: bisque;
+}
+
+.quote::before {
+  content: "“";
+  font-family: serif;
+  font-size: 200%;
+  float: left;
+  margin-right: 0.4em;
+}
+
+.quote::after {
+  content: "”";
+  font-family: serif;
+  font-size: 200%;
+  float: right;
+  margin-left: 0.4em;
+}
+
 .dumpzone {
   padding: 0.5em;
   margin-top: 0.3em;

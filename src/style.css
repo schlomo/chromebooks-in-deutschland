@@ -115,6 +115,15 @@ p {
   margin-left: 0.4em;
 }
 
+dt {
+  font-weight: bold;
+  margin: 1em 0 1em 0;
+}
+
+dd {
+  text-align: justify;
+}
+
 .dumpzone {
   padding: 0.5em;
   margin-top: 0.3em;

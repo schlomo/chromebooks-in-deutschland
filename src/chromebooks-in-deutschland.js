@@ -172,7 +172,14 @@ $(document).ready(function(){
     };
 
     function setSearchExampleClickHandler(e) {
-        setSearch($( this ).text());
+        let el = $(this);
+        let href = el.attr("href");
+        let text = el.text();
+        console.log(href,text, e.data);
+        setSearch(href != "" ? href : text);
+        if (e.data && "scroll" in e.data) {
+            $('html, body').stop().animate({ scrollTop: search_field.offset().top }, 500);
+        }
         e.preventDefault();
     };
 
@@ -189,7 +196,8 @@ $(document).ready(function(){
         }
         let search_field_div = search_field.parent().parent();
         search_field_div.on("click", "a", setSearchExampleClickHandler);
-        search_field_div.append(`, z.B. Geräte mit <a href="#">14"</a> Bildschirm, mit <a href="#">8 GB</a> RAM, <a href="#">Intel Core</a> CPU oder Updates bis <a href="#">2026</a>`);
+        search_field_div.append(`, z.B. Geräte mit <a href="">14"</a> Bildschirm, mit <a href="">8 GB</a> RAM, <a href="">Intel Core</a> CPU, einem <a href="stylus">Stift</a> oder Updates bis <a href="">2026</a>`);
+        $(".search").on("click", {scroll: true}, setSearchExampleClickHandler);
     }
 
 

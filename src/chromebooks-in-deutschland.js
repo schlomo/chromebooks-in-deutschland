@@ -50,6 +50,14 @@ const devices_defaults = {
   };
 */
 
+if (window.location.search.includes("debug")) {
+    var debug = (...args) => {
+        console.log(...args);
+    }
+} else {
+    var debug = (...args) => {};
+}
+
 function screenResToText(res) {
     switch (res) {
         case "1366x768": return "HD" ;
@@ -192,6 +200,15 @@ $(document).ready(function(){
     var dt = undefined;
     const html_body = $('html, body');
 
+    // links without a class are external and open a new window
+    $('a:not([class])').each(function() {
+        let el = $(this);
+        let target = $(this).attr("target");
+        if (! target) {
+            $(this).attr("target", "_blank");
+        }
+    });
+
     // on-page links implemented via scrolling
     $('.scroll_to').click(function(e){
         var jump = $(this).attr('href');
@@ -218,7 +235,7 @@ $(document).ready(function(){
             history.state.search : 
             window.location.hash.split('#')[1];
         if (search_term) {
-            console.log("Restoring saved search", search_term);
+            debug("Restoring saved search", search_term);
             setSearch(search_term);
         }
 
@@ -229,10 +246,10 @@ $(document).ready(function(){
     }
 
     function persistSearch(search_term) {
-        console.log(`Persisting >${search_term}<`);
+        debug(`Persisting >${search_term}<`);
         if (search_term) {
             if (search_term != last_search_term) {
-                console.log(`Persisting >${search_term} to browser`);
+                debug(`Persisting >${search_term}< to browser`);
                 //window.location.hash = encodeURIComponent(search_term);
                 history.replaceState(
                     {search:search_term}, 
@@ -241,10 +258,10 @@ $(document).ready(function(){
                 );
                 last_search_term = search_term;
             } else {
-                console.log("Ignoring repeat persistSearch call for " + search_term);
+                debug("Ignoring repeat persistSearch call for " + search_term);
             }
         } else {
-            console.log("Clearing search persistance");
+            debug("Clearing search persistance");
             history.replaceState(
                 {search:""},
                 document.title,
@@ -256,20 +273,20 @@ $(document).ready(function(){
 
     function setSearch(search_term) {
         search_term = decodeURIComponent(search_term);
-        console.log(`Setting search to >${search_term}<`);
+        debug(`Setting search to >${search_term}<`);
         search_field.val(search_term);
         dt.search(search_term, false, false).draw();
         if (search_term) {
-            console.log("Scrolling to search");
+            debug("Scrolling to search");
             html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
         } else {
-            console.log("setSearch not scrolling to top");
+            debug("setSearch not scrolling to top");
         }
     };
 
     window.onpopstate = function(event) {
         //console.log("last_search_term", last_search_term, "window-hash", window.location.hash, "location: " + document.location + ", state: " + JSON.stringify(event.state));
-        console.log("onpopstate", event.state);
+        debug("onpopstate", event.state);
         //if (event.state && event.state.search && event.state.search != last_search_term) {
             setSearch(event.state.search);
         //}
@@ -286,9 +303,9 @@ $(document).ready(function(){
     firebase.database().ref('/').once('value').then((snapshot) => {
         var data = snapshot.val();
         const dataDump = JSON.stringify(data, null, 2);
-        console.debug("Read data from database:", data);
+        debug("Read data from database:", data);
         let tableData = prepareTableData(data);
-        console.debug("Table data:", tableData);
+        debug("Table data:", tableData);
         $('#chromebooks').DataTable({
             paging: false,
             info: false,
@@ -353,7 +370,7 @@ $(document).ready(function(){
                 }
             });
             
-            console.log("expirationModelsByYear", expirationModelsByYear);
+            debug("expirationModelsByYear", expirationModelsByYear);
 
             // add last 2 years to dump output
             let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-2);

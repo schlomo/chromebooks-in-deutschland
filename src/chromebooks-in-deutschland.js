@@ -111,15 +111,58 @@ function getProductLink(entry) {
     return url;
 }
 
+var extraLinkClickHandler = (event) => {
+    let a = $(event.target);
+    let extraLinks = a.data("extralinks");
+    debug("Rendering", extraLinks);
+
+
+    let extraLinksElements = [];
+    for (const text in extraLinks) {
+        let url = extraLinks[text];
+        extraLinksElements.push(`<a href="${url}" target="_blank">${text}</a>`);
+    }
+    a.closest("div").after(
+        $("<div>")
+        .addClass("extralinks-content")
+        .append(...extraLinksElements)
+    );
+    a.remove();
+    event.preventDefault();
+}
+
 var renderModel = function ( data, type, row ) {
     if ( type === 'display') {
-        data = encodeEntities(data);
-        data += '<div class="devicelinks">' + 
-                `<a href="${getProductLink(row)}" target="_blank" class="material-icons-two-tone">shopping_cart</a>`;
+        let result = $("<p>").text(data);
+        let deviceLinks = [
+            $("<a>")
+                .addClass("material-icons-two-tone")
+                .attr("href", getProductLink(row))
+                .attr("target", "_blank")
+                .text("shopping_cart")
+        ];
         if (row.specLink.startsWith("http")) {
-            data += `&nbsp;&nbsp;<a href="${row.specLink}" target="_blank" class="material-icons-two-tone">info</a>`;
+            deviceLinks.push(
+                $("<a>")
+                    .addClass("material-icons-two-tone")
+                    .attr("href", row.specLink)
+                    .attr("target", "_blank")
+                    .text("info")
+            );
         }
-        data += '</div>';
+        if (row.extraLinks) {
+            debug("Adding extra Links");
+            deviceLinks.push(
+                $("<a>")
+                    .attr("href","")
+                    .addClass("material-icons-two-tone")
+                    .addClass("extralinks")
+                    .text("insert_link")
+                    .attr("data-extralinks", JSON.stringify(row.extraLinks))
+            )
+        }
+        result.append($("<div>").addClass("devicelinks").append(...deviceLinks));
+        data = result.html();
     }
     return data;
 };
@@ -240,9 +283,12 @@ $(document).ready(function(){
         }
 
         let search_field_div = search_field.parent().parent();
-        search_field_div.on("click", "a", setSearchExampleClickHandler);
+        search_field_div.on("click", "a", searchExampleClickHandler);
         search_field_div.append(`, z.B. Geräte mit <a href="">14"</a> Bildschirm, mit <a href="">8 GB</a> RAM, <a href="">Intel Core</a> CPU, einem <a href="stylus">Stift</a> oder Updates bis <a href="">2026</a>`);
-        $(".search").on("click", {scroll: true}, setSearchExampleClickHandler);
+ 
+        $("a.search").on("click", searchExampleClickHandler);
+
+        $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
     }
 
     function persistSearch(search_term) {
@@ -285,14 +331,11 @@ $(document).ready(function(){
     };
 
     window.onpopstate = function(event) {
-        //console.log("last_search_term", last_search_term, "window-hash", window.location.hash, "location: " + document.location + ", state: " + JSON.stringify(event.state));
         debug("onpopstate", event.state);
-        //if (event.state && event.state.search && event.state.search != last_search_term) {
-            setSearch(event.state.search);
-        //}
+        setSearch(event.state.search);
       };
     
-    function setSearchExampleClickHandler(e) {
+    function searchExampleClickHandler(e) {
         let el = $(this);
         let href = el.attr("href");
         let text = el.text();

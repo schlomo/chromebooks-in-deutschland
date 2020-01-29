@@ -116,6 +116,7 @@ var extraLinkClickHandler = (event) => {
     let content = a.closest("td").find(".extralinks-content");
     if (content) {
         content.toggle();
+        a.toggleClass("extralinks-open");
     } else {
         console.error("ERROR toggling extra links", event);
     }
@@ -129,6 +130,7 @@ var renderModel = function ( data, type, row ) {
             $("<a>")
                 .addClass("material-icons-two-tone")
                 .attr("href", getProductLink(row))
+                .attr("title", `Angebote für ${data}`)
                 .attr("target", "_blank")
                 .text("shopping_cart")
         ];
@@ -137,6 +139,7 @@ var renderModel = function ( data, type, row ) {
                 $("<a>")
                     .addClass("material-icons-two-tone")
                     .attr("href", row.specLink)
+                    .attr("title", `Technische Spezifikation für ${data}`)
                     .attr("target", "_blank")
                     .text("info")
             );
@@ -149,6 +152,7 @@ var renderModel = function ( data, type, row ) {
                     .attr("href","")
                     .addClass("material-icons-two-tone")
                     .addClass("extralinks")
+                    .attr("title", `Weitere Links für ${data}`)
                     .text("insert_link")
                     .attr("data-extralinks", JSON.stringify(row.extraLinks))
             )
@@ -249,6 +253,23 @@ $(document).ready(function(){
     var data = {};
     var dataDump = "";
 
+    // on-page links implemented via scrolling
+    $(document).on("click", ".scroll_to", (event) => {
+        var jump = $(event.target).attr('href');
+        var new_position = $(jump).offset();
+        $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
+        event.preventDefault();
+    });
+
+    // search links
+    $(document).on("click", ".search", (event) => {
+        let el = $(event.target);
+        let href = el.attr("href");
+        let text = el.text();
+        setSearch(href != "" ? href : text);
+        event.preventDefault();
+    });
+
     // links without a class are external and open a new window
     $('a:not([class])').each(function() {
         let el = $(this);
@@ -258,25 +279,16 @@ $(document).ready(function(){
         }
     });
 
-    // on-page links implemented via scrolling
-    $('.scroll_to').click(function(e){
-        var jump = $(this).attr('href');
-        var new_position = $(jump).offset();
-        $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
-        e.preventDefault();
-    });
-
     // h1 get a scroll-to-top button
     $('h1').each(function() {
         $(this).append('<button onclick="$(\'html, body\').stop().animate({ scrollTop: 0 }, 500);return false;" style="float:right;font-size:80%;">⬆</button>');
     });
 
+    // extralinks toggle in table
+    $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
+
     var stage2setup = function () {
         search_field = $('#chromebooks_filter input');
-        dt = $('#chromebooks').DataTable();
-        dt.on( 'search.dt', function () {
-            persistSearch(dt.search());
-        } );
         search_field.focus();
 
         // take state from history API or from URL hash
@@ -288,14 +300,9 @@ $(document).ready(function(){
             setSearch(search_term);
         }
 
-        let search_field_div = search_field.parent().parent();
-        search_field_div.on("click", "a", searchExampleClickHandler);
-        search_field_div.append(`, z.B. Geräte mit <a href="">14"</a> Bildschirm, mit <a href="">8 GB</a> RAM, <a href="">Intel Core</a> CPU, einem <a href="stylus">Stift</a> oder Updates bis <a href="">2026</a>`);
+        let search_field_div = search_field.parent();
+        search_field_div.append(`, z.B. Geräte mit <a class="search" href="">14"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="">2026</a>`);
  
-        $("a.search").on("click", searchExampleClickHandler);
-
-        $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
-
         $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
     }
 
@@ -343,14 +350,6 @@ $(document).ready(function(){
         setSearch(event.state.search);
       };
     
-    function searchExampleClickHandler(e) {
-        let el = $(this);
-        let href = el.attr("href");
-        let text = el.text();
-        setSearch(href != "" ? href : text);
-        e.preventDefault();
-    };
-
     var loadTableDataFromFirebase = (ajaxData, callback, dtSettings) => {
         // load data from Firebase and call callback with result
         return firebase.database().ref('/').once('value').then((snapshot) => {
@@ -363,7 +362,7 @@ $(document).ready(function(){
         });
     };
 
-    $('#chromebooks').DataTable({
+    dt = $('#chromebooks').DataTable({
         paging: false,
         info: false,
         responsive: true,
@@ -405,6 +404,8 @@ $(document).ready(function(){
             smart: false
         },
         initComplete: stage2setup,
+    }).on( 'search.dt', function () {
+        persistSearch(dt.search());
     });
 
     $('#dump').click(function(e) {

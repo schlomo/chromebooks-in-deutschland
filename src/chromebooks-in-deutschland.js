@@ -246,6 +246,9 @@ $(document).ready(function(){
     var dt = undefined;
     const html_body = $('html, body');
 
+    var data = {};
+    var dataDump = "";
+
     // links without a class are external and open a new window
     $('a:not([class])').each(function() {
         let el = $(this);
@@ -292,6 +295,8 @@ $(document).ready(function(){
         $("a.search").on("click", searchExampleClickHandler);
 
         $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
+
+        $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
     }
 
     function persistSearch(search_term) {
@@ -346,104 +351,109 @@ $(document).ready(function(){
         e.preventDefault();
     };
 
-    firebase.database().ref('/').once('value').then((snapshot) => {
-        var data = snapshot.val();
-        const dataDump = JSON.stringify(data, null, 2);
-        debug("Read data from database:", data);
-        let tableData = prepareTableData(data);
-        debug("Table data:", tableData);
-        $('#chromebooks').DataTable({
-            paging: false,
-            info: false,
-            responsive: true,
-            autoWidth: false,
-            data: tableData,
-            columns: [
-                { 
-                    title: "Modell",
-                    data: 'id',
-                    render: renderModel,
-                },
-                {
-                    title: "Ausstattung",
-                    data: 'ausstattung',
-                    render: renderFeatures,
-                },
-                {
-                    title: "Preis",
-                    data: 'price',
-                    render: renderPrice,
-                },
-                {
-                    title: "Preis / Monat (/&nbsp;Jahr)",
-                    data: 'pricePerMonth',
-                    render: renderPricePerMonth,
-                },
-                {
-                    title: "Updates bis",
-                    data: 'expiration',
-                    render: renderExpiration,
-                },
-            ],
-            order: [[ 3, "asc" ]],
-            language: {
-                search: "Suche _INPUT_ in allen Feldern",
-            },
-            search: {
-                smart: false
-            },
-            initComplete: stage2setup,
+    var loadTableDataFromFirebase = (ajaxData, callback, dtSettings) => {
+        // load data from Firebase and call callback with result
+        return firebase.database().ref('/').once('value').then((snapshot) => {
+            data = snapshot.val();
+            dataDump = JSON.stringify(data, null, 2);
+            debug("Read data from database:", data);
+            let tableData = prepareTableData(data);
+            debug("Table data:", tableData);
+            return callback({data: tableData});
         });
-        $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${Object.keys(tableData).length} Geräte.`);
+    };
 
-        $('#dump').click(function(e) {
-            // transform expiration list into list of model by year
-            let expirationModelsByYear = {};
-            Object.entries(data.expiration).forEach(([id, entry]) => {
-                let year = entry.expiration.substr(0,4);
-                if (!(year in expirationModelsByYear)) {
-                    expirationModelsByYear[year] = {};
-                }
-                expirationModelsByYear[year][id] = true;
-            });
-            
-            // remove listed devices
-            Object.entries(data.devices).forEach(([id, entry]) => {
-                let expirationId = entry.expirationId;
-                let year = entry.expiration.substr(0,4);
-                if (expirationId in expirationModelsByYear[year]) {
-                    delete expirationModelsByYear[year][expirationId];
-                }
-            });
-            
-            debug("expirationModelsByYear", expirationModelsByYear);
+    $('#chromebooks').DataTable({
+        paging: false,
+        info: false,
+        responsive: true,
+        autoWidth: false,
+        ajax: loadTableDataFromFirebase,
+        columns: [
+            { 
+                title: "Modell",
+                data: 'id',
+                render: renderModel,
+            },
+            {
+                title: "Ausstattung",
+                data: 'ausstattung',
+                render: renderFeatures,
+            },
+            {
+                title: "Preis",
+                data: 'price',
+                render: renderPrice,
+            },
+            {
+                title: "Preis / Monat (/&nbsp;Jahr)",
+                data: 'pricePerMonth',
+                render: renderPricePerMonth,
+            },
+            {
+                title: "Updates bis",
+                data: 'expiration',
+                render: renderExpiration,
+            },
+        ],
+        order: [[ 3, "asc" ]],
+        language: {
+            search: "Suche _INPUT_ in allen Feldern",
+            loadingRecords: "Daten werden geladen...",
+        },
+        search: {
+            smart: false
+        },
+        initComplete: stage2setup,
+    });
 
-            // add last 2 years to dump output
-            let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-2);
-            let result = [$("<h1>", { text: "Additional Devices"})];
-            interestingYears.forEach((year) => {
-                let yearContainer = $("<ul>");
-                result.push($("<h2>", {text: `Supported till ${year}`}));
-                Object.keys(expirationModelsByYear[year]).forEach((id) => {
-                    let li = $("<li>")
-                    li.append($("<a>",{
-                        text: id,
-                        target: "_blank",
-                        href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
-                        title: `Idealo search for $id`
-                    }))
-                    yearContainer.append(li);
-                });
-                result.push(yearContainer);
-            });
-            result.push(
-                $("<h1>", {text: "Data Dump"}),
-                $("<pre>").html(dataDump)
-            );
-            let dumpElement = $(this);
-            let footer = dumpElement.parent().parent();
-            dumpElement.remove();
-            footer.after($("<div>", {class: "dumpzone", html: result}));
+    $('#dump').click(function(e) {
+        // transform expiration list into list of model by year
+        let expirationModelsByYear = {};
+        Object.entries(data.expiration).forEach(([id, entry]) => {
+            let year = entry.expiration.substr(0,4);
+            if (!(year in expirationModelsByYear)) {
+                expirationModelsByYear[year] = {};
+            }
+            expirationModelsByYear[year][id] = true;
         });
+        
+        // remove listed devices
+        Object.entries(data.devices).forEach(([id, entry]) => {
+            let expirationId = entry.expirationId;
+            let year = entry.expiration.substr(0,4);
+            if (expirationId in expirationModelsByYear[year]) {
+                delete expirationModelsByYear[year][expirationId];
+            }
+        });
+        
+        debug("expirationModelsByYear", expirationModelsByYear);
+
+        // add last 2 years to dump output
+        let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-2);
+        let result = [$("<h1>", { text: "Additional Devices"})];
+        interestingYears.forEach((year) => {
+            let yearContainer = $("<ul>");
+            result.push($("<h2>", {text: `Supported till ${year}`}));
+            Object.keys(expirationModelsByYear[year]).forEach((id) => {
+                let li = $("<li>")
+                li.append($("<a>",{
+                    text: id,
+                    target: "_blank",
+                    href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
+                    title: `Idealo search for $id`
+                }))
+                yearContainer.append(li);
+            });
+            result.push(yearContainer);
+        });
+        result.push(
+            $("<h1>", {text: "Data Dump"}),
+            $("<pre>").html(dataDump)
+        );
+        let dumpElement = $(this);
+        let footer = dumpElement.parent().parent();
+        dumpElement.remove();
+        footer.after($("<div>", {class: "dumpzone", html: result}));
     });
 });

@@ -59,6 +59,7 @@ html, body {
 
 .extralinks-content {
   padding-top: 0.1em;
+  display: none;
 }
 
 .extralinks-content a {
@@ -80,8 +81,12 @@ html, body {
   text-align: center;
   border-style: groove;
   padding: 0.2em;
-  _border: 2px solid darkgray;
   border-radius: 1em;
+}
+
+
+input[type=search] {
+  border-radius: 0.5em;
 }
 
 table.dataTable tbody td {

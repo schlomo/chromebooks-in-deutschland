@@ -113,21 +113,12 @@ function getProductLink(entry) {
 
 var extraLinkClickHandler = (event) => {
     let a = $(event.target);
-    let extraLinks = a.data("extralinks");
-    debug("Rendering", extraLinks);
-
-
-    let extraLinksElements = [];
-    for (const text in extraLinks) {
-        let url = extraLinks[text];
-        extraLinksElements.push(`<a href="${url}" target="_blank">${text}</a>`);
+    let content = a.closest("td").find(".extralinks-content");
+    if (content) {
+        content.toggle();
+    } else {
+        console.error("ERROR toggling extra links", event);
     }
-    a.closest("div").after(
-        $("<div>")
-        .addClass("extralinks-content")
-        .append(...extraLinksElements)
-    );
-    a.remove();
     event.preventDefault();
 }
 
@@ -150,6 +141,7 @@ var renderModel = function ( data, type, row ) {
                     .text("info")
             );
         }
+        let extraLinksElements = [];
         if (row.extraLinks) {
             debug("Adding extra Links");
             deviceLinks.push(
@@ -160,8 +152,19 @@ var renderModel = function ( data, type, row ) {
                     .text("insert_link")
                     .attr("data-extralinks", JSON.stringify(row.extraLinks))
             )
+            for (const text in row.extraLinks) {
+                let url = row.extraLinks[text];
+                extraLinksElements.push(`<a href="${url}" target="_blank">${text}</a>`);
+            }
         }
         result.append($("<div>").addClass("devicelinks").append(...deviceLinks));
+        if (extraLinksElements.length > 0) {
+            result.append(
+                $("<div>")
+                    .addClass("extralinks-content")
+                    .append(...extraLinksElements)
+            )
+        }
         data = result.html();
     }
     return data;

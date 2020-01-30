@@ -300,6 +300,10 @@ $(document).ready(function(){
             setSearch(search_term);
         }
 
+        dt.on( 'search.dt', function (event) {
+            persistSearch(dt.search());
+        });
+
         let search_field_div = search_field.parent();
         search_field_div.append(`, z.B. Geräte mit <a class="search" href="">14"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="">2026</a>`);
  
@@ -404,8 +408,6 @@ $(document).ready(function(){
             smart: false
         },
         initComplete: stage2setup,
-    }).on( 'search.dt', function () {
-        persistSearch(dt.search());
     });
 
     $('#dump').click(function(e) {

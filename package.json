@@ -10,7 +10,8 @@
     "postinstall": "cd functions && npm install",
     "build": "gulp build",
     "dev": "gulp dev",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "update-dev-database": "./update-dev-database"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",

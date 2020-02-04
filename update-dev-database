@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e -E -o pipefail
+
+# make backup
+firebase --project prod database:get / | jq >backup.json
+firebase --project dev database:update --confirm / backup.json

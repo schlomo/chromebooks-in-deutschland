@@ -12,14 +12,13 @@ steps:
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
-# - name: gcr.io/cloud-builders/git
-#   args: [status, --verbose]
-# - name: gcr.io/cloud-builders/git
-#   args: [diff]
+- name: gcr.io/cloud-builders/npm:current
+  args: [run, update-dev-database]
+
 substitutions:
     _ENVIRONMENT: dev
 
-# artifacts:
-#   objects:
-#     location: gs://chromebooks-in-deutschland-logs/$BUILD_ID
-#     paths: [/builder/home/.npm/_logs/*]
+artifacts:
+  objects:
+    location: gs://chromebooks-in-deutschland-logs/$BUILD_ID
+    paths: [backup.json]

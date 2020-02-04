@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e -E -o pipefail
+
+# make backup
+firebase --project prod database:get /devices | jq >chromebooks.json
+
+# get new id
+id="$(jq -r ".id" new.json)"
+
+if [ "$id" ] ; then
+    echo "Importing $id"
+
+    firebase --project prod database:update "/devices/$id" new.json
+else
+    echo "Failed to read new id from new.json"
+    exit 1
+fi

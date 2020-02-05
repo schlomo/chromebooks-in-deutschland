@@ -25,6 +25,15 @@ const cpus = {
     "Rockship RK3399":      {"cores":6, "frequency":2   },
 };
 
+var search_field = undefined;
+var last_search_term = undefined;
+var dt = undefined;
+const html_body = $('html, body');
+
+var screenSizesMap = {};
+var data = {};
+var dataDump = "";
+
 /*
 const devices_defaults = {
     id: "default",
@@ -46,7 +55,9 @@ const devices_defaults = {
     variant: "default",
     biometricUnlock: false,
     model: "default",
-    productProvider: "default"
+    productProvider: "default",
+    extraInfo: "",
+    extraLinks: {}
   };
 */
 
@@ -219,9 +230,10 @@ function prepareTableData(data) {
             entry.pricePerMonth = entry.price / entry.supportMonths;
             entry.pricePerYear = entry.pricePerMonth * 12;
 
-            entry.ausstattung = 
-                (entry.screenSize > 0 ?
-                    // screen info only for chromebooks, else show type
+            entry.ausstattung = "";
+            if (entry.screenSize > 0) {
+                // screen info only for chromebooks, else show type
+                entry.ausstattung +=
                     toNumber(entry.screenSize) + '" ' + 
                     (entry.screenGlare ? "spiegelnd " : "matt ") + 
                     screenResToText(entry.screenResolution) + " " +
@@ -229,8 +241,10 @@ function prepareTableData(data) {
                     (entry.flip ? "flip " : "" ) +
                     (entry.stylus ? "stylus " : "" ) +
                     (entry.biometricUnlock ? "biometrisch " : "") +
-                    "\n"
-                : "") +
+                    "\n";
+                screenSizesMap[entry.screenSize] = (entry.screenSize in screenSizesMap ? ++screenSizesMap[entry.screenSize] : 1 );
+            }
+            entry.ausstattung += 
                 entry.memory + " GB RAM " + 
                 entry.cpu + " " + cpuToText(entry.cpu) +
                 ("extraInfo" in entry ? "\n" + entry.extraInfo + " " : "")
@@ -244,14 +258,6 @@ function prepareTableData(data) {
 }
 
 $(document).ready(function(){
-
-    var search_field = undefined;
-    var last_search_term = undefined;
-    var dt = undefined;
-    const html_body = $('html, body');
-
-    var data = {};
-    var dataDump = "";
 
     // on-page links implemented via scrolling
     $(document).on("click", ".scroll_to", (event) => {
@@ -305,7 +311,7 @@ $(document).ready(function(){
         });
 
         let search_field_div = search_field.parent();
-        search_field_div.append(`, z.B. Geräte mit <a class="search" href="">14"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="">2026</a>`);
+        search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="">2026</a>`);
  
         $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
     }
@@ -426,6 +432,7 @@ $(document).ready(function(){
             let expirationId = entry.expirationId;
             let year = entry.expiration.substr(0,4);
             if (expirationId in expirationModelsByYear[year]) {
+                debug("Deleting", expirationModelsByYear[year][expirationId]);
                 delete expirationModelsByYear[year][expirationId];
             }
         });

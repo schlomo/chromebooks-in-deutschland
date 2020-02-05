@@ -1,5 +1,6 @@
 :root {
-  --main-bg-color: rgba(255, 255, 224, 0.4);
+  --main-bg-color: rgba(224, 250, 255, 0.297);
+  --table-even-row-color: #f5f5f5;
 }
 
 html, body {
@@ -107,7 +108,7 @@ table.dataTable tbody td {
 }
 
 table#chromebooks tr.even {
-  background-color: #fafafa;
+  background-color: var(--table-even-row-color);
 }
 
 a.search, a.search:visited, a.search:hover, a.search:active,

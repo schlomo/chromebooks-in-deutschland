@@ -28,6 +28,18 @@ html, body {
   vertical-align: middle;
 }
 
+.box-left {
+  text-align: left;
+  flex-grow: 1;
+  margin: auto;
+}
+
+.box-center {
+  text-align: center;
+  flex-grow: 1;
+  margin: auto;
+}
+
 .box-right {
   text-align: right;
   flex-grow: 1;
@@ -45,7 +57,7 @@ html, body {
 }
 
 #footer {
-  padding: 0.5em 0.2em 0.1em 0.2em;
+  padding: 0.1em 0.2em 0.1em 0.2em;
   border-top: 1px solid black;
   overflow: auto;
   display: flex;

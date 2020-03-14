@@ -223,6 +223,7 @@ function prepareTableData(data) {
             if (! (entry.expirationId in data.expiration)) {
                 throw `Invalid Expiration ID >${entry.expirationId}<!`;
             }
+            entry = Object.assign({}, entry); // create copy of entry
             // use YYYY-MM from ISO date string as display date, can be improved
             entry.expiration = data.expiration[entry.expirationId].expiration.substr(0,7);
             entry.supportMonths = monthDiff(now, new Date(entry.expiration));
@@ -432,17 +433,20 @@ $(document).ready(function(){
         // remove listed devices
         Object.entries(data.devices).forEach(([id, entry]) => {
             let expirationId = entry.expirationId;
-            let year = entry.expiration.substr(0,4);
-            if (expirationId in expirationModelsByYear[year]) {
-                debug("Deleting", expirationModelsByYear[year][expirationId]);
-                delete expirationModelsByYear[year][expirationId];
+            if (expirationId in data.expiration) {
+                let year = data.expiration[expirationId].expiration.substr(0,4);
+                if (expirationId in expirationModelsByYear[year]) {
+                    delete expirationModelsByYear[year][expirationId];
+                }
+            } else {
+                debug(`Invalid expiration ID ${expirationId} for ${id}`);
             }
         });
         
         debug("expirationModelsByYear", expirationModelsByYear);
 
-        // add last 2 years to dump output
-        let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-2);
+        // add last 3 years to dump output
+        let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-3);
         let result = [$("<h1>", { text: "Additional Devices"})];
         interestingYears.forEach((year) => {
             let yearContainer = $("<ul>");

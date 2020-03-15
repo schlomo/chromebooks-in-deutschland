@@ -15,6 +15,7 @@ const cpus = {
     "Intel Core i5-7300U":  {"cores":2, "frequency":2.6,    "burst":3.5 },
     "Intel Core i5-8250U":  {"cores":4, "frequency":1.6,    "burst":3.4 },
     "Intel Core i5-8350U":  {"cores":4, "frequency":1.7,    "burst":3.6 },
+    "Intel Core i5-10210U": {"cores":4, "frequency":1.6,    "burst":4.2 },
     "Intel Core i7-8550U":  {"cores":4, "frequency":1.8,    "burst":4   },
     "Intel Core i7-8650U":  {"cores":4, "frequency":1.9,    "burst":4.2 },
     "Intel Core m3-8100Y":  {"cores":2, "frequency":1.1,    "burst":3.4 },
@@ -24,7 +25,7 @@ const cpus = {
     "Intel Pentium N4200":  {"cores":4, "frequency":1.1,    "burst":2.5 },
     "Intel Pentium N5000":  {"cores":4, "frequency":1.1,    "burst":2.7 },
     "MediaTek MT8173C":     {"cores":4, "frequency":2.1 },
-    "Rockship RK3399":      {"cores":6, "frequency":2   },
+    "Rockchip RK3399":      {"cores":6, "frequency":2   },
 };
 
 var search_field = undefined;
@@ -95,7 +96,7 @@ function cpuToText(cpu, notfound="") {
         let burstinfo = ("burst" in cpus[cpu] ? `-${cpus[cpu].burst}` : "");
         return `${cpus[cpu].cores}x ${toNumber(cpus[cpu].frequency)}${burstinfo} GHz`;
     } catch(err) {
-        console.error(`ERROR looking up CPU >${cpu}<`, err);
+        debug(`ERROR looking up CPU >${cpu}<`, err);
         return notfound;
     }
 }

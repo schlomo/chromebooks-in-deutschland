@@ -350,7 +350,7 @@ $(document).ready(function(){
         search_term = decodeURIComponent(search_term);
         debug(`Setting search to >${search_term}<`);
         search_field.val(search_term);
-        dt.search(search_term, false, false).draw();
+        dt.search(search_term, true, false).draw();
         if (search_term) {
             debug("Scrolling to search");
             html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);

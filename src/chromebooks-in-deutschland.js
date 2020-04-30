@@ -224,6 +224,10 @@ function prepareTableData(data) {
             if (! (entry.expirationId in data.expiration)) {
                 throw `Invalid Expiration ID >${entry.expirationId}<!`;
             }
+            if (entry.disabled && entry.disabled === true) {
+                debug(`Disabled ${id}`);
+                return; // skip disabled
+            }
             entry = Object.assign({}, entry); // create copy of entry
             // use YYYY-MM from ISO date string as display date, can be improved
             entry.expiration = data.expiration[entry.expirationId].expiration.substr(0,7);

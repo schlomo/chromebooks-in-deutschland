@@ -130,7 +130,7 @@ updateChromebookPriceData
 
 */
 
-async function getIdealoPrice(productId) {
+async function getIdealoPriceOld(productId) {
     let options = {
         uri: `https://www.idealo.de/offerpage/pricechart/api/${productId}?period=P1M`,
         pool: httpsAgent,
@@ -144,6 +144,48 @@ async function getIdealoPrice(productId) {
         return lastPrice;
     });
 }
+
+async function getIdealoPrice(productId) {
+    let options = {
+        uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
+        pool: httpsAgent,
+        json: false
+    };
+    return rp(options).then((body) => {
+        let match = body.match(/<title>.*ab (.*)€.*<\/title>/);
+        let price = 0;
+        if (match != null) {
+            let priceString = match[1].replace(/\./g, "").replace(/,/g, ".");
+            let parsedPrice = parseFloat(priceString);
+            if (parsedPrice != NaN) {
+                price = parsedPrice;
+            }
+        }
+
+        if (price > 0) {
+            console.log(`Idealo ${productId} = ${price}`);
+        } else {
+            let match = body.match(/<title>.*<\/title>/);
+            console.log(`Idealo ${productId} ERROR: ${match}`)
+        }
+
+        return price;
+    });
+}
+
+exports.test = functions.https.onRequest((request, response) => {
+    Promise.resolve(getIdealoPrice("6950800")).then((val) => { 
+        console.log(val);
+        response.send(`Price: ${val}`);
+    });
+});
+
+exports.test2 = functions.https.onRequest((request, response) => {
+    Promise.resolve(getIdealoPrice("6943191")).then((val) => { 
+        console.log(val);
+        response.send(`Price: ${val}`);
+    });
+});
 
 async function getMetacompPrice(productId) {
     let options = {
@@ -168,8 +210,13 @@ function updateChromebookEntry(entry) {
         default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
     }
     return priceFunction(entry.productId).then((price) => {
-        entry.price = price;
-        entry.priceUpdated = new Date().toISOString();
+        if (price > 0) {
+            entry.price = price;
+            entry.disabled = false;
+            entry.priceUpdated = new Date().toISOString();
+        } else {
+            entry.disabled = true; // disable entry and don't change price & date
+        }
         debug(entry);
         return admin.database().ref(`/devices/${id}`).set(entry);
     }).catch((error) => {
@@ -182,10 +229,7 @@ function updateChromebookEntry(entry) {
 
 }
 
-exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
+exports.updateChromebookPriceData = functions.pubsub.schedule('every 97 minutes').onRun((context) => {
     return Promise.map(getChromebookData(),updateChromebookEntry,{concurrency:20});
 });
 
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//     response.send("fgoo");
-// });

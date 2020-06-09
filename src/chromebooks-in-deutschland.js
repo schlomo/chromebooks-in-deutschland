@@ -43,6 +43,7 @@ const devices_defaults = {
     cpu: "default",
     productId: "default",
     expirationId: "default",
+    disabled: false,
     flip: false,
     priceUpdated: "1900-01-01T00:00:00.000Z",
     screenGlare: false,
@@ -64,7 +65,9 @@ const devices_defaults = {
   };
 */
 
-if (window.location.search.includes("debug")) {
+const debugMode = window.location.search.includes("debug");
+
+if (debugMode) {
     var debug = (...args) => {
         console.log(...args);
     }
@@ -224,10 +227,7 @@ function prepareTableData(data) {
             if (! (entry.expirationId in data.expiration)) {
                 throw `Invalid Expiration ID >${entry.expirationId}<!`;
             }
-            if (entry.disabled && entry.disabled === true) {
-                debug(`Disabled ${id}`);
-                return; // skip disabled
-            }
+
             entry = Object.assign({}, entry); // create copy of entry
             // use YYYY-MM from ISO date string as display date, can be improved
             entry.expiration = data.expiration[entry.expirationId].expiration.substr(0,7);
@@ -257,6 +257,16 @@ function prepareTableData(data) {
                 entry.cpu + " " + cpuToText(entry.cpu) +
                 ("extraInfo" in entry ? "\n" + entry.extraInfo + " " : "")
             ;
+
+            if (entry.disabled && entry.disabled === true) {
+                debug(`Disabled ${id}`);
+                if (debugMode) {
+                    entry.ausstattung += "\nNICHT VERFÜGBAR";
+                } else {
+                    return; // skip disabled unless in debug mode
+                }
+            }
+
             result.push(entry);
         } catch(err) {
             console.error(`ERROR loading >${id}<`, entry, err);

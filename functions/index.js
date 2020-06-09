@@ -154,10 +154,10 @@ async function getIdealoPrice(productId) {
     return rp(options).then((body) => {
         let match = body.match(/<title>.*ab (.*)€.*<\/title>/);
         let price = 0;
-        if (match != null) {
+        if (match !== null) {
             let priceString = match[1].replace(/\./g, "").replace(/,/g, ".");
             let parsedPrice = parseFloat(priceString);
-            if (parsedPrice != NaN) {
+            if (! isNaN(parsedPrice)) {
                 price = parsedPrice;
             }
         }
@@ -176,14 +176,26 @@ async function getIdealoPrice(productId) {
 exports.test = functions.https.onRequest((request, response) => {
     Promise.resolve(getIdealoPrice("6950800")).then((val) => { 
         console.log(val);
-        response.send(`Price: ${val}`);
+        return response.send(`Price: ${val}`);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
     });
 });
 
 exports.test2 = functions.https.onRequest((request, response) => {
     Promise.resolve(getIdealoPrice("6943191")).then((val) => { 
         console.log(val);
-        response.send(`Price: ${val}`);
+        return response.send(`Price: ${val}`);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
     });
 });
 

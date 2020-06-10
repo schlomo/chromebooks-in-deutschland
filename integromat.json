@@ -1,0 +1,207 @@
+{
+    "name": "Chromebooks in Deutschland Cloud Build",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 417182,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "hook": {
+                        "label": "chromebooks-in-deutschland-cloud-builds"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "message",
+                        "spec": [
+                            {
+                                "name": "attributes",
+                                "spec": [
+                                    {
+                                        "name": "buildId",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "status",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "collection"
+                            },
+                            {
+                                "name": "data",
+                                "type": "text"
+                            },
+                            {
+                                "name": "messageId",
+                                "type": "text"
+                            },
+                            {
+                                "name": "message_id",
+                                "type": "text"
+                            },
+                            {
+                                "name": "publishTime",
+                                "type": "text"
+                            },
+                            {
+                                "name": "publish_time",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "collection"
+                    },
+                    {
+                        "name": "subscription",
+                        "type": "text"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 6,
+            "module": "util:ComposeTransformer",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "value": "{{toString(toBinary(1.message.data; \"base64\"))}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 278,
+                    "y": 7
+                },
+                "expect": [
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Text",
+                        "multiline": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "json:ParseJSON",
+            "version": 1,
+            "parameters": {
+                "type": ""
+            },
+            "mapper": {
+                "json": "{{6.value}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 573,
+                    "y": 9
+                },
+                "restore": {
+                    "type": {
+                        "label": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "json",
+                        "type": "text",
+                        "label": "JSON string",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "module": "email:ActionSendMeEmail",
+            "version": 7,
+            "parameters": {},
+            "filter": {
+                "name": "Filter out progress info",
+                "conditions": [
+                    [
+                        {
+                            "a": "{{9.status}}",
+                            "o": "text:notequal",
+                            "b": "WORKING"
+                        },
+                        {
+                            "a": "{{9.status}}",
+                            "o": "text:notequal",
+                            "b": "QUEUED"
+                        }
+                    ]
+                ]
+            },
+            "mapper": {
+                "subject": "{{9.status}} {{ifempty(9.substitutions.TAG_NAME; 9.substitutions.BRANCH_NAME )}} to {{9.substitutions.`_ENVIRONMENT`}} Cloud Build {{9.projectId}} ",
+                "html": "<a href=\"{{9.logUrl}}\">Logs</a>\n\n<a href=\"https://github.com/schlomo/chromebooks-in-deutschland/commit/{{9.sourceProvenance.resolvedRepoSource.commitSha}}\">Commit {{9.sourceProvenance.resolvedRepoSource.commitSha}}</a>\n\n<hr>\n\nDetails:<br><pre>{{6.value}}</pre>"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 866,
+                    "y": 7
+                },
+                "expect": [
+                    {
+                        "name": "subject",
+                        "label": "Subject",
+                        "type": "text"
+                    },
+                    {
+                        "name": "html",
+                        "label": "Content",
+                        "type": "text"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": false,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.integromat.com"
+    }
+}

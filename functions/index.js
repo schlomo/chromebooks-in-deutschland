@@ -163,7 +163,7 @@ async function getIdealoPriceNew(productId) {
         }
 
         if (price > 0) {
-            console.log(`Idealo ${productId} = ${price}`);
+            debug(`Idealo ${productId} = ${price}`);
         } else {
             let match = body.match(/<title>.*<\/title>/);
             console.log(`Idealo ${productId} ERROR: ${match}`)

@@ -25,7 +25,16 @@ const cpus = {
     "Intel Pentium N4200":  {"cores":4, "frequency":1.1,    "burst":2.5 },
     "Intel Pentium N5000":  {"cores":4, "frequency":1.1,    "burst":2.7 },
     "MediaTek MT8173C":     {"cores":4, "frequency":2.1 },
+    "MediaTek P60T":        {"cores":8, "frequency":2.0 },
     "Rockchip RK3399":      {"cores":6, "frequency":2   },
+};
+
+const extraExpirationInfo = {
+    "Lenovo Ideapad Duet Chromebook": {
+        "brand": "Lenovo",
+        "expiration": "2028-01-01T00:00:00.000Z",
+        "model": "Ideapad Duet Chromebook"
+      },
 };
 
 var search_field = undefined;
@@ -384,6 +393,8 @@ $(document).ready(function(){
             data = snapshot.val();
             dataDump = JSON.stringify(data, null, 2);
             debug("Read data from database:", data);
+            Object.assign(data.expiration, extraExpirationInfo);
+            debug("Final data after patching:", data);
             let tableData = prepareTableData(data);
             debug("Table data:", tableData);
             return callback({data: tableData});

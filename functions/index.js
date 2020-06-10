@@ -130,7 +130,7 @@ updateChromebookPriceData
 
 */
 
-async function getIdealoPriceOld(productId) {
+async function getIdealoPrice(productId) {
     let options = {
         uri: `https://www.idealo.de/offerpage/pricechart/api/${productId}?period=P1M`,
         pool: httpsAgent,
@@ -145,7 +145,7 @@ async function getIdealoPriceOld(productId) {
     });
 }
 
-async function getIdealoPrice(productId) {
+async function getIdealoPriceNew(productId) {
     let options = {
         uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
         pool: httpsAgent,
@@ -241,7 +241,7 @@ function updateChromebookEntry(entry) {
 
 }
 
-exports.updateChromebookPriceData = functions.pubsub.schedule('every 97 minutes').onRun((context) => {
+exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
     return Promise.map(getChromebookData(),updateChromebookEntry,{concurrency:20});
 });
 

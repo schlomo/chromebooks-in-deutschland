@@ -105,8 +105,12 @@ function toEuro(num) {
 
 function cpuToText(cpu, notfound="") {
     try {
-        let burstinfo = ("burst" in cpus[cpu] ? `-${cpus[cpu].burst}` : "");
-        return `${cpus[cpu].cores}x ${toNumber(cpus[cpu].frequency)}${burstinfo} GHz`;
+        if (cpu in cpus) {
+            let burstinfo = ("burst" in cpus[cpu] ? `-${cpus[cpu].burst}` : "");
+            return `${cpus[cpu].cores}x ${toNumber(cpus[cpu].frequency)}${burstinfo} GHz`;
+        } else {
+            return notfound;
+        }
     } catch(err) {
         debug(`ERROR looking up CPU >${cpu}<`, err);
         return notfound;

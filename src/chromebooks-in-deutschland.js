@@ -39,6 +39,8 @@ const extraExpirationInfo = {
 
 var search_field = undefined;
 var last_search_term = undefined;
+// take state from history API or from URL hash
+const initial_search_term = history.state ? history.state.search : window.location.hash.split('#')[1];
 var dt = undefined;
 const html_body = $('html, body');
 
@@ -70,7 +72,7 @@ const devices_defaults = {
     model: "default",
     productProvider: "default",
     extraInfo: "",
-    extraLinks: {}
+    extraLinks: { title: "url"}
   };
 */
 
@@ -328,13 +330,9 @@ $(document).ready(function(){
         search_field = $('#chromebooks_filter input');
         search_field.focus();
 
-        // take state from history API or from URL hash
-        let search_term = history.state ? 
-            history.state.search : 
-            window.location.hash.split('#')[1];
-        if (search_term) {
-            debug("Restoring saved search", search_term);
-            setSearch(search_term);
+        if (initial_search_term) {
+            debug("Restoring saved search", initial_search_term);
+            setSearch(initial_search_term);
         }
 
         dt.on( 'search.dt', function (event) {
@@ -423,6 +421,7 @@ $(document).ready(function(){
         //ajax: loadTableDataFromFirebase,
         ajax: {
             url: "api/data",
+            data: {search: initial_search_term},
             dataSrc: loadTableDataFromApi
         },
         columns: [

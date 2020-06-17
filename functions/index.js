@@ -265,6 +265,27 @@ exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes'
 const api = express()
 
 api.get("/api/data", (req, res) => {
+
+    // count calls & record search string if given
+    const today = new Date().toISOString().substr(0,10);
+    var statisticsTodayRef = admin.database().ref(`/statistics/${today}`);
+    statisticsTodayRef.transaction((statistics) => {
+        // If statistics/$today has never been set, it will be `null`.
+        if (! statistics || ! ("count" in statistics)) {
+            statistics = {
+                count: 1,
+                searches: {}
+            }
+        } else {
+            statistics["count"] += 1;
+        }
+        if ("search" in req.query) {
+            const search_term = req.query.search;
+            statistics["searches"][search_term] = search_term in statistics["searches"] ? statistics["searches"][search_term] + 1 : 1;
+        }
+        return statistics;
+    });
+
     return admin.database().ref('/').once('value').then( (snapshot) => {
         return res.json(snapshot.val());
     }).catch( (e) => {

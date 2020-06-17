@@ -4,11 +4,28 @@ const
     functions = require('firebase-functions'),
     admin = require('firebase-admin'),
     rp = require('request-promise-native'),
-    cheerio = require('cheerio'),
+    express = require('express'),
     https = require('https'), // Or use ‘http’ if you do insecure requests
-    httpsAgent = new https.Agent({ keepAlive: true });
+    httpsAgent = new https.Agent({ keepAlive: true }),
     
-admin.initializeApp();
+    { inspect } = require("util");
+
+    console.log(process.env);
+
+if ("FUNCTIONS_EMULATOR" in process.env) {
+    const conf = {
+        databaseURL: `http://${process.env.FIREBASE_DATABASE_EMULATOR_HOST}/?ns=${process.env.GCLOUD_PROJECT}`,
+        credential: {
+            getAccessToken: function() { return {expires_in: 123, access_token: "owner"} }
+        }
+    };
+    console.log(`Initializing for emulator`);
+    admin.initializeApp(conf);
+    console.log("Loading data from ../backup.json into database");
+    admin.database().ref("/").set(require("../backup.json"));
+} else {
+    admin.initializeApp();
+}
 
 // return string formatted as DB key
 function getDbKey(t) {
@@ -245,3 +262,27 @@ exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes'
     return Promise.map(getChromebookData(),updateChromebookEntry,{concurrency:20});
 });
 
+const api = express()
+
+api.get("/api/data", (req, res) => {
+    admin.database().ref('/').once('value').then( (snapshot) => {
+        res.json(snapshot.val());
+    }).catch( (e) => {
+        console.error(e);
+        res.status(500).send("ERROR, check logs");
+    });
+});
+
+api.get("*", (req, res) => {
+    res.send(`<!doctype html>
+    <head>
+      <title>API</title>
+    </head>
+    <body>
+      <p>API here</p>
+      <pre>${inspect(req)}</pre>
+    </body>
+  </html>`);
+});
+
+exports.api = functions.https.onRequest(api);

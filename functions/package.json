@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bluebird": "^3.7.2",
-    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
     "firebase-admin": "^8.9.1",
     "firebase-functions": "^3.3.0",
     "request": "^2.88.0",

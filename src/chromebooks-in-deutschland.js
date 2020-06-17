@@ -405,12 +405,26 @@ $(document).ready(function(){
         });
     };
 
+    var loadTableDataFromApi = (data) => {
+        dataDump = JSON.stringify(data, null, 2);
+        debug("Read data from database:", data);
+        Object.assign(data.expiration, extraExpirationInfo);
+        debug("Final data after patching:", data);
+        let tableData = prepareTableData(data);
+        debug("Table data:", tableData);
+        return tableData;
+    };
+
     dt = $('#chromebooks').DataTable({
         paging: false,
         info: false,
         responsive: true,
         autoWidth: false,
-        ajax: loadTableDataFromFirebase,
+        //ajax: loadTableDataFromFirebase,
+        ajax: {
+            url: "api/data",
+            dataSrc: loadTableDataFromApi
+        },
         columns: [
             { 
                 title: "Modell",

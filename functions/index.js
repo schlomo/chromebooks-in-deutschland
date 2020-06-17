@@ -265,11 +265,11 @@ exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes'
 const api = express()
 
 api.get("/api/data", (req, res) => {
-    admin.database().ref('/').once('value').then( (snapshot) => {
-        res.json(snapshot.val());
+    return admin.database().ref('/').once('value').then( (snapshot) => {
+        return res.json(snapshot.val());
     }).catch( (e) => {
         console.error(e);
-        res.status(500).send("ERROR, check logs");
+        return res.status(500).send("ERROR, check logs");
     });
 });
 

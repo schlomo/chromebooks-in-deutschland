@@ -40,7 +40,7 @@ const extraExpirationInfo = {
 var search_field = undefined;
 var last_search_term = undefined;
 // take state from history API or from URL hash
-const initial_search_term = history.state ? history.state.search : window.location.hash.split('#')[1];
+const initial_search_term = history.state ? history.state.search : decodeURIComponent(window.location.hash.split('#')[1]);
 var dt = undefined;
 const html_body = $('html, body');
 
@@ -155,14 +155,14 @@ var extraLinkClickHandler = (event) => {
     event.preventDefault();
 }
 
-var renderModel = function ( data, type, row ) {
+var renderModel = function ( model, type, row ) {
     if ( type === 'display') {
-        let result = $("<p>").text(data);
+        let result = $("<p>").text(model);
         let deviceLinks = [
             $("<a>")
                 .addClass("material-icons-two-tone")
                 .attr("href", getProductLink(row))
-                .attr("title", `Angebote für ${data}`)
+                .attr("title", `Angebote für ${model}`)
                 .attr("target", "_blank")
                 .text("shopping_cart")
         ];
@@ -171,7 +171,7 @@ var renderModel = function ( data, type, row ) {
                 $("<a>")
                     .addClass("material-icons-two-tone")
                     .attr("href", row.specLink)
-                    .attr("title", `Technische Spezifikation für ${data}`)
+                    .attr("title", `Technische Spezifikation für ${model}`)
                     .attr("target", "_blank")
                     .text("info")
             );
@@ -184,7 +184,7 @@ var renderModel = function ( data, type, row ) {
                     .attr("href","")
                     .addClass("material-icons-two-tone")
                     .addClass("extralinks")
-                    .attr("title", `Weitere Links für ${data}`)
+                    .attr("title", `Weitere Links für ${model}`)
                     .text("insert_link")
                     .attr("data-extralinks", JSON.stringify(row.extraLinks))
             )
@@ -201,51 +201,51 @@ var renderModel = function ( data, type, row ) {
                     .append(...extraLinksElements)
             )
         }
-        data = result.html();
+        model = result.html();
     }
-    return data;
+    return model;
 };
 
-var renderFeatures = function ( data, type, row ) {
+var renderFeatures = function ( features, type, row ) {
     if ( type === 'display') {
-        data = encodeEntities(data).replace(/[\n\r]+/g,"<br>");
+        features = encodeEntities(features).replace(/[\n\r]+/g,"<br>");
     }
-    return data;
+    return features;
 };
 
-var renderPrice = function ( data, type, row ) {
+var renderPrice = function ( price, type, row ) {
     if ( type === 'display') {
-        data = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(data) + '</a>';
+        price = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(price) + '</a>';
     }
-    return data;
+    return price;
 };
 
-var renderPricePerMonth = function ( data, type, row ) {
+var renderPricePerMonth = function ( pricePerMonth, type, row ) {
     if ( type === 'display') {
-        data = `<a title="${row.supportMonths} Monate">${toEuro(data)} (${toEuro(data * 12)})</a>`;
+        pricePerMonth = `<a title="${row.supportMonths} Monate">${toEuro(pricePerMonth)} (${toEuro(pricePerMonth * 12)})</a>`;
     }
-    return data;
+    return pricePerMonth;
 };
 
-var renderExpiration = function ( data, type, row ) {
+var renderExpiration = function ( expiration, type, row ) {
     if ( type === 'display') {
-        data = `<a title="${row.expirationId}">${data}</a>`;
+        expiration = `<a title="${row.expirationId}">${expiration}</a>`;
     }
-    return data;
+    return expiration;
 };
 
-function prepareTableData(data) {
+function prepareTableData(rawData) {
     let now = new Date();
     let result = [];
-    Object.entries(data.devices).forEach(([id, entry]) => {
+    Object.entries(rawData.devices).forEach(([id, entry]) => {
         try {
-            if (! (entry.expirationId in data.expiration)) {
+            if (! (entry.expirationId in rawData.expiration)) {
                 throw `Invalid Expiration ID >${entry.expirationId}<!`;
             }
 
             entry = Object.assign({}, entry); // create copy of entry
             // use YYYY-MM from ISO date string as display date, can be improved
-            entry.expiration = data.expiration[entry.expirationId].expiration.substr(0,7);
+            entry.expiration = rawData.expiration[entry.expirationId].expiration.substr(0,7);
             entry.supportMonths = monthDiff(now, new Date(entry.expiration));
             if (! (entry.price && entry.price > 0 && entry.price < 9999) ) {
                 throw `Invalid price >${entry.price}<!`;
@@ -290,6 +290,77 @@ function prepareTableData(data) {
     return result;
 }
 
+
+var loadTableDataFromApi = (rawData) => {
+    dataDump = JSON.stringify(rawData, null, 2);
+    debug("Read data from database:", rawData);
+    Object.assign(rawData.expiration, extraExpirationInfo);
+    debug("Final data after patching:", rawData);
+    data = rawData; // make data globally accessible
+    let tableData = prepareTableData(rawData);
+    debug("Table data:", tableData);
+    return tableData;
+};
+
+function persistSearch(search_term) {
+    debug(`Persisting >${search_term}<`);
+    if (search_term) {
+        if (search_term != last_search_term) {
+            debug(`Persisting >${search_term}< to browser`);
+            history.replaceState(
+                {search:search_term}, 
+                document.title,
+                window.location.pathname + "#" + encodeURI(search_term)
+            );
+            last_search_term = search_term;
+        } else {
+            debug("Ignoring repeat persistSearch call for " + search_term);
+        }
+    } else {
+        debug("Clearing search persistance");
+        history.replaceState(
+            {search:""},
+            document.title,
+            window.location.pathname
+        );
+        last_search_term = "";
+    }
+};
+
+function setSearch(search_term) {
+    // now in initial loading
+    // search_term = decodeURIComponent(search_term);
+    debug(`Setting search to >${search_term}<`);
+    search_field.val(search_term);
+    dt.search(search_term, true, false).draw();
+    if (search_term) {
+        debug("Scrolling to search");
+        html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
+    } else {
+        debug("setSearch not scrolling to top");
+    }
+};
+
+var stage2setup = function () {
+    search_field = $('#chromebooks_filter input');
+    search_field.focus();
+
+    if (initial_search_term) {
+        debug("Restoring saved search", initial_search_term);
+        setSearch(initial_search_term);
+    }
+
+    dt.on( 'search.dt', function (event) {
+        persistSearch(dt.search());
+    });
+
+    let search_field_div = search_field.parent();
+    search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
+
+    $('#AUP_updated').html(` vom ${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
+}
+
+
 $(document).ready(function(){
 
     // on-page links implemented via scrolling
@@ -326,93 +397,11 @@ $(document).ready(function(){
     // extralinks toggle in table
     $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
 
-    var stage2setup = function () {
-        search_field = $('#chromebooks_filter input');
-        search_field.focus();
-
-        if (initial_search_term) {
-            debug("Restoring saved search", initial_search_term);
-            setSearch(initial_search_term);
-        }
-
-        dt.on( 'search.dt', function (event) {
-            persistSearch(dt.search());
-        });
-
-        let search_field_div = search_field.parent();
-        search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
- 
-        $('#AUP_updated').html(`${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
-    }
-
-    function persistSearch(search_term) {
-        debug(`Persisting >${search_term}<`);
-        if (search_term) {
-            if (search_term != last_search_term) {
-                debug(`Persisting >${search_term}< to browser`);
-                //window.location.hash = encodeURIComponent(search_term);
-                history.replaceState(
-                    {search:search_term}, 
-                    document.title,
-                    window.location.pathname + "#" + encodeURI(search_term)
-                );
-                last_search_term = search_term;
-            } else {
-                debug("Ignoring repeat persistSearch call for " + search_term);
-            }
-        } else {
-            debug("Clearing search persistance");
-            history.replaceState(
-                {search:""},
-                document.title,
-                window.location.pathname
-            );
-            last_search_term = "";
-        }
-    };
-
-    function setSearch(search_term) {
-        search_term = decodeURIComponent(search_term);
-        debug(`Setting search to >${search_term}<`);
-        search_field.val(search_term);
-        dt.search(search_term, true, false).draw();
-        if (search_term) {
-            debug("Scrolling to search");
-            html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
-        } else {
-            debug("setSearch not scrolling to top");
-        }
-    };
-
     window.onpopstate = function(event) {
         debug("onpopstate", event.state);
         if ("search" in event.state) {
             setSearch(event.state.search);
         }
-      };
-
-    var loadTableDataFromFirebase = (ajaxData, callback, dtSettings) => {
-        // load data from Firebase and call callback with result
-        return firebase.database().ref('/').once('value').then((snapshot) => {
-            data = snapshot.val();
-            dataDump = JSON.stringify(data, null, 2);
-            debug("Read data from database:", data);
-            Object.assign(data.expiration, extraExpirationInfo);
-            debug("Final data after patching:", data);
-            let tableData = prepareTableData(data);
-            debug("Table data:", tableData);
-            return callback({data: tableData});
-        });
-    };
-
-    var loadTableDataFromApi = (data) => {
-        dataDump = JSON.stringify(data, null, 2);
-        debug("Read data from database:", data);
-        Object.assign(data.expiration, extraExpirationInfo);
-        debug("Final data after patching:", data);
-        let tableData = prepareTableData(data);
-        debug("Table data:", tableData);
-        return tableData;
     };
 
     dt = $('#chromebooks').DataTable({
@@ -420,7 +409,6 @@ $(document).ready(function(){
         info: false,
         responsive: true,
         autoWidth: false,
-        //ajax: loadTableDataFromFirebase,
         ajax: {
             url: "api/data",
             data: {search: initial_search_term},

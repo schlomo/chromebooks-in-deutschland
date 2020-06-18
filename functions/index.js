@@ -14,7 +14,7 @@ if ("FUNCTIONS_EMULATOR" in process.env) {
     const conf = {
         databaseURL: `http://${process.env.FIREBASE_DATABASE_EMULATOR_HOST}/?ns=${process.env.GCLOUD_PROJECT}`,
         credential: {
-            getAccessToken: function() { return {expires_in: 123, access_token: "owner"} }
+            getAccessToken: function () { return { expires_in: 123, access_token: "owner" } }
         }
     };
     console.log(`Initializing for emulator`);
@@ -27,10 +27,10 @@ if ("FUNCTIONS_EMULATOR" in process.env) {
 
 // return string formatted as DB key
 function getDbKey(t) {
-    return t.replace(/[.#$/[\]]/g,'_');
+    return t.replace(/[.#$/[\]]/g, '_');
 }
 
-function debug(...args) { 
+function debug(...args) {
     //console.debug(...args); 
 }
 
@@ -117,9 +117,9 @@ function writeChromebookExpirationData(data) {
 }
 
 async function getChromebookData() {
-    return admin.database().ref('/devices').once('value').then( (snapshot) => {
+    return admin.database().ref('/devices').once('value').then((snapshot) => {
         let devices = snapshot.val();
-        if (! devices) {
+        if (!devices) {
             devices = {};
         }
         debug(devices);
@@ -127,15 +127,15 @@ async function getChromebookData() {
 
         let entries = [];
         // set the id property of an entry to the key in the devices map
-        Object.entries(devices).forEach(([id, entry]) => { entry.id = id ; entries.push(entry) });
+        Object.entries(devices).forEach(([id, entry]) => { entry.id = id; entries.push(entry) });
         debug(entries);
         return entries;
     });
 }
 
 exports.updateChromebookExpirationData = functions.pubsub.schedule('every 23 hours').onRun((context) => {
-        return getChromebookExpirationData(writeChromebookExpirationData);
-    });
+    return getChromebookExpirationData(writeChromebookExpirationData);
+});
 
 
 /*
@@ -172,7 +172,7 @@ async function getIdealoPriceNew(productId) {
         if (match !== null) {
             let priceString = match[1].replace(/\./g, "").replace(/,/g, ".");
             let parsedPrice = parseFloat(priceString);
-            if (! isNaN(parsedPrice)) {
+            if (!isNaN(parsedPrice)) {
                 price = parsedPrice;
             }
         }
@@ -189,7 +189,7 @@ async function getIdealoPriceNew(productId) {
 }
 
 exports.test = functions.https.onRequest((request, response) => {
-    Promise.resolve(getIdealoPrice("6950800")).then((val) => { 
+    Promise.resolve(getIdealoPrice("6950800")).then((val) => {
         console.log(val);
         return response.send(`Price: ${val}`);
     }).catch((error) => {
@@ -202,7 +202,7 @@ exports.test = functions.https.onRequest((request, response) => {
 });
 
 exports.test2 = functions.https.onRequest((request, response) => {
-    Promise.resolve(getIdealoPrice("6943191")).then((val) => { 
+    Promise.resolve(getIdealoPrice("6943191")).then((val) => {
         console.log(val);
         return response.send(`Price: ${val}`);
     }).catch((error) => {
@@ -257,7 +257,7 @@ function updateChromebookEntry(entry) {
 }
 
 exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
-    return Promise.map(getChromebookData(),updateChromebookEntry,{concurrency:20});
+    return Promise.map(getChromebookData(), updateChromebookEntry, { concurrency: 20 });
 });
 
 const api = express()
@@ -265,7 +265,7 @@ const api = express()
 api.get("/api/data", (req, res) => {
 
     // count calls & record search string if given
-    const today = new Date().toISOString().substr(0,10);
+    const today = new Date().toISOString().substr(0, 10);
     var statisticsTodayRef = admin.database().ref(`/statistics/${today}`);
     statisticsTodayRef.transaction((statistics) => {
         // If statistics/$today has never been set, it will be `null`.
@@ -279,11 +279,13 @@ api.get("/api/data", (req, res) => {
         if ("search" in req.query) {
             var search_term = req.query.search;
             if (search_term && search_term.length > 3) {
-                search_term = search_term.replace(/[.#$/[\]]/g,"-");
+                search_term = search_term.
+                    replace(/[.#$/[\]]/g, "-").
+                    toLowerCase();
                 if ("searches" in statistics) {
                     statistics["searches"][search_term] = search_term in statistics["searches"] ? statistics["searches"][search_term] + 1 : 1;
                 } else {
-                    statistics["searches"] = { };
+                    statistics["searches"] = {};
                     statistics["searches"][search_term] = 1;
                 }
             }
@@ -291,9 +293,9 @@ api.get("/api/data", (req, res) => {
         return statistics;
     });
 
-    return admin.database().ref('/').once('value').then( (snapshot) => {
+    return admin.database().ref('/').once('value').then((snapshot) => {
         return res.json(snapshot.val());
-    }).catch( (e) => {
+    }).catch((e) => {
         console.error(e);
         return res.status(500).send("ERROR, check logs");
     });

@@ -15,15 +15,15 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "express": "^4.17.1",
-    "firebase-admin": "^8.9.1",
-    "firebase-functions": "^3.3.0",
+    "firebase-admin": "^8.12.1",
+    "firebase-functions": "^3.7.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.8"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.2.0",
     "eslint-plugin-promise": "^4.0.1",
-    "firebase-functions-test": "^0.1.7"
+    "firebase-functions-test": "^0.2.1"
   },
   "private": true
 }

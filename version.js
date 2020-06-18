@@ -2,7 +2,7 @@ const
     outputCSS = "version.css",
     outputFile = "VERSION",
     { gitDescribeSync } = require("git-describe"),
-    { writeFile } = require("fs")
+    { writeFileSync } = require("fs")
     ;
 
 function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
@@ -41,11 +41,14 @@ const versioncss = `
 }
 
 `
-writeFile(outputCSS, versioncss, (err) => {
-    if (err) throw err;
+
+try {
+    writeFileSync(outputCSS, versioncss);
     console.log(`Set ${version} CSS in >${outputCSS}<`);
-});
-writeFile(outputFile, version, (err) => {
-    if (err) throw err;
+
+    writeFileSync(outputFile, version);
     console.log(`Set ${version} in >${outputFile}<`);
-});
+} catch (err) {
+    console.error(err);
+    process.exit(1);
+}

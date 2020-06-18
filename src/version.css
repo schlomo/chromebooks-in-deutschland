@@ -1,8 +1,0 @@
-/* manual file to serve as dummy in git */
-#version::after {
-  content: " VERSION";
-}
-
-#version:hover::after {
-  content: " DATE";
-}

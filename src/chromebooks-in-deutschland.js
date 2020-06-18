@@ -386,9 +386,11 @@ $(document).ready(function(){
 
     window.onpopstate = function(event) {
         debug("onpopstate", event.state);
-        setSearch(event.state.search);
+        if ("search" in event.state) {
+            setSearch(event.state.search);
+        }
       };
-    
+
     var loadTableDataFromFirebase = (ajaxData, callback, dtSettings) => {
         // load data from Firebase and call callback with result
         return firebase.database().ref('/').once('value').then((snapshot) => {

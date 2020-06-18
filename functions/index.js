@@ -5,12 +5,10 @@ const
     admin = require('firebase-admin'),
     rp = require('request-promise-native'),
     express = require('express'),
-    https = require('https'), // Or use ‘http’ if you do insecure requests
+    https = require('https'),
     httpsAgent = new https.Agent({ keepAlive: true }),
-    
-    { inspect } = require("util");
 
-    console.log(process.env);
+    { inspect } = require("util");
 
 if ("FUNCTIONS_EMULATOR" in process.env) {
     const conf = {
@@ -271,17 +269,24 @@ api.get("/api/data", (req, res) => {
     var statisticsTodayRef = admin.database().ref(`/statistics/${today}`);
     statisticsTodayRef.transaction((statistics) => {
         // If statistics/$today has never been set, it will be `null`.
-        if (! statistics || ! ("count" in statistics)) {
+        if (statistics && "count" in statistics) {
+            statistics["count"] += 1;
+        } else {
             statistics = {
                 count: 1,
-                searches: {}
             }
-        } else {
-            statistics["count"] += 1;
         }
         if ("search" in req.query) {
-            const search_term = req.query.search;
-            statistics["searches"][search_term] = search_term in statistics["searches"] ? statistics["searches"][search_term] + 1 : 1;
+            var search_term = req.query.search;
+            if (search_term && search_term.length > 3) {
+                search_term = search_term.replace(/[.#$/[\]]/g,"-");
+                if ("searches" in statistics) {
+                    statistics["searches"][search_term] = search_term in statistics["searches"] ? statistics["searches"][search_term] + 1 : 1;
+                } else {
+                    statistics["searches"] = { };
+                    statistics["searches"][search_term] = 1;
+                }
+            }
         }
         return statistics;
     });

@@ -1,18 +1,24 @@
 steps:
-- name: gcr.io/cloud-builders/gcloud
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  entrypoint: gcloud
   args: [config, get-value, account]
-- name: gcr.io/cloud-builders/git
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  entrypoint: git
   args: [fetch, --unshallow, --tags]
-- name: gcr.io/cloud-builders/npm:current
+- name: node
+  entrypoint: npm
   args: [install]
-- name: gcr.io/cloud-builders/npm:current
+- name: node
+  entrypoint: npm
+  args: [install]
   dir: functions
-  args: [install]
-- name: gcr.io/cloud-builders/npm:current
+- name: node
+  entrypoint: npm
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
-- name: gcr.io/cloud-builders/npm:current
+- name: node
+  entrypoint: npm
   args: [run, update-dev-database]
 
 substitutions:

@@ -280,7 +280,7 @@ api.get("/api/data", (req, res) => {
             var search_term = req.query.search;
             if (search_term && search_term.length > 3) {
                 search_term = search_term.
-                    replace(/[.#$/[\]]/g, "-").
+                    replace(/[.#$/[\]]/g, " ").
                     toLowerCase();
                 if ("searches" in statistics) {
                     statistics["searches"][search_term] = search_term in statistics["searches"] ? statistics["searches"][search_term] + 1 : 1;

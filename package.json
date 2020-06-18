@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "cd functions && npm install",
-    "build": "rm -Rf public/* && npm run version && parcel build --out-dir public src/index.html",
+    "build": "rm -Rf public/* && npm run version && parcel build --no-source-maps --out-dir public src/index.html",
     "start": "rm -Rf public/* && npm run version && firebase emulators:exec 'parcel watch --out-dir public src/index.html'",
     "version": "node version.js",
     "deploy": "npm run build && firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",

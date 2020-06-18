@@ -1,3 +1,10 @@
+@import "datatables.net-dt/css/jquery.dataTables.min.css";
+@import "datatables.net-responsive-dt/css/responsive.dataTables.min.css";
+@import "fontsource-roboto/latin-400.css";
+@import "fontsource-roboto/latin-700.css";
+@import "@mdi/font/css/materialdesignicons.css";
+@import "../version.css";
+
 :root {
   --main-bg-color: rgba(224, 250, 255, 0.297);
   --table-even-row-color: #f5f5f5;
@@ -75,7 +82,7 @@ html, body {
 }
 
 .extralinks-open {
-  padding: 0 0.2em 0.2em 0.2em;
+  padding: 0 0.2em 0 0.2em;
   border-radius: 0.3em 0.3em 0 0;
   border: 1px solid darkgray;
   background-color: darkgray;
@@ -131,6 +138,11 @@ a.scroll_to, a.scroll_to:visited, a.scroll_to:hover, a.scroll_to:active {
 
 h1 {
   font-size: 1.5em;
+}
+
+.scroll_to_top {
+  float:right;
+  font-size:80%;
 }
 
 h2 {

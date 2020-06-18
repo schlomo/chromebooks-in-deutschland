@@ -1,5 +1,9 @@
 'use strict';
 
+var $ = require('jquery');
+var DataTables = require('datatables.net-dt')();
+var DataTablesResponsive = require('datatables.net-responsive-dt')();
+
 const cpus = {
     "AMD A4 9120C":         {"cores":2, "frequency":1.6,    "burst":2.4 },
     "AMD A6 9220C":         {"cores":2, "frequency":1.8,    "burst":2.7 },
@@ -39,8 +43,11 @@ const extraExpirationInfo = {
 
 var search_field = undefined;
 var last_search_term = undefined;
+
 // take state from history API or from URL hash
-const initial_search_term = history.state ? history.state.search : decodeURIComponent(window.location.hash.split('#')[1]);
+const wlhash = window.location.hash.split('#')[1];
+const initial_search_term = history.state ? history.state.search : (wlhash ? decodeURIComponent(wlhash) : undefined);
+
 var dt = undefined;
 const html_body = $('html, body');
 
@@ -160,20 +167,18 @@ var renderModel = function ( model, type, row ) {
         let result = $("<p>").text(model);
         let deviceLinks = [
             $("<a>")
-                .addClass("material-icons-two-tone")
+                .addClass("mdi mdi-cart-outline")
                 .attr("href", getProductLink(row))
                 .attr("title", `Angebote für ${model}`)
                 .attr("target", "_blank")
-                .text("shopping_cart")
         ];
         if (row.specLink.startsWith("http")) {
             deviceLinks.push(
                 $("<a>")
-                    .addClass("material-icons-two-tone")
+                    .addClass("mdi mdi-information-outline")
                     .attr("href", row.specLink)
                     .attr("title", `Technische Spezifikation für ${model}`)
                     .attr("target", "_blank")
-                    .text("info")
             );
         }
         let extraLinksElements = [];
@@ -182,10 +187,9 @@ var renderModel = function ( model, type, row ) {
             deviceLinks.push(
                 $("<a>")
                     .attr("href","")
-                    .addClass("material-icons-two-tone")
+                    .addClass("mdi mdi-link")
                     .addClass("extralinks")
                     .attr("title", `Weitere Links für ${model}`)
-                    .text("insert_link")
                     .attr("data-extralinks", JSON.stringify(row.extraLinks))
             )
             for (const text in row.extraLinks) {
@@ -358,6 +362,7 @@ var stage2setup = function () {
     search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
 
     $('#AUP_updated').html(` vom ${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
+
 }
 
 
@@ -389,10 +394,17 @@ $(document).ready(function(){
         }
     });
 
+  
     // h1 get a scroll-to-top button
     $('h1').each(function() {
-        $(this).append('<button onclick="$(\'html, body\').stop().animate({ scrollTop: 0 }, 500);return false;" style="float:right;font-size:80%;">⬆</button>');
+        $(this).append('<button class="scroll_to_top">⬆</button>');
     });
+
+    $(document).on("click", ".scroll_to_top", (event) => {
+        $('html, body').stop().animate({ scrollTop: 0 }, 500);
+        event.preventDefault();
+    });
+    // onclick="$(\'html, body\').stop().animate({ scrollTop: 0 }, 500);return false;"
 
     // extralinks toggle in table
     $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
@@ -490,7 +502,7 @@ $(document).ready(function(){
                     text: id,
                     target: "_blank",
                     href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
-                    title: `Idealo search for $id`
+                    title: `Idealo search for ${id}`
                 }))
                 yearContainer.append(li);
             });

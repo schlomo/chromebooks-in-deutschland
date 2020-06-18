@@ -1,6 +1,9 @@
 /.firebase
+/.cache
 node_modules
 /public
+/version.css
+/VERSION
 *.log
 package-lock.json
 new.json

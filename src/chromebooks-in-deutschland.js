@@ -4,6 +4,9 @@ var $ = require('jquery');
 var DataTables = require('datatables.net-dt')();
 var DataTablesResponsive = require('datatables.net-responsive-dt')();
 
+import Iconify from '@iconify/iconify';
+require("../icon-bundle");
+
 const cpus = {
     "AMD A4 9120C":         {"cores":2, "frequency":1.6,    "burst":2.4 },
     "AMD A6 9220C":         {"cores":2, "frequency":1.8,    "burst":2.7 },
@@ -93,6 +96,10 @@ if (debugMode) {
     var debug = (...args) => {};
 }
 
+function getIcon(iconName) {
+    return Iconify.getSVG(iconName);
+}
+
 function screenResToText(res) {
     switch (res) {
         case "1366x768": return "HD" ;
@@ -151,7 +158,7 @@ function getProductLink(entry) {
 }
 
 var extraLinkClickHandler = (event) => {
-    let a = $(event.target);
+    let a = $(event.target).closest("a");
     let content = a.closest("td").find(".extralinks-content");
     if (content) {
         content.toggle();
@@ -167,18 +174,18 @@ var renderModel = function ( model, type, row ) {
         let result = $("<p>").text(model);
         let deviceLinks = [
             $("<a>")
-                .addClass("mdi mdi-cart-outline")
                 .attr("href", getProductLink(row))
                 .attr("title", `Angebote für ${model}`)
                 .attr("target", "_blank")
+                .html(getIcon("mdi-cart-outline"))
         ];
         if (row.specLink.startsWith("http")) {
             deviceLinks.push(
                 $("<a>")
-                    .addClass("mdi mdi-information-outline")
                     .attr("href", row.specLink)
                     .attr("title", `Technische Spezifikation für ${model}`)
                     .attr("target", "_blank")
+                    .html(getIcon("mdi-information-outline"))
             );
         }
         let extraLinksElements = [];
@@ -187,10 +194,10 @@ var renderModel = function ( model, type, row ) {
             deviceLinks.push(
                 $("<a>")
                     .attr("href","")
-                    .addClass("mdi mdi-link")
                     .addClass("extralinks")
                     .attr("title", `Weitere Links für ${model}`)
                     .attr("data-extralinks", JSON.stringify(row.extraLinks))
+                    .html(getIcon("mdi-link"))
             )
             for (const text in row.extraLinks) {
                 let url = row.extraLinks[text];
@@ -362,7 +369,6 @@ var stage2setup = function () {
     search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
 
     $('#AUP_updated').html(` vom ${new Date(data.expiration_timestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
-
 }
 
 
@@ -416,6 +422,7 @@ $(document).ready(function(){
         }
     };
 
+
     dt = $('#chromebooks').DataTable({
         paging: false,
         info: false,
@@ -423,8 +430,10 @@ $(document).ready(function(){
         autoWidth: false,
         ajax: {
             url: "api/data",
-            data: {search: initial_search_term},
-            dataSrc: loadTableDataFromApi
+            cache: true,
+            dataType: "json",
+            data: initial_search_term ? {search: initial_search_term} : {},
+            dataSrc: loadTableDataFromApi,
         },
         columns: [
             { 

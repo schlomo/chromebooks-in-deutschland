@@ -17,6 +17,7 @@ const cpus = {
     "Intel Celeron N3450":  {"cores":4, "frequency":1.1,    "burst":2.2 },
     "Intel Celeron N4000":  {"cores":2, "frequency":1.1,    "burst":2.6 },
     "Intel Celeron N4100":  {"cores":4, "frequency":1.1,    "burst":2.4 },
+    "Intel Celeron N4120":  {"cores":4, "frequency":1.1,    "burst":2.6 },
     "Intel Core i3-7100U":  {"cores":2, "frequency":2.4 },
     "Intel Core i3-8130U":  {"cores":2, "frequency":2.2,    "burst":3.4 },
     "Intel Core i5-7300U":  {"cores":2, "frequency":2.6,    "burst":3.5 },

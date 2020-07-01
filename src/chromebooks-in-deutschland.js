@@ -150,7 +150,7 @@ function getProductLink(entry) {
     let id = entry.productId;
     let url = "";
     switch (provider) {
-      case "idealo": url = "http://idealo.de/preisvergleich/OffersOfProduct/" + id; break;
+      case "idealo": url = "https://idealo.de/preisvergleich/OffersOfProduct/" + id; break;
       case "geizhals": url = "https://geizhals.de/-a" + id + ".html"; break;
       case "metacomp": url = "https://shop.metacomp.de/Shop-DE/Produkt-1_" + id; break;
       default: url = "";

@@ -179,7 +179,7 @@ var renderModel = function ( model, type, row ) {
                 .attr("title", `Angebote für ${model}`)
                 .attr("target", "_blank")
                 .html(getIcon("mdi-cart-outline"))
-                .attr("rel", "external noopener noreferrer")
+                .attr("rel", "external noopener")
         ];
         if (row.specLink.startsWith("http")) {
             deviceLinks.push(
@@ -188,7 +188,7 @@ var renderModel = function ( model, type, row ) {
                     .attr("title", `Technische Spezifikation für ${model}`)
                     .attr("target", "_blank")
                     .html(getIcon("mdi-information-outline"))
-                    .attr("rel", "external noopener noreferrer")
+                    .attr("rel", "external noopener")
             );
         }
         let extraLinksElements = [];
@@ -204,7 +204,7 @@ var renderModel = function ( model, type, row ) {
             )
             for (const text in row.extraLinks) {
                 let url = row.extraLinks[text];
-                extraLinksElements.push(`<a href="${url}" target="_blank" rel="external noopener noreferrer">${text}</a>`);
+                extraLinksElements.push(`<a href="${url}" target="_blank" rel="external noopener">${text}</a>`);
             }
         }
         result.append($("<div>").addClass("devicelinks").append(...deviceLinks));
@@ -399,7 +399,7 @@ $(document).ready(function(){
         let el = $(this);
         let target = $(this).attr("target");
         if (! target) {
-            $(this).attr("target", "_blank").attr("rel", "external noopener noreferrer");
+            $(this).attr("target", "_blank").attr("rel", "external noopener");
         }
     });
 
@@ -515,7 +515,7 @@ $(document).ready(function(){
                     target: "_blank",
                     href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
                     title: `Idealo search for ${id}`,
-                    rel: "external noopener noreferrer"
+                    rel: "external noopener"
                 }))
                 yearContainer.append(li);
             });

@@ -104,6 +104,7 @@ function getIcon(iconName) {
 function screenResToText(res) {
     switch (res) {
         case "1366x768": return "HD" ;
+        case "1366x912": return "HD 3:2" ;
         case "1920x1080": return "FHD" ;
         case "1920x1200": return "FHD 16:10" ;
         case "2256x1504": return "2K 3:2" ;

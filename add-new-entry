@@ -2,7 +2,7 @@
 set -e -E -o pipefail
 
 # make backup
-firebase --project prod database:get /devices | jq >chromebooks.json
+firebase --project prod database:get / | jq >backup.json
 
 # get new id
 id="$(jq -r ".id" new.json)"

@@ -8,6 +8,8 @@ import Iconify from '@iconify/iconify';
 require("./generated/icon-bundle");
 import { expirationData, expirationTimestamp } from "./generated/expiration-data";
 import { cpus, resolutions } from "./consts";
+import deviceData from "../functions/chromebooks.json";
+console.log(deviceData);
 
 var search_field = undefined;
 var last_search_term = undefined;
@@ -335,7 +337,7 @@ function handleUsedDevice(e) {
             const expiration = expirationData[used_device_model].expiration,
                 { supportMonths, pricePerMonth, pricePerYear } = calculatePricesFromExpiration(used_device_price, expiration);
             if (pricePerMonth < 0) {
-                used_device_error.html(`Das <b>${used_device_model}</b> erhält <b>keine</b> Updates mehr!`).show();
+                used_device_error.html(`Das <b>${used_device_model}</b> erhält seit <b>${expiration.substr(0, 7)} keine</b> Updates mehr!`).show();
             } else {
                 $('#used_device_aue').text(expiration.substr(0, 7));
                 $('#used_price_per_month').html(toEuro(pricePerMonth));

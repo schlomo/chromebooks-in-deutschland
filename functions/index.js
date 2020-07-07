@@ -1,5 +1,6 @@
 'use strict';
 const
+    deviceData = require("./chromebooks.json"),
     Promise = require('bluebird'),
     functions = require('firebase-functions'),
     admin = require('firebase-admin'),
@@ -23,6 +24,13 @@ if (emulator) {
     admin.database().ref("/").set(require("../backup.json"));
 } else {
     admin.initializeApp();
+}
+
+function msleep(n) {
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
+}
+function sleep(n) {
+    msleep(n * 1000);
 }
 
 // return string formatted as DB key
@@ -167,8 +175,112 @@ function updateChromebookEntry(entry) {
 
 }
 
-exports.updateChromebookPriceData = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
+exports.updateChromebookPriceDataOld = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
     return Promise.map(getChromebookData(), updateChromebookEntry, { concurrency: 20 });
+});
+
+function updateChromebookPriceEntry(entry) {
+    let id = entry.id;
+    console.log(`Processing ${id}`);
+    let priceFunction = undefined;
+    switch (entry.productProvider) {
+        case "idealo": priceFunction = getIdealoPrice; break;
+        case "metacomp": priceFunction = getMetacompPrice; break;
+        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
+    }
+    return priceFunction(entry.productId).then((price) => {
+        if (price < 0) {
+            price = 0;
+        }
+        var priceDataEntry = [price, new Date().toISOString()];
+        debug(priceDataEntry);
+        return admin.database()
+            .ref(`/priceData/${entry.productProvider}/${entry.productId}`).set(priceDataEntry);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
+    });
+
+}
+
+function updateChromebookPriceData() {
+    return Promise.map(
+        Object.values(deviceData),
+        updateChromebookPriceEntry,
+        { concurrency: 20 }
+    );
+}
+
+exports.updateChromebookPriceData = functions.pubsub.schedule('every 1129 seconds').onRun(updateChromebookPriceData);
+
+exports.test_updateChromebookPriceData = functions.https.onRequest((request, response) => {
+    updateChromebookPriceData().then((val) => {
+        const msg = `OK ${val.length} entries`;
+        console.log(msg);
+        return response.send(msg);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
+    });
+});
+
+
+function updateChromebookPriceEntryNew(entry) {
+    let id = entry.id;
+    console.log(`Processing updateChromebookPriceEntryNew ${id}`);
+    let priceFunction = undefined;
+    switch (entry.productProvider) {
+        case "idealo": priceFunction = getIdealoPriceNew; break;
+        case "metacomp": priceFunction = getMetacompPrice; break;
+        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
+    }
+    msleep(573);
+    return priceFunction(entry.productId).then((price) => {
+        if (price < 0) {
+            price = 0;
+        }
+        var priceDataEntry = [price, new Date().toISOString()];
+        debug(priceDataEntry);
+        return admin.database()
+            .ref(`/priceDataNew/${entry.productProvider}/${entry.productId}`).set(priceDataEntry);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
+    });
+
+}
+
+function updateChromebookPriceDataNew() {
+    return Promise.map(
+        Object.values(deviceData),
+        updateChromebookPriceEntryNew,
+        { concurrency: 1 }
+    );
+}
+
+exports.updateChromebookPriceDataNew = functions.pubsub.schedule('every 71290 seconds').onRun(updateChromebookPriceDataNew);
+
+exports.test_updateChromebookPriceDataNew = functions.https.onRequest((request, response) => {
+    updateChromebookPriceDataNew().then((val) => {
+        const msg = `OK ${val.length} entries`;
+        console.log(msg);
+        return response.send(msg);
+    }).catch((error) => {
+        if ("statusCode" in error) {
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+        } else {
+            console.error(error);
+        }
+    });
 });
 
 const api = express()

@@ -1,5 +1,6 @@
 "use strict";
 
+const output = 'src/generated/icon-bundle.js';
 const fs = require('fs');
 const { Collection } = require('@iconify/json-tools');
 
@@ -8,7 +9,6 @@ let icons = [
     'mdi-cart-outline', 'mdi-information-outline', 'mdi-link'
 ];
 
-let output = 'icon-bundle.js';
 let pretty = false;
 
 // Sort icons by collections: filtered[prefix][array of icons]

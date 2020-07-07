@@ -2,7 +2,8 @@
 @import "datatables.net-responsive-dt/css/responsive.dataTables.css";
 @import "fontsource-roboto/latin-400.css";
 @import "fontsource-roboto/latin-700.css";
-@import "../version.css";
+@import "select2/dist/css/select2.css";
+@import "./generated/version.css";
 
 :root {
   --main-bg-color: rgba(224, 250, 255, 0.297);
@@ -205,4 +206,19 @@ dd {
   color: rgba(255, 255, 224);
   font-size: 2em;
   font-style: italic;
+}
+
+#used_device_results {
+  display: none;
+  background-color: white;
+  padding: 0.5em;
+}
+
+#used_device_results span {
+  font-weight: bold;
+}
+
+#used_device_error {
+  display: none;
+  color: lightcoral;
 }

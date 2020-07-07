@@ -1,5 +1,5 @@
 const
-    outputCSS = "version.css",
+    outputCSS = "src/generated/version.css",
     outputFile = "VERSION",
     { gitDescribeSync } = require("git-describe"),
     { writeFileSync } = require("fs")

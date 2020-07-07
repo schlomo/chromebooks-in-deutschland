@@ -20,6 +20,8 @@
       –
       <a href="#faq" class="scroll_to">Häufige Fragen und Antworten</a>
       –
+      <a href="#used" class="scroll_to">Gebrauchtgeräte</a>
+      –
       <a href="https://forms.gle/TJAk3EWVfzZs5wrd7">Feedback</a>
     </div>
   </div>
@@ -110,6 +112,21 @@
           </p>
         </dd>
       </dl>
+
+      <h1 id="used">Gebrauchtes Chromebook kaufen</h1>
+      <p>Lohnt sich der Kauf eines gebrauchten Chromebooks? Mit dem Rechner hier lässt sich der Preis des Geräts in Relation zur Restzeit der verfügbaren Updates berechnen, analog zu den Monats- und Jahreskosten in der Marktübersicht.</p>
+      <p>
+        Gerät: <select value="" id="used_device_model" placeholder="Chromebook Modell">
+          <option disabled selected value> -- Bitte ein Chromebook auswählen -- </option>
+        </select>
+        Kaufpreis: <input type="number" id="used_device_price" placeholder="Preis in €">
+        <span id="used_device_error"></span>
+        <fieldset id="used_device_results">
+          Kosten pro Monat: <span id="used_price_per_month"></span>
+          (pro Jahr <span id="used_price_per_year"></span>),
+          Updates verfügbar bis: <span id="used_device_aue"></span>
+        </fieldset>
+      </p>
     </div>
     
   </div>

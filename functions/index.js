@@ -42,21 +42,6 @@ function debug(...args) {
     //console.debug(...args); 
 }
 
-async function getChromebookData() {
-    return admin.database().ref('/devices').once('value').then((snapshot) => {
-        let devices = snapshot.val();
-        if (!devices) {
-            devices = {};
-        }
-        debug(devices);
-        let entries = [];
-        // set the id property of an entry to the key in the devices map
-        Object.entries(devices).forEach(([id, entry]) => { entry.id = id; entries.push(entry) });
-        debug(entries);
-        return entries;
-    });
-}
-
 /*
 
 updateChromebookPriceData
@@ -107,6 +92,19 @@ async function getIdealoPriceNew(productId) {
     });
 }
 
+async function getMetacompPrice(productId) {
+    let options = {
+        uri: `https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`,
+        pool: httpsAgent,
+    };
+    return rp(options).then((rawData) => {
+        debug(rawData);
+        var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
+        debug(`Metacomp ${productId} = ${price}`);
+        return Number(price);
+    });
+}
+
 exports.test3 = functions.https.onRequest((request, response) => {
     Promise.resolve(getIdealoPrice("6950800")).then((val) => {
         console.log(val);
@@ -131,52 +129,6 @@ exports.test4 = functions.https.onRequest((request, response) => {
             console.error(error);
         }
     });
-});
-
-async function getMetacompPrice(productId) {
-    let options = {
-        uri: `https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`,
-        pool: httpsAgent,
-    };
-    return rp(options).then((rawData) => {
-        debug(rawData);
-        var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
-        debug(`Metacomp ${productId} = ${price}`);
-        return Number(price);
-    });
-}
-
-function updateChromebookEntry(entry) {
-    let id = entry.id;
-    console.log(`Processing ${id}`);
-    let priceFunction = undefined;
-    switch (entry.productProvider) {
-        case "idealo": priceFunction = getIdealoPrice; break;
-        case "metacomp": priceFunction = getMetacompPrice; break;
-        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
-    }
-    return priceFunction(entry.productId).then((price) => {
-        if (price > 0) {
-            entry.price = price;
-            entry.disabled = false;
-            entry.priceUpdated = new Date().toISOString();
-        } else {
-            entry.disabled = true; // disable entry and don't change price & date
-        }
-        debug(entry);
-        return admin.database().ref(`/devices/${id}`).set(entry);
-    }).catch((error) => {
-        if ("statusCode" in error) {
-            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
-        } else {
-            console.error(error);
-        }
-    });
-
-}
-
-exports.updateChromebookPriceDataOld = functions.pubsub.schedule('every 17 minutes').onRun((context) => {
-    return Promise.map(getChromebookData(), updateChromebookEntry, { concurrency: 20 });
 });
 
 function updateChromebookPriceEntry(entry) {

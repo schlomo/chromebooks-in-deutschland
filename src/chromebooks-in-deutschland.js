@@ -1,5 +1,7 @@
 'use strict';
 
+import "./style.css";
+
 var $ = require('jquery');
 var DataTables = require('datatables.net-dt')();
 var DataTablesResponsive = require('datatables.net-responsive-dt')();
@@ -225,21 +227,31 @@ function calculatePricesFromExpiration(price, expiration) {
 
 function prepareTableData(rawData) {
     let result = [];
-    Object.entries(rawData.devices).forEach(([id, entry]) => {
+    Object.entries(deviceData).forEach(([id, entry]) => {
         try {
-            if (!(entry.expirationId in expirationData)) {
-                throw `Invalid Expiration ID >${entry.expirationId}<!`;
+            const { expirationId, productProvider, productId } = entry;
+
+            if (!(expirationId in expirationData)) {
+                throw `Invalid Expiration ID >${expirationId}<!`;
             }
 
+            if (!(productProvider in rawData.priceData) &&
+                !(productId in rawData.priceData[productProvider])) {
+                throw `No priceData found for >${id}< (/priceData/${productProvider}/${productId})`;
+            }
             entry = Object.assign({}, entry); // create copy of entry
             // use YYYY-MM from ISO date string as display date, can be improved
-            entry.expirationDate = expirationData[entry.expirationId].expiration
+            const expirationDate = entry.expirationDate = expirationData[expirationId].expiration
             entry.expiration = entry.expirationDate.substr(0, 7);
-            if (!(entry.price && entry.price > 0 && entry.price < 9999)) {
+
+            const [ price, priceUpdated ] = rawData.priceData[productProvider][productId];
+            if (!(price && price > 0 && price < 9999)) {
                 throw `Invalid price >${price}<!`;
             }
-            Object.assign(entry, calculatePricesFromExpiration(entry.price, entry.expirationDate));
+            entry.price = price;
+            entry.priceUpdated = priceUpdated;
 
+            Object.assign(entry, calculatePricesFromExpiration(price, expirationDate));
 
             entry.ausstattung = "";
             if (entry.screenSize > 0) {

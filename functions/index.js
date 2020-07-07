@@ -214,7 +214,7 @@ function updateChromebookPriceData() {
     );
 }
 
-exports.updateChromebookPriceData = functions.pubsub.schedule('every 1129 seconds').onRun(updateChromebookPriceData);
+exports.updateChromebookPriceData = functions.pubsub.schedule('every 19 minutes').onRun(updateChromebookPriceData);
 
 exports.test_updateChromebookPriceData = functions.https.onRequest((request, response) => {
     updateChromebookPriceData().then((val) => {
@@ -267,7 +267,7 @@ function updateChromebookPriceDataNew() {
     );
 }
 
-exports.updateChromebookPriceDataNew = functions.pubsub.schedule('every 71290 seconds').onRun(updateChromebookPriceDataNew);
+exports.updateChromebookPriceDataNew = functions.pubsub.schedule('every 7 hours').onRun(updateChromebookPriceDataNew);
 
 exports.test_updateChromebookPriceDataNew = functions.https.onRequest((request, response) => {
     updateChromebookPriceDataNew().then((val) => {

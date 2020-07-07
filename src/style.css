@@ -16,7 +16,7 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-#header {
+header {
   padding: 0.1em 0.2em 0.5em 0.2em;
   border-bottom: 1px solid black;
   overflow: auto;
@@ -58,12 +58,12 @@ html, body {
 }
 
 
-#main {
+main {
   background-color: var(--main-bg-color);
   padding: 1em;
 }
 
-#footer {
+footer {
   padding: 0.1em 0.2em 0.1em 0.2em;
   border-top: 1px solid black;
   overflow: auto;

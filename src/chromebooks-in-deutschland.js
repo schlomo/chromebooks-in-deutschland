@@ -11,7 +11,6 @@ require("./generated/icon-bundle");
 import { expirationData, expirationTimestamp } from "./generated/expiration-data";
 import { cpus, resolutions } from "./consts";
 import deviceData from "../functions/chromebooks.json";
-console.log(deviceData);
 
 var search_field = undefined;
 var last_search_term = undefined;
@@ -28,7 +27,6 @@ const html_body = $('html, body');
 
 var screenSizesMap = {};
 var data = {};
-var dataDump = "";
 
 /*
 const devices_defaults = {
@@ -291,7 +289,6 @@ function prepareTableData(rawData) {
 }
 
 var loadTableDataFromApi = (rawData) => {
-    dataDump = JSON.stringify(rawData, null, 2);
     debug("Read data from database:", rawData);
     data = rawData; // make data globally accessible
     let tableData = prepareTableData(rawData);
@@ -519,6 +516,10 @@ $(document).ready(function () {
         .on("propertychange keyup paste input", handleUsedDevice);
 
     $('#dump').click(function (e) {
+        const dumpElement = $(this);
+        const footer = $("footer");
+        dumpElement.off("click"); // prevent double action
+
         // transform expiration list into list of model by year
         let expirationModelsByYear = {};
         Object.entries(expirationData).forEach(([id, entry]) => {
@@ -530,7 +531,7 @@ $(document).ready(function () {
         });
 
         // remove listed devices
-        Object.entries(data.devices).forEach(([id, entry]) => {
+        Object.entries(deviceData).forEach(([id, entry]) => {
             let expirationId = entry.expirationId;
             if (expirationId in expirationData) {
                 let year = expirationData[expirationId].expiration.substr(0, 4);
@@ -563,13 +564,13 @@ $(document).ready(function () {
             });
             result.push(yearContainer);
         });
+
+        const dataDump = JSON.stringify(data, null, 2);
         result.push(
             $("<h1>", { text: "Data Dump" }),
             $("<pre>").html(dataDump)
         );
-        let dumpElement = $(this);
-        let footer = dumpElement.parent().parent();
-        dumpElement.remove();
+
         footer.after($("<div>", { class: "dumpzone", html: result }));
     });
 });

@@ -1,626 +1,137 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="1 1 503.39673 458.80829"
-   version="1.1"
-   id="svg2622"
-   sodipodi:docname="chromebooks-in-deutschland-logo.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   width="503.39673"
-   height="458.80829">
-  <metadata
-     id="metadata2626">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1428"
-     inkscape:window-height="851"
-     id="namedview2624"
-     showgrid="false"
-     inkscape:zoom="1.3409091"
-     inkscape:cx="228.57972"
-     inkscape:cy="339.77706"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2622"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <defs
-     id="defs2488">
-    <circle
-       id="a"
-       cy="96"
-       cx="96"
-       r="88" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#c"
-       id="linearGradient7569"
-       gradientUnits="userSpaceOnUse"
-       x1="29.337"
-       y1="75.021004"
-       x2="81.836998"
-       y2="44.354" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#d"
-       id="linearGradient7571"
-       gradientUnits="userSpaceOnUse"
-       x1="110.87"
-       y1="164.5"
-       x2="52.537998"
-       y2="130.33" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#g"
-       id="linearGradient7573"
-       gradientUnits="userSpaceOnUse"
-       x1="121.86"
-       y1="49.804001"
-       x2="136.55"
-       y2="114.13" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#g"
-       id="linearGradient7575"
-       gradientUnits="userSpaceOnUse"
-       x1="121.86"
-       y1="49.804001"
-       x2="136.55"
-       y2="114.13" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#c"
-       id="linearGradient7577"
-       gradientUnits="userSpaceOnUse"
-       x1="29.337"
-       y1="75.021004"
-       x2="81.836998"
-       y2="44.354" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#d"
-       id="linearGradient7579"
-       gradientUnits="userSpaceOnUse"
-       x1="110.87"
-       y1="164.5"
-       x2="52.537998"
-       y2="130.33" />
-    <clipPath
-       id="a-2">
-      <path
-         id="path7689"
-         d="M 72.54,579.24 H 539.46 V 342.15 H 72.54 Z"
-         inkscape:connector-curvature="0" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1 1 503.397 458.808">
+  <defs>
+    <linearGradient id="g" x1="29.337" x2="81.837" y1="75.021" y2="44.354" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    <linearGradient id="h" x1="110.87" x2="52.538" y1="164.5" y2="130.33" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+    <linearGradient id="k" x1="121.86" x2="136.55" y1="49.804" y2="114.13" gradientUnits="userSpaceOnUse" xlink:href="#c"/>
+    <linearGradient id="l" x1="121.86" x2="136.55" y1="49.804" y2="114.13" gradientUnits="userSpaceOnUse" xlink:href="#c"/>
+    <linearGradient id="o" x1="29.337" x2="81.837" y1="75.021" y2="44.354" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    <linearGradient id="s" x1="110.87" x2="52.538" y1="164.5" y2="130.33" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+    <clipPath id="e">
+      <path d="M72.54 579.24h466.92V342.15H72.54z"/>
     </clipPath>
+    <circle id="d" cx="96" cy="96" r="88"/>
   </defs>
-  <clipPath
-     id="b">
-    <use
-       width="100%"
-       overflow="visible"
-       xlink:href="#a"
-       height="100%"
-       id="use2490"
-       style="overflow:visible"
-       x="0"
-       y="0" />
+  <clipPath id="f">
+    <use width="100%" height="100%" overflow="visible" xlink:href="#d"/>
   </clipPath>
-  <radialGradient
-     id="l"
-     gradientUnits="userSpaceOnUse"
-     cy="55.948002"
-     cx="668.17999"
-     gradientTransform="translate(-576)"
-     r="84.078003">
-    <stop
-       stop-color="#3E2723"
-       stop-opacity=".2"
-       offset="0"
-       id="stop2558" />
-    <stop
-       stop-color="#3E2723"
-       stop-opacity="0"
-       offset="1"
-       id="stop2560" />
+  <radialGradient id="p" cx="668.18" cy="55.948" r="84.078" gradientTransform="translate(-576)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#3E2723" stop-opacity=".2"/>
+    <stop offset="1" stop-color="#3E2723" stop-opacity="0"/>
   </radialGradient>
-  <radialGradient
-     id="p"
-     gradientUnits="userSpaceOnUse"
-     cy="48.52"
-     cx="597.88"
-     gradientTransform="translate(-576)"
-     r="78.043999">
-    <stop
-       stop-color="#3E2723"
-       stop-opacity=".2"
-       offset="0"
-       id="stop2579" />
-    <stop
-       stop-color="#3E2723"
-       stop-opacity="0"
-       offset="1"
-       id="stop2581" />
+  <radialGradient id="t" cx="597.88" cy="48.52" r="78.044" gradientTransform="translate(-576)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#3E2723" stop-opacity=".2"/>
+    <stop offset="1" stop-color="#3E2723" stop-opacity="0"/>
   </radialGradient>
-  <radialGradient
-     id="q"
-     gradientUnits="userSpaceOnUse"
-     cy="96.138"
-     cx="671.84003"
-     gradientTransform="translate(-576)"
-     r="87.870003">
-    <stop
-       stop-color="#263238"
-       stop-opacity=".2"
-       offset="0"
-       id="stop2586" />
-    <stop
-       stop-color="#263238"
-       stop-opacity="0"
-       offset="1"
-       id="stop2588" />
+  <radialGradient id="u" cx="671.84" cy="96.138" r="87.87" gradientTransform="translate(-576)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#263238" stop-opacity=".2"/>
+    <stop offset="1" stop-color="#263238" stop-opacity="0"/>
   </radialGradient>
-  <radialGradient
-     id="r"
-     gradientUnits="userSpaceOnUse"
-     cy="32.014"
-     cx="34.285999"
-     gradientTransform="translate(-7,-7)"
-     r="176.75">
-    <stop
-       stop-color="#fff"
-       stop-opacity=".1"
-       offset="0"
-       id="stop2615" />
-    <stop
-       stop-color="#fff"
-       stop-opacity="0"
-       offset="1"
-       id="stop2617" />
+  <radialGradient id="v" cx="34.286" cy="32.014" r="176.75" gradientTransform="translate(-7 -7)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
   </radialGradient>
-  <g
-     id="g7800"
-     transform="translate(143.56277,195.09903)">
-    <g
-       id="g7698"
-       transform="matrix(6.469125,0,0,-6.469125,-611.8331,3547.0089)"
-       style="fill:#ffffff;stroke:#000000">
-      <g
-         id="g7696"
-         clip-path="url(#a-2)"
-         style="fill:#ffffff;stroke:#000000">
-        <path
-           id="path7694"
-           stroke-miterlimit="10"
-           d="m 137.86,534.92 h 2.1 l 10.081,-22.441 H 72.818 l 7.02,22.441 h 2.1 m 9.24,0 h 37.442 m 0.0137,-27.237 h -55.816 v 4.7959 h 77.223 v -4.7959 h -21.481"
-           inkscape:connector-curvature="0"
-           style="fill:#ffffff;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
-      </g>
+  <g stroke="#000">
+    <g fill="#fff" clip-path="url(#e)" transform="matrix(6.46913 0 0 -6.46913 -468.27 3742.108)">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".6" d="M137.86 534.92h2.1l10.081-22.441H72.818l7.02 22.441h2.1m9.24 0h37.442m.014-27.237H72.818v4.796h77.223v-4.796H128.56"/>
     </g>
-    <g
-       id="g7702"
-       clip-path="url(#a-2)"
-       transform="matrix(6.469125,0,0,-6.469125,-611.8331,3547.0089)"
-       style="stroke:#000000">
-      <path
-         id="path7700"
-         stroke-miterlimit="10"
-         d="m 134.54,523.67 2.19,-5.6705 m 13.321,-5.52 H 72.828 m 11.1,16.861 -3.54,-11.341 h 61.082 l -5.1,11.341 z m -0.9,-2.82 h 54.602 m -55.502,-2.821 h 56.822 m -57.662,-2.82 h 58.922 m -55.142,-2.88 2.88,11.341 m 8.101,0 -1.561,-11.341 m 5.581,11.341 -0.675,-8.5058 m 4.695,8.5058 -0.18,-8.5058 m 4.2,8.5058 0.36,-8.5058 m 3.72,8.5058 0.81,-8.5058 m 3.21,8.5058 1.305,-8.5058 m 2.716,8.5058 1.845,-8.5058 m 2.175,8.5058 3.12,-11.341 m 4.98,11.341 1.095,-2.8352 m -5.115,2.8352 3.72,-11.341 m -40.082,11.341 -2.22,-11.341 m -16.92,-10.316 v 4.7959 h 77.223 v -4.7959"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
+    <g clip-path="url(#e)" transform="matrix(6.46913 0 0 -6.46913 -468.27 3742.108)">
+      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".6" d="M134.54 523.67l2.19-5.67m13.321-5.52H72.828m11.1 16.86L80.388 518h61.082l-5.1 11.34zm-.9-2.82h54.602m-55.502-2.82h56.822m-57.662-2.82h58.922M85.068 518l2.88 11.34m8.101 0L94.488 518m5.581 11.34l-.675-8.505m4.695 8.505l-.18-8.505m4.2 8.505l.36-8.505m3.72 8.505l.81-8.505m3.21 8.505l1.305-8.505m2.716 8.505l1.845-8.505m2.175 8.505l3.12-11.34m4.98 11.34l1.095-2.835m-5.115 2.835l3.72-11.34m-40.082 11.34L89.748 518m-16.92-10.317v4.796h77.223v-4.796"/>
     </g>
-    <g
-       id="g7708"
-       transform="matrix(6.469125,0,0,-6.469125,-611.8331,3547.0089)"
-       style="fill:#ffffff;stroke:#000000">
-      <g
-         id="g7706"
-         clip-path="url(#a-2)"
-         style="fill:#ffffff;stroke:#000000">
-        <path
-           id="path7704"
-           stroke-miterlimit="10"
-           d="M 137.86,535.46 H 79.845 v 42.542 h 60.122 V 535.46 h -2.1"
-           inkscape:connector-curvature="0"
-           style="fill:#ffffff;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
-      </g>
+    <g fill="#fff" clip-path="url(#e)" transform="matrix(6.46913 0 0 -6.46913 -468.27 3742.108)">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".6" d="M137.86 535.46H79.845v42.542h60.122V535.46h-2.1"/>
     </g>
-    <g
-       id="g7716"
-       transform="matrix(6.469125,0,0,-6.469125,-611.8331,3547.0089)"
-       style="fill:#7f7f7f;stroke:#000000">
-      <g
-         id="g7714"
-         stroke-miterlimit="10"
-         clip-path="url(#a-2)"
-         style="fill:#7f7f7f;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10">
-        <path
-           id="path7710"
-           d="m 85.303,574.28 h 49.502 V 539.179 H 85.303 Z"
-           inkscape:connector-curvature="0" />
-        <path
-           id="path7712"
-           d="m 85.303,574.28 h 49.502 V 539.179 H 85.303 Z"
-           inkscape:connector-curvature="0" />
-      </g>
+    <g fill="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".6" clip-path="url(#e)" transform="matrix(6.46913 0 0 -6.46913 -468.27 3742.108)">
+      <path d="M85.303 574.28h49.502v-35.101H85.303z"/>
+      <path d="M85.303 574.28h49.502v-35.101H85.303z"/>
     </g>
-    <path
-       id="path7718"
-       d="M -59.9956,59.05887 H 260.2419"
-       inkscape:connector-curvature="0"
-       style="fill:#e3e3e3;fill-rule:evenodd;stroke:#000000;stroke-width:6.46912527" />
-    <g
-       id="g7724"
-       transform="matrix(6.469125,0,0,-6.469125,-611.8331,3547.0089)"
-       style="stroke:#000000">
-      <g
-         id="g7722"
-         clip-path="url(#a-2)"
-         style="stroke:#000000">
-        <path
-           id="path7720"
-           stroke-miterlimit="10"
-           d="m 137.86,536.18 h -9.2404 v -1.9801 h 9.2404 z"
-           inkscape:connector-curvature="0"
-           style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
-      </g>
+    <path fill="#e3e3e3" fill-rule="evenodd" stroke-width="6.469" d="M83.567 254.158h320.238"/>
+    <g clip-path="url(#e)" transform="matrix(6.46913 0 0 -6.46913 -468.27 3742.108)">
+      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".6" d="M137.86 536.18h-9.24v-1.98h9.24z"/>
     </g>
-    <g
-       id="g7730"
-       transform="matrix(6.469125,0,0,-6.469125,-611.8331,3547.0089)"
-       style="stroke:#000000">
-      <g
-         id="g7728"
-         clip-path="url(#a-2)"
-         style="stroke:#000000">
-        <path
-           id="path7726"
-           stroke-miterlimit="10"
-           d="m 81.943,536.18 h 9.2404 v -1.9801 H 81.943 Z"
-           inkscape:connector-curvature="0"
-           style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
-      </g>
+    <g clip-path="url(#e)" transform="matrix(6.46913 0 0 -6.46913 -468.27 3742.108)">
+      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".6" d="M81.943 536.18h9.24v-1.98h-9.24z"/>
     </g>
   </g>
-  <g
-     id="g7567"
-     transform="translate(146.54581,54.149871)">
-    <g
-       id="g2502"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <path
-         id="path2493"
-         d="M 21.97,8 V 116 H 61.36 L 96,56 h 88 V 8 Z"
-         inkscape:connector-curvature="0"
-         style="fill:#db4437" />
-      <linearGradient
-         x1="29.337"
-         x2="81.836998"
-         y1="75.021004"
-         gradientUnits="userSpaceOnUse"
-         y2="44.354"
-         id="c">
-        <stop
-           id="stop2495"
-           offset="0"
-           stop-opacity=".6"
-           stop-color="#A52714" />
-        <stop
-           id="stop2497"
-           offset=".66"
-           stop-opacity="0"
-           stop-color="#A52714" />
+  <g transform="translate(146.546 54.15)">
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <path fill="#db4437" d="M21.97 8v108h39.39L96 56h88V8z"/>
+      <linearGradient id="a" x1="29.337" x2="81.837" y1="75.021" y2="44.354" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#A52714" stop-opacity=".6"/>
+        <stop offset=".66" stop-color="#A52714" stop-opacity="0"/>
       </linearGradient>
-      <path
-         id="path2500"
-         d="M 21.97,8 V 116 H 61.36 L 96,56 h 88 V 8 Z"
-         style="fill:url(#linearGradient7569)"
-         inkscape:connector-curvature="0" />
+      <path fill="url(#g)" d="M21.97 8v108h39.39L96 56h88V8z"/>
     </g>
-    <path
-       id="path2504"
-       transform="translate(-7,-7)"
-       d="m 62.31,115.65 -39.83,-68.31 -0.58,1 39.54,67.8 z"
-       clip-path="url(#b)"
-       inkscape:connector-curvature="0"
-       style="fill:#3e2723;fill-opacity:0.15" />
-    <g
-       id="g2515"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <path
-         id="path2506"
-         d="m 8,184 h 83.77 l 38.88,-38.88 V 116 H 61.36 L 8,24.48 Z"
-         inkscape:connector-curvature="0"
-         style="fill:#0f9d58" />
-      <linearGradient
-         x1="110.87"
-         x2="52.537998"
-         y1="164.5"
-         gradientUnits="userSpaceOnUse"
-         y2="130.33"
-         id="d">
-        <stop
-           id="stop2508"
-           offset="0"
-           stop-opacity=".4"
-           stop-color="#055524" />
-        <stop
-           id="stop2510"
-           offset=".33"
-           stop-opacity="0"
-           stop-color="#055524" />
+    <path fill="#3e2723" fill-opacity=".15" d="M62.31 115.65L22.48 47.34l-.58 1 39.54 67.8z" clip-path="url(#f)" transform="translate(-7 -7)"/>
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <path fill="#0f9d58" d="M8 184h83.77l38.88-38.88V116H61.36L8 24.48z"/>
+      <linearGradient id="b" x1="110.87" x2="52.538" y1="164.5" y2="130.33" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#055524" stop-opacity=".4"/>
+        <stop offset=".33" stop-color="#055524" stop-opacity="0"/>
       </linearGradient>
-      <path
-         id="path2513"
-         d="m 8,184 h 83.77 l 38.88,-38.88 V 116 H 61.36 L 8,24.48 Z"
-         style="fill:url(#linearGradient7571)"
-         inkscape:connector-curvature="0" />
+      <path fill="url(#h)" d="M8 184h83.77l38.88-38.88V116H61.36L8 24.48z"/>
     </g>
-    <path
-       id="path2517"
-       transform="translate(-7,-7)"
-       d="M 129.84,117.33 129.01,116.85 90.62,184 h 1.15 l 38.1,-66.64 z"
-       clip-path="url(#b)"
-       inkscape:connector-curvature="0"
-       style="fill:#263238;fill-opacity:0.15" />
-    <g
-       id="g2536"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <defs
-         id="defs2520">
-        <path
-           d="m 8,184 h 83.77 l 38.88,-38.88 V 116 H 61.36 L 8,24.48 Z"
-           id="e"
-           inkscape:connector-curvature="0" />
+    <path fill="#263238" fill-opacity=".15" d="M129.84 117.33l-.83-.48L90.62 184h1.15l38.1-66.64z" clip-path="url(#f)" transform="translate(-7 -7)"/>
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <defs>
+        <path id="i" d="M8 184h83.77l38.88-38.88V116H61.36L8 24.48z"/>
       </defs>
-      <clipPath
-         id="f">
-        <use
-           id="use2522"
-           height="100%"
-           xlink:href="#e"
-           overflow="visible"
-           width="100%"
-           style="overflow:visible"
-           x="0"
-           y="0" />
+      <clipPath id="j">
+        <use width="100%" height="100%" overflow="visible" xlink:href="#i"/>
       </clipPath>
-      <g
-         id="g2534"
-         clip-path="url(#f)">
-        <path
-           id="path2525"
-           d="m 96,56 34.65,60 -38.88,68 H 184 V 56 Z"
-           inkscape:connector-curvature="0"
-           style="fill:#ffcd40" />
-        <linearGradient
-           x1="121.86"
-           x2="136.55"
-           y1="49.804001"
-           gradientUnits="userSpaceOnUse"
-           y2="114.13"
-           id="g">
-          <stop
-             id="stop2527"
-             offset="0"
-             stop-opacity=".3"
-             stop-color="#EA6100" />
-          <stop
-             id="stop2529"
-             offset=".66"
-             stop-opacity="0"
-             stop-color="#EA6100" />
+      <g clip-path="url(#j)">
+        <path fill="#ffcd40" d="M96 56l34.65 60-38.88 68H184V56z"/>
+        <linearGradient id="c" x1="121.86" x2="136.55" y1="49.804" y2="114.13" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#EA6100" stop-opacity=".3"/>
+          <stop offset=".66" stop-color="#EA6100" stop-opacity="0"/>
         </linearGradient>
-        <path
-           id="path2532"
-           d="m 96,56 34.65,60 -38.88,68 H 184 V 56 Z"
-           style="fill:url(#linearGradient7573)"
-           inkscape:connector-curvature="0" />
+        <path fill="url(#k)" d="M96 56l34.65 60-38.88 68H184V56z"/>
       </g>
     </g>
-    <g
-       id="g2542"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <path
-         id="path2538"
-         d="m 96,56 34.65,60 -38.88,68 H 184 V 56 Z"
-         inkscape:connector-curvature="0"
-         style="fill:#ffcd40" />
-      <path
-         id="path2540"
-         d="m 96,56 34.65,60 -38.88,68 H 184 V 56 Z"
-         style="fill:url(#linearGradient7575)"
-         inkscape:connector-curvature="0" />
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <path fill="#ffcd40" d="M96 56l34.65 60-38.88 68H184V56z"/>
+      <path fill="url(#l)" d="M96 56l34.65 60-38.88 68H184V56z"/>
     </g>
-    <g
-       id="g2556"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <defs
-         id="defs2545">
-        <path
-           d="m 96,56 34.65,60 -38.88,68 H 184 V 56 Z"
-           id="i"
-           inkscape:connector-curvature="0" />
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <defs>
+        <path id="m" d="M96 56l34.65 60-38.88 68H184V56z"/>
       </defs>
-      <clipPath
-         id="j">
-        <use
-           id="use2547"
-           height="100%"
-           xlink:href="#i"
-           overflow="visible"
-           width="100%"
-           style="overflow:visible"
-           x="0"
-           y="0" />
+      <clipPath id="n">
+        <use width="100%" height="100%" overflow="visible" xlink:href="#m"/>
       </clipPath>
-      <g
-         id="g2554"
-         clip-path="url(#j)">
-        <path
-           id="path2550"
-           d="M 21.97,8 V 116 H 61.36 L 96,56 h 88 V 8 Z"
-           inkscape:connector-curvature="0"
-           style="fill:#db4437" />
-        <path
-           id="path2552"
-           d="M 21.97,8 V 116 H 61.36 L 96,56 h 88 V 8 Z"
-           style="fill:url(#linearGradient7577)"
-           inkscape:connector-curvature="0" />
+      <g clip-path="url(#n)">
+        <path fill="#db4437" d="M21.97 8v108h39.39L96 56h88V8z"/>
+        <path fill="url(#o)" d="M21.97 8v108h39.39L96 56h88V8z"/>
       </g>
     </g>
-    <path
-       id="path2563"
-       transform="translate(-7,-7)"
-       d="M 96,56 V 76.95 L 174.4,56 Z"
-       clip-path="url(#b)"
-       style="fill:url(#l)"
-       inkscape:connector-curvature="0" />
-    <g
-       id="g2577"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <defs
-         id="defs2566">
-        <path
-           d="M 21.97,8 V 48.34 L 61.36,116 96,56 h 88 V 8 Z"
-           id="m"
-           inkscape:connector-curvature="0" />
+    <path fill="url(#p)" d="M96 56v20.95L174.4 56z" clip-path="url(#f)" transform="translate(-7 -7)"/>
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <defs>
+        <path id="q" d="M21.97 8v40.34L61.36 116 96 56h88V8z"/>
       </defs>
-      <clipPath
-         id="n">
-        <use
-           id="use2568"
-           height="100%"
-           xlink:href="#m"
-           overflow="visible"
-           width="100%"
-           style="overflow:visible"
-           x="0"
-           y="0" />
+      <clipPath id="r">
+        <use width="100%" height="100%" overflow="visible" xlink:href="#q"/>
       </clipPath>
-      <g
-         id="g2575"
-         clip-path="url(#n)">
-        <path
-           id="path2571"
-           d="m 8,184 h 83.77 l 38.88,-38.88 V 116 H 61.36 L 8,24.48 Z"
-           inkscape:connector-curvature="0"
-           style="fill:#0f9d58" />
-        <path
-           id="path2573"
-           d="m 8,184 h 83.77 l 38.88,-38.88 V 116 H 61.36 L 8,24.48 Z"
-           style="fill:url(#linearGradient7579)"
-           inkscape:connector-curvature="0" />
+      <g clip-path="url(#r)">
+        <path fill="#0f9d58" d="M8 184h83.77l38.88-38.88V116H61.36L8 24.48z"/>
+        <path fill="url(#s)" d="M8 184h83.77l38.88-38.88V116H61.36L8 24.48z"/>
       </g>
     </g>
-    <path
-       id="path2584"
-       transform="translate(-7,-7)"
-       d="M 21.97,48.45 79.22,105.69 61.36,116 Z"
-       clip-path="url(#b)"
-       style="fill:url(#p)"
-       inkscape:connector-curvature="0" />
-    <path
-       id="path2591"
-       transform="translate(-7,-7)"
-       d="m 91.83,183.89 20.96,-78.2 17.86,10.31 z"
-       clip-path="url(#b)"
-       style="fill:url(#q)"
-       inkscape:connector-curvature="0" />
-    <g
-       id="g2597"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <circle
-         id="circle2593"
-         r="40"
-         cx="96"
-         cy="96"
-         style="fill:#f1f1f1" />
-      <circle
-         id="circle2595"
-         r="32"
-         cx="96"
-         cy="96"
-         style="fill:#4285f4" />
+    <path fill="url(#t)" d="M21.97 48.45l57.25 57.24L61.36 116z" clip-path="url(#f)" transform="translate(-7 -7)"/>
+    <path fill="url(#u)" d="M91.83 183.89l20.96-78.2L130.65 116z" clip-path="url(#f)" transform="translate(-7 -7)"/>
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <circle cx="96" cy="96" r="40" fill="#f1f1f1"/>
+      <circle cx="96" cy="96" r="32" fill="#4285f4"/>
     </g>
-    <g
-       id="g2607"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <path
-         id="path2599"
-         d="M 96,55 C 73.91,55 56,72.91 56,95 v 1 C 56,73.91 73.91,56 96,56 h 88 v -1 z"
-         inkscape:connector-curvature="0"
-         style="fill:#3e2723;fill-opacity:0.2" />
-      <path
-         id="path2601"
-         d="m 130.6,116 c -6.92,11.94 -19.81,20 -34.6,20 -14.8,0 -27.69,-8.06 -34.61,-20 H 61.35 L 8,24.48 v 1 L 61.36,117 h 0.04 c 6.92,11.94 19.81,20 34.61,20 14.79,0 27.68,-8.05 34.6,-20 h 0.05 v -1 z"
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff;fill-opacity:0.1" />
-      <path
-         id="path2603"
-         d="m 97,56 c -0.17,0 -0.33,0.02 -0.5,0.03 21.86,0.27 39.5,18.05 39.5,39.97 0,21.92 -17.64,39.7 -39.5,39.97 0.17,0 0.33,0.03 0.5,0.03 22.09,0 40,-17.91 40,-40 0,-22.09 -17.91,-40 -40,-40 z"
-         inkscape:connector-curvature="0"
-         style="opacity:0.1;fill:#3e2723" />
-      <path
-         id="path2605"
-         d="m 131,117.33 c 3.4,-5.88 5.37,-12.68 5.37,-19.96 0,-4.22 -0.66,-8.28 -1.87,-12.09 0.95,3.42 1.5,7.01 1.5,10.73 0,7.28 -1.97,14.08 -5.37,19.96 l 0.02,0.04 -38.88,68 h 1.16 l 38.09,-66.64 z"
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff;fill-opacity:0.2" />
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <path fill="#3e2723" fill-opacity=".2" d="M96 55c-22.09 0-40 17.91-40 40v1c0-22.09 17.91-40 40-40h88v-1z"/>
+      <path fill="#fff" fill-opacity=".1" d="M130.6 116c-6.92 11.94-19.81 20-34.6 20-14.8 0-27.69-8.06-34.61-20h-.04L8 24.48v1L61.36 117h.04c6.92 11.94 19.81 20 34.61 20 14.79 0 27.68-8.05 34.6-20h.05v-1z"/>
+      <path fill="#3e2723" d="M97 56c-.17 0-.33.02-.5.03C118.36 56.3 136 74.08 136 96c0 21.92-17.64 39.7-39.5 39.97.17 0 .33.03.5.03 22.09 0 40-17.91 40-40s-17.91-40-40-40z" opacity=".1"/>
+      <path fill="#fff" fill-opacity=".2" d="M131 117.33c3.4-5.88 5.37-12.68 5.37-19.96 0-4.22-.66-8.28-1.87-12.09.95 3.42 1.5 7.01 1.5 10.73 0 7.28-1.97 14.08-5.37 19.96l.02.04-38.88 68h1.16l38.09-66.64z"/>
     </g>
-    <g
-       id="g2613"
-       clip-path="url(#b)"
-       transform="translate(-7,-7)">
-      <path
-         id="path2609"
-         d="m 96,9 c 48.43,0 87.72,39.13 87.99,87.5 0,-0.17 0.01,-0.33 0.01,-0.5 C 184,47.4 144.6,8 96,8 47.4,8 8,47.4 8,96 8,96.17 8.01,96.33 8.01,96.5 8.28,48.13 47.57,9 96,9 Z"
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff;fill-opacity:0.2" />
-      <path
-         id="path2611"
-         d="m 96,183 c 48.43,0 87.72,-39.13 87.99,-87.5 0,0.17 0.01,0.33 0.01,0.5 0,48.6 -39.4,88 -88,88 C 47.4,184 8,144.6 8,96 8,95.83 8.01,95.67 8.01,95.5 8.28,143.87 47.57,183 96,183 Z"
-         inkscape:connector-curvature="0"
-         style="fill:#3e2723;fill-opacity:0.15" />
+    <g clip-path="url(#f)" transform="translate(-7 -7)">
+      <path fill="#fff" fill-opacity=".2" d="M96 9c48.43 0 87.72 39.13 87.99 87.5 0-.17.01-.33.01-.5 0-48.6-39.4-88-88-88S8 47.4 8 96c0 .17.01.33.01.5C8.28 48.13 47.57 9 96 9z"/>
+      <path fill="#3e2723" fill-opacity=".15" d="M96 183c48.43 0 87.72-39.13 87.99-87.5 0 .17.01.33.01.5 0 48.6-39.4 88-88 88S8 144.6 8 96c0-.17.01-.33.01-.5C8.28 143.87 47.57 183 96 183z"/>
     </g>
-    <circle
-       id="circle2620"
-       r="88"
-       cx="89"
-       cy="89"
-       style="fill:url(#r)" />
+    <circle cx="89" cy="89" r="88" fill="url(#v)"/>
   </g>
 </svg>

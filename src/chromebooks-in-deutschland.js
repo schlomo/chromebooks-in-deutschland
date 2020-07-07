@@ -210,6 +210,8 @@ var renderPricePerMonth = function (pricePerMonth, type, row) {
 var renderExpiration = function (expiration, type, row) {
     if (type === 'display') {
         expiration = `<a title="${row.expirationId}">${expiration}</a>`;
+    } else if (type === "filter") {
+        expiration = `${row.expirationId} ${expiration}`;
     }
     return expiration;
 };
@@ -242,7 +244,7 @@ function prepareTableData(rawData) {
             const expirationDate = entry.expirationDate = expirationData[expirationId].expiration
             entry.expiration = entry.expirationDate.substr(0, 7);
 
-            const [ price, priceUpdated ] = rawData.priceData[productProvider][productId];
+            const [price, priceUpdated] = rawData.priceData[productProvider][productId];
             if (!(price && price > 0 && price < 9999)) {
                 throw `Invalid price >${price}<!`;
             }
@@ -336,30 +338,41 @@ function setSearch(search_term) {
 };
 
 function handleUsedDevice(e) {
-    var used_device_model = used_device_model_select.val(),
-        used_device_price = used_device_price_input.val(),
+    var expirationId = used_device_model_select.val(),
+        price = used_device_price_input.val();
+    const 
         used_device_results = $('#used_device_results'),
-        used_device_error = $('#used_device_error');
+        used_device_error = $('#used_device_error'),
+        used_device_search_new = $("#used_device_search_new");
 
-    if (used_device_model && used_device_price) {
-        if (used_device_model in expirationData) {
-            const expiration = expirationData[used_device_model].expiration,
-                { supportMonths, pricePerMonth, pricePerYear } = calculatePricesFromExpiration(used_device_price, expiration);
+    if (expirationId && price) {
+        if (expirationId in expirationData) {
+            const 
+                expirationDate = expirationData[expirationId].expiration,
+                expirationYearMonth = expirationDate.substr(0, 7),
+                { supportMonths, pricePerMonth, pricePerYear } = calculatePricesFromExpiration(price, expirationDate);
             if (pricePerMonth < 0) {
-                used_device_error.html(`Das <b>${used_device_model}</b> erhält seit <b>${expiration.substr(0, 7)} keine</b> Updates mehr!`).show();
+                used_device_error.html(`Das <b>${expirationId}</b> erhält seit <b>${expirationYearMonth} keine</b> Updates mehr!`).show();
             } else {
-                $('#used_device_aue').text(expiration.substr(0, 7));
+                $('#used_device_aue').text(expirationYearMonth);
                 $('#used_price_per_month').html(toEuro(pricePerMonth));
                 $('#used_price_per_year').html(toEuro(pricePerYear));
                 used_device_error.text("").hide();
                 used_device_results.show();
+                if (Object.values(deviceData).filter(entry => entry.expirationId == expirationId).length > 0) {
+                    used_device_search_new.show().click((e) => {
+                        setSearch(expirationId.replace(/[()]/g,"."));
+                        e.preventDefault();
+                    });
+                }
             }
         } else {
-            used_device_error.text(`Modell ${used_device_model} nicht bekannt`).show();
+            used_device_error.text(`Modell ${expirationId} nicht bekannt`).show();
         }
     } else {
         used_device_results.hide();
         used_device_error.text("").hide();
+        used_device_search_new.hide().off("click");
     }
     e.preventDefault();
 }

@@ -222,3 +222,7 @@ dd {
   display: none;
   color: lightcoral;
 }
+
+#used_device_search_new {
+  display: none;
+}

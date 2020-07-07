@@ -3,7 +3,6 @@
 var $ = require('jquery');
 var DataTables = require('datatables.net-dt')();
 var DataTablesResponsive = require('datatables.net-responsive-dt')();
-var Select2 = require('select2')();
 
 import Iconify from '@iconify/iconify';
 require("./generated/icon-bundle");
@@ -13,7 +12,7 @@ import { cpus, resolutions } from "./consts";
 var search_field = undefined;
 var last_search_term = undefined;
 
-var used_device_model_input = undefined;
+var used_device_model_select = undefined;
 var used_device_price_input = undefined;
 
 // take state from history API or from URL hash
@@ -277,7 +276,6 @@ function prepareTableData(rawData) {
     return result;
 }
 
-
 var loadTableDataFromApi = (rawData) => {
     dataDump = JSON.stringify(rawData, null, 2);
     debug("Read data from database:", rawData);
@@ -327,8 +325,8 @@ function setSearch(search_term) {
 };
 
 function handleUsedDevice(e) {
-    var used_device_model = used_device_model_input.val(),
-        used_device_price = $('#used_device_price').val(),
+    var used_device_model = used_device_model_select.val(),
+        used_device_price = used_device_price_input.val(),
         used_device_results = $('#used_device_results'),
         used_device_error = $('#used_device_error');
 
@@ -336,18 +334,23 @@ function handleUsedDevice(e) {
         if (used_device_model in expirationData) {
             const expiration = expirationData[used_device_model].expiration,
                 { supportMonths, pricePerMonth, pricePerYear } = calculatePricesFromExpiration(used_device_price, expiration);
-            $('#used_device_aue').text(expiration.substr(0, 7));
-            $('#used_price_per_month').html(toEuro(pricePerMonth));
-            $('#used_price_per_year').html(toEuro(pricePerYear));
-            used_device_results.show();
-            used_device_error.hide();
+            if (pricePerMonth < 0) {
+                used_device_error.html(`Das <b>${used_device_model}</b> erhält <b>keine</b> Updates mehr!`).show();
+            } else {
+                $('#used_device_aue').text(expiration.substr(0, 7));
+                $('#used_price_per_month').html(toEuro(pricePerMonth));
+                $('#used_price_per_year').html(toEuro(pricePerYear));
+                used_device_error.text("").hide();
+                used_device_results.show();
+            }
         } else {
             used_device_error.text(`Modell ${used_device_model} nicht bekannt`).show();
         }
     } else {
         used_device_results.hide();
-        used_device_error.hide();
+        used_device_error.text("").hide();
     }
+    e.preventDefault();
 }
 
 var stage2setup = function () {
@@ -376,11 +379,15 @@ var stage2setup = function () {
 
     $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
 
-    used_device_model_input.append(
-        Object.keys(expirationData).map((entry) => {
-            return $("<option>").text(entry)
-        })).select2();
-
+    var used_device_form = $('#used_device_form')
+    used_device_form.on("mouseover", (e) => {
+        require('select2')();
+        used_device_model_select.append(
+            Object.keys(expirationData).map((entry) => {
+                return $("<option>").text(entry)
+            })).select2();
+        used_device_form.off("mouseover");
+    });
 }
 
 function scrollToElement(jump) {
@@ -492,8 +499,10 @@ $(document).ready(function () {
         initComplete: stage2setup,
     });
 
-    used_device_model_input = $('#used_device_model').change(handleUsedDevice);
-    used_device_price_input = $('#used_device_price').on("propertychange keyup paste input", handleUsedDevice);
+    used_device_model_select = $('#used_device_model')
+        .change(handleUsedDevice);
+    used_device_price_input = $('#used_device_price')
+        .on("propertychange keyup paste input", handleUsedDevice);
 
     $('#dump').click(function (e) {
         // transform expiration list into list of model by year

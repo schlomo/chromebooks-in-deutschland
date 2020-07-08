@@ -290,7 +290,7 @@ function prepareTableData(rawData) {
     return result;
 }
 
-var loadTableDataFromApi = (rawData) => {
+var tableDataFromApi = (rawData) => {
     debug("Read data from database:", rawData);
     data = rawData; // make data globally accessible
     let tableData = prepareTableData(rawData);
@@ -340,14 +340,14 @@ function setSearch(search_term) {
 function handleUsedDevice(e) {
     var expirationId = used_device_model_select.val(),
         price = used_device_price_input.val();
-    const 
+    const
         used_device_results = $('#used_device_results'),
         used_device_error = $('#used_device_error'),
         used_device_search_new = $("#used_device_search_new");
 
     if (expirationId && price) {
         if (expirationId in expirationData) {
-            const 
+            const
                 expirationDate = expirationData[expirationId].expiration,
                 expirationYearMonth = expirationDate.substr(0, 7),
                 { supportMonths, pricePerMonth, pricePerYear } = calculatePricesFromExpiration(price, expirationDate);
@@ -361,7 +361,7 @@ function handleUsedDevice(e) {
                 used_device_results.show();
                 if (Object.values(deviceData).filter(entry => entry.expirationId == expirationId).length > 0) {
                     used_device_search_new.show().click((e) => {
-                        setSearch(expirationId.replace(/[()]/g,"."));
+                        setSearch(expirationId.replace(/[()]/g, "."));
                         e.preventDefault();
                     });
                 }
@@ -377,43 +377,7 @@ function handleUsedDevice(e) {
     e.preventDefault();
 }
 
-var stage2setup = function () {
-    search_field = $('#chromebooks_filter input');
-
-    if (initial_search_term) {
-        try {
-            const linkElement = $(`#${initial_search_term}`);
-            debug(`Search is actually link element`, linkElement[0]);
-            scrollToElement(linkElement[0]);
-        } catch {
-            debug("Restoring saved search", initial_search_term);
-            setSearch(initial_search_term);
-        }
-    } else {
-        // no initial search or link, focus on search input field
-        search_field.focus();
-    }
-
-    dt.on('search.dt', function (event) {
-        persistSearch(dt.search());
-    });
-
-    let search_field_div = search_field.parent();
-    search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
-
-}
-
-function scrollToElement(jump) {
-    const el = $(jump),
-        new_position = el.offset().top,
-        id = el.attr("id");
-    if (id) {
-        persistSearch(id);
-    }
-    $('html, body').stop().animate({ scrollTop: new_position }, 500);
-}
-
-$(document).ready(function () {
+function stage1setup(tableData) {
 
     dt = $('#chromebooks').DataTable({
         paging: true,
@@ -421,13 +385,7 @@ $(document).ready(function () {
         dom: "frtilp",
         responsive: true,
         autoWidth: false, // responsive needs autoWidth to respond correctly to rotation / screen size changes
-        ajax: {
-            url: "api/data",
-            cache: true,
-            dataType: "json",
-            data: initial_search_term ? { search: initial_search_term } : {},
-            dataSrc: loadTableDataFromApi,
-        },
+        data: tableData,
         columns: [
             {
                 title: "Modell",
@@ -457,26 +415,26 @@ $(document).ready(function () {
         ],
         order: [[3, "asc"]],
         language: {
-            "decimal": ",",
-            "thousands": ".",
-            "info": "Anzeige _START_ bis _END_ von _TOTAL_ Einträgen",
-            "infoEmpty": "Keine Einträge",
-            "infoPostFix": "",
-            "infoFiltered": "(gefiltert aus insgesamt _MAX_ Einträgen)",
-            "lengthMenu": "Jeweils _MENU_ Einträge anzeigen",
-            "paginate": {
-                "first": "Erste",
-                "last": "Letzte",
-                "next": "Nächste",
-                "previous": "Zurück"
+            decimal: ",",
+            thousands: ".",
+            info: "Anzeige _START_ bis _END_ von _TOTAL_ Einträgen",
+            infoEmpty: "Keine Einträge",
+            infoPostFix: "",
+            infoFiltered: "(gefiltert aus insgesamt _MAX_ Einträgen)",
+            lengthMenu: "Jeweils _MENU_ Einträge anzeigen",
+            paginate: {
+                first: "Erste",
+                last: "Letzte",
+                next: "Nächste",
+                previous: "Zurück"
             },
-            "processing": "Verarbeitung läuft ...",
-            "searchPlaceholder": "Suchbegriff",
-            "zeroRecords": "Keine Daten! Bitte ändern Sie Ihren Suchbegriff.",
-            "emptyTable": "Keine Daten vorhanden",
-            "aria": {
-                "sortAscending":  ": aktivieren, um Spalte aufsteigend zu sortieren",
-                "sortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
+            processing: "Verarbeitung läuft ...",
+            searchPlaceholder: "Suchbegriff",
+            zeroRecords: "Keine Daten! Bitte ändern Sie Ihren Suchbegriff.",
+            emptyTable: "Keine Daten vorhanden",
+            aria: {
+                sortAscending: ": aktivieren, um Spalte aufsteigend zu sortieren",
+                sortDescending: ": aktivieren, um Spalte absteigend zu sortieren"
             },
             search: "Suche _INPUT_ in allen Feldern",
             loadingRecords: "Daten werden geladen...",
@@ -607,6 +565,57 @@ $(document).ready(function () {
 
         footer.after($("<div>", { class: "dumpzone", html: result }));
     });
-});
+}
+
+function stage2setup(settings) {
+    dt = settings.oInstance.api();
+    search_field = $('#chromebooks_filter input');
+
+    if (initial_search_term) {
+        try {
+            const linkElement = $(`#${initial_search_term}`);
+            debug(`Search is actually link element`, linkElement[0]);
+            scrollToElement(linkElement[0]);
+        } catch {
+            debug("Restoring saved search", initial_search_term);
+            setSearch(initial_search_term);
+        }
+    } else {
+        // no initial search or link, focus on search input field
+        search_field.focus();
+    }
+
+    dt.on('search.dt', function (event) {
+        persistSearch(dt.search());
+    });
+
+    let search_field_div = search_field.parent();
+    search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
+
+}
+
+function scrollToElement(jump) {
+    const el = $(jump),
+        new_position = el.offset().top,
+        id = el.attr("id");
+    if (id) {
+        persistSearch(id);
+    }
+    $('html, body').stop().animate({ scrollTop: new_position }, 500);
+}
+
+const apiSettings = {
+    url: "api/data",
+    cache: true,
+    dataType: "json",
+    data: initial_search_term ? { search: initial_search_term } : {},
+};
+
+$.when(
+    $.ajax(apiSettings).then(tableDataFromApi),
+    $.ready
+).then(stage1setup);
+
+
 
 

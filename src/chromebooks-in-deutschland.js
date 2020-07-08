@@ -377,6 +377,65 @@ function handleUsedDevice(e) {
     e.preventDefault();
 }
 
+function showDumpZone(e) {
+    const footer = $("footer");
+
+    // transform expiration list into list of model by year
+    let expirationModelsByYear = {};
+    Object.entries(expirationData).forEach(([id, entry]) => {
+        let year = entry.expiration.substr(0, 4);
+        if (!(year in expirationModelsByYear)) {
+            expirationModelsByYear[year] = {};
+        }
+        expirationModelsByYear[year][id] = true;
+    });
+
+    // remove listed devices
+    Object.entries(deviceData).forEach(([id, entry]) => {
+        let expirationId = entry.expirationId;
+        if (expirationId in expirationData) {
+            let year = expirationData[expirationId].expiration.substr(0, 4);
+            if (expirationId in expirationModelsByYear[year]) {
+                delete expirationModelsByYear[year][expirationId];
+            }
+        } else {
+            debug(`Invalid expiration ID ${expirationId} for ${id}`);
+        }
+    });
+
+    debug("expirationModelsByYear", expirationModelsByYear);
+
+    // add last 3 years to dump output
+    let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-3);
+    let result = [$("<h1>", { text: "Additional Devices" })];
+    interestingYears.forEach((year) => {
+        let yearContainer = $("<ul>");
+        result.push($("<h2>", { text: `Supported till ${year}` }));
+        Object.keys(expirationModelsByYear[year]).forEach((id) => {
+            let li = $("<li>")
+            li.append($("<a>", {
+                text: id,
+                target: "_blank",
+                href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
+                title: `Idealo search for ${id}`,
+                rel: "external noopener"
+            }))
+            yearContainer.append(li);
+        });
+        result.push(yearContainer);
+    });
+
+    const dataDump = JSON.stringify(data, null, 2);
+    result.push(
+        $("<h1>", { text: "Data Dump" }),
+        $("<pre>").html(dataDump)
+    );
+
+    footer.after($("<div>", { class: "dumpzone", html: result }));
+
+    e.preventDefault();
+}
+
 function stage1setup(tableData) {
 
     dt = $('#chromebooks').DataTable({
@@ -447,6 +506,8 @@ function stage1setup(tableData) {
 
     $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleString()}.`);
 
+    // used device price calculator
+    // model selector fills with data only when needed
     var used_device_form = $('#used_device_form')
     used_device_form.one("mouseover", (e) => {
         require('select2')();
@@ -455,6 +516,10 @@ function stage1setup(tableData) {
                 return $("<option>").text(entry)
             })).select2();
     });
+    used_device_model_select = $('#used_device_model')
+        .change(handleUsedDevice);
+    used_device_price_input = $('#used_device_price')
+        .on("propertychange keyup paste input", handleUsedDevice);
 
     // on-page links implemented via scrolling
     $(document).on("click", ".scroll_to", (event) => {
@@ -483,7 +548,6 @@ function stage1setup(tableData) {
         }
     });
 
-
     // h1 get a scroll-to-top button
     $('h1').each(function () {
         $(this).append('<button class="scroll_to_top">⬆</button>');
@@ -504,67 +568,7 @@ function stage1setup(tableData) {
         }
     };
 
-    used_device_model_select = $('#used_device_model')
-        .change(handleUsedDevice);
-    used_device_price_input = $('#used_device_price')
-        .on("propertychange keyup paste input", handleUsedDevice);
-
-    $('#dump').one("click", (e) => {
-        const footer = $("footer");
-
-        // transform expiration list into list of model by year
-        let expirationModelsByYear = {};
-        Object.entries(expirationData).forEach(([id, entry]) => {
-            let year = entry.expiration.substr(0, 4);
-            if (!(year in expirationModelsByYear)) {
-                expirationModelsByYear[year] = {};
-            }
-            expirationModelsByYear[year][id] = true;
-        });
-
-        // remove listed devices
-        Object.entries(deviceData).forEach(([id, entry]) => {
-            let expirationId = entry.expirationId;
-            if (expirationId in expirationData) {
-                let year = expirationData[expirationId].expiration.substr(0, 4);
-                if (expirationId in expirationModelsByYear[year]) {
-                    delete expirationModelsByYear[year][expirationId];
-                }
-            } else {
-                debug(`Invalid expiration ID ${expirationId} for ${id}`);
-            }
-        });
-
-        debug("expirationModelsByYear", expirationModelsByYear);
-
-        // add last 3 years to dump output
-        let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-3);
-        let result = [$("<h1>", { text: "Additional Devices" })];
-        interestingYears.forEach((year) => {
-            let yearContainer = $("<ul>");
-            result.push($("<h2>", { text: `Supported till ${year}` }));
-            Object.keys(expirationModelsByYear[year]).forEach((id) => {
-                let li = $("<li>")
-                li.append($("<a>", {
-                    text: id,
-                    target: "_blank",
-                    href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
-                    title: `Idealo search for ${id}`,
-                    rel: "external noopener"
-                }))
-                yearContainer.append(li);
-            });
-            result.push(yearContainer);
-        });
-
-        const dataDump = JSON.stringify(data, null, 2);
-        result.push(
-            $("<h1>", { text: "Data Dump" }),
-            $("<pre>").html(dataDump)
-        );
-
-        footer.after($("<div>", { class: "dumpzone", html: result }));
-    });
+    $('#dump').one("click", showDumpZone);
 }
 
 function stage2setup(settings) {

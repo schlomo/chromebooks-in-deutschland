@@ -401,17 +401,6 @@ var stage2setup = function () {
     let search_field_div = search_field.parent();
     search_field_div.append(`, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>`);
 
-    $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleString()}. Insgesamt ${dt.data().count()} Geräte.`);
-
-    var used_device_form = $('#used_device_form')
-    used_device_form.on("mouseover", (e) => {
-        require('select2')();
-        used_device_model_select.append(
-            Object.keys(expirationData).map((entry) => {
-                return $("<option>").text(entry)
-            })).select2();
-        used_device_form.off("mouseover");
-    });
 }
 
 function scrollToElement(jump) {
@@ -425,53 +414,6 @@ function scrollToElement(jump) {
 }
 
 $(document).ready(function () {
-
-    // on-page links implemented via scrolling
-    $(document).on("click", ".scroll_to", (event) => {
-        var jump = $(event.target).attr('href');
-        scrollToElement(jump);
-        event.preventDefault();
-    });
-
-    // search links
-    $(document).on("click", ".search", (event) => {
-        let el = $(event.target);
-        let href = el.attr("href");
-        let text = el.text();
-        setSearch(href != "" ? href : text);
-        event.preventDefault();
-    });
-
-    // links without a class are external and open a new window
-    $('a:not([class])').each(function () {
-        let el = $(this);
-        let target = $(this).attr("target");
-        if (!target) {
-            $(this).attr("target", "_blank").attr("rel", "external noopener");
-        }
-    });
-
-
-    // h1 get a scroll-to-top button
-    $('h1').each(function () {
-        $(this).append('<button class="scroll_to_top">⬆</button>');
-    });
-
-    $(document).on("click", ".scroll_to_top", (event) => {
-        $('html, body').stop().animate({ scrollTop: 0 }, 500);
-        event.preventDefault();
-    });
-
-    // extralinks toggle in table
-    $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
-
-    window.onpopstate = function (event) {
-        debug("onpopstate", event.state);
-        if (event.state && "search" in event.state) {
-            setSearch(event.state.search);
-        }
-    };
-
 
     dt = $('#chromebooks').DataTable({
         paging: true,
@@ -545,15 +487,72 @@ $(document).ready(function () {
         initComplete: stage2setup,
     });
 
+    $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleString()}.`);
+
+    var used_device_form = $('#used_device_form')
+    used_device_form.one("mouseover", (e) => {
+        require('select2')();
+        used_device_model_select.append(
+            Object.keys(expirationData).map((entry) => {
+                return $("<option>").text(entry)
+            })).select2();
+    });
+
+    // on-page links implemented via scrolling
+    $(document).on("click", ".scroll_to", (event) => {
+        var jump = $(event.target).attr('href');
+        scrollToElement(jump);
+        event.preventDefault();
+    });
+
+    // search links
+    $(document).on("click", ".search", (event) => {
+        let el = $(event.target);
+        let href = el.attr("href");
+        let text = el.text();
+        setSearch(href != "" ? href : text);
+        event.preventDefault();
+    });
+
+    // links without a class are external and open a new window
+    $('a:not([class])').each(function () {
+        let el = $(this);
+        let target = $(this).attr("target");
+        if (!target) {
+            $(this)
+                .attr("target", "_blank")
+                .attr("rel", "external noopener");
+        }
+    });
+
+
+    // h1 get a scroll-to-top button
+    $('h1').each(function () {
+        $(this).append('<button class="scroll_to_top">⬆</button>');
+    });
+
+    $(document).on("click", ".scroll_to_top", (event) => {
+        $('html, body').stop().animate({ scrollTop: 0 }, 500);
+        event.preventDefault();
+    });
+
+    // extralinks toggle in table
+    $("#chromebooks").on("click", ".extralinks", extraLinkClickHandler);
+
+    window.onpopstate = function (event) {
+        debug("onpopstate", event.state);
+        if (event.state && "search" in event.state) {
+            setSearch(event.state.search);
+        }
+    };
+
     used_device_model_select = $('#used_device_model')
         .change(handleUsedDevice);
     used_device_price_input = $('#used_device_price')
         .on("propertychange keyup paste input", handleUsedDevice);
 
-    $('#dump').click(function (e) {
-        const dumpElement = $(this);
+    $('#dump').one("click", (e) => {
         const footer = $("footer");
-        dumpElement.off("click"); // prevent double action
 
         // transform expiration list into list of model by year
         let expirationModelsByYear = {};

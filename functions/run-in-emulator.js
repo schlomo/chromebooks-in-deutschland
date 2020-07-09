@@ -14,7 +14,7 @@ module.exports = function () {
     try {
         admin.database().ref("/").set(require("../backup.json"));
         console.log("Loaded data from ../backup.json into database");
-    } catch {
+    } catch (error) {
         // no backup.json, generate random price data
         var priceData = {};
         Object.values(deviceData).forEach(entry => {

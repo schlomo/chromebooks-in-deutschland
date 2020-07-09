@@ -16,7 +16,7 @@
     "prep:expiration-data": "node generate-expiration-data.js",
     "parcel-build": "parcel build --no-source-maps --out-dir public --log-level 4 src/index.html",
     "parcel-watch": "parcel watch --out-dir public --log-level 4 src/index.html",
-    "firebase-emulators": "firebase emulators:exec 'npm run parcel-watch'",
+    "firebase-emulators": "firebase --project dev emulators:exec 'npm run parcel-watch'",
     "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",
     "update-dev-database": "./update-dev-database",
     "postinstall": "cd functions && npm install"

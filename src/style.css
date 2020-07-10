@@ -63,6 +63,23 @@ main {
   padding: 1em;
 }
 
+jtslink {
+  float: right;
+}
+
+jtsinfo {
+  display: block;
+  margin: 0.3em;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+jtsinfo img {
+  vertical-align: middle;
+  margin-right: 1em;
+  height: 3em;
+}
+
 footer {
   padding: 0.1em 0.2em 0.1em 0.2em;
   border-top: 1px solid black;

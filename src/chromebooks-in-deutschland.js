@@ -326,12 +326,21 @@ function persistSearch(search_term) {
 function setSearch(search_term) {
     // now in initial loading
     // search_term = decodeURIComponent(search_term);
+    if (search_term.startsWith("#")) {
+        search_term = search_term.substr(1); // strip leading #
+    }
     debug(`Setting search to >${search_term}<`);
     search_field.val(search_term);
     dt.search(search_term, true, false).draw();
+    $("jtsinfo").remove();
     if (search_term) {
         debug("Scrolling to search");
         html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
+        if (search_term == '14".*FHD.*Intel.*202(6|7|8)') {
+            $("#chromebooks_filter").append($("<jtsinfo>").html(
+                '<img src="https://www.google.com/a/cpanel/jschule.de/images/logo.gif">' +
+                "Diese Auswahl an Chromebooks entspricht der Empfehlung für Schülerlaptops für die JTS."));
+        }
     } else {
         debug("setSearch not scrolling to top");
     }

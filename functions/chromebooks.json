@@ -545,7 +545,7 @@
     "brand": "Acer",
     "cpu": "Intel Celeron N4100",
     "disabled": false,
-    "expirationId": "Acer Chromebook Spin 11 (CP311-H1)",
+    "expirationId": "Acer Chromebook Spin 311 (CP311-2H)",
     "extraInfo": "",
     "flip": true,
     "id": "Acer Chromebook Spin 311 (CP311-2H-C7BG)",
@@ -1740,12 +1740,12 @@
     "type": "chromebook",
     "variant": "81WX0008"
   },
-  "Lenovo Ideapad Duet Chromebook (ZA6F0014)": {
+  "Lenovo Chromebook Duet (ZA6F0014)": {
     "biometricUnlock": false,
     "brand": "Lenovo",
     "cpu": "MediaTek P60T",
     "disabled": false,
-    "expirationId": "Lenovo Ideapad Duet Chromebook",
+    "expirationId": "Lenovo Chromebook Duet",
     "extraInfo": "Tastatur abnehmbar, USI Stylus optional",
     "extraLinks": {
       "Chromebookz: Testbericht": "https://chromebookz.de/lenovo-ideapad-duet-test-review-video/",
@@ -1753,9 +1753,9 @@
       "VoWe: Das Schnuckelchen": "https://vowe.net/archives/018564.html"
     },
     "flip": true,
-    "id": "Lenovo Ideapad Duet Chromebook (ZA6F0014)",
+    "id": "Lenovo Chromebook Duet (ZA6F0014)",
     "memory": 4,
-    "model": "Ideapad Duet Chromebook",
+    "model": "Chromebook Duet",
     "productId": "200339232",
     "productProvider": "idealo",
     "screenGlare": true,
@@ -1767,12 +1767,12 @@
     "type": "chromebook",
     "variant": "ZA6F0014"
   },
-  "Lenovo Ideapad Duet Chromebook (ZA6F0026)": {
+  "Lenovo Chromebook Duet (ZA6F0026)": {
     "biometricUnlock": false,
     "brand": "Lenovo",
     "cpu": "MediaTek P60T",
     "disabled": false,
-    "expirationId": "Lenovo Ideapad Duet Chromebook",
+    "expirationId": "Lenovo Chromebook Duet",
     "extraInfo": "Tastatur abnehmbar, USI Stylus optional",
     "extraLinks": {
       "Chromebookz: Testbericht": "https://chromebookz.de/lenovo-ideapad-duet-test-review-video/",
@@ -1780,9 +1780,9 @@
       "VoWe: Das Schnuckelchen": "https://vowe.net/archives/018564.html"
     },
     "flip": true,
-    "id": "Lenovo Ideapad Duet Chromebook (ZA6F0026)",
+    "id": "Lenovo Chromebook Duet (ZA6F0026)",
     "memory": 4,
-    "model": "Ideapad Duet Chromebook",
+    "model": "Chromebook Duet",
     "productId": "200326544",
     "productProvider": "idealo",
     "screenGlare": true,

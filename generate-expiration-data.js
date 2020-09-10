@@ -12,10 +12,10 @@ const decode = require("decode-html");
 
 const extraExpirationInfo = {
     // This is actually called different, migrate data before removing
-    "Lenovo Ideapad Duet Chromebook": {
-        "brand": "Lenovo",
+    "expirationID": {
+        "brand": "Brand",
         "expiration": "2028-01-01T00:00:00.000Z",
-        "model": "Ideapad Duet Chromebook"
+        "model": "Some Chromebook Model"
     },
 };
 

@@ -1,10 +1,17 @@
 'use strict';
 
+const assert = require("assert").strict;
+
 const output = "src/generated/expiration-data.js";
 const url = 'https://support.google.com/chrome/a/answer/6220366?hl=en';
 const fetch = require("node-fetch");
 const { writeFileSync } = require("fs");
+const cheerio = require('cheerio');
+const cheerioTableparser = require('cheerio-tableparser');
+const decode = require("decode-html");
+
 const extraExpirationInfo = {
+    // This is actually called different, migrate data before removing
     "Lenovo Ideapad Duet Chromebook": {
         "brand": "Lenovo",
         "expiration": "2028-01-01T00:00:00.000Z",
@@ -13,7 +20,7 @@ const extraExpirationInfo = {
 };
 
 function debug(...args) {
-    //console.debug(...args); 
+    // console.debug(...args); 
 }
 
 // return string formatted as DB key
@@ -27,23 +34,24 @@ function getDateFromMonthYear(input) {
 }
 
 function getExpirationDataFromSection(html) {
-    var table = html.split("<tbody>")[1].split("</tbody>")[0];
+    var $ = cheerio.load(html);
+    cheerioTableparser($);
+    var rawData = $("table").parsetable(false, false, true);
+
+    // var table = html.split("<tbody>")[1].split("</tbody>")[0];
     var results = [];
-    var rows = table.split("<tr>");
-    rows.forEach((row) => {
-        var columns = row.split("<td>").map((html) => {
-            return html.replace(/(\n|<[^>]+>)/g, "");
-        });
-        if (columns.length < 3) {
-            return;
-        }
-        var modelparts = columns[1].replace(/&nbsp;/g, " ").trim().split(/ \(|\/ |, |\)/g);
+
+    rawData[0].forEach((models, index) => {
+        if (models == "Product") return; // skip column headings
+        var expirationRawData = rawData[1][index];
+        var modelparts = decode(models).replace(/ +/, " ").split(/ \(|\/ |, |\)/g);
         var model = modelparts.shift().trim();
         var junk = modelparts.pop(); // some models have multiple submodels separated by /, sadly without system
         if (junk) {
-            debug(`${columns[1]} has model ${model} and extra ${junk}, ignoring`);
+            debug(`>${models}< has model >${model}< and extra >${junk}<, ignoring`);
         }
-        var expiration = getDateFromMonthYear(columns[2].trim());
+        debug(`- ${models} ${expirationRawData} [${modelparts}]`);
+        var expiration = getDateFromMonthYear(expirationRawData);
         if (modelparts.length === 0) {
             results.push([model, expiration]);
         } else {
@@ -59,12 +67,16 @@ function getExpirationDataFromSection(html) {
 fetch(url)
     .then(res => res.text())
     .then((rawData) => {
-        var sections = rawData.split('<h2 class="zippy">');
+        var sections = rawData.split(/<a class="zippy".*>(.*)<\/a>/);
         sections.shift(); // get rid of HTML boilerplate
+        assert.ok(sections.length % 2 == 0, "After dropping HTML boilerplate, there should be an even amount of elements of Brand and Tabledata");
         var expirationData = extraExpirationInfo;
-        sections.forEach((section) => {
-            var brand = section.split("</h2>")[0];
-            var table = getExpirationDataFromSection(section);
+        while (sections.length > 0) {
+            var brand = decode(sections.shift());
+            assert.ok(brand !== undefined, "Brand cannot be undefined");
+            var tableData = sections.shift();
+            debug(`==== Brand ${brand} ====`);
+            var table = getExpirationDataFromSection(tableData);
             table.forEach((row) => {
                 var model = row[0];
                 var expiration = row[1];
@@ -73,9 +85,12 @@ fetch(url)
                     brand: brand,
                     model: model,
                     expiration: expiration,
-                };
+                }; 
             });
-        });
+        }
+
+        assert.ok(Object.keys(expirationData).length >= 316, "Expect at least 316 entries for expiration data");
+
         var result = {
             expirationData: expirationData,
             expirationTimestamp: new Date()

@@ -26,6 +26,9 @@
   "devDependencies": {
     "@iconify/json": "^1.1.175",
     "@iconify/json-tools": "^1.0.8",
+    "cheerio": "^1.0.0-rc.3",
+    "cheerio-tableparser": "^1.0.1",
+    "decode-html": "^2.0.0",
     "firebase-tools": "^8.4.3",
     "git-describe": "^4.0.4",
     "node-fetch": "^2.6.0",

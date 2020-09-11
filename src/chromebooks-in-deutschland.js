@@ -12,6 +12,8 @@ import { expirationData, expirationTimestamp } from "./generated/expiration-data
 import { cpus, resolutions } from "./consts";
 import deviceData from "../functions/chromebooks.json";
 
+import jtslogo from "./jtslogo.png";
+
 var search_field = undefined;
 var last_search_term = undefined;
 
@@ -56,7 +58,13 @@ const devices_defaults = {
   };
 */
 
-const debugMode = window.location.search.includes("debug");
+var debugMode = window.location.search.includes("debug") || (window.localStorage.getItem("debug") !== null) ;
+if (debugMode) {
+    console.log("Enabling & persisting debug mode");
+    window.localStorage.setItem("debug", true);
+} else {
+    window.localStorage.removeItem("debug");
+}
 
 if (debugMode) {
     var debug = (...args) => {
@@ -324,25 +332,24 @@ function persistSearch(search_term) {
 };
 
 function setSearch(search_term) {
-    // now in initial loading
-    // search_term = decodeURIComponent(search_term);
     if (search_term.startsWith("#")) {
         search_term = search_term.substr(1); // strip leading #
     }
     debug(`Setting search to >${search_term}<`);
-    search_field.val(search_term);
-    dt.search(search_term, true, false).draw();
-    $("jtsinfo").remove();
-    if (search_term) {
-        debug("Scrolling to search");
-        html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
-        if (search_term == '14".*FHD.*Intel.*202(6|7|8)') {
-            $("#chromebooks_filter").append($("<jtsinfo>").html(
-                '<img src="https://www.google.com/a/cpanel/jschule.de/images/logo.gif">' +
-                "Diese Auswahl an Chromebooks entspricht der Empfehlung für Schülerlaptops für die JTS."));
+    try {
+        new RegExp(search_term);
+        search_field.val(search_term).trigger("input");
+        handleJtsInfoBanner(search_term);
+        // function search( input [, regex[ , smart[ , caseInsen ]]] ) https://datatables.net/reference/api/search()
+        dt.search(search_term, true, false, true).draw();
+        if (search_term) {
+            debug("Scrolling to search");
+            html_body.stop().animate({ scrollTop: search_field.offset().top }, 500);
+        } else {
+            debug("setSearch not scrolling to top");
         }
-    } else {
-        debug("setSearch not scrolling to top");
+    } catch (err) {
+        console.error(`Search term >${search_term}< is invalid RegEx: ${err}`);
     }
 };
 
@@ -415,7 +422,28 @@ function showDumpZone(e) {
 
     // add last 3 years to dump output
     let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-3);
-    let result = [$("<h1>", { text: "Additional Devices" })];
+    let result = [
+        $("<h1>", { text: "Additional Devices" }),
+        $("<button>", {
+            id: "debugToggle",
+            css: {
+                float:"right",
+            },
+            text: `${debugMode ? "Disable" : "Enable"} Debug Mode`,
+            click: (event) => {
+                var button = $(event.target);
+                console.log(`CLICKED: debugMode was ${debugMode}`);
+                if (debugMode) {
+                    window.localStorage.removeItem("debug");
+                    debugMode = false;
+                } else {
+                    window.localStorage.setItem("debug", true);
+                    debugMode = true;
+                }
+                button.text(`${debugMode ? "Disable" : "Enable"} Debug Mode`);
+            }
+        }),
+    ];
     interestingYears.forEach((year) => {
         let yearContainer = $("<ul>");
         result.push($("<h2>", { text: `Supported till ${year}` }));
@@ -507,7 +535,8 @@ function stage1setup(tableData) {
             loadingRecords: "Daten werden geladen...",
         },
         search: {
-            smart: false
+            smart: false,
+            regex: true,
         },
         initComplete: stage2setup,
     });
@@ -578,6 +607,20 @@ function stage1setup(tableData) {
     $('#dump').one("click", showDumpZone);
 }
 
+function handleJtsInfoBanner(search_term) {
+    $("jtsinfo").remove();
+    if (search_term == '14".*FHD.*Intel.*202(6|7|8)') {
+        $("#chromebooks_filter").append($("<jtsinfo>").html(
+            `<img src="${jtslogo}">` +
+            "Diese Auswahl an Chromebooks entspricht der Empfehlung für Schülerlaptops für die JTS."));
+    }
+}
+const searchInputChangedHandler = (event) => {
+    var search_term = event.target.value;
+    debug(`INPUT changed >${search_term}<`);
+    handleJtsInfoBanner(search_term);
+};
+
 function stage2setup(settings) {
     dt = settings.oInstance.api();
     search_field = $('#chromebooks_filter input');
@@ -597,9 +640,12 @@ function stage2setup(settings) {
     }
 
     dt.on('search.dt', function (event) {
-        persistSearch(dt.search());
+        var search_term = dt.search();
+        debug(`DT Search Event >${search_term}<`);
+        persistSearch(search_term);
     });
 
+    search_field.on("input", searchInputChangedHandler );
 }
 
 function scrollToElement(jump) {

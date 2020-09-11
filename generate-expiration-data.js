@@ -1,5 +1,8 @@
 'use strict';
 
+// sanity check - how many entries to expect at least?
+const mindEntries = 315;
+
 const assert = require("assert").strict;
 
 const output = "src/generated/expiration-data.js";
@@ -12,11 +15,13 @@ const decode = require("decode-html");
 
 const extraExpirationInfo = {
     // This is actually called different, migrate data before removing
-    "expirationID": {
+/*
+     "expiration ID": {
         "brand": "Brand",
         "expiration": "2028-01-01T00:00:00.000Z",
         "model": "Some Chromebook Model"
-    },
+    }, 
+    */
 };
 
 function debug(...args) {
@@ -89,7 +94,7 @@ fetch(url)
             });
         }
 
-        assert.ok(Object.keys(expirationData).length >= 316, "Expect at least 316 entries for expiration data");
+        assert.ok(Object.keys(expirationData).length >= mindEntries, `Expect at least ${mindEntries} entries for expiration data`);
 
         var result = {
             expirationData: expirationData,

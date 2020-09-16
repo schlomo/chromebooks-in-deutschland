@@ -90,6 +90,7 @@ async function getIdealoPriceNew(productId) {
         uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
         pool: httpsAgent,
         json: false,
+        method: "POST",
         headers: {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
         }
@@ -248,7 +249,7 @@ function updateChromebookPriceDataJustOne() {
 
 }
 
-exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('*/7 * * * *').onRun(updateChromebookPriceDataJustOne);
+exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('*/3 * * * *').onRun(updateChromebookPriceDataJustOne);
 
 exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
     updateChromebookPriceDataJustOne().then(() => {

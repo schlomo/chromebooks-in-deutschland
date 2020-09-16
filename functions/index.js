@@ -45,7 +45,6 @@ function devicesByPriceAge() {
                 var b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
                 return a_price_age - b_price_age;
             } catch (e) {
-                console.error(e);
                 return 0;
             }
         });
@@ -249,7 +248,7 @@ function updateChromebookPriceDataJustOne() {
 
 }
 
-exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('every 1 minute').onRun(updateChromebookPriceDataJustOne);
+exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('* * * * *').onRun(updateChromebookPriceDataJustOne);
 
 exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
     updateChromebookPriceDataJustOne().then(() => {

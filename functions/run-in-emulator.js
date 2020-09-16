@@ -29,7 +29,9 @@ module.exports = function () {
                 price += 200;
             }
             priceData[productProvider][productId] = [
-                price, new Date().toISOString()
+                // use random price to also generate random date variation for last price info
+                // as a side effect, the most expensive device has the oldest price info which makes it easy to identify
+                price, new Date(Date.now() - Math.floor(price * 100000)).toISOString()
             ]
         });
         admin.database().ref("/priceData").set(priceData);

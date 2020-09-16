@@ -7,11 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "generate-expiration-data.js",
+            "name": "Node current file",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/generate-expiration-data.js"
+            "program": "${file}"
         }
     ]
 }

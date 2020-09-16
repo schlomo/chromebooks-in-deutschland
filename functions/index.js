@@ -1,4 +1,5 @@
 'use strict';
+
 const
     deviceData = require("./chromebooks.json"),
     Promise = require('bluebird'),
@@ -30,9 +31,39 @@ function getDbKey(t) {
 }
 
 function debug(...args) {
-    //console.debug(...args); 
+    console.debug(...args);
 }
 
+function devicesByPriceAge() {
+    // get a list of deviceData entries ordered by the age of their price
+
+    return admin.database().ref('/priceData').once('value').then((snapshot) => {
+        var priceData = snapshot.val();
+        return Object.values(deviceData).sort((a, b) => {
+            try {
+                var a_price_age = new Date(priceData[a.productProvider][a.productId][1]);
+                var b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
+                return a_price_age - b_price_age;
+            } catch (e) {
+                console.error(e);
+                return 0;
+            }
+        });
+    });
+}
+exports.test = functions.https.onRequest((request, response) => {
+
+    devicesByPriceAge()
+        .then(data => { return data.shift()}) // take first entry = oldest price
+        .then((entry) => {
+            return updateChromebookPriceEntryNew(entry, () => {
+                return response.send("OK");
+            });
+        }).catch(e => {
+            console.error(e);
+            return response.status(500).send("ERROR, check logs");
+        });
+});
 /*
 
 updateChromebookPriceData
@@ -59,7 +90,10 @@ async function getIdealoPriceNew(productId) {
     let options = {
         uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
         pool: httpsAgent,
-        json: false
+        json: false,
+        headers: {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+        }
     };
     return rp(options).then((body) => {
         let match = body.match(/<title>.*ab (.*)€.*<\/title>/);
@@ -76,11 +110,12 @@ async function getIdealoPriceNew(productId) {
             debug(`Idealo ${productId} = ${price}`);
         } else {
             let match = body.match(/<title>.*<\/title>/);
-            console.log(`Idealo ${productId} ERROR: ${match}`)
+            console.log(`Idealo ${productId} = 0 from >${match}<`)
         }
 
         return price;
     });
+    // non-200 codes like 429 go to .catch() upstream
 }
 
 async function getMetacompPrice(productId) {
@@ -110,7 +145,7 @@ exports.test3 = functions.https.onRequest((request, response) => {
 });
 
 exports.test4 = functions.https.onRequest((request, response) => {
-    Promise.resolve(getIdealoPrice("6943191")).then((val) => {
+    Promise.resolve(getIdealoPriceNew("6943191")).then((val) => {
         console.log(val);
         return response.send(`Price: ${val}`);
     }).catch((error) => {
@@ -157,8 +192,6 @@ function updateChromebookPriceData() {
     );
 }
 
-exports.updateChromebookPriceData = functions.pubsub.schedule('every 19 minutes').onRun(updateChromebookPriceData);
-
 exports.test_updateChromebookPriceData = functions.https.onRequest((request, response) => {
     updateChromebookPriceData().then((val) => {
         const msg = `OK ${val.length} entries`;
@@ -174,7 +207,7 @@ exports.test_updateChromebookPriceData = functions.https.onRequest((request, res
 });
 
 
-function updateChromebookPriceEntryNew(entry) {
+function updateChromebookPriceEntryNew(entry, onComplete = null) {
     let id = entry.id;
     console.log(`Processing updateChromebookPriceEntryNew ${id}`);
     let priceFunction = undefined;
@@ -183,38 +216,44 @@ function updateChromebookPriceEntryNew(entry) {
         case "metacomp": priceFunction = getMetacompPrice; break;
         default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
     }
-    msleep(573);
     return priceFunction(entry.productId).then((price) => {
         if (price < 0) {
             price = 0;
         }
         var priceDataEntry = [price, new Date().toISOString()];
-        debug(priceDataEntry);
         return admin.database()
-            .ref(`/priceDataNew/${entry.productProvider}/${entry.productId}`).set(priceDataEntry);
+            .ref(`/priceData/${entry.productProvider}/${entry.productId}`).set(priceDataEntry, onComplete);
     }).catch((error) => {
         if ("statusCode" in error) {
-            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+            if (error.statusCode === 429) {
+                console.error(`Blocked 429 ${error.options.uri}`)
+            } else {
+                console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
+            }
         } else {
             console.error(error);
         }
+        return false;
     });
 
 }
 
-function updateChromebookPriceDataNew() {
-    return Promise.map(
-        Object.values(deviceData),
-        updateChromebookPriceEntryNew,
-        { concurrency: 1 }
-    );
+function updateChromebookPriceDataJustOne() {
+    return devicesByPriceAge()
+            .then(data => { return data.shift()}) // take first entry = oldest price
+            .then(updateChromebookPriceEntryNew)
+            .catch(e => {
+                console.error(e);
+                return false;
+            });
+
 }
 
-exports.updateChromebookPriceDataNew = functions.pubsub.schedule('every 7 hours').onRun(updateChromebookPriceDataNew);
+exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('every 1 minute').onRun(updateChromebookPriceDataJustOne);
 
-exports.test_updateChromebookPriceDataNew = functions.https.onRequest((request, response) => {
-    updateChromebookPriceDataNew().then((val) => {
-        const msg = `OK ${val.length} entries`;
+exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
+    updateChromebookPriceDataJustOne().then(() => {
+        const msg = `OK`;
         console.log(msg);
         return response.send(msg);
     }).catch((error) => {
@@ -223,6 +262,7 @@ exports.test_updateChromebookPriceDataNew = functions.https.onRequest((request, 
         } else {
             console.error(error);
         }
+        response.sendStatus(500);
     });
 });
 

@@ -248,7 +248,7 @@ function updateChromebookPriceDataJustOne() {
 
 }
 
-exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('* * * * *').onRun(updateChromebookPriceDataJustOne);
+exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('*/7 * * * *').onRun(updateChromebookPriceDataJustOne);
 
 exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
     updateChromebookPriceDataJustOne().then(() => {

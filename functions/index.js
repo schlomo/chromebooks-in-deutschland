@@ -8,6 +8,7 @@ const
     rp = require('request-promise-native'),
     express = require('express'),
     https = require('https'),
+    crypto = require("crypto"),
     httpsAgent = new https.Agent({ keepAlive: true }),
     { inspect } = require("util");
 
@@ -92,7 +93,7 @@ async function getIdealoPriceNew(productId) {
         json: false,
         method: "POST",
         headers: {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 " + crypto.randomBytes(50).toString("hex")
         }
     };
     return rp(options).then((body) => {

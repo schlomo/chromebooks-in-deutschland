@@ -266,7 +266,7 @@ exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('13 */3 * *
 
 exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
     updateChromebookPriceDataJustOne().then((val) => {
-        const msg = `Done: ${JSON.stringify(val, null, 2)}`;
+        const msg = `Done: ${inspect(val)}`;
         console.log(msg);
         return response.send(msg);
     }).catch((error) => {

@@ -260,7 +260,7 @@ function updateChromebookPriceDataJustOne() {
         .then(updateChromebookPriceEntryNew)
         .catch(e => {
             console.error(e);
-            return false;
+            return e;
         });
 
 }
@@ -279,6 +279,24 @@ exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((reque
             console.error(error);
         }
         response.sendStatus(500);
+    });
+});
+
+exports.test_webhook = functions.https.onRequest((request, response) => {
+    // See https://webhook.site/#!/f736144d-44b4-4347-a277-02687070ee4d
+    let options = {
+        uri: "https://webhook.site/f736144d-44b4-4347-a277-02687070ee4d",
+        pool: httpsAgent,
+        json: false,
+        method: "POST",
+        headers: {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 " + crypto.randomBytes(50).toString("hex")
+        }
+    };
+    return rp(options).then((val) => {
+        return response.send(inspect(val));
+    }).catch((error) => {
+        return response.status(500).send(inspect(error));
     });
 });
 

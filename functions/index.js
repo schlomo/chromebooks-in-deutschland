@@ -57,7 +57,7 @@ function devicesByPriceAge() {
 exports.test = functions.https.onRequest((request, response) => {
 
     devicesByPriceAge()
-        .then(data => { return data.shift()}) // take first entry = oldest price
+        .then(data => { return data.shift() }) // take first entry = oldest price
         .then((entry) => {
             return updateChromebookPriceEntryNew(entry, () => {
                 return response.send("OK");
@@ -238,7 +238,7 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
         return admin.database()
             .ref(`/priceData/${priceData.productProvider}/${priceData.productId}`)
             .set(priceDataEntry, onComplete)
-            .then(() => {return priceData});
+            .then(() => { return priceData });
     }).catch((error) => {
         if ("statusCode" in error) {
             if (error.statusCode === 429) {
@@ -256,12 +256,12 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
 
 function updateChromebookPriceDataJustOne() {
     return devicesByPriceAge()
-            .then(data => { return data.shift()}) // take first entry = oldest price
-            .then(updateChromebookPriceEntryNew)
-            .catch(e => {
-                console.error(e);
-                return false;
-            });
+        .then(data => { return data.shift() }) // take first entry = oldest price
+        .then(updateChromebookPriceEntryNew)
+        .catch(e => {
+            console.error(e);
+            return false;
+        });
 
 }
 
@@ -269,7 +269,7 @@ exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('13 */3 * *
 
 exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
     updateChromebookPriceDataJustOne().then((val) => {
-        const msg = `Done: ${JSON.stringify(val,null,2)}`;
+        const msg = `Done: ${JSON.stringify(val, null, 2)}`;
         console.log(msg);
         return response.send(msg);
     }).catch((error) => {
@@ -337,4 +337,5 @@ if (emulator) {
     });
 }
 
-exports.api = functions.https.onRequest(api);
+exports.api = functions.region("us-central1") // works only in this region
+    .https.onRequest(api);

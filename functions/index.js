@@ -241,15 +241,12 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
             .then(() => { return priceData });
     }).catch((error) => {
         if ("statusCode" in error) {
-            if (error.statusCode === 429) {
-                console.error(`Blocked 429 ${error.options.uri}`)
-            } else {
-                console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
-            }
-        } else {
-            console.error(error);
+            var msg = error.statusCode === 429 ? `Blocked 429 ${error.options.uri}` : `ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`;
+            console.error(msg);
+            return msg;
         }
-        return false;
+        console.error(error);
+        return error;
     });
 
 }

@@ -1,9 +1,11 @@
 'use strict';
 
+const region = "europe-west3"; // https://cloud.google.com/functions/docs/locations
+
 const
     deviceData = require("./chromebooks.json"),
     Promise = require('bluebird'),
-    functions = require('firebase-functions'),
+    functions = require('firebase-functions').region(region), // set region for all
     admin = require('firebase-admin'),
     rp = require('request-promise-native'),
     express = require('express'),
@@ -11,6 +13,7 @@ const
     crypto = require("crypto"),
     httpsAgent = new https.Agent({ keepAlive: true }),
     { inspect } = require("util");
+
 
 const emulator = "FUNCTIONS_EMULATOR" in process.env;
 if (emulator) {
@@ -112,6 +115,7 @@ async function getIdealoPriceNew(productId) {
         } else {
             let match = body.match(/<title>.*<\/title>/);
             console.log(`Idealo ${productId} = 0 from >${match}<`)
+            price = 0;
         }
 
         return price;
@@ -221,9 +225,20 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
         if (price < 0) {
             price = 0;
         }
-        var priceDataEntry = [price, new Date().toISOString()];
+        return {
+            productProvider: entry.productProvider,
+            productId: entry.productId,
+            price: price,
+            id: id,
+        }
+    }).then((priceData) => {
+        var priceDataEntry = [priceData.price, new Date().toISOString()];
+        // requests-promise and requests-promise-native don't support the Bluebird .tap() method which would be the optimum to avoid nesting
+        // eslint-disable-next-line promise/no-nesting
         return admin.database()
-            .ref(`/priceData/${entry.productProvider}/${entry.productId}`).set(priceDataEntry, onComplete);
+            .ref(`/priceData/${priceData.productProvider}/${priceData.productId}`)
+            .set(priceDataEntry, onComplete)
+            .then(() => {return priceData});
     }).catch((error) => {
         if ("statusCode" in error) {
             if (error.statusCode === 429) {
@@ -250,11 +265,11 @@ function updateChromebookPriceDataJustOne() {
 
 }
 
-exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('*/3 * * * *').onRun(updateChromebookPriceDataJustOne);
+exports.updateChromebookPriceDataJustOne = functions.pubsub.schedule('13 */3 * * *').onRun(updateChromebookPriceDataJustOne);
 
 exports.test_updateChromebookPriceDataJustOne = functions.https.onRequest((request, response) => {
-    updateChromebookPriceDataJustOne().then(() => {
-        const msg = `OK`;
+    updateChromebookPriceDataJustOne().then((val) => {
+        const msg = `Done: ${JSON.stringify(val,null,2)}`;
         console.log(msg);
         return response.send(msg);
     }).catch((error) => {

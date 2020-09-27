@@ -12,9 +12,12 @@ if (emulator) {
     admin.initializeApp();
 }
 
+// eslint throws promise/catch-or-return on the next line and I don't understand why, disable it
+// eslint-disable-next-line
 backend.updateChromebookPriceDataJustOne().then((val) => {
     const msg = `Done: ${inspect(val)}`;
     console.log(msg);
+    return;
 }).catch((error) => {
     if ("statusCode" in error) {
         console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)

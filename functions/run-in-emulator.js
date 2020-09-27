@@ -37,6 +37,7 @@ module.exports = function (admin) {
         });
         admin.database().ref("/priceData").set(priceData).then(() => {
             console.log("Generated random price data");
+            return;
         }).catch((e) => {
             console.error("ERROR setting /priceData", e);
         });

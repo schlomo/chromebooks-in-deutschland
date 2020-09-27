@@ -1,8 +1,8 @@
 const
     deviceData = require("./chromebooks.json"),
-    admin = require('firebase-admin');
+    { inspect } = require("util")   ;
 
-module.exports = function () {
+module.exports = function (admin) {
     const conf = {
         databaseURL: `http://${process.env.FIREBASE_DATABASE_EMULATOR_HOST}/?ns=${process.env.GCLOUD_PROJECT}`,
         credential: {
@@ -11,6 +11,7 @@ module.exports = function () {
     };
     console.log(`Initializing for emulator`);
     admin.initializeApp(conf);
+
     try {
         admin.database().ref("/").set(require("../backup.json"));
         console.log("Loaded data from ../backup.json into database");
@@ -34,7 +35,10 @@ module.exports = function () {
                 price, new Date(Date.now() - Math.floor(price * 100000)).toISOString()
             ]
         });
-        admin.database().ref("/priceData").set(priceData);
-        console.log("Generated random price data");
+        admin.database().ref("/priceData").set(priceData).then(() => {
+            console.log("Generated random price data");
+        }).catch((e) => {
+            console.error("ERROR setting /priceData", e);
+        });
     }
 }

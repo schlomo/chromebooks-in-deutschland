@@ -254,6 +254,10 @@ function prepareTableData(rawData) {
 
             const [price, priceUpdated] = rawData.priceData[productProvider][productId];
             if (!(price && price > 0 && price < 9999)) {
+                if (price === 0) {
+                    debug(`Disable ${id}`);
+                    return;
+                }
                 throw `Invalid price >${price}<!`;
             }
             entry.price = price;
@@ -432,7 +436,6 @@ function showDumpZone(e) {
             text: `${debugMode ? "Disable" : "Enable"} Debug Mode`,
             click: (event) => {
                 var button = $(event.target);
-                console.log(`CLICKED: debugMode was ${debugMode}`);
                 if (debugMode) {
                     window.localStorage.removeItem("debug");
                     debugMode = false;
@@ -440,7 +443,7 @@ function showDumpZone(e) {
                     window.localStorage.setItem("debug", true);
                     debugMode = true;
                 }
-                button.text(`${debugMode ? "Disable" : "Enable"} Debug Mode`);
+                location.reload();
             }
         }),
     ];
@@ -627,16 +630,21 @@ function stage2setup(settings) {
 
     if (initial_search_term) {
         try {
-            const linkElement = $(`#${initial_search_term}`);
-            debug(`Search is actually link element`, linkElement[0]);
-            scrollToElement(linkElement[0]);
+            const linkElements = $(`#${initial_search_term}`);
+            const linkElement = linkElements[0];
+            if ((linkElement instanceof Element) && ("id" in linkElement)) { 
+                debug(`Search is actually link element`, linkElement);
+                scrollToElement(linkElement);
+            } else {
+                throw 0;
+            }
         } catch {
             debug("Restoring saved search", initial_search_term);
             setSearch(initial_search_term);
         }
     } else {
         // no initial search or link, focus on search input field
-        search_field.focus();
+        search_field.trigger("focus");
     }
 
     dt.on('search.dt', function (event) {

@@ -20,7 +20,7 @@
     "firebase-emulators": "firebase --project dev emulators:exec 'npm run parcel-watch'",
     "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",
     "update-dev-database": "./update-dev-database",
-    "postinstall": "cd functions && npm install"
+    "postinstall": "echo Installing Functions && cd functions && npm install && echo OK"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",

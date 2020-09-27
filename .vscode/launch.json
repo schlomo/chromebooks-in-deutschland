@@ -12,6 +12,20 @@
                 "<node_internals>/**"
             ],
             "program": "${file}"
+        },
+        {
+            "type": "node",
+            "name": "Standalone Emulator",
+            "program": "${workspaceFolder}/functions/standalone.js",
+            "request": "launch",
+            "env": {
+                "FIREBASE_DATABASE_EMULATOR_HOST": "localhost:9000",
+                "GCLOUD_PROJECT": "chromebooks-in-deutschland-dev",
+                "FUNCTIONS_EMULATOR": "1"
+            },
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
         }
     ]
 }

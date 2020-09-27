@@ -140,8 +140,9 @@ footer {
 }
 
 
-input[type=search] {
+#chromebooks_filter > label > input[type=search] {
   border-radius: 0.5em;
+  background-color: white;
 }
 
 table.dataTable tbody td {

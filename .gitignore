@@ -9,3 +9,4 @@ package-lock.json
 new.json
 backup.json
 /src/generated/*
+/functions/bundle.js

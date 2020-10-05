@@ -7,7 +7,6 @@ const
     rp = require('request-promise-native'),
     express = require('express'),
     https = require('https'),
-    crypto = require("crypto"),
     httpsAgent = new https.Agent({ keepAlive: true });
 
 
@@ -16,11 +15,6 @@ function msleep(n) {
 }
 function sleep(n) {
     msleep(n * 1000);
-}
-
-// return string formatted as DB key
-function getDbKey(t) {
-    return t.replace(/[.#$/[\]]/g, '_');
 }
 
 function debug(...args) {
@@ -93,7 +87,7 @@ async function getIdealoPriceNew(productId) {
             debug(`Idealo ${productId} = ${price} from ${options.uri}`);
         } else {
             let match = body.match(/<title>.*<\/title>/);
-            console.log(`Idealo ${productId} = 0 from >${match}<`)
+            console.log(`Idealo ${productId} = 0 from ${options.uri} »${match}«`)
             price = 0;
         }
 

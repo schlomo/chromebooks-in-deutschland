@@ -1,7 +1,7 @@
 'use strict';
 
 // sanity check - how many entries to expect at least?
-const mindEntries = 315;
+const minEntries = 315;
 
 const assert = require("assert").strict;
 
@@ -94,7 +94,7 @@ fetch(url)
             });
         }
 
-        assert.ok(Object.keys(expirationData).length >= mindEntries, `Expect at least ${mindEntries} entries for expiration data`);
+        assert.ok(Object.keys(expirationData).length >= minEntries, `Expect at least ${minEntries} entries for expiration data`);
 
         var result = {
             expirationData: expirationData,

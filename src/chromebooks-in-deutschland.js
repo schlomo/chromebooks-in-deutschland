@@ -254,26 +254,26 @@ function calculatePricesFromExpiration(price, expiration) {
     return result;
 }
 
+function getPriceData(rawData, productProvider, productId) {
+    if ((productProvider in rawData.priceData) && (productId in rawData.priceData[productProvider])) {
+        return rawData.priceData[productProvider][productId];
+    } else {
+        return [0, ""]; // fake data for missing price items, for price=0 nobody should care about the date
+    } 
+}
+
 function prepareTableData(rawData) {
     let result = [];
     Object.entries(deviceData).forEach(([id, entry]) => {
         try {
             const { expirationId, productProvider, productId } = entry;
 
-            if (!(expirationId in expirationData)) {
-                throw `Invalid Expiration ID >${expirationId}<!`;
-            }
-
-            if (!(productProvider in rawData.priceData) &&
-                !(productId in rawData.priceData[productProvider])) {
-                throw `No priceData found for >${id}< (/priceData/${productProvider}/${productId})`;
-            }
             entry = Object.assign({}, entry); // create copy of entry
             // use YYYY-MM from ISO date string as display date, can be improved
             const expirationDate = entry.expirationDate = expirationData[expirationId].expiration
             entry.expiration = entry.expirationDate.substr(0, 7);
-
-            const [price, priceUpdated] = rawData.priceData[productProvider][productId];
+            
+            const [price, priceUpdated] = getPriceData(rawData, productProvider, productId);
             if (!(price && price > 0 && price < 9999)) {
                 if (price === 0) {
                     debug(`No price for ${id}`);
@@ -283,7 +283,7 @@ function prepareTableData(rawData) {
             }
             entry.price = price;
             entry.priceUpdated = priceUpdated;
-
+            
             Object.assign(entry, calculatePricesFromExpiration(price, expirationDate));
 
             entry.ausstattung = "";

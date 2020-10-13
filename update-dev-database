@@ -2,5 +2,7 @@
 set -e -E -o pipefail
 
 # make backup
-firebase --project prod database:get / | ./node_modules/node-jq/bin/jq >backup.json
+firebase --project prod database:get / >backup.json
 firebase --project dev database:update --confirm / backup.json
+
+echo "OK"

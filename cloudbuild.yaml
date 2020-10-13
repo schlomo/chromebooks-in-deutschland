@@ -10,10 +10,6 @@ steps:
   args: [install]
 - name: node
   entrypoint: npm
-  args: [install]
-  dir: functions
-- name: node
-  entrypoint: npm
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}

@@ -23,22 +23,24 @@
                 "parameters": [
                     {
                         "name": "hook",
-                        "type": "hook",
                         "label": "Webhook",
+                        "type": "hook",
                         "required": true
                     },
                     {
                         "name": "maxResults",
-                        "type": "number",
-                        "label": "Maximum number of results"
+                        "label": "Maximum number of results",
+                        "type": "number"
                     }
                 ],
                 "interface": [
                     {
                         "name": "message",
+                        "type": "collection",
                         "spec": [
                             {
                                 "name": "attributes",
+                                "type": "collection",
                                 "spec": [
                                     {
                                         "name": "buildId",
@@ -48,8 +50,7 @@
                                         "name": "status",
                                         "type": "text"
                                     }
-                                ],
-                                "type": "collection"
+                                ]
                             },
                             {
                                 "name": "data",
@@ -71,8 +72,7 @@
                                 "name": "publish_time",
                                 "type": "text"
                             }
-                        ],
-                        "type": "collection"
+                        ]
                     },
                     {
                         "name": "subscription",
@@ -140,7 +140,54 @@
                         "required": true
                     }
                 ]
-            }
+            },
+            "onerror": [
+                {
+                    "id": 13,
+                    "module": "email:ActionSendMeEmail",
+                    "version": 7,
+                    "parameters": {},
+                    "mapper": {
+                        "subject": "ERROR {{9.error.message}}",
+                        "html": "{{9.error.detail}}\n{{6.value}}"
+                    },
+                    "metadata": {
+                        "designer": {
+                            "x": 841,
+                            "y": 262
+                        },
+                        "expect": [
+                            {
+                                "name": "subject",
+                                "label": "Subject",
+                                "type": "text"
+                            },
+                            {
+                                "name": "html",
+                                "label": "Content",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    "onerror": [
+                        {
+                            "id": 14,
+                            "module": "builtin:Ignore",
+                            "version": 1,
+                            "filter": {
+                                "name": "Catch all",
+                                "conditions": []
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1141,
+                                    "y": 262
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "id": 10,
@@ -153,36 +200,36 @@
                     [
                         {
                             "a": "{{9.status}}",
-                            "o": "text:notequal",
-                            "b": "WORKING"
+                            "b": "WORKING",
+                            "o": "text:notequal"
                         },
                         {
                             "a": "{{9.status}}",
-                            "o": "text:notequal",
-                            "b": "QUEUED"
+                            "b": "QUEUED",
+                            "o": "text:notequal"
                         }
                     ]
                 ]
             },
             "mapper": {
-                "subject": "{{9.status}} {{ifempty(9.substitutions.TAG_NAME; 9.substitutions.BRANCH_NAME )}} to {{9.substitutions.`_ENVIRONMENT`}} Cloud Build {{9.projectId}} ",
-                "html": "<a href=\"{{9.logUrl}}\">Logs</a>\n\n<a href=\"https://github.com/schlomo/chromebooks-in-deutschland/commit/{{9.sourceProvenance.resolvedRepoSource.commitSha}}\">Commit {{9.sourceProvenance.resolvedRepoSource.commitSha}}</a>\n\n<hr>\n\nDetails:<br><pre>{{6.value}}</pre>"
+                "html": "<a href=\"{{9.logUrl}}\">Logs</a>\n\n<a href=\"https://github.com/schlomo/chromebooks-in-deutschland/commit/{{9.sourceProvenance.resolvedRepoSource.commitSha}}\">Commit {{9.sourceProvenance.resolvedRepoSource.commitSha}}</a>\n\n<hr>\n\nDetails:<br><pre>{{6.value}}</pre>",
+                "subject": "{{9.status}} {{ifempty(9.substitutions.TAG_NAME; 9.substitutions.BRANCH_NAME )}} to {{9.substitutions.`_ENVIRONMENT`}} Cloud Build {{9.projectId}} "
             },
             "metadata": {
                 "designer": {
-                    "x": 866,
-                    "y": 7
+                    "x": 873,
+                    "y": -141
                 },
                 "expect": [
                     {
                         "name": "subject",
-                        "label": "Subject",
-                        "type": "text"
+                        "type": "text",
+                        "label": "Subject"
                     },
                     {
                         "name": "html",
-                        "label": "Content",
-                        "type": "text"
+                        "type": "text",
+                        "label": "Content"
                     }
                 ]
             }

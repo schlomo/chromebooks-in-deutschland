@@ -155,7 +155,7 @@ var renderModel = function (model, type, row) {
                 .html(getIcon("mdi-cart-outline"))
                 .attr("rel", "external noopener")
         ];
-        if (row.specLink.startsWith("http")) {
+        if (row.speclink && row.specLink.startsWith("http")) {
             deviceLinks.push(
                 $("<a>")
                     .attr("href", row.specLink)
@@ -167,7 +167,6 @@ var renderModel = function (model, type, row) {
         }
         let extraLinksElements = [];
         if (row.extraLinks) {
-            debug("Adding extra Links");
             deviceLinks.push(
                 $("<a>")
                     .attr("href", "")
@@ -201,18 +200,40 @@ var renderFeatures = function (features, type, row) {
     return features;
 };
 
-var renderPrice = function (price, type, row) {
-    if (type === 'display') {
-        price = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(price) + '</a>';
+
+function renderZeroPrice(type) {
+    switch (type) {
+        case "display":
+            return "<nv title='kein Preis verfügbar'>&circleddash;</nv>";
+        case "sort":
+            return 9999;
+        case "filter":
+            return "kein Preis verfügbar";
+        default:
+            return null;
     }
-    return price;
+}
+
+var renderPrice = function (price, type, row) {
+    if (price === 0) {
+        return renderZeroPrice(type);
+    } else {
+        if (type === 'display') {
+            price = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(price) + '</a>';
+        }
+        return price;
+    }
 };
 
 var renderPricePerMonth = function (pricePerMonth, type, row) {
-    if (type === 'display') {
-        pricePerMonth = `<a title="${row.supportMonths} Monate">${toEuro(pricePerMonth)} (${toEuro(pricePerMonth * 12)})</a>`;
+    if (pricePerMonth === 0) {
+        return renderZeroPrice(type);
+    } else {        
+        if (type === 'display') {
+            pricePerMonth = `<a title="${row.supportMonths} Monate">${toEuro(pricePerMonth)} (${toEuro(pricePerMonth * 12)})</a>`;
+        }
+        return pricePerMonth;
     }
-    return pricePerMonth;
 };
 
 var renderExpiration = function (expiration, type, row) {
@@ -255,10 +276,10 @@ function prepareTableData(rawData) {
             const [price, priceUpdated] = rawData.priceData[productProvider][productId];
             if (!(price && price > 0 && price < 9999)) {
                 if (price === 0) {
-                    debug(`Disable ${id}`);
-                    return;
+                    debug(`No price for ${id}`);
+                } else {
+                    throw `Invalid price >${price}<!`;
                 }
-                throw `Invalid price >${price}<!`;
             }
             entry.price = price;
             entry.priceUpdated = priceUpdated;
@@ -288,7 +309,7 @@ function prepareTableData(rawData) {
             if (entry.disabled && entry.disabled === true) {
                 debug(`Disabled ${id}`);
                 if (debugMode) {
-                    entry.ausstattung += "\nNICHT VERFÜGBAR";
+                    entry.ausstattung += "\nDISABLED";
                 } else {
                     return; // skip disabled unless in debug mode
                 }

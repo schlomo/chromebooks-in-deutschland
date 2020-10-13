@@ -233,6 +233,12 @@ dd {
   font-style: italic;
 }
 
+nv {
+  display: block;
+  font-size: 200%;
+  text-align: center;
+}
+
 #used_device_results {
   display: none;
   background-color: white;

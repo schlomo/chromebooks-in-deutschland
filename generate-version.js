@@ -24,10 +24,6 @@ function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
     return version;
 }
 
-if (process.env.HOME === '/builder/home') {
-    console.warn(process.env); // debug env only on GCP builder
-}
-
 const version = getGitVersion();
 const versioncss = `
 

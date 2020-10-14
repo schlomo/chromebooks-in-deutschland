@@ -241,6 +241,28 @@
     "type": "chromebook",
     "variant": "C933T-C8MF"
   },
+  "Acer Chromebook 314 (CB314-1H-C2KX)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron N4020",
+    "disabled": false,
+    "expirationId": "Acer Chromebook 314 (CB314-1H)",
+    "extraInfo": "",
+    "flip": false,
+    "id": "Acer Chromebook 314 (CB314-1H-C2KX)",
+    "memory": 4,
+    "model": "Chromebook 314",
+    "productId": "200477221",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://www.acer.com/ac/de/DE/content/model/NX.HPYEG.006",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CB314-1H-C2KX"
+  },
   "Acer Chromebook 314 (CB314-1H-C6KW)": {
     "biometricUnlock": false,
     "brand": "Acer",

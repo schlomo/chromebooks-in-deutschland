@@ -11,6 +11,7 @@
     "clean": "rm -Rf public/*",
     "build": "run-s -sl clean prep:* parcel-build",
     "deploy": "run-s -sl build firebase-deploy",
+    "test": "run-s -sl clean prep:*",
     "prep:01-icons": "node generate-icon-bundle.js",
     "prep:02-version": "node generate-version.js",
     "prep:03-expiration-data": "node generate-expiration-data.js",

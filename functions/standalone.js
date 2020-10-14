@@ -13,7 +13,7 @@ if (emulator) {
     admin.initializeApp();
 }
 
-console.log(`Starting standalone for ${admin.app().options.projectId}`);
+console.log(`Starting standalone for project >${admin.app().options.projectId}<`);
 
 // eslint throws promise/catch-or-return on the next line and I don't understand why, disable it
 // eslint-disable-next-line

@@ -155,7 +155,7 @@ var renderModel = function (model, type, row) {
                 .html(getIcon("mdi-cart-outline"))
                 .attr("rel", "external noopener")
         ];
-        if (row.speclink && row.specLink.startsWith("http")) {
+        if (row.specLink && row.specLink.startsWith("http")) {
             deviceLinks.push(
                 $("<a>")
                     .attr("href", row.specLink)

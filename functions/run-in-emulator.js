@@ -5,6 +5,7 @@ const
 module.exports = function (admin) {
     const conf = {
         databaseURL: `http://${process.env.FIREBASE_DATABASE_EMULATOR_HOST}/?ns=${process.env.GCLOUD_PROJECT}`,
+        projectId: process.env.GCLOUD_PROJECT,
         credential: {
             getAccessToken: function () { return { expires_in: 123, access_token: "owner" } }
         }

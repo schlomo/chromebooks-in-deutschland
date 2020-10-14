@@ -32,6 +32,7 @@ function devicesByPriceAge() {
                 var b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
                 return a_price_age - b_price_age;
             } catch (e) {
+                // console.log(`No pricedata for ${a.productId} or ${b.productId}`);
                 return 0;
             }
         });
@@ -189,7 +190,10 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
 
 function updateChromebookPriceDataJustOne() {
     return devicesByPriceAge()
-        .then(data => { return data.shift() }) // take first entry = oldest price
+        .then(data => {
+            console.log(data.map((entry) => entry.id).join("\n")); 
+            return data.shift() 
+        }) // take first entry = oldest price
         .then(updateChromebookPriceEntryNew)
         .catch(e => {
             console.error(e);

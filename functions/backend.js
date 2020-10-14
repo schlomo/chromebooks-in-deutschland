@@ -27,14 +27,19 @@ function devicesByPriceAge() {
     return admin.database().ref('/priceData').once('value').then((snapshot) => {
         var priceData = snapshot.val();
         return Object.values(deviceData).sort((a, b) => {
+            var a_price_age, b_price_age;
+            // Use Unix Epoch (1970) for missing date info
             try {
-                var a_price_age = new Date(priceData[a.productProvider][a.productId][1]);
-                var b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
-                return a_price_age - b_price_age;
+                a_price_age = new Date(priceData[a.productProvider][a.productId][1]);
             } catch (e) {
-                // console.log(`No pricedata for ${a.productId} or ${b.productId}`);
-                return 0;
+                a_price_age = new Date(0);
             }
+            try {
+                b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
+            } catch(e) {
+                b_price_age = new Date(0);
+            }
+            return a_price_age - b_price_age;
         });
     });
 }

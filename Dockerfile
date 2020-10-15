@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 ADD . /work/
 WORKDIR /work
-RUN find . && yarn install && yarn run prep && chmod -R o+rX .
+RUN find . && yarn install && yarn run env && ls -l node_modules/.bin/ && yarn run prep && chmod -R o+rX .
 
 FROM node:alpine
 WORKDIR /work

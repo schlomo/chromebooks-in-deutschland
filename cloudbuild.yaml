@@ -6,19 +6,15 @@ steps:
   entrypoint: git
   args: [fetch, --unshallow, --tags]
 - name: node
-  entrypoint: npm
+  entrypoint: yarn
   args: [install]
 - name: node
-  entrypoint: npm
-  args: [install]
-  dir: functions
-- name: node
-  entrypoint: npm
+  entrypoint: yarn
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
 - name: node
-  entrypoint: npm
+  entrypoint: yarn
   args: [run, update-dev-database]
 
 substitutions:

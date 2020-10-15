@@ -1,7 +1,12 @@
+# exclude everything
 **/*
+# include normal files
 !functions/*.*
 !src/*.*
 !*.*
+# exclude dotfiles and other junk
 **/.*
 **/*.log
+# re-include individual required dotfiles
+!functions/.yarn*
 !src/generated/.keep.directory

@@ -22,10 +22,17 @@ var used_device_price_input = undefined;
 
 // take state from history API or from URL hash
 const wlhash = window.location.hash.split('#')[1];
-const initial_search_term = history.state ? history.state.search : (wlhash ? decodeURIComponent(wlhash) : undefined);
+const initial_search_term = history.state ?
+    history.state.search :
+    (wlhash ? decodeURIComponent(wlhash) : undefined);
 
 var dt = undefined;
 const html_body = $('html, body');
+
+const epochDate = new Date(0);
+
+let oldestprice = new Date();
+let newestprice = new Date(0);
 
 var screenSizesMap = {};
 var data = {};
@@ -58,7 +65,7 @@ const devices_defaults = {
   };
 */
 
-var debugMode = window.location.search.includes("debug") || (window.localStorage.getItem("debug") !== null) ;
+var debugMode = window.location.search.includes("debug") || (window.localStorage.getItem("debug") !== null);
 if (debugMode) {
     console.log("Enabling & persisting debug mode");
     window.localStorage.setItem("debug", true);
@@ -219,7 +226,7 @@ var renderPrice = function (price, type, row) {
         return renderZeroPrice(type);
     } else {
         if (type === 'display') {
-            price = '<a title="Aktualisiert: ' + new Date(row.priceUpdated).toLocaleString() + '">' + toEuro(price) + '</a>';
+            price = '<a title="Aktualisiert: ' + row.priceUpdated.toLocaleString() + '">' + toEuro(price) + '</a>';
         }
         return price;
     }
@@ -228,7 +235,7 @@ var renderPrice = function (price, type, row) {
 var renderPricePerMonth = function (pricePerMonth, type, row) {
     if (pricePerMonth === 0) {
         return renderZeroPrice(type);
-    } else {        
+    } else {
         if (type === 'display') {
             pricePerMonth = `<a title="${row.supportMonths} Monate">${toEuro(pricePerMonth)} (${toEuro(pricePerMonth * 12)})</a>`;
         }
@@ -256,10 +263,12 @@ function calculatePricesFromExpiration(price, expiration) {
 
 function getPriceData(rawData, productProvider, productId) {
     if ((productProvider in rawData.priceData) && (productId in rawData.priceData[productProvider])) {
-        return rawData.priceData[productProvider][productId];
+        let [price, priceUpdated] = rawData.priceData[productProvider][productId];
+        let priceUpdatedDate = new Date(priceUpdated);
+        return [price, priceUpdatedDate];
     } else {
-        return [0, ""]; // fake data for missing price items, for price=0 nobody should care about the date
-    } 
+        return [0, epochDate]; // fake data for missing price items
+    }
 }
 
 function prepareTableData(rawData) {
@@ -272,7 +281,7 @@ function prepareTableData(rawData) {
             // use YYYY-MM from ISO date string as display date, can be improved
             const expirationDate = entry.expirationDate = expirationData[expirationId].expiration
             entry.expiration = entry.expirationDate.substr(0, 7);
-            
+
             const [price, priceUpdated] = getPriceData(rawData, productProvider, productId);
             if (!(price && price > 0 && price < 9999)) {
                 if (price === 0) {
@@ -283,7 +292,15 @@ function prepareTableData(rawData) {
             }
             entry.price = price;
             entry.priceUpdated = priceUpdated;
-            
+            if (priceUpdated > epochDate) {
+                if (priceUpdated > newestprice) {
+                    newestprice = priceUpdated;
+                }
+                if (priceUpdated < oldestprice) {
+                    oldestprice = priceUpdated;
+                }
+            }
+
             Object.assign(entry, calculatePricesFromExpiration(price, expirationDate));
 
             entry.ausstattung = "";
@@ -452,7 +469,7 @@ function showDumpZone(e) {
         $("<button>", {
             id: "debugToggle",
             css: {
-                float:"right",
+                float: "right",
             },
             text: `${debugMode ? "Disable" : "Enable"} Debug Mode`,
             click: (event) => {
@@ -565,7 +582,14 @@ function stage1setup(tableData) {
         initComplete: stage2setup,
     });
 
-    $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleString()}.`);
+    $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleDateString()}.`);
+
+    const oldestpriceDate = oldestprice.toLocaleDateString(),
+        newestpriceDate = newestprice.toLocaleDateString();
+    const priceDateInfo = (oldestpriceDate == newestpriceDate) ?
+        ` Preise vom ${newestpriceDate}.` :
+        ` Preise von ${oldestpriceDate} bis ${newestpriceDate}.`
+    $("#notices").append(priceDateInfo);
 
     // used device price calculator
     // model selector fills with data only when needed
@@ -653,7 +677,7 @@ function stage2setup(settings) {
         try {
             const linkElements = $(`#${initial_search_term}`);
             const linkElement = linkElements[0];
-            if ((linkElement instanceof Element) && ("id" in linkElement)) { 
+            if ((linkElement instanceof Element) && ("id" in linkElement)) {
                 debug(`Search is actually link element`, linkElement);
                 scrollToElement(linkElement);
             } else {
@@ -674,7 +698,7 @@ function stage2setup(settings) {
         persistSearch(search_term);
     });
 
-    search_field.on("input", searchInputChangedHandler );
+    search_field.on("input", searchInputChangedHandler);
 }
 
 function scrollToElement(jump) {

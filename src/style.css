@@ -134,11 +134,16 @@ footer {
   border-radius: 1em;
 }
 
-.dataTables_wrapper .dataTables_length {
+#chromebooks_info, #chromebooks_length {
   padding-top: 0.75em;
   margin: 0 1em 0 1em;
 }
 
+/* disable vertical padding of select to make length and info vertically aligned */
+#chromebooks_length select {
+  padding: 0 4px 0 4px;
+  background-color: white;
+}
 
 #chromebooks_filter > label > input[type=search] {
   border-radius: 0.5em;

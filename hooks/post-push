@@ -1,0 +1,14 @@
+#!/bin/bash
+# https://docs.docker.com/docker-hub/builds/advanced/
+
+if [[ "DOCKER_TAG" == v* ]] ; then
+    echo "=> Setting release tag"
+    tag="$DOCKER_REPO:release"
+    docker tag $IMAGE_NAME "$tag"
+    docker push "$tag"
+fi
+
+echo "=> Setting $SOURCE_COMMIT tag"
+tag="$DOCKER_REPO:$SOURCE_COMMIT"
+docker tag $IMAGE_NAME "$tag"
+docker push "$tag"

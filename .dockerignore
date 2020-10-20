@@ -4,6 +4,8 @@
 !functions/*.*
 !src/*.*
 !*.*
+!*-*
+!LICENSE
 # exclude dotfiles and other junk
 **/.*
 **/*.log
@@ -11,3 +13,5 @@
 !functions/.yarn*
 !src/generated/.keep.directory
 !functions/generated/.keep.directory
+!.dockerignore
+!Dockerfile

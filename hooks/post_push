@@ -1,6 +1,8 @@
 #!/bin/bash
 # https://docs.docker.com/docker-hub/builds/advanced/
 
+set -x
+
 if [[ "DOCKER_TAG" == v* ]] ; then
     echo "=> Setting release tag"
     tag="$DOCKER_REPO:release"
@@ -8,12 +10,7 @@ if [[ "DOCKER_TAG" == v* ]] ; then
     docker push "$tag"
 fi
 
-pwd
-find .
-
-if test -r VERSION ; then
-    read -r VERSION <VERSION
-    echo "=> Setting $VERSION tag"
-    tag="$DOCKER_REPO:$VERSION"
-    docker push "$tag"
-fi
+GIT_VERSION=$(git describe --long --dirty)
+echo "=> Setting $GIT_VERSION tag"
+tag="$DOCKER_REPO:$GIT_VERSION"
+docker push "$tag"

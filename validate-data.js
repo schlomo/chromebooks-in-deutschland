@@ -39,5 +39,5 @@ Object.values(deviceData).map(device => {
 if (errors > 0) {
     process.exit(1);
 } else {
-    console.log("Data is OK");
+    console.log(`Data is OK: ${Object.keys(deviceData).length} devices`);
 }

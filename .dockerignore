@@ -10,3 +10,4 @@
 # re-include individual required dotfiles
 !functions/.yarn*
 !src/generated/.keep.directory
+!functions/generated/.keep.directory

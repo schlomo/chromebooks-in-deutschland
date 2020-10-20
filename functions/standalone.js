@@ -4,6 +4,12 @@ const
 
 const backend = require("./backend");
 
+try {
+    version = require("./generated/version");
+} catch(e) {
+    version = "unknown version";
+}
+
 
 const emulator = "FUNCTIONS_EMULATOR" in process.env ||
     "FIREBASE_DATABASE_EMULATOR_HOST" in process.env;
@@ -13,13 +19,11 @@ if (emulator) {
     admin.initializeApp();
 }
 
-console.log(`Starting standalone for project >${admin.app().options.projectId}<`);
+console.log(`Starting standalone ${version} for project >${admin.app().options.projectId}<`);
 
 // eslint throws promise/catch-or-return on the next line and I don't understand why, disable it
 // eslint-disable-next-line
 backend.updateChromebookPriceDataJustOne().then((val) => {
-    const msg = `Done: ${inspect(val)}`;
-    console.log(msg);
     return;
 }).catch((error) => {
     if ("statusCode" in error) {

@@ -462,8 +462,8 @@ function showDumpZone(e) {
 
     debug("expirationModelsByYear", expirationModelsByYear);
 
-    // add last 3 years to dump output
-    let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-3);
+    // add last 4 years to dump output
+    let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-4);
     let result = [
         $("<h1>", { text: "Additional Devices" }),
         $("<button>", {

@@ -18,7 +18,7 @@ function sleep(n) {
 }
 
 function debug(...args) {
-    console.debug(...args);
+    //console.debug(...args);
 }
 
 function devicesByPriceAge() {
@@ -90,7 +90,7 @@ async function getIdealoPriceNew(productId) {
         }
 
         if (price > 0) {
-            debug(`Idealo ${productId} = ${price} from ${options.uri}`);
+            console.log(`Idealo ${productId} = ${price} from ${options.uri}`);
         } else {
             let match = body.match(/<title>.*<\/title>/);
             console.log(`Idealo ${productId} = 0 from ${options.uri} »${match}«`)
@@ -130,7 +130,6 @@ function updateChromebookPriceEntry(entry) {
             price = 0;
         }
         var priceDataEntry = [price, new Date().toISOString()];
-        debug(priceDataEntry);
         return admin.database()
             .ref(`/priceData/${entry.productProvider}/${entry.productId}`).set(priceDataEntry);
     }).catch((error) => {
@@ -196,7 +195,7 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
 function updateChromebookPriceDataJustOne() {
     return devicesByPriceAge()
         .then(data => {
-            console.log(data.map((entry) => entry.id).join("\n")); 
+            debug(data.map((entry) => entry.id).join("\n")); 
             return data.shift() 
         }) // take first entry = oldest price
         .then(updateChromebookPriceEntryNew)

@@ -1,6 +1,7 @@
 const
     outputCSS = "src/generated/version.css",
     outputFile = "VERSION",
+    outputJS = "functions/generated/version.js",
     { gitDescribeSync } = require("git-describe"),
     { writeFileSync } = require("fs")
     ;
@@ -36,7 +37,10 @@ const versioncss = `
   content: " ${ new Date().toISOString()}";
 }
 
-`
+`;
+const versionjs = `
+module.exports = "${version}";
+`;
 
 try {
     writeFileSync(outputCSS, versioncss);
@@ -44,6 +48,9 @@ try {
 
     writeFileSync(outputFile, version);
     console.log(`Set ${version} in >${outputFile}<`);
+
+    writeFileSync(outputJS, versionjs);
+    console.log(`Set ${version} JS in >${outputJS}`);
 } catch (err) {
     console.error(err);
     process.exit(1);

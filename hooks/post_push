@@ -3,15 +3,15 @@
 
 set -x
 
-if [[ "DOCKER_TAG" == v* ]] ; then
+if [[ "$DOCKER_TAG" =~ ^v[0-9]+$ ]] ; then
     echo "=> Setting release tag"
     tag="$DOCKER_REPO:release"
-    docker tag $IMAGE_NAME "$tag"
+    docker tag "$IMAGE_NAME" "$tag"
     docker push "$tag"
 fi
 
 GIT_VERSION=$(git describe --long --dirty)
 echo "=> Setting $GIT_VERSION tag"
 tag="$DOCKER_REPO:$GIT_VERSION"
-docker tag $IMAGE_NAME "$tag"
+docker tag "$IMAGE_NAME" "$tag"
 docker push "$tag"

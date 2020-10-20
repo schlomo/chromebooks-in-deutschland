@@ -13,4 +13,5 @@ fi
 GIT_VERSION=$(git describe --long --dirty)
 echo "=> Setting $GIT_VERSION tag"
 tag="$DOCKER_REPO:$GIT_VERSION"
+docker tag $IMAGE_NAME "$tag"
 docker push "$tag"

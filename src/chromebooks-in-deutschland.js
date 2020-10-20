@@ -581,7 +581,7 @@ function stage1setup(tableData) {
                 sortAscending: ": aktivieren, um Spalte aufsteigend zu sortieren",
                 sortDescending: ": aktivieren, um Spalte absteigend zu sortieren"
             },
-            search: 'Suche 🔎_INPUT_ in allen Feldern, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="202(6|7|8|9)-">mind. 2026</a>',
+            search: 'Suche 🔎_INPUT_ in allen Feldern, z.B. Geräte mit <a class="search" href="">11,6"</a>, <a class="search" href="">14"</a>, <a class="search" href="">15,6"</a> Bildschirm, mit <a class="search" href="">8 GB</a> RAM, <a class="search" href="">Intel Core</a> CPU, einem <a class="search" href="stylus">Stift</a> oder Updates bis <a class="search" href="20(26|27|28|29|30|31)-">mind. 2026</a>',
             loadingRecords: "Daten werden geladen...",
         },
         search: {

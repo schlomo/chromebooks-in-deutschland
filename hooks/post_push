@@ -8,6 +8,16 @@ if [[ "$DOCKER_TAG" =~ ^v[0-9]+$ ]] ; then
     tag="$DOCKER_REPO:release"
     docker tag "$IMAGE_NAME" "$tag"
     docker push "$tag"
+
+    echo "=> Setting prod tag"
+    tag="$DOCKER_REPO:prod"
+    docker tag "$IMAGE_NAME" "$tag"
+    docker push "$tag"    
+elif [[ "$DOCKER_TAG" == latest ]] ; then
+    echo "=> Setting dev tag"
+    tag="$DOCKER_REPO:dev"
+    docker tag "$IMAGE_NAME" "$tag"
+    docker push "$tag"
 fi
 
 GIT_VERSION=$(git describe --long --dirty)

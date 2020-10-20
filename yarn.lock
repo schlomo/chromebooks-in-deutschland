@@ -3626,10 +3626,10 @@ fn.name@1.x.x:
   resolved "https://registry.yarnpkg.com/fn.name/-/fn.name-1.1.0.tgz#26cad8017967aea8731bc42961d04a3d5988accc"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
-fontsource-roboto@^2.1.4:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/fontsource-roboto/-/fontsource-roboto-2.2.6.tgz#187f009aa490b85156c4db3d2b6b5080412f6b01"
-  integrity sha512-QY6T0fMRfqPnljpSU6gU4cZoTXD4UB5tQpNlQIkX224uAtDaGt8zNjx7glNJCLtCthuTjOb33MbqtifHp/kSyA==
+fontsource-roboto@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/fontsource-roboto/-/fontsource-roboto-3.0.3.tgz#99c312babeabce22b3e933b3edf2951d4508f4f7"
+  integrity sha512-kfsC9qAP6XhwnSDAhg2lhWeaUJfLGXZh7GcLxFiz/4lXdkV2pVhWv2Xp9ES3b3BHdc9UuPrWXXLOphzHIStcOw==
 
 for-in@^1.0.2:
   version "1.0.2"

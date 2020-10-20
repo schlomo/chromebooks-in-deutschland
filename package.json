@@ -42,7 +42,7 @@
     "@iconify/iconify": "^1.0.6",
     "datatables.net-dt": "^1.10.21",
     "datatables.net-responsive-dt": "^2.2.5",
-    "fontsource-roboto": "^2.1.4",
+    "fontsource-roboto": "^3.0.3",
     "jquery": "^3.5.1",
     "select2": "^4.0.13"
   }

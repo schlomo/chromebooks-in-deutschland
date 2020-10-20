@@ -17,13 +17,13 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "express": "^4.17.1",
-    "firebase-admin": "^8.12.1",
+    "firebase-admin": "^9.2.0",
     "firebase-functions": "^3.7.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.8"
   },
   "devDependencies": {
-    "browserify": "^16.5.2",
+    "browserify": "^17.0.0",
     "eslint": "^7.2.0",
     "eslint-plugin-promise": "^4.0.1",
     "firebase-functions-test": "^0.2.1"

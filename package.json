@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "run-s -s clean 'prep:*' firebase-emulators",
-    "clean": "rm -Rf public/* src/generated/*",
+    "clean": "rm -Rf public/* src/generated/* functions/generated/*",
     "build": "run-s -sl clean 'prep:*' parcel-build",
     "deploy": "run-s -sl build firebase-deploy",
     "docker": "docker build -t schlomo/chromebooks-in-deutschland-standalone .",

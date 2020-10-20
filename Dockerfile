@@ -1,7 +1,12 @@
 FROM node:alpine as builder
 ADD . /work/
 WORKDIR /work
-RUN find . && apk add --no-cache bash git && yarn install && yarn run prep && chmod -R o+rX .
+RUN git status --porcelain ; \
+    find . && \
+    apk add --no-cache bash git && \
+    yarn install && \
+    yarn run prep && \
+    chmod -R o+rX .
 
 FROM node:alpine
 WORKDIR /work

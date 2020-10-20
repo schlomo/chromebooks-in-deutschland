@@ -8,6 +8,9 @@ if [[ "DOCKER_TAG" == v* ]] ; then
     docker push "$tag"
 fi
 
+pwd
+find .
+
 if test -r VERSION ; then
     read -r VERSION <VERSION
     echo "=> Setting $VERSION tag"

@@ -20,6 +20,8 @@ var last_search_term = undefined;
 var used_device_model_select = undefined;
 var used_device_price_input = undefined;
 
+const jts_search = '1(3|4).*".*FHD.*Intel.*20(26|27|28|29|30|31)';
+
 // take state from history API or from URL hash
 const wlhash = window.location.hash.split('#')[1];
 const initial_search_term = history.state ?
@@ -351,6 +353,9 @@ var tableDataFromApi = (rawData) => {
 function persistSearch(search_term) {
     debug(`Persisting >${search_term}<`);
     if (search_term) {
+        if (search_term == jts_search) {
+            search_term = "jts";
+        }
         if (search_term != last_search_term) {
             debug(`Persisting >${search_term}< to browser`);
             history.replaceState(
@@ -378,6 +383,10 @@ function setSearch(search_term) {
         search_term = search_term.substr(1); // strip leading #
     }
     debug(`Setting search to >${search_term}<`);
+    if (search_term == "jts") {
+        debug(`Substituting JTS search ${jts_search}`);
+        search_term = jts_search;
+    }
     try {
         new RegExp(search_term);
         search_field.val(search_term).trigger("input");
@@ -657,7 +666,9 @@ function stage1setup(tableData) {
 
 function handleJtsInfoBanner(search_term) {
     $("jtsinfo").remove();
-    if (search_term == '14".*FHD.*Intel.*202(6|7|8)') {
+    if (search_term == '14".*FHD.*Intel.*202(6|7|8)' ||
+        search_term == jts_search
+        ) {
         $("#chromebooks_filter").append($("<jtsinfo>").html(
             `<img src="${jtslogo}">` +
             "Diese Auswahl an Chromebooks entspricht der Empfehlung für Schülerlaptops für die JTS."));
@@ -665,6 +676,10 @@ function handleJtsInfoBanner(search_term) {
 }
 const searchInputChangedHandler = (event) => {
     var search_term = event.target.value;
+    if (search_term == "jts") {
+        event.target.value = jts_search;
+        search_term = jts_search;
+    }
     debug(`INPUT changed >${search_term}<`);
     handleJtsInfoBanner(search_term);
 };

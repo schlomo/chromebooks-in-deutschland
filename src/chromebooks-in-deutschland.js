@@ -383,7 +383,7 @@ function setSearch(search_term) {
         search_term = search_term.substr(1); // strip leading #
     }
     debug(`Setting search to >${search_term}<`);
-    if (search_term == "jts") {
+    if (search_term.toLowerCase() == "jts") {
         debug(`Substituting JTS search ${jts_search}`);
         search_term = jts_search;
     }
@@ -676,7 +676,7 @@ function handleJtsInfoBanner(search_term) {
 }
 const searchInputChangedHandler = (event) => {
     var search_term = event.target.value;
-    if (search_term == "jts") {
+    if (search_term.toLowerCase() == "jts") {
         event.target.value = jts_search;
         search_term = jts_search;
     }

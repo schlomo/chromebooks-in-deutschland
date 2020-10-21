@@ -2112,7 +2112,11 @@
     "screenTouch": true,
     "specLink": "https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B8000YGE",
     "extraLinks": {
-      "Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf"
+      "Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf",
+      "c|net Review": "https://www.cnet.com/reviews/lenovo-chromebook-flex-5-review/",
+      "androidcentral Review": "https://www.androidcentral.com/lenovo-flex-5-chromebook-review",
+      "LaptopMag Review": "https://www.laptopmag.com/reviews/lenovo-flex-5-chromebook-review",
+      "Notebookcheck: Übersicht": "https://www.notebookcheck.com/Lenovo-Chromebook-Flex-5-13-i3-10110U.479196.0.html"
     },
     "stylus": true,
     "type": "chromebook",
@@ -2137,7 +2141,8 @@
     "screenTouch": true,
     "specLink": "https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B80010GE",
     "extraLinks": {
-      "Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf"
+      "Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf",
+      "VoWe: Vorstellung": "https://vowe.net/archives/018786.html"
     },
     "stylus": true,
     "type": "chromebook",

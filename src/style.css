@@ -262,3 +262,8 @@ nv {
 #used_device_search_new {
   display: none;
 }
+
+.interestingYears tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+

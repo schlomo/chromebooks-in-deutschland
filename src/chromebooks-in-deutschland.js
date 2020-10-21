@@ -446,6 +446,19 @@ function handleUsedDevice(e) {
 function showDumpZone(e) {
     const footer = $("footer");
 
+    // count devices per expiration ID
+    let devicesPerExpirationId = {};
+    Object.values(deviceData).forEach((entry) => {
+        const { expirationId } = entry;
+        if (expirationId in devicesPerExpirationId) {
+            devicesPerExpirationId[expirationId]++;
+        } else {
+            devicesPerExpirationId[expirationId] = 1;
+        }
+    });
+
+    debug("devicesPerExpirationId", devicesPerExpirationId);
+
     // transform expiration list into list of model by year
     let expirationModelsByYear = {};
     Object.entries(expirationData).forEach(([id, entry]) => {
@@ -453,26 +466,30 @@ function showDumpZone(e) {
         if (!(year in expirationModelsByYear)) {
             expirationModelsByYear[year] = {};
         }
-        expirationModelsByYear[year][id] = true;
+        expirationModelsByYear[year][id] =
+            (id in devicesPerExpirationId) ?
+                devicesPerExpirationId[id] :
+                0;
     });
 
-    // remove listed devices
-    Object.entries(deviceData).forEach(([id, entry]) => {
-        let expirationId = entry.expirationId;
-        if (expirationId in expirationData) {
-            let year = expirationData[expirationId].expiration.substr(0, 4);
-            if (expirationId in expirationModelsByYear[year]) {
-                delete expirationModelsByYear[year][expirationId];
+    /*     // remove listed devices
+        Object.entries(deviceData).forEach(([id, entry]) => {
+            let expirationId = entry.expirationId;
+            if (expirationId in expirationData) {
+                let year = expirationData[expirationId].expiration.substr(0, 4);
+                if (expirationId in expirationModelsByYear[year]) {
+                    delete expirationModelsByYear[year][expirationId];
+                }
+            } else {
+                debug(`Invalid expiration ID ${expirationId} for ${id}`);
             }
-        } else {
-            debug(`Invalid expiration ID ${expirationId} for ${id}`);
-        }
-    });
+        }); */
 
     debug("expirationModelsByYear", expirationModelsByYear);
 
     // add last 4 years to dump output
     let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-4);
+
     let result = [
         $("<h1>", { text: "Additional Devices" }),
         $("<button>", {
@@ -495,18 +512,31 @@ function showDumpZone(e) {
         }),
     ];
     interestingYears.forEach((year) => {
-        let yearContainer = $("<ul>");
         result.push($("<h2>", { text: `Supported till ${year}` }));
+        let yearContainer = $("<table>", { 
+            class: "interestingYears", 
+            css: { width: "100%" } 
+        });
         Object.keys(expirationModelsByYear[year]).forEach((id) => {
-            let li = $("<li>")
-            li.append($("<a>", {
-                text: id,
-                target: "_blank",
-                href: "https://idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
-                title: `Idealo search for ${id}`,
-                rel: "external noopener"
-            }))
-            yearContainer.append(li);
+            let row = $("<tr>")
+            row.append($("<td>", { text: id }))
+                .append($("<td>", { text: expirationModelsByYear[year][id] }))
+                .append($("<td>").append($("<a>", {
+                    text: "Idealo",
+                    target: "_blank",
+                    href: "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
+                    title: `Idealo search for ${id}`,
+                    rel: "external noopener"
+                })))
+                .append($("<td>").append($("<a>", {
+                    text: "Geizhals",
+                    target: "_blank",
+                    href: "https://geizhals.de/?fs=" + encodeURI(id),
+                    title: `Geizhals search for ${id}`,
+                    rel: "external noopener"
+                })));
+            yearContainer.append(row);
+
         });
         result.push(yearContainer);
     });
@@ -668,7 +698,7 @@ function handleJtsInfoBanner(search_term) {
     $("jtsinfo").remove();
     if (search_term == '14".*FHD.*Intel.*202(6|7|8)' ||
         search_term == jts_search
-        ) {
+    ) {
         $("#chromebooks_filter").append($("<jtsinfo>").html(
             `<img src="${jtslogo}">` +
             "Diese Auswahl an Chromebooks entspricht der Empfehlung für Schülerlaptops für die JTS."));

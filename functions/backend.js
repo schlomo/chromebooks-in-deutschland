@@ -53,21 +53,6 @@ updateChromebookPriceData
 
 async function getIdealoPrice(productId) {
     let options = {
-        uri: `https://www.idealo.de/offerpage/pricechart/api/${productId}?period=P1M`,
-        pool: httpsAgent,
-        json: true
-    };
-    return rp(options).then((jsonData) => {
-        debug(jsonData);
-        var data = jsonData.data;
-        var lastPrice = data.pop().y;
-        debug(`Idealo ${productId} = ${lastPrice}`);
-        return lastPrice;
-    });
-}
-
-async function getIdealoPriceNew(productId) {
-    let options = {
         uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
         pool: httpsAgent,
         json: false,
@@ -102,6 +87,36 @@ async function getIdealoPriceNew(productId) {
     // non-200 codes like 429 go to .catch() upstream
 }
 
+async function getGeizhalsPrice(productId) {
+    let options = {
+        uri: `https://geizhals.de/a${productId}.html`,
+        pool: httpsAgent,
+        json: false,
+    };
+    return rp(options).then((body) => {
+        let match = body.match(/<meta property='og:price:amount' content='(.*)'>/);
+        let price = 0;
+        if (match !== null) {
+            let priceString = match[1];
+            let parsedPrice = parseFloat(priceString);
+            if (!isNaN(parsedPrice)) {
+                price = parsedPrice;
+            }
+        }
+
+        if (price > 0) {
+            console.log(`Geizhals ${productId} = ${price} from ${options.uri}`);
+        } else {
+            let match = body.match(/<meta property='og:price:amount'.*>/);
+            console.log(`Geizhals ${productId} = 0 from ${options.uri} »${match}«`)
+            price = 0;
+        }
+
+        return price;
+    });
+    // non-200 codes like 429 go to .catch() upstream
+}
+
 async function getMetacompPrice(productId) {
     let options = {
         uri: `https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`,
@@ -115,71 +130,39 @@ async function getMetacompPrice(productId) {
     });
 }
 
-
-function updateChromebookPriceEntry(entry) {
-    let id = entry.id;
-    console.log(`Processing ${id}`);
+async function getPrice(entry) {
+    // entry is device entry with id, productProvider, productId
+    const { id, productId, productProvider } = entry;
+    console.log(`Retrieving price for ${id}`);
     let priceFunction = undefined;
-    switch (entry.productProvider) {
+    switch (productProvider) {
         case "idealo": priceFunction = getIdealoPrice; break;
+        case "geizhals": priceFunction = getGeizhalsPrice; break;
         case "metacomp": priceFunction = getMetacompPrice; break;
-        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
+        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${productProvider}`);
     }
-    return priceFunction(entry.productId).then((price) => {
-        if (price < 0) {
-            price = 0;
-        }
-        var priceDataEntry = [price, new Date().toISOString()];
-        return admin.database()
-            .ref(`/priceData/${entry.productProvider}/${entry.productId}`).set(priceDataEntry);
-    }).catch((error) => {
-        if ("statusCode" in error) {
-            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
-        } else {
-            console.error(error);
-        }
-    });
-
-}
-
-function updateChromebookPriceData() {
-    return Promise.map(
-        Object.values(deviceData),
-        updateChromebookPriceEntry,
-        { concurrency: 20 }
-    );
-}
-
-
-
-
-function updateChromebookPriceEntryNew(entry, onComplete = null) {
-    let id = entry.id;
-    console.log(`Processing updateChromebookPriceEntryNew ${id}`);
-    let priceFunction = undefined;
-    switch (entry.productProvider) {
-        case "idealo": priceFunction = getIdealoPriceNew; break;
-        case "metacomp": priceFunction = getMetacompPrice; break;
-        default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${entry.productProvider}`);
-    }
-    return priceFunction(entry.productId).then((price) => {
+    return priceFunction(productId).then((price) => {
         if (price < 0) {
             price = 0;
         }
         return {
-            productProvider: entry.productProvider,
-            productId: entry.productId,
+            productProvider: productProvider,
+            productId: productId,
             price: price,
             id: id,
         }
-    }).then((priceData) => {
+    });
+}
+
+async function updateChromebookPriceEntry(entry, onComplete = null) {
+    return getPrice(entry).then(async (priceData) => {
         var priceDataEntry = [priceData.price, new Date().toISOString()];
         // requests-promise and requests-promise-native don't support the Bluebird .tap() method which would be the optimum to avoid nesting
         // eslint-disable-next-line promise/no-nesting
-        return admin.database()
+        await admin.database()
             .ref(`/priceData/${priceData.productProvider}/${priceData.productId}`)
-            .set(priceDataEntry, onComplete)
-            .then(() => { return priceData });
+            .set(priceDataEntry, onComplete);
+        return priceData;
     }).catch((error) => {
         if ("statusCode" in error) {
             var msg = error.statusCode === 429 ? `Blocked 429 ${error.options.uri}` : `ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`;
@@ -192,13 +175,13 @@ function updateChromebookPriceEntryNew(entry, onComplete = null) {
 
 }
 
-function updateChromebookPriceDataJustOne() {
+async function updateChromebookPriceDataJustOne() {
     return devicesByPriceAge()
         .then(data => {
             debug(data.map((entry) => entry.id).join("\n")); 
             return data.shift() 
         }) // take first entry = oldest price
-        .then(updateChromebookPriceEntryNew)
+        .then(updateChromebookPriceEntry)
         .catch(e => {
             console.error(e);
             return e;
@@ -252,8 +235,7 @@ api.get("/api/data", (req, res) => {
 module.exports = {
     devicesByPriceAge,
     api,
-    updateChromebookPriceData,
+    getPrice,
     updateChromebookPriceDataJustOne,
-    getIdealoPrice,
-    getIdealoPriceNew,
+    
 };

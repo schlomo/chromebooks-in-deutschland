@@ -2309,7 +2309,7 @@
 		"cpu": "Intel Core i5-10310U",
 		"disabled": false,
 		"expirationId": "HP Elite c1030 Chromebook Enterprise",
-		"extraInfo": "hinterleuchtete Tastatur, Zuschaltbarer Blickschutz, 256GB SSD, USI Stylus optional",
+		"extraInfo": "hinterleuchtete Tastatur, 256GB SSD, USI Stylus optional",
 		"flip": true,
 		"id": "HP Elite c1030 Chromebook Enterprise (178A2EA)",
 		"memory": 16,
@@ -2320,11 +2320,11 @@
 		"screenResolution": "1920x1280",
 		"screenSize": 13.5,
 		"screenTouch": true,
-		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06713827.pdf",
+		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06722206",
 		"stylus": true,
 		"type": "chromebook",
 		"extraLinks": {
-			"Blickschutz": "https://www.prad.de/hp-erstes-chromebook-mit-speziellem-sichtschutz/",
+      "HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A2EA&opt=ABD&sel=NTB",
 			"Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
 		},
 		"variant": "178A2EA"
@@ -2335,7 +2335,7 @@
 		"cpu": "Intel Core i7-10610U",
 		"disabled": false,
 		"expirationId": "HP Elite c1030 Chromebook Enterprise",
-		"extraInfo": "hinterleuchtete Tastatur, Zuschaltbarer Blickschutz, 256GB SSD, USI Stylus optional",
+		"extraInfo": "hinterleuchtete Tastatur, zuschaltbarer Blickschutz, integriertes LTE Modem, 256GB SSD, USI Stylus optional",
 		"flip": true,
 		"id": "HP Elite c1030 Chromebook Enterprise (178A3EA)",
 		"memory": 16,
@@ -2346,11 +2346,13 @@
 		"screenResolution": "1920x1280",
 		"screenSize": 13.5,
 		"screenTouch": true,
-		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06713827.pdf",
+		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06722206",
 		"stylus": true,
 		"type": "chromebook",
 		"extraLinks": {
-			"Blickschutz": "https://www.prad.de/hp-erstes-chromebook-mit-speziellem-sichtschutz/",
+      "HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A3EA&opt=ABD&sel=NTB",
+      "Blickschutz": "https://www.prad.de/hp-erstes-chromebook-mit-speziellem-sichtschutz/",
+      "Blickschutz Probleme": "https://www.notebookcheck.net/HP-Spectre-x360-13-with-Sure-View-What-a-way-to-ruin-a-great-laptop.484262.0.html",
 			"Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
 		},
 		"variant": "178A3EA"

@@ -449,11 +449,11 @@ function showDumpZone(e) {
     // count devices per expiration ID
     let devicesPerExpirationId = {};
     Object.values(deviceData).forEach((entry) => {
-        const { expirationId } = entry;
+        const { expirationId, variant } = entry;
         if (expirationId in devicesPerExpirationId) {
-            devicesPerExpirationId[expirationId]++;
+            devicesPerExpirationId[expirationId].push(variant);
         } else {
-            devicesPerExpirationId[expirationId] = 1;
+            devicesPerExpirationId[expirationId] = [variant];
         }
     });
 
@@ -468,22 +468,9 @@ function showDumpZone(e) {
         }
         expirationModelsByYear[year][id] =
             (id in devicesPerExpirationId) ?
-                devicesPerExpirationId[id] :
+                devicesPerExpirationId[id].length :
                 0;
     });
-
-    /*     // remove listed devices
-        Object.entries(deviceData).forEach(([id, entry]) => {
-            let expirationId = entry.expirationId;
-            if (expirationId in expirationData) {
-                let year = expirationData[expirationId].expiration.substr(0, 4);
-                if (expirationId in expirationModelsByYear[year]) {
-                    delete expirationModelsByYear[year][expirationId];
-                }
-            } else {
-                debug(`Invalid expiration ID ${expirationId} for ${id}`);
-            }
-        }); */
 
     debug("expirationModelsByYear", expirationModelsByYear);
 
@@ -511,32 +498,48 @@ function showDumpZone(e) {
             }
         }),
     ];
+
+    // show table with stats and links for all devices with long run-time
     interestingYears.forEach((year) => {
         result.push($("<h2>", { text: `Supported till ${year}` }));
-        let yearContainer = $("<table>", { 
-            class: "interestingYears", 
-            css: { width: "100%" } 
-        });
-        Object.keys(expirationModelsByYear[year]).forEach((id) => {
-            let row = $("<tr>")
-            row.append($("<td>", { text: id }))
-                .append($("<td>", { text: expirationModelsByYear[year][id] }))
-                .append($("<td>").append($("<a>", {
-                    text: "Idealo",
-                    target: "_blank",
-                    href: "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + encodeURI(id),
-                    title: `Idealo search for ${id}`,
-                    rel: "external noopener"
-                })))
-                .append($("<td>").append($("<a>", {
-                    text: "Geizhals",
-                    target: "_blank",
-                    href: "https://geizhals.de/?fs=" + encodeURI(id),
-                    title: `Geizhals search for ${id}`,
-                    rel: "external noopener"
-                })));
-            yearContainer.append(row);
+        let yearContainer = $("<table>", {
+            class: "interestingYears",
+            css: {
+                width: "100%",
 
+            }
+        });
+        Object.keys(expirationModelsByYear[year]).sort().forEach((id) => {
+            let row = $("<tr>")
+            const id_encoded = encodeURI(id);
+            row.append($("<td>", { text: id }))
+                .append($("<td>")
+                    .append(
+                        devicesPerExpirationId[id] ?
+                            devicesPerExpirationId[id].sort()
+                                .join("<br>") :
+                            "&circleddash;"
+                    )
+                )
+                .append($("<td>")
+                    .append($("<a>", {
+                        text: "Idealo",
+                        target: "_blank",
+                        href: "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + id_encoded,
+                        title: `Idealo search for ${id}`,
+                        rel: "external noopener"
+                    }))
+                )
+                .append($("<td>")
+                    .append($("<a>", {
+                        text: "Geizhals",
+                        target: "_blank",
+                        href: "https://geizhals.de/?fs=" + id_encoded,
+                        title: `Geizhals search for ${id}`,
+                        rel: "external noopener"
+                    }))
+                );
+            yearContainer.append(row);
         });
         result.push(yearContainer);
     });

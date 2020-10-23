@@ -397,11 +397,11 @@
 		"cpu": "Intel Pentium N5000",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 315 (CB315-3HT)",
+		"extraInfo": "128GB",
 		"flip": false,
 		"id": "Acer Chromebook 315 (CB315-3HT-P297)",
 		"memory": 8,
 		"model": "Chromebook 315",
-		"extraInfo": "128GB",
 		"productId": "7000075",
 		"productProvider": "idealo",
 		"screenGlare": false,
@@ -440,10 +440,10 @@
 		"cpu": "Intel Core i5-8250U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 714 (CB714-1WT)",
+		"extraInfo": "128GB",
 		"flip": false,
 		"id": "Acer Chromebook 714 (CB714-1WT-541J)",
 		"memory": 16,
-		"extraInfo": "128GB",
 		"model": "Chromebook 714",
 		"productId": "6597503",
 		"productProvider": "idealo",
@@ -462,11 +462,11 @@
 		"cpu": "Intel Core i5-8250U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 714 (CB714-1WT)",
+		"extraInfo": "128GB",
 		"flip": false,
 		"id": "Acer Chromebook 714 (CB714-1WT-59DB)",
 		"memory": 8,
 		"model": "Chromebook 714",
-		"extraInfo": "128GB",
 		"productId": "6650996",
 		"productProvider": "idealo",
 		"screenGlare": false,
@@ -484,11 +484,11 @@
 		"cpu": "Intel Core i3-8130U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 715 (CB715-1WT)",
+		"extraInfo": "hinterleuchtete Tastatur",
 		"flip": false,
 		"id": "Acer Chromebook 715 (CB715-1WT-33NB)",
 		"memory": 8,
 		"model": "Chromebook 715",
-		"extraInfo": "hinterleuchtete Tastatur",
 		"productId": "6597486",
 		"productProvider": "idealo",
 		"screenGlare": false,
@@ -506,10 +506,10 @@
 		"cpu": "Intel Core i3-8130U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 715 (CB715-1WT)",
+		"extraInfo": "hinterleuchtete Tastatur, 128GB",
 		"flip": false,
 		"id": "Acer Chromebook 715 (CB715-1WT-3415)",
 		"memory": 8,
-		"extraInfo": "hinterleuchtete Tastatur, 128GB",
 		"model": "Chromebook 715",
 		"productId": "200344204",
 		"productProvider": "idealo",
@@ -528,10 +528,10 @@
 		"cpu": "Intel Core i3-8130U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 715 (CB715-1WT)",
+		"extraInfo": "hinterleuchtete Tastatur",
 		"flip": false,
 		"id": "Acer Chromebook 715 (CB715-1WT-37GM)",
 		"memory": 8,
-		"extraInfo": "hinterleuchtete Tastatur",
 		"model": "Chromebook 715",
 		"productId": "7075233",
 		"productProvider": "idealo",
@@ -550,11 +550,11 @@
 		"cpu": "Intel Core i5-8250U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 715 (CB715-1WT)",
+		"extraInfo": "hinterleuchtete Tastatur, 128GB",
 		"flip": false,
 		"id": "Acer Chromebook 715 (CB715-1WT-5368)",
 		"memory": 16,
 		"model": "Chromebook 715",
-		"extraInfo": "hinterleuchtete Tastatur, 128GB",
 		"productId": "6578991",
 		"productProvider": "idealo",
 		"screenGlare": false,
@@ -572,10 +572,10 @@
 		"cpu": "Intel Core i5-8250U",
 		"disabled": false,
 		"expirationId": "Acer Chromebook 715 (CB715-1WT)",
+		"extraInfo": "hinterleuchtete Tastatur",
 		"flip": false,
 		"id": "Acer Chromebook 715 (CB715-1WT-56SP)",
 		"memory": 8,
-		"extraInfo": "hinterleuchtete Tastatur",
 		"model": "Chromebook 715",
 		"productId": "7075227",
 		"productProvider": "idealo",
@@ -1136,11 +1136,14 @@
 		"cpu": "Intel Pentium 4415Y",
 		"disabled": false,
 		"expirationId": "Asus Chromebook Flip C433",
+		"extraInfo": "hinterleuchtete Tastatur",
+		"extraLinks": {
+			"ASUS C433TA": "https://www.asus.com/2-in-1-PCs/ASUS-Chromebook-Flip-C433TA/"
+		},
 		"flip": true,
 		"id": "Asus Chromebook Flip C433 (C433TA-AJ0057)",
 		"memory": 8,
 		"model": "Chromebook Flip C433",
-		"extraInfo": "hinterleuchtete Tastatur",
 		"productId": "6986516",
 		"productProvider": "idealo",
 		"screenGlare": true,
@@ -1149,9 +1152,6 @@
 		"screenTouch": true,
 		"specLink": "https://gzhls.at/blob/ldb/6/5/1/0/af1610379db218f61f36dffb35f1e26b7141.pdf",
 		"stylus": false,
-		"extraLinks": {
-			"ASUS C433TA": "https://www.asus.com/2-in-1-PCs/ASUS-Chromebook-Flip-C433TA/"
-		},
 		"type": "chromebook",
 		"variant": "C433TA-AJ0057"
 	},
@@ -1161,11 +1161,11 @@
 		"cpu": "Intel Core m3-8100Y",
 		"disabled": false,
 		"expirationId": "Asus Chromebook Flip C433",
+		"extraInfo": "hinterleuchtete Tastatur",
 		"flip": true,
 		"id": "Asus Chromebook Flip C433 (C433TA-AJ0156)",
 		"memory": 8,
 		"model": "Chromebook Flip C433",
-		"extraInfo": "hinterleuchtete Tastatur",
 		"productId": "200608500",
 		"productProvider": "idealo",
 		"screenGlare": true,
@@ -1568,11 +1568,11 @@
 		"cpu": "Intel Pentium N5000",
 		"disabled": false,
 		"expirationId": "HP Chromebook 14a",
+		"extraInfo": "128GB",
 		"flip": false,
 		"id": "HP Chromebook 14a (2020) (14a-na0240ng)",
 		"memory": 8,
 		"model": "Chromebook 14a (2020)",
-		"extraInfo": "128GB",
 		"productId": "200518604",
 		"productProvider": "idealo",
 		"screenGlare": false,
@@ -2133,6 +2133,9 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0215ng)",
 		"memory": 4,
@@ -2146,9 +2149,6 @@
 		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06926182.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
-		},
 		"variant": "14c-ca0215ng"
 	},
 	"HP Chromebook x360 14c (14c-ca0220ng)": {
@@ -2158,6 +2158,9 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0220ng)",
 		"memory": 4,
@@ -2171,9 +2174,6 @@
 		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943880.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
-		},
 		"variant": "14c-ca0220ng"
 	},
 	"HP Chromebook x360 14c (14c-ca0241ng)": {
@@ -2183,6 +2183,10 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "128GB, USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/",
+			"androidcentral Review": "https://www.androidcentral.com/hp-chromebook-x360-14c-review"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0241ng)",
 		"memory": 8,
@@ -2196,10 +2200,6 @@
 		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943873.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/",
-			"androidcentral Review": "https://www.androidcentral.com/hp-chromebook-x360-14c-review"
-		},
 		"variant": "14c-ca0241ng"
 	},
 	"HP Chromebook x360 14c (14c-ca0259ng)": {
@@ -2209,6 +2209,9 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "128GB, USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0259ng)",
 		"memory": 8,
@@ -2222,9 +2225,6 @@
 		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943881.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
-		},
 		"variant": "14c-ca0259ng"
 	},
 	"HP Chromebook x360 14c (14c-ca0290ng)": {
@@ -2234,6 +2234,9 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "128GB, USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0290ng)",
 		"memory": 8,
@@ -2247,9 +2250,6 @@
 		"specLink": "https://gzhls.at/blob/ldb/6/0/f/6/9542ea84563b29a6b3146260c8f62b58f694.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
-		},
 		"variant": "14c-ca0290ng"
 	},
 	"HP Chromebook x360 14c (14c-ca0305ng)": {
@@ -2259,6 +2259,9 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0305ng)",
 		"memory": 4,
@@ -2272,9 +2275,6 @@
 		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943887.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/"
-		},
 		"variant": "14c-ca0305ng"
 	},
 	"HP Chromebook x360 14c (14c-ca0430ng)": {
@@ -2284,6 +2284,10 @@
 		"disabled": false,
 		"expirationId": "HP Chromebook x360 14c",
 		"extraInfo": "128GB, USI Stylus optional",
+		"extraLinks": {
+			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/",
+			"androidcentral Review": "https://www.androidcentral.com/hp-chromebook-x360-14c-review"
+		},
 		"flip": true,
 		"id": "HP Chromebook x360 14c (14c-ca0430ng)",
 		"memory": 8,
@@ -2297,10 +2301,6 @@
 		"specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06713827.pdf",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-			"Chrome Unboxed Review": "https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/",
-			"androidcentral Review": "https://www.androidcentral.com/hp-chromebook-x360-14c-review"
-		},
 		"variant": "14c-ca0430ng"
 	},
 	"HP Elite c1030 Chromebook Enterprise (178A2EA)": {
@@ -2310,6 +2310,10 @@
 		"disabled": false,
 		"expirationId": "HP Elite c1030 Chromebook Enterprise",
 		"extraInfo": "hinterleuchtete Tastatur, 256GB SSD, USI Stylus optional",
+		"extraLinks": {
+			"HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A2EA&opt=ABD&sel=NTB",
+			"Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
+		},
 		"flip": true,
 		"id": "HP Elite c1030 Chromebook Enterprise (178A2EA)",
 		"memory": 16,
@@ -2323,10 +2327,6 @@
 		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06722206",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-      "HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A2EA&opt=ABD&sel=NTB",
-			"Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
-		},
 		"variant": "178A2EA"
 	},
 	"HP Elite c1030 Chromebook Enterprise (178A3EA)": {
@@ -2336,6 +2336,12 @@
 		"disabled": false,
 		"expirationId": "HP Elite c1030 Chromebook Enterprise",
 		"extraInfo": "hinterleuchtete Tastatur, zuschaltbarer Blickschutz, integriertes LTE Modem, 256GB SSD, USI Stylus optional",
+		"extraLinks": {
+			"Blickschutz": "https://www.prad.de/hp-erstes-chromebook-mit-speziellem-sichtschutz/",
+			"Blickschutz Probleme": "https://www.notebookcheck.net/HP-Spectre-x360-13-with-Sure-View-What-a-way-to-ruin-a-great-laptop.484262.0.html",
+			"HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A3EA&opt=ABD&sel=NTB",
+			"Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
+		},
 		"flip": true,
 		"id": "HP Elite c1030 Chromebook Enterprise (178A3EA)",
 		"memory": 16,
@@ -2349,12 +2355,6 @@
 		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06722206",
 		"stylus": true,
 		"type": "chromebook",
-		"extraLinks": {
-      "HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A3EA&opt=ABD&sel=NTB",
-      "Blickschutz": "https://www.prad.de/hp-erstes-chromebook-mit-speziellem-sichtschutz/",
-      "Blickschutz Probleme": "https://www.notebookcheck.net/HP-Spectre-x360-13-with-Sure-View-What-a-way-to-ruin-a-great-laptop.484262.0.html",
-			"Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
-		},
 		"variant": "178A3EA"
 	},
 	"HP Pro c640 Chromebook Enterprise (10X57EA)": {
@@ -2364,6 +2364,10 @@
 		"disabled": false,
 		"expirationId": "HP Pro c640 Chromebook Enterprise",
 		"extraInfo": "hinterleuchtete Tastatur",
+		"extraLinks": {
+			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+		},
 		"flip": false,
 		"id": "HP Pro c640 Chromebook Enterprise (10X57EA)",
 		"memory": 8,
@@ -2376,10 +2380,6 @@
 		"screenTouch": false,
 		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
 		"stylus": false,
-		"extraLinks": {
-			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review",
-			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review"
-		},
 		"type": "chromebook",
 		"variant": "10X57EA"
 	},
@@ -2390,6 +2390,10 @@
 		"disabled": false,
 		"expirationId": "HP Pro c640 Chromebook Enterprise",
 		"extraInfo": "hinterleuchtete Tastatur",
+		"extraLinks": {
+			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+		},
 		"flip": false,
 		"id": "HP Pro c640 Chromebook Enterprise (10X58EA)",
 		"memory": 8,
@@ -2402,10 +2406,6 @@
 		"screenTouch": false,
 		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
 		"stylus": false,
-		"extraLinks": {
-			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review",
-			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review"
-		},
 		"type": "chromebook",
 		"variant": "10X58EA"
 	},
@@ -2416,6 +2416,11 @@
 		"disabled": false,
 		"expirationId": "HP Pro c640 Chromebook Enterprise",
 		"extraInfo": "hinterleuchtete Tastatur, 128GB",
+		"extraLinks": {
+			"Datenblatt (Serie)": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
+			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+		},
 		"flip": false,
 		"id": "HP Pro c640 Chromebook Enterprise (10X59EA)",
 		"memory": 16,
@@ -2428,11 +2433,6 @@
 		"screenTouch": false,
 		"specLink": "https://gzhls.at/blob/ldb/9/0/c/1/cb086f7bca88d5b74c181d30593f278bdcbc.pdf",
 		"stylus": false,
-		"extraLinks": {
-			"Datenblatt (Serie)": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
-			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review",
-			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review"
-		},
 		"type": "chromebook",
 		"variant": "10X59EA"
 	},
@@ -2443,6 +2443,10 @@
 		"disabled": false,
 		"expirationId": "HP Pro c640 Chromebook Enterprise",
 		"extraInfo": "hinterleuchtete Tastatur, 128GB",
+		"extraLinks": {
+			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+		},
 		"flip": false,
 		"id": "HP Pro c640 Chromebook Enterprise (10X60EA)",
 		"memory": 16,
@@ -2455,10 +2459,6 @@
 		"screenTouch": false,
 		"specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
 		"stylus": false,
-		"extraLinks": {
-			"androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review",
-			"LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review"
-		},
 		"type": "chromebook",
 		"variant": "10X60EA"
 	},
@@ -2793,6 +2793,9 @@
 		"disabled": false,
 		"expirationId": "Lenovo Flex 5 Chromebook",
 		"extraInfo": "USI Stylus optional",
+		"extraLinks": {
+			"Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf"
+		},
 		"flip": true,
 		"id": "Lenovo Flex 5 Chromebook (82B8000X)",
 		"memory": 4,
@@ -2804,9 +2807,6 @@
 		"screenSize": 13.3,
 		"screenTouch": true,
 		"specLink": "https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B8000XGE",
-		"extraLinks": {
-			"Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf"
-		},
 		"stylus": true,
 		"type": "chromebook",
 		"variant": "82B8000X"
@@ -2818,6 +2818,13 @@
 		"disabled": false,
 		"expirationId": "Lenovo Flex 5 Chromebook",
 		"extraInfo": "hinterleuchtete Tastatur, USI Stylus optional",
+		"extraLinks": {
+			"Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf",
+			"LaptopMag Review": "https://www.laptopmag.com/reviews/lenovo-flex-5-chromebook-review",
+			"Notebookcheck: Übersicht": "https://www.notebookcheck.com/Lenovo-Chromebook-Flex-5-13-i3-10110U.479196.0.html",
+			"androidcentral Review": "https://www.androidcentral.com/lenovo-flex-5-chromebook-review",
+			"c|net Review": "https://www.cnet.com/reviews/lenovo-chromebook-flex-5-review/"
+		},
 		"flip": true,
 		"id": "Lenovo Flex 5 Chromebook (82B8000Y)",
 		"memory": 4,
@@ -2829,13 +2836,6 @@
 		"screenSize": 13.3,
 		"screenTouch": true,
 		"specLink": "https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B8000YGE",
-		"extraLinks": {
-			"Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf",
-			"c|net Review": "https://www.cnet.com/reviews/lenovo-chromebook-flex-5-review/",
-			"androidcentral Review": "https://www.androidcentral.com/lenovo-flex-5-chromebook-review",
-			"LaptopMag Review": "https://www.laptopmag.com/reviews/lenovo-flex-5-chromebook-review",
-			"Notebookcheck: Übersicht": "https://www.notebookcheck.com/Lenovo-Chromebook-Flex-5-13-i3-10110U.479196.0.html"
-		},
 		"stylus": true,
 		"type": "chromebook",
 		"variant": "82B8000Y"
@@ -2847,6 +2847,10 @@
 		"disabled": false,
 		"expirationId": "Lenovo Flex 5 Chromebook",
 		"extraInfo": "128GB SSD, hinterleuchtete Tastatur, USI Stylus optional",
+		"extraLinks": {
+			"Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf",
+			"VoWe: Vorstellung": "https://vowe.net/archives/018786.html"
+		},
 		"flip": true,
 		"id": "Lenovo Flex 5 Chromebook (82B80010)",
 		"memory": 8,
@@ -2858,10 +2862,6 @@
 		"screenSize": 13.3,
 		"screenTouch": true,
 		"specLink": "https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B80010GE",
-		"extraLinks": {
-			"Flyer": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf",
-			"VoWe: Vorstellung": "https://vowe.net/archives/018786.html"
-		},
 		"stylus": true,
 		"type": "chromebook",
 		"variant": "82B80010"

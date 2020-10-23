@@ -16,7 +16,8 @@
     "prep:01-icons": "node generate-icon-bundle.js",
     "prep:02-version": "node generate-version.js",
     "prep:03-expiration-data": "node generate-expiration-data.js",
-    "prep:04-validate-data": "node validate-data.js",
+    "prep:04-sort-chromebooks": "sort-json functions/chromebooks.json",
+    "prep:05-validate-data": "node validate-data.js",
     "parcel-build": "parcel build --no-source-maps --out-dir public --log-level 4 src/index.html",
     "parcel-watch": "parcel watch --out-dir public --log-level 4 src/index.html",
     "firebase-emulators": "firebase --project dev emulators:exec 'npm run parcel-watch'",
@@ -36,6 +37,7 @@
     "git-describe": "^4.0.4",
     "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.4",
+    "sort-json": "^2.0.0",
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {

@@ -215,12 +215,13 @@ dd {
   text-align: justify;
 }
 
-.dumpzone {
+debuginfo {
   padding: 0.5em;
   margin-top: 0.3em;
   padding-top: 0;
   border: 0.5em solid rgb(236, 246, 250);
   border-top: 1px solid black;
+  display: block;
 }
 
 #chromebooks {
@@ -263,7 +264,7 @@ nv {
   display: none;
 }
 
-.interestingYears tr:nth-child(even) {
+.interestingYears tbody tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 

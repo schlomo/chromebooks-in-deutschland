@@ -443,7 +443,7 @@ function handleUsedDevice(e) {
     e.preventDefault();
 }
 
-function showDumpZone(e) {
+function showDebugInfo(e) {
     const footer = $("footer");
 
     // count devices per expiration ID
@@ -478,79 +478,81 @@ function showDumpZone(e) {
     let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-4);
 
     let result = [
-        $("<h1>", { text: "Additional Devices" }),
-        $("<button>", {
-            id: "debugToggle",
-            css: {
-                float: "right",
-            },
-            text: `${debugMode ? "Disable" : "Enable"} Debug Mode`,
-            click: (event) => {
-                var button = $(event.target);
-                if (debugMode) {
-                    window.localStorage.removeItem("debug");
-                    debugMode = false;
-                } else {
-                    window.localStorage.setItem("debug", true);
-                    debugMode = true;
+        $("<h1>", { text: "Devices" }).append(
+            $("<button>", {
+                id: "debugToggle",
+                css: {
+                    float: "right",
+                },
+                text: `${debugMode ? "Disable" : "Enable"} Debug Mode`,
+                click: (event) => {
+                    var button = $(event.target);
+                    if (debugMode) {
+                        window.localStorage.removeItem("debug");
+                        debugMode = false;
+                    } else {
+                        window.localStorage.setItem("debug", true);
+                        debugMode = true;
+                    }
+                    location.reload();
                 }
-                location.reload();
-            }
-        }),
+            })
+        ),
     ];
 
     // show table with stats and links for all devices with long run-time
-    interestingYears.forEach((year) => {
-        result.push($("<h2>", { text: `Supported till ${year}` }));
-        let yearContainer = $("<table>", {
-            class: "interestingYears",
-            css: {
-                width: "100%",
+    let table = $("<table>", {
+        class: "interestingYears",
+        css: {
+            width: "100%",
 
-            }
-        });
-        Object.keys(expirationModelsByYear[year]).sort().forEach((id) => {
-            let row = $("<tr>")
-            const id_encoded = encodeURI(id);
-            row.append($("<td>", { text: id }))
-                .append($("<td>")
-                    .append(
-                        devicesPerExpirationId[id] ?
-                            devicesPerExpirationId[id].sort()
-                                .join("<br>") :
-                            "&circleddash;"
-                    )
-                )
-                .append($("<td>")
-                    .append($("<a>", {
-                        text: "Idealo",
-                        target: "_blank",
-                        href: "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=" + id_encoded,
-                        title: `Idealo search for ${id}`,
-                        rel: "external noopener"
-                    }))
-                )
-                .append($("<td>")
-                    .append($("<a>", {
-                        text: "Geizhals",
-                        target: "_blank",
-                        href: "https://geizhals.de/?fs=" + id_encoded,
-                        title: `Geizhals search for ${id}`,
-                        rel: "external noopener"
-                    }))
-                );
-            yearContainer.append(row);
-        });
-        result.push(yearContainer);
+        }
     });
+    interestingYears.forEach((year) => {
+        let rows = [];
+        Object.keys(expirationModelsByYear[year]).sort().forEach((id) => {
+            const id_encoded = encodeURI(id);
+            let row = `
+            <tr>
+                <td>
+                    ${id}
+                </td>
+                <td>
+                    ${devicesPerExpirationId[id] ?
+                        devicesPerExpirationId[id].sort()
+                            .join("<br>") :
+                        "&circleddash;"}
+                </td>
+                <td>
+                    <a target="_blank" 
+                        href="https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=${id_encoded}"
+                        title="Idealo search for ${id}"
+                        rel="external noopener" >
+                        Idealo
+                    </a>
+                </td>
+                <td>
+                    <a target="_blank" 
+                        href="https://geizhals.de/?fs=${id_encoded}"
+                        title="Geizhals search for ${id}"
+                        rel="external noopener" >
+                    Geizhals
+                    </a>
+                </td>
+            </tr>
+            `;
+            rows.push(row);
+        });
+        table.append(`
+            <thead><tr><td colspan=4>
+                <h2>Supported till ${year}</h2>
+            </td></tr></thead>`,
+            $("<tbody>").append(rows)
+        );
+    });
+    result.push(table);
 
-    const dataDump = JSON.stringify(data, null, 2);
-    result.push(
-        $("<h1>", { text: "Data Dump" }),
-        $("<pre>").html(dataDump)
-    );
-
-    footer.after($("<div>", { class: "dumpzone", html: result }));
+    footer.after($("<debuginfo>", { html: result }));
 
     e.preventDefault();
 }
@@ -694,7 +696,7 @@ function stage1setup(tableData) {
         }
     };
 
-    $('#dump').one("click", showDumpZone);
+    $('#show_debuginfo').one("click", showDebugInfo);
 }
 
 function handleJtsInfoBanner(search_term) {

@@ -420,6 +420,7 @@ function handleUsedDevice(e) {
                 { supportMonths, pricePerMonth, pricePerYear } = calculatePricesFromExpiration(price, expirationDate);
             if (pricePerMonth < 0) {
                 used_device_error.html(`Das <b>${expirationId}</b> erhält seit <b>${expirationYearMonth} keine</b> Updates mehr!`).show();
+                used_device_results.hide();
             } else {
                 $('#used_device_aue').text(expirationYearMonth);
                 $('#used_price_per_month').html(toEuro(pricePerMonth));

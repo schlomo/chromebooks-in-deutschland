@@ -13,7 +13,7 @@
     "standalone-all": "firebase emulators:exec --only database 'node standalone-all.js'"
   },
   "engines": {
-    "node": "10"
+    "node": "14"
   },
   "dependencies": {
     "bluebird": "^3.7.2",

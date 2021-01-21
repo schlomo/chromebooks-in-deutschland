@@ -5,15 +5,15 @@ steps:
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: git
   args: [fetch, --unshallow, --tags]
-- name: node
+- name: node:14
   entrypoint: yarn
   args: [install]
-- name: node
+- name: node:14
   entrypoint: yarn
   args: [run, deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
-- name: node
+- name: node:14
   entrypoint: yarn
   args: [run, update-dev-database]
 

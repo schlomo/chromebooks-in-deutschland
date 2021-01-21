@@ -1,4 +1,4 @@
-FROM node as builder
+FROM node:14 as builder
 ARG VERSION
 ADD . /work/
 WORKDIR /work
@@ -9,7 +9,7 @@ RUN yarn install && \
     yarn run prep && \
     chmod -R o+rX .
 
-FROM node:alpine
+FROM node:14-alpine
 WORKDIR /work
 COPY --from=builder /work/functions /work
 VOLUME /config

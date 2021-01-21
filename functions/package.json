@@ -9,7 +9,8 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "bundle": "browserify --outfile generated/bundle.js --node --ignore-missing --entry standalone.js",
-    "standalone": "firebase emulators:exec --only database 'node standalone.js'"
+    "standalone": "firebase emulators:exec --only database 'node standalone.js'",
+    "standalone-all": "firebase emulators:exec --only database 'node standalone-all.js'"
   },
   "engines": {
     "node": "10"

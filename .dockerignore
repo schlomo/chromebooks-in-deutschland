@@ -15,4 +15,5 @@
 !src/generated/.keep.directory
 !functions/generated/.keep.directory
 !.dockerignore
+!.npmrc
 !Dockerfile

@@ -18,9 +18,7 @@ function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
         }
     } catch (error) {
         console.warn(error + "\n" +
-            `${dir} is not a git repository, using ${version} as version` + "\n" +
-            JSON.stringify(process.env, undefined, 2)
-        );
+            `${dir} is not a git repository, using ${version} as version`);
     }
     return version;
 }

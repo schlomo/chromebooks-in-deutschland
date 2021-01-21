@@ -11,7 +11,7 @@ const
     crypto = require('crypto'),
     httpsAgent = new https.Agent({ keepAlive: true });
 
-require("./httptrace")();
+// require("./httptrace")();
 
 function msleep(n) {
     Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
@@ -39,7 +39,7 @@ function devicesByPriceAge() {
             }
             try {
                 b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
-            } catch(e) {
+            } catch (e) {
                 b_price_age = new Date(0);
             }
             return a_price_age - b_price_age;
@@ -173,6 +173,9 @@ async function getPrice(entry) {
 }
 
 async function updateChromebookPriceEntry(entry, onComplete = null) {
+    if (typeof(onComplete) !== "function") {
+        onComplete = null // Promise.map calls us with the index as onComplete arg, simply drop all non-function args
+    }
     return getPrice(entry).then(async (priceData) => {
         var priceDataEntry = [priceData.price, new Date().toISOString()];
         // requests-promise and requests-promise-native don't support the Bluebird .tap() method which would be the optimum to avoid nesting
@@ -196,8 +199,8 @@ async function updateChromebookPriceEntry(entry, onComplete = null) {
 async function updateChromebookPriceDataJustOne() {
     return devicesByPriceAge()
         .then(data => {
-            debug(data.map((entry) => entry.id).join("\n")); 
-            return data.shift() 
+            debug(data.map((entry) => entry.id).join("\n"));
+            return data.shift()
         }) // take first entry = oldest price
         .then(updateChromebookPriceEntry)
         .catch(e => {
@@ -207,6 +210,17 @@ async function updateChromebookPriceDataJustOne() {
 
 }
 
+async function updateChromebookPriceData() {
+    return Promise.map(
+        Object.values(deviceData),
+        updateChromebookPriceEntry,
+        { concurrency: 20 }
+    ).catch(e => {
+        console.error(e);
+        return e;
+    });
+
+}
 
 const api = express()
 
@@ -255,5 +269,5 @@ module.exports = {
     api,
     getPrice,
     updateChromebookPriceDataJustOne,
-    
+    updateChromebookPriceData,
 };

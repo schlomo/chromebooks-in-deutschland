@@ -1,7 +1,7 @@
 @import "datatables.net-dt/css/jquery.dataTables.css";
 @import "datatables.net-responsive-dt/css/responsive.dataTables.css";
-@import "fontsource-roboto/latin-400.css";
-@import "fontsource-roboto/latin-700.css";
+@import "@fontsource/roboto/latin-400.css";
+@import "@fontsource/roboto/latin-700.css";
 @import "select2/dist/css/select2.css";
 @import "./generated/version.css";
 

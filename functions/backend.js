@@ -5,10 +5,13 @@ const
     Promise = require('bluebird'),
     admin = require('firebase-admin'),
     rp = require('request-promise-native'),
+    cookiejar = rp.jar(),
     express = require('express'),
     https = require('https'),
+    crypto = require('crypto'),
     httpsAgent = new https.Agent({ keepAlive: true });
 
+require("./httptrace")();
 
 function msleep(n) {
     Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
@@ -56,6 +59,11 @@ async function getIdealoPrice(productId) {
         uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
         pool: httpsAgent,
         json: false,
+        jar: cookiejar,
+        headers: {
+            "User-Agent": "HTTPie/2.3.0",
+            "Accept": "*/*"
+        }
         /*
         method: "POST",
         headers: {
@@ -92,6 +100,11 @@ async function getGeizhalsPrice(productId) {
         uri: `https://geizhals.de/a${productId}.html`,
         pool: httpsAgent,
         json: false,
+        jar: cookiejar,
+        headers: {
+            "User-Agent": "HTTPie/2.3.0",
+            "Accept": "*/*"
+        }
     };
     return rp(options).then((body) => {
         let match = body.match(/<meta property='og:price:amount' content='(.*)'>/);
@@ -121,6 +134,11 @@ async function getMetacompPrice(productId) {
     let options = {
         uri: `https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`,
         pool: httpsAgent,
+        jar: cookiejar,
+        headers: {
+            "User-Agent": "HTTPie/2.3.0",
+            "Accept": "*/*"
+        }
     };
     return rp(options).then((rawData) => {
         debug(rawData);

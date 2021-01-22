@@ -173,9 +173,6 @@ async function getPrice(entry) {
 }
 
 async function updateChromebookPriceEntry(entry, onComplete = null) {
-    if (typeof(onComplete) !== "function") {
-        onComplete = null // Promise.map calls us with the index as onComplete arg, simply drop all non-function args
-    }
     return getPrice(entry).then(async (priceData) => {
         var priceDataEntry = [priceData.price, new Date().toISOString()];
         // requests-promise and requests-promise-native don't support the Bluebird .tap() method which would be the optimum to avoid nesting
@@ -213,7 +210,7 @@ async function updateChromebookPriceDataJustOne() {
 async function updateChromebookPriceData() {
     return Promise.map(
         Object.values(deviceData),
-        updateChromebookPriceEntry,
+        (entry) => updateChromebookPriceEntry(entry),
         { concurrency: 20 }
     ).catch(e => {
         console.error(e);

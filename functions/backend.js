@@ -71,6 +71,7 @@ async function getIdealoPrice(productId) {
         }
         */
     };
+    msleep(2); // maybe fix for strange DNS lookup issues in Cloud Shell
     return rp(options).then((body) => {
         let match = body.match(/<title>.*ab (.*)€.*<\/title>/);
         let price = 0;

@@ -36,11 +36,19 @@ module.exports = function (admin) {
                 price, new Date(Date.now() - Math.floor(price * 100000)).toISOString()
             ]
         });
-        admin.database().ref("/priceData").set(priceData).then(() => {
-            console.log("Generated random price data");
-            return;
-        }).catch((e) => {
-            console.error("ERROR setting /priceData", e);
+        admin.database().ref("/").set(
+            {
+                priceData: priceData,
+                keys: {
+                    random_key: "Test Data Random ID"
+                }
+            }, 
+            () => {
+                console.log("Generated random data");
+                return;
+            }
+        ).catch((e) => {
+            console.error("ERROR setting /", e);
         });
     }
 }

@@ -192,8 +192,8 @@ async function updateChromebookPriceEntry(entry, onComplete = null) {
         return priceData;
     }).catch((error) => {
         if ("statusCode" in error) {
-            var msg = error.statusCode === 429 ? 
-                `Blocked 429 ${error.options.uri}` : 
+            var msg = error.statusCode === 429 ?
+                `Blocked 429 ${error.options.uri}` :
                 `ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`;
             console.error(msg);
             return msg;
@@ -264,7 +264,7 @@ api.get("/api/data", (req, res) => {
     });
 
     return admin.database().ref('/').once('value').then((snapshot) => {
-        var rawData=snapshot.val();
+        var rawData = snapshot.val();
         var result = {
             // hand out only the public data
             priceData: rawData.priceData,
@@ -277,11 +277,11 @@ api.get("/api/data", (req, res) => {
     });
 });
 
-api.get("/api/devicesbypriceage", (req,res) => {
+api.get("/api/devicesbypriceage", (req, res) => {
     return devicesByPriceAge()
         .then((data) => {
             const first = Number.parseInt(req.query.slice)
-            if (! isNaN(first)) {
+            if (!isNaN(first)) {
                 data = data.slice(0, first);
             }
             return res.json(data);
@@ -300,7 +300,7 @@ function checkAuth(req, keys) {
 function checkPayload(req) {
     if ("content-type" in req.headers &&
         req.headers["content-type"] === "application/json" &&
-        "priceData" in req.body && 
+        "priceData" in req.body &&
         Array.isArray(req.body.priceData)
     ) {
         return true;
@@ -309,17 +309,24 @@ function checkPayload(req) {
     return false;
 }
 
-api.post("/api/price", (req, res)  => {
+api.post("/api/price", (req, res) => {
     return admin.database().ref("/keys").once("value").then((snapshot) => {
         const keys = snapshot.val();
         if (keys && checkAuth(req, keys) && checkPayload(req)) {
             var updateData = {};
             try {
                 req.body.priceData.forEach(element => {
-                    const 
-                        { productProvider, productId, price } = element,
-                        priceDataEntry = makePriceDataEntry(price);
-                    updateData[`/${productProvider}/${productId}`] = priceDataEntry;
+                    const { productProvider, productId, price, id } = element;
+                    if (id in deviceData &&
+                        productProvider === deviceData[id].productProvider &&
+                        productId === deviceData[id].productId &&
+                        Number.isFinite(price) &&
+                        price >= 0
+                    ) {
+                        updateData[`/${productProvider}/${productId}`] = makePriceDataEntry(price);
+                    } else {
+                        throw new Error(`Invalid device ${id}:\n${inspect(element)}`);
+                    }
                 });
             } catch (e) {
                 return res.status(400).send("Could not convert data:\n" + inspect(e))
@@ -338,7 +345,7 @@ api.post("/api/price", (req, res)  => {
         }
     }).catch((e) => {
         console.error(e);
-        return res.status(500).send("ERROR, check logs");    
+        return res.status(500).send("ERROR, check logs");
     });
 });
 

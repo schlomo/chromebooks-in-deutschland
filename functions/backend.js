@@ -8,8 +8,8 @@ const
     cookiejar = rp.jar(),
     express = require('express'),
     https = require('https'),
-    { inspect } = require("util"),
-    httpsAgent = new https.Agent({ keepAlive: true });
+    httpsAgent = new https.Agent({ keepAlive: true }),
+    { inspect } = require("util");
 
 // require("./httptrace")();
 
@@ -248,7 +248,7 @@ api.get("/api/data", (req, res) => {
         }
         if ("search" in req.query) {
             var search_term = req.query.search;
-            if (search_term && search_term.length > 3) {
+            if (search_term && search_term.length > 2) {
                 search_term = search_term.
                     replace(/[.#$/[\]]/g, " ").
                     toLowerCase();
@@ -291,7 +291,6 @@ api.get("/api/devicesbypriceage", (req, res) => {
 function checkAuth(req, keys) {
     if ("key" in req.query && req.query.key in keys) {
         console.log(`Accepting data from ${keys[req.query.key]}`);
-        console.log(inspect(req.headers));
         return true;
     }
     return false;
@@ -338,7 +337,7 @@ api.post("/api/price", (req, res) => {
                         console.error("DB Write Error", error);
                         return res.status(500).send("ERROR, check logs");
                     }
-                    return res.send("OK");
+                    return res.send("OK: " + Object.keys(updateData).length);
                 });
         } else {
             return res.status(403).send("Must authenticate and provide valid payload");

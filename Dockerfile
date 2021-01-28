@@ -13,6 +13,6 @@ FROM node:14-alpine
 WORKDIR /work
 COPY --from=builder /work/functions /work
 VOLUME /config
-ENV FIREBASE_CONFIG=/config/config.json
-ENV GOOGLE_APPLICATION_CREDENTIALS=/config/credentials.json
-CMD ["node", "standalone.js"]
+ENV CID_API_URL http://localhost:5000/api
+ENV CID_API_KEY random_key
+CMD ["node", "updateprice.js"]

@@ -634,7 +634,9 @@ function stage1setup(tableData) {
     const priceDateInfo = (oldestpriceDate == newestpriceDate) ?
         ` Preise vom ${newestpriceDate}.` :
         ` Preise von ${oldestpriceDate} bis ${newestpriceDate}.`
-    $("#notices").append(priceDateInfo);
+    $("#notices")
+        .append(priceDateInfo)
+        .prop("title", `${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}`);
 
     // used device price calculator
     // model selector fills with data only when needed
@@ -647,7 +649,7 @@ function stage1setup(tableData) {
             })).select2();
     });
     used_device_model_select = $('#used_device_model')
-        .change(handleUsedDevice);
+        .on("change", handleUsedDevice);
     used_device_price_input = $('#used_device_price')
         .on("propertychange keyup paste input", handleUsedDevice);
 

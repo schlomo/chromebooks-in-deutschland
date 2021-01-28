@@ -24,3 +24,6 @@ artifacts:
   objects:
     location: gs://chromebooks-in-deutschland-logs/$BUILD_ID
     paths: [backup.json]
+
+# build standalone binary:
+# npx pkg --targets node14-linux-x64,node14-alpine-x64,node14-macos-x64 updateprice.js

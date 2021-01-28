@@ -11,3 +11,4 @@ new.json
 backup.json
 /src/generated/*
 /functions/generated/*
+/dist

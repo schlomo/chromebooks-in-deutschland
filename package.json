@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "run-s -s clean 'prep:*' firebase-emulators",
-    "clean": "rm -Rf VERSION public/* src/generated/* functions/generated/*",
+    "clean": "rm -Rf VERSION dist public src/generated/* functions/generated/*",
     "build": "run-s -sl clean 'prep:*' parcel-build",
     "deploy": "run-s -sl build firebase-deploy",
     "docker": "run-s -s clean 'prep:*version' docker-build",
@@ -24,7 +24,9 @@
     "firebase-emulators": "firebase --project dev emulators:exec 'npm run parcel-watch'",
     "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",
     "update-dev-database": "./update-dev-database",
-    "postinstall": "echo Installing Functions && cd functions && yarn install && echo OK"
+    "postinstall": "echo Installing Functions && cd functions && yarn install && echo OK",
+    "binary": "run-s -s clean 'prep:*version' binary-build",
+    "binary-build": "npx pkg --out-path dist --targets node14-linux-x64,node14-alpine-x64,node14-macos-x64 --public functions/updateprice.js"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",

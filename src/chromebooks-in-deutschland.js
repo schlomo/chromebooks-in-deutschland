@@ -699,7 +699,11 @@ function stage1setup(tableData) {
         }
     };
 
-    $('#show_debuginfo').one("click", showDebugInfo);
+    if (debugMode) {
+        showDebugInfo();
+    } else {
+        $('#show_debuginfo').one("click", showDebugInfo);
+    }
 }
 
 function handleJtsInfoBanner(search_term) {

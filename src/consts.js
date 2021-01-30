@@ -23,6 +23,7 @@ module.exports = {
         "Intel Core i5-10310U": { "cores": 4, "frequency": 1.7, "burst": 4.4 },
         "Intel Core i7-8550U": { "cores": 4, "frequency": 1.8, "burst": 4 },
         "Intel Core i7-8650U": { "cores": 4, "frequency": 1.9, "burst": 4.2 },
+        "Intel Core i7-10510U": { "cores": 4, "frequency": 1.8, "burst": 4.9 },
         "Intel Core i7-10610U": { "cores": 4, "frequency": 1.8, "burst": 4.9 },
         "Intel Core m3-8100Y": { "cores": 2, "frequency": 1.1, "burst": 3.4 },
         "Intel Pentium 4415U": { "cores": 2, "frequency": 2.3 },

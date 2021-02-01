@@ -29,7 +29,15 @@ jobs:
         node-version: 14.x
     - run: yarn
     - run: yarn binary
+    - id: version
+      name: Set VERSION
+      run: echo "::set-output name=VERSION::$(<VERSION)"
     - name: Upload
       uses: 'actions/upload-artifact@v2'
       with:
           path: dist/*
+          name: cid-${{ steps.version.outputs.VERSION }}
+    - name: Upload
+      uses: 'actions/upload-artifact@v2'
+      with:
+          path: dist/*macos*

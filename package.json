@@ -25,8 +25,12 @@
     "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",
     "update-dev-database": "./update-dev-database",
     "postinstall": "echo Installing Functions && cd functions && yarn install && echo OK",
-    "binary": "run-s -s clean 'prep:*version' binary-build",
-    "binary-build": "npx pkg --out-path dist --targets node14-linux-x64,node14-alpine-x64,node14-macos-x64,node14-linux-armv7 --public functions/updateprice.js"
+    "binary": "run-s -s clean 'prep:*version' 'binary-build:node14:*'",
+    "binary-arm": "run-s -s clean 'prep:*version' 'binary-build:arm'",
+    "binary-build:node14:linux": "npx pkg --output dist/updateprice.\"$(<VERSION)\".linux --targets node14-linux-x64 --public functions/updateprice.js",
+    "binary-build:node14:alpine": "npx pkg --output dist/updateprice.\"$(<VERSION)\".alpine --targets node14-alpine-x64 --public functions/updateprice.js",
+    "binary-build:node14:macos": "npx pkg --output dist/updateprice.\"$(<VERSION)\".macos --targets node14-macos-x64 --public functions/updateprice.js",
+    "binary-build:arm": "npx pkg --output dist/updateprice.\"$(<VERSION)\".linux-armv7 --targets node12.2.0-linux-armv7 functions/updateprice.js"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",

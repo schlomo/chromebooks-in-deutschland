@@ -26,7 +26,7 @@
     "update-dev-database": "./update-dev-database",
     "postinstall": "echo Installing Functions && cd functions && yarn install && echo OK",
     "binary": "run-s -s clean 'prep:*version' binary-build",
-    "binary-build": "npx pkg --out-path dist --targets node14-linux-x64,node14-alpine-x64,node14-macos-x64 --public functions/updateprice.js"
+    "binary-build": "npx pkg --out-path dist --targets node14-linux-x64,node14-alpine-x64,node14-macos-x64,node14-linux-armv7 --public functions/updateprice.js"
   },
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "license": "CC-BY-SA-4.0",

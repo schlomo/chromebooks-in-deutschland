@@ -210,10 +210,10 @@ var renderFeatures = function (features, type, row) {
 };
 
 
-function renderZeroPrice(type) {
+function renderZeroPrice(type, row) {
     switch (type) {
         case "display":
-            return "<nv title='kein Preis verfügbar'>&circleddash;</nv>";
+            return '<nv title="kein Preis verfügbar' + (row ? " :" + row.priceUpdated.toLocaleString() : "") + '">&circleddash;</nv>';
         case "sort":
             return 9999;
         case "filter":
@@ -225,7 +225,7 @@ function renderZeroPrice(type) {
 
 var renderPrice = function (price, type, row) {
     if (price === 0) {
-        return renderZeroPrice(type);
+        return renderZeroPrice(type, row);
     } else {
         if (type === 'display') {
             price = '<a title="Aktualisiert: ' + row.priceUpdated.toLocaleString() + '">' + toEuro(price) + '</a>';
@@ -555,7 +555,9 @@ function showDebugInfo(e) {
 
     footer.after($("<debuginfo>", { html: result }));
 
-    e.preventDefault();
+    if (e) {
+        e.preventDefault();
+    }
 }
 
 function stage1setup(tableData) {

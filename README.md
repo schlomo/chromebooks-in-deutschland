@@ -12,7 +12,7 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 * [Integromat](https://www.integromat.com/) used for email notifications for Cloud Build results based on Push Subscription to web hook from `cloud-build` Pub/Sub topic.
 * https://iconify.design/docs/icon-bundles/ explains about local icon bundles
 * Agents need keys in the database under `/keys`, emulator creates dummy key for local testing
-* Agent can be run like this:
+* Agent can be run like this with a binary:
 
     ```sh
     #!/bin/bash
@@ -25,6 +25,22 @@ Please freel free to submit pull requests for features and bugfixes, they will b
     bin=${bins[-1]}
 
     result="$(./$bin)"
+    if ! grep -q "OK: 1" <<<"$result" ; then
+        echo "$result"
+        exit 1
+    fi
+    ```
+    Or like this from source:
+    ```sh
+    #!/bin/bash
+    cd "$(dirname "$(readlink -f "$0")")"
+
+    export CID_API_KEY=THE_SECRET_KEY
+    export CID_API_URL=https://DOMAIN_NAME/api
+
+    cd chromebooks-in-deutschland/functions
+
+    result="$(node updateprice.js)"
     if ! grep -q "OK: 1" <<<"$result" ; then
         echo "$result"
         exit 1

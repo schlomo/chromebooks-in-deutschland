@@ -458,7 +458,7 @@ function showDebugInfo(e) {
         }
     });
 
-    debug("devicesPerExpirationId", devicesPerExpirationId);
+    console.log("devicesPerExpirationId", devicesPerExpirationId);
 
     // transform expiration list into list of model by year
     let expirationModelsByYear = {};
@@ -473,7 +473,7 @@ function showDebugInfo(e) {
                 0;
     });
 
-    debug("expirationModelsByYear", expirationModelsByYear);
+    console.log("expirationModelsByYear", expirationModelsByYear);
 
     // add last 4 years to dump output
     let interestingYears = Object.keys(expirationModelsByYear).sort().slice(-4);
@@ -517,6 +517,10 @@ function showDebugInfo(e) {
             <tr>
                 <td>
                     ${id}
+                    <span style="float:right">
+                        ${devicesPerExpirationId[id] ?
+                        devicesPerExpirationId[id].length : ""}
+                    </span>
                 </td>
                 <td>
                     ${devicesPerExpirationId[id] ?
@@ -629,16 +633,19 @@ function stage1setup(tableData) {
         initComplete: stage2setup,
     });
 
-    $('#AUP_updated').html(` vom ${new Date(expirationTimestamp).toLocaleDateString()}.`);
-
     const oldestpriceDate = oldestprice.toLocaleDateString(),
         newestpriceDate = newestprice.toLocaleDateString();
     const priceDateInfo = (oldestpriceDate == newestpriceDate) ?
-        ` Preise vom ${newestpriceDate}.` :
-        ` Preise von ${oldestpriceDate} bis ${newestpriceDate}.`
+        `Preise vom ${newestpriceDate}.` :
+        `Preise von ${oldestpriceDate} bis ${newestpriceDate}.`
     $("#notices")
-        .append(priceDateInfo)
-        .prop("title", `${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}`);
+        .append(
+            ` ${new Date(expirationTimestamp).toLocaleDateString()}.`,
+            " ",
+            $("<span>")
+                .text(priceDateInfo)
+                .attr("title", `${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}`)
+        );
 
     // used device price calculator
     // model selector fills with data only when needed

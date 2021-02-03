@@ -30,6 +30,22 @@ Object.values(deviceData).map(device => {
         productIDs[productId] = [device.id];
     }
 
+    // check that all devices have a known CPU
+    var cpu = device.cpu;
+    if (! (cpu in cpus)) {
+        console.error(`Unknown CPU >${cpu}<`);
+        OK = false;
+    }
+
+    // check that all devices have a known screen resolution
+    if (device.screenSize > 0) {
+        var resolution = device.screenResolution;
+        if (! (resolution in resolutions)) {
+            console.error(`Unknown screen resolution >${resolution}<`);
+            OK = false;
+        }
+    }
+
     if (! OK) {
         console.error(`Data:\n${JSON.stringify(device,null,2)}\n`);
         errors += 1;

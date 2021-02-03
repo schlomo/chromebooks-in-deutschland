@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: 14.x
     - run: yarn
+    - run: git status ; yarn prep ; git status || ls -lR
     - run: yarn binary
     - id: version
       name: Set VERSION

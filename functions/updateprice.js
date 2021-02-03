@@ -82,7 +82,7 @@ getEntry()
     .then(console.log)
     .catch((error) => {
         if ("statusCode" in error) {
-            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}:\n${error.response.body}`);
+            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}:\n${error.statusCode !== 503 ? error.response.body : ""}`);
         } else {
             console.error(error);
         }

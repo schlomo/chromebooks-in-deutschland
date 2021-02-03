@@ -25,8 +25,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - run: yarn
-    - run: git status ; yarn prep ; git status || ls -lR
+    - run: yarn --frozen-lockfile
+    - run: git status ; yarn prep ; git diff
     - run: yarn binary
     - id: version
       name: Set VERSION

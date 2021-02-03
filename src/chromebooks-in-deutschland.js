@@ -213,7 +213,7 @@ var renderFeatures = function (features, type, row) {
 function renderZeroPrice(type, row) {
     switch (type) {
         case "display":
-            return '<nv title="kein Preis verfügbar' + (row ? " :" + row.priceUpdated.toLocaleString() : "") + '">&circleddash;</nv>';
+            return '<nv title="kein Preis verfügbar' + (row ? ": " + row.priceUpdated.toLocaleString() : "") + '">&circleddash;</nv>';
         case "sort":
             return 9999;
         case "filter":
@@ -228,7 +228,7 @@ var renderPrice = function (price, type, row) {
         return renderZeroPrice(type, row);
     } else {
         if (type === 'display') {
-            price = '<a title="Aktualisiert: ' + row.priceUpdated.toLocaleString() + '">' + toEuro(price) + '</a>';
+            price = '<span title="Aktualisiert: ' + row.priceUpdated.toLocaleString() + '">' + toEuro(price) + '</span>';
         }
         return price;
     }
@@ -239,7 +239,7 @@ var renderPricePerMonth = function (pricePerMonth, type, row) {
         return renderZeroPrice(type);
     } else {
         if (type === 'display') {
-            pricePerMonth = `<a title="${row.supportMonths} Monate">${toEuro(pricePerMonth)} (${toEuro(pricePerMonth * 12)})</a>`;
+            pricePerMonth = `<span title="${row.supportMonths} Monate">${toEuro(pricePerMonth)} (${toEuro(pricePerMonth * 12)})</span>`;
         }
         return pricePerMonth;
     }
@@ -247,7 +247,7 @@ var renderPricePerMonth = function (pricePerMonth, type, row) {
 
 var renderExpiration = function (expiration, type, row) {
     if (type === 'display') {
-        expiration = `<a title="${row.expirationId}">${expiration}</a>`;
+        expiration = `<span title="${row.expirationId}">${expiration}</span>`;
     } else if (type === "filter") {
         expiration = `${row.expirationId} ${expiration}`;
     }

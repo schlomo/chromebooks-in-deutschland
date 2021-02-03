@@ -26,11 +26,12 @@ jobs:
       with:
         node-version: 14.x
     - run: yarn --frozen-lockfile
-    - run: git status ; yarn prep ; git diff
     - run: yarn binary
     - id: version
       name: Set VERSION
-      run: echo "::set-output name=VERSION::$(<VERSION)"
+      run: |
+        echo "::set-output name=VERSION::$(<VERSION)"
+        grep -v dirty VERSION
     - name: Upload
       uses: 'actions/upload-artifact@v2'
       with:

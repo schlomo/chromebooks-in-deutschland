@@ -5,8 +5,9 @@ WORKDIR /work
 # RUN apk add --no-cache bash python3 && \
 #     yarn install && \
 #     yarn run prep && \
-RUN yarn install && \
-    yarn run prep && \
+RUN yarn --frozen-lockfile && \
+    yarn prep && \
+    grep -v dirty VERSION && \
     chmod -R o+rX .
 
 FROM node:14-alpine

@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: CID updater
+
+Resources:
+  CidUpdater:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../functions
+      Handler: updateprice.lambda
+      Runtime: nodejs12.x
+      MemorySize: 128
+      Environment:
+        Variables:
+          CID_API_URL: http://192.168.11.6:5000/api

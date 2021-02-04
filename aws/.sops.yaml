@@ -1,0 +1,3 @@
+creation_rules:
+    - pgp: EAE2A8B2C84B7F639914C80E6D97452DAD649AF2
+      kms: arn:aws:kms:eu-central-1:491147667814:key/397c793f-6a50-440d-9856-e88642157164

@@ -26,6 +26,8 @@ jobs:
       with:
         node-version: 14.x
     - run: yarn --frozen-lockfile
+      env:
+        NODE_ENV: production
     - run: yarn binary
     - id: version
       name: Set VERSION

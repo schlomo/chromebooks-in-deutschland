@@ -7,15 +7,17 @@ steps:
   args: [fetch, --unshallow, --tags]
 - name: node:14
   entrypoint: yarn
-  args: [install]
+  env:
+  - NODE_ENV=production
+  args: [--frozen-lockfile]
 - name: node:14
   entrypoint: yarn
-  args: [run, deploy]
+  args: [deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
 - name: node:14
   entrypoint: yarn
-  args: [run, update-dev-database]
+  args: [update-dev-database]
 
 substitutions:
     _ENVIRONMENT: dev

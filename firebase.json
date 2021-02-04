@@ -52,5 +52,19 @@
     "predeploy": [
       "npm --prefix \"$RESOURCE_DIR\" run lint"
     ]
+  },
+  "emulators": {
+    "functions": {
+      "host": "0.0.0.0"
+    },
+    "firestore": {
+      "host": "0.0.0.0"
+    },
+    "database": {
+      "host": "0.0.0.0"
+    },
+    "hosting": {
+      "host": "0.0.0.0"
+    }
   }
 }

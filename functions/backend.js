@@ -298,7 +298,7 @@ function checkAuth(req, keys) {
 
 function checkPayload(req) {
     if ("content-type" in req.headers &&
-        req.headers["content-type"] === "application/json" &&
+        req.headers["content-type"].startsWith("application/json") &&
         "priceData" in req.body &&
         Array.isArray(req.body.priceData)
     ) {

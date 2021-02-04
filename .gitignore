@@ -12,3 +12,7 @@ backup.json
 /src/generated/*
 /functions/generated/*
 /dist
+venv
+.terraform
+.aws-sam
+*.zip

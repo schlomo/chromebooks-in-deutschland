@@ -2,7 +2,9 @@ const
     { inspect } = require("util"),
     apiUrl = process.env.CID_API_URL || "http://localhost:5000/api",
     apiKey = process.env.CID_API_KEY || "random_key",
-    rp = require('request-promise-native');
+    axios = require("axios").default;
+
+axios.defaults.timeout = 3000; // 3 second timeout
 
 // require("./httptrace")();
 
@@ -18,12 +20,12 @@ try {
 
 function getEntryManual(productProvider, productId) {
     console.log(`Starting updateprice ${version} for ${productProvider} ${productId}`);
-    
+
     var [entry] = Object.values(devices).filter((entry) => {
         return (entry.productId === productId) &&
             (entry.productProvider === productProvider);
     });
-    
+
     if (!entry) {
         entry = {
             "id": "Unknown Device",
@@ -34,57 +36,86 @@ function getEntryManual(productProvider, productId) {
     return entry;
 }
 
-function getEntryFromApi() {
+async function getEntryFromApi() {
     console.log(`Starting updateprice ${version} for ${apiUrl}`);
-    return rp({
-        uri: apiUrl + "/devicesbypriceage",
-        qs: { slice: 1 },
-        json: true,
-    }).then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
-            return data.shift();
-        }
-        throw new Error(`Expected array of entries, got:\n${data}`);
-    });
+    return axios
+        .get(
+            apiUrl + "/devicesbypriceage",
+            { params: { slice: 1 } }
+        )
+        .then(res => res.data)
+        .then((data) => {
+            if (Array.isArray(data) && data.length > 0) {
+                return data.shift();
+            }
+            throw new Error(`Expected array of entries, got:\n${inspect(data)}`);
+        });
 }
 
-async function getEntry() {
-    if (process.argv.length === 4) {
-        return getEntryManual(...process.argv.slice(2));
+async function getEntry(argv = process.argv) {
+    if (argv.length === 4) {
+        return getEntryManual(...argv.slice(2));
     }
-    if (process.argv.length > 2 && process.argv[2].match("-h")) {
-        console.log(`${
-            process.argv[1].split("/").slice(-1)
-        } [productProvider productId]`);
+    if (argv.length > 2 && argv[2].match("-h")) {
+        console.log(`${argv[1].split("/").slice(-1)
+            } [productProvider productId]`);
         process.exit(1);
     }
     return getEntryFromApi();
 }
 
 async function updatePrices(entries) {
-    if (! Array.isArray(entries)) {
+    if (!Array.isArray(entries)) {
         entries = [entries];
     }
-    return rp({
-        method: "POST",
-        uri: apiUrl + "/price",
-        qs: { key: apiKey },
-        json: true,
-        body: { priceData: entries },
-    });
+    return axios.post(
+        apiUrl + "/price",
+        { priceData: entries },
+        { 
+            params: { key: apiKey } , 
+            headers: { "Content-type": "application/json" }
+        }
+    ).then(res => res.data);
 }
 
-// eslint throws promise/catch-or-return on the next line and I don't understand why, disable it
-// eslint-disable-next-line
-getEntry()
-    .then(backend.getPrice)
-    .then(updatePrices)
-    .then(console.log)
-    .catch((error) => {
-        if ("statusCode" in error) {
-            console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}:\n${error.statusCode !== 503 ? error.response.body : ""}`);
-        } else {
-            console.error(error);
-        }
-        process.exit(1);
-    });
+async function main() {
+    return getEntry()
+        .then(backend.getPrice)
+        .then(updatePrices)
+        .then(console.log)
+        .then(0)
+        .catch((error) => {
+            if ("statusCode" in error) {
+                console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}:\n${error.statusCode !== 503 ? error.response.body : ""}`);
+            } else {
+                console.error(error);
+            }
+            return 1;
+        });
+}
+
+exports.lambda = async function () {
+    console.log("Hey λ");
+    return getEntry()
+        .then(backend.getPrice)
+        .then(updatePrices)
+        .then(console.log)
+        .catch((error) => {
+            if ("statusCode" in error) {
+                console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`);
+            } else {
+                console.error(inspect(error));
+            }
+        });
+    const deviceEntry = await getEntry([]);
+    console.log(deviceEntry);
+    const priceEntry = await backend.getPrice(deviceEntry);
+    console.log(priceEntry);
+    const updateResult = await updatePrices(priceEntry);
+    console.log(inspect(updateResult));
+    return updateResult;
+}
+
+if (require.main === module) {
+    main().then(process.exit);
+}

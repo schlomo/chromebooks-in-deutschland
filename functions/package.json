@@ -3,19 +3,20 @@
   "description": "Cloud Functions for Firebase",
   "scripts": {
     "lint": "eslint .",
-    "serve": "firebase serve --only functions",
-    "shell": "firebase functions:shell",
+    "serve": "firebase -P dev serve --only functions",
+    "shell": "firebase -P dev functions:shell",
     "start": "yarn shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "standalone": "firebase emulators:exec --only database 'node standalone.js'",
-    "standalone-all": "firebase emulators:exec --only database 'node standalone-all.js'",
-    "updateprice": "firebase emulators:exec 'node updateprice.js'"
+    "standalone": "firebase -P dev emulators:exec --only database 'node standalone.js'",
+    "standalone-all": "firebase -P dev emulators:exec --only database 'node standalone-all.js'",
+    "updateprice": "firebase -P dev emulators:exec 'node updateprice.js'"
   },
   "engines": {
     "node": "14"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "express": "^4.17.1",
     "firebase-admin": "^9.2.0",
@@ -27,7 +28,9 @@
     "browserify": "^17.0.0",
     "eslint": "^7.2.0",
     "eslint-plugin-promise": "^4.0.1",
-    "firebase-functions-test": "^0.2.1"
+    "firebase-functions-test": "^0.2.1",
+    "firebase-tools": "^9.3.0",
+    "lambda-local": "^1.7.4"
   },
   "private": true
 }

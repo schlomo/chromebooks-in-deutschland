@@ -46,3 +46,5 @@ Please freel free to submit pull requests for features and bugfixes, they will b
         exit 1
     fi
     ```
+* Lambda function can be tested locally via [SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-using-invoke.html), `pip install aws-sam-cli` in a `venv`
+* Lambda deployment is via [terragrunt](https://terragrunt.gruntwork.io/) and needs [terraform](https://www.terraform.io/) and [sops](https://github.com/mozilla/sops)

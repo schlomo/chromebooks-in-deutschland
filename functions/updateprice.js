@@ -107,15 +107,8 @@ exports.lambda = async function () {
                 console.error(inspect(error));
             }
         });
-    const deviceEntry = await getEntry([]);
-    console.log(deviceEntry);
-    const priceEntry = await backend.getPrice(deviceEntry);
-    console.log(priceEntry);
-    const updateResult = await updatePrices(priceEntry);
-    console.log(inspect(updateResult));
-    return updateResult;
 }
 
 if (require.main === module) {
-    main().then(process.exit);
+    main().then(process.exit).catch(console.error);
 }

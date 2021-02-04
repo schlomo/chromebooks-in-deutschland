@@ -7,6 +7,9 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
+      # workaround for expired yarn apt repo key
+      # https://github.com/yarnpkg/yarn/issues/7866
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - apt-get update
       - apt-get -y install build-essential curl file git
       - bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

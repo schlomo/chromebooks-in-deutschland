@@ -1,1 +1,25 @@
-#
+version: 0.2
+env:
+  shell: bash
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - apt-get update
+      - apt-get -y install build-essential curl file git
+      - bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - source ~/.profile
+      - brew install terraform terragrunt awscli
+  build:
+    commands:
+      - ls -lR
+      - git status --verbose
+      - yarn --prod --frozen-lockfile
+      - yarn prep
+      - cd aws
+      - terragrunt plan tf.plan
+      - terragrunt apply -auto-approve tf.plan
+
+

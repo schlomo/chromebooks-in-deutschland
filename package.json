@@ -48,10 +48,10 @@
     "mocha": "^8.2.1",
     "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.4",
-    "pkg": "^4.4.9",
-    "yarn-run-all": "^3.1.1"
+    "pkg": "^4.4.9"
   },
   "dependencies": {
+    "yarn-run-all": "^3.1.1",
     "@fontsource/roboto": "^4.1.0",
     "@iconify/iconify": "^1.0.6",
     "datatables.net-dt": "^1.10.21",

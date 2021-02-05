@@ -32,6 +32,7 @@ data "archive_file" "lambda_zip" {
 }
 
 resource "aws_lambda_function" "cid_updater" {
+  description      = "Version: ${file("${path.module}/../VERSION")}"
   filename         = "${path.module}/lambda_function.zip"
   function_name    = "cid_updater"
   role             = aws_iam_role.cid_updater.arn
@@ -73,20 +74,20 @@ resource "aws_iam_role_policy_attachment" "cid_updater_execution_policy" {
 }
 
 resource "aws_cloudwatch_event_rule" "every_seven_minutes" {
-    name = "every_seven_minutes"
-    schedule_expression = "rate(7 minutes)"
+  name                = "every_seven_minutes"
+  schedule_expression = "rate(7 minutes)"
 }
 
 resource "aws_cloudwatch_event_target" "cid_updater_every_seven_minutes" {
-    rule = aws_cloudwatch_event_rule.every_seven_minutes.name
-    target_id = "call_cid_updater"
-    arn = aws_lambda_function.cid_updater.arn
+  rule      = aws_cloudwatch_event_rule.every_seven_minutes.name
+  target_id = "call_cid_updater"
+  arn       = aws_lambda_function.cid_updater.arn
 }
 
 resource "aws_lambda_permission" "allow_cloudwatch_to_call_cid_updater" {
-    statement_id = "AllowExecutionFromCloudWatch"
-    action = "lambda:InvokeFunction"
-    function_name = aws_lambda_function.cid_updater.function_name
-    principal = "events.amazonaws.com"
-    source_arn = aws_cloudwatch_event_rule.every_seven_minutes.arn
+  statement_id  = "AllowExecutionFromCloudWatch"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.cid_updater.function_name
+  principal     = "events.amazonaws.com"
+  source_arn    = aws_cloudwatch_event_rule.every_seven_minutes.arn
 }

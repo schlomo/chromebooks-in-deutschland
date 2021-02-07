@@ -1,21 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket = "9826119742-state"
-    key    = "chromebooks-in-deutschland.tfstate"
-    region = "eu-central-1"
-  }
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 2.70"
-    }
-  }
-}
-
-provider "aws" {
-  profile = "default"
-  region  = "eu-central-1"
-}
 
 variable "cid_api_key" {
   description = "CID API key"
@@ -23,16 +5,22 @@ variable "cid_api_key" {
   sensitive   = true
 }
 
+variable "base_dir" {
+  description = "Base dir"
+  type = string
+  default = "."
+}
+
 # from https://gist.github.com/smithclay/e026b10980214cbe95600b82f67b4958
 
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../functions"
+  source_dir  = "${var.base_dir}/functions"
   output_path = "${path.module}/lambda_function.zip"
 }
 
 resource "aws_lambda_function" "cid_updater" {
-  description      = "Version: ${file("${path.module}/../VERSION")}"
+  description      = "Version: ${file("${var.base_dir}/VERSION")}"
   filename         = "${path.module}/lambda_function.zip"
   function_name    = "cid_updater"
   role             = aws_iam_role.cid_updater.arn

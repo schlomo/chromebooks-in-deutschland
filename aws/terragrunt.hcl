@@ -1,14 +1,30 @@
-locals {
-  secrets = yamldecode(sops_decrypt_file(("secrets.enc.yaml")))
+skip = true
+
+generate "base" {
+  path = "_base.tf"
+  if_exists = "overwrite_terragrunt"
+  contents = <<EOF
+terraform {
+  backend "s3" {
+    bucket = "9826119742-state"
+    key    = "chromebooks-in-deutschland/${path_relative_to_include()}/terraform.tfstate"
+    region = "eu-central-1"
+  }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 2.70"
+    }
+  }
+}
+
+provider "aws" {
+  profile = "default"
+  region  = "eu-central-1"
+}
+EOF
 }
 
 inputs = {
-  cid_api_key = local.secrets.cid_api_key
-}
-
-terraform {
-  before_hook "before_hook" {
-    commands     = ["apply", "plan"]
-    execute      = ["chmod", "-R", "o+rX", "../functions"]
-  }
+  base_dir = "${get_parent_terragrunt_dir()}/.."
 }

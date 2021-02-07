@@ -24,11 +24,11 @@ phases:
         -w /apps/aws 
         -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
         alpine/terragrunt
-        terragrunt plan -out tf.plan
+        terragrunt run-all plan -out tf.plan
       - docker run --rm 
         -v $(pwd):/apps -u $(id -u):$(id -g)
         -w /apps/aws 
         -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
         alpine/terragrunt
-        terragrunt apply -auto-approve tf.plan
+        terragrunt run-all apply -auto-approve tf.plan
 

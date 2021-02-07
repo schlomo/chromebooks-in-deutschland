@@ -16,4 +16,5 @@ venv
 .terraform
 .aws-sam
 *.zip
-/aws/tf.plan
+_base.tf
+tf.plan

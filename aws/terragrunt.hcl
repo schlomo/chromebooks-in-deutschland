@@ -1,5 +1,11 @@
 skip = true
 
+locals {
+  region = "eu-central-1"
+  www_domain_name = "aws.chromebooks-in-deutschland.de"
+  root_domain_name = "chromebooks-in-deutschland.de"
+}
+
 generate "base" {
   path = "_base.tf"
   if_exists = "overwrite_terragrunt"
@@ -8,7 +14,7 @@ terraform {
   backend "s3" {
     bucket = "9826119742-state"
     key    = "chromebooks-in-deutschland/${path_relative_to_include()}/terraform.tfstate"
-    region = "eu-central-1"
+    region = "${local.region}"
   }
   required_providers {
     aws = {
@@ -19,8 +25,11 @@ terraform {
 }
 
 provider "aws" {
-  profile = "default"
-  region  = "eu-central-1"
+  region  = "${local.region}"
+}
+provider "aws" {
+  region  = "us-east-1"
+  alias = "aws_us"
 }
 EOF
 }

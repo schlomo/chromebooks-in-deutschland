@@ -6,6 +6,10 @@ dependency "certificate" {
   config_path = "../certificate"
 }
 
+dependencies {
+  paths = ["../certificate"]
+}
+
 inputs = {
   certificate_arn = dependency.certificate.outputs.certificate_arn
   domains = dependency.certificate.outputs.domains

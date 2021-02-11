@@ -3,7 +3,7 @@ variable "www_domain_name" {}
 variable "root_domain_name" {}
 
 resource "aws_acm_certificate" "website" {
-  provider = "aws_us"
+  provider = aws.us
   domain_name       = "*.${var.root_domain_name}"
   validation_method = "EMAIL"
   subject_alternative_names = [

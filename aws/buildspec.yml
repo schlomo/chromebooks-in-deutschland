@@ -22,13 +22,13 @@ phases:
         -w /apps/aws 
         -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
         alpine/terragrunt
-        terragrunt run-all plan -out tf.plan
+        ./plan.sh
       - docker run --rm 
         -v $(pwd):/apps -u $(id -u):$(id -g)
         -w /apps/aws 
         -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
         alpine/terragrunt
-        terragrunt run-all apply -auto-approve tf.plan
+        ./apply.sh
 
 # Notes:
 # Docker requires the privileged flag in the CodeBuild configuration

@@ -18,3 +18,4 @@ venv
 *.zip
 _base.tf
 tf.plan
+output*xml

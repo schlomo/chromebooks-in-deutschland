@@ -3,6 +3,7 @@
 # include normal files
 !functions/*.*
 !src/*.*
+!test/*.*   
 !hooks/*
 !*.*
 !*-*

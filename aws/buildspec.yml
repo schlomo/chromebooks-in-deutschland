@@ -28,7 +28,7 @@ phases:
           -v $(pwd):$(pwd) -u $(id -u):$(id -g)
           -w $(pwd)
           -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
-          mozilla/sops:alpine --verbose -d build_secrets.env
+          mozilla/sops:alpine --verbose -d aws/build_secrets.env
         )
       - docker run --rm
         -e CLOUDRAIL_API_KEY -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI

@@ -25,7 +25,7 @@ resource "aws_lambda_function" "cid_updater" {
   environment {
     variables = {
       CID_API_URL = "https://dev.chromebooks-in-deutschland.de/api"
-      CID_API_KEY = "var.cid_api_key"
+      CID_API_KEY = var.cid_api_key
     }
   }
 }

@@ -8,7 +8,6 @@ locals {
 
 resource "aws_s3_bucket" "website" {
   bucket = local.bucket_id
-  acl    = "public-read"
   // See http://amzn.to/2Fa04ul
   policy = <<POLICY
 {
@@ -32,13 +31,20 @@ POLICY
   }
 }
 
+module "website_files" {
+  source = "hashicorp/dir/template"
+  base_dir = "${var.base_dir}/public/"
+}
+
 resource "aws_s3_bucket_object" "website" {
-  for_each = fileset("${var.base_dir}/public/", "*")
+  for_each = module.website_files.files
+
+  key = each.key
+  source  = each.value.source_path
+  etag = each.value.digests.md5
+  content_type = each.value.content_type
+
   bucket = aws_s3_bucket.website.id
-  key = each.value
-  acl = "public-read"
-  source = "${var.base_dir}/public/${each.value}"
-  etag = filemd5("${var.base_dir}/public/${each.value}")
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {}
@@ -65,7 +71,7 @@ resource "aws_cloudfront_distribution" "website" {
     target_origin_id       = local.origin_id
     min_ttl                = 0
     default_ttl            = 300
-    max_ttl                = 31536000
+    max_ttl                = 300
 
     forwarded_values {
       query_string = false
@@ -74,7 +80,10 @@ resource "aws_cloudfront_distribution" "website" {
       }
     }
   }
-  aliases = aws_acm_certificate.website.subject_alternative_names
+  aliases = concat(
+    aws_acm_certificate.website.subject_alternative_names,
+    [format("%s.%s", var.www_host_name, var.root_domain_name)]
+  )
 
   restrictions {
     geo_restriction {
@@ -86,5 +95,8 @@ resource "aws_cloudfront_distribution" "website" {
   viewer_certificate {
     acm_certificate_arn = aws_acm_certificate.website.arn
     ssl_support_method  = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2019"
   }
+
+  
 }

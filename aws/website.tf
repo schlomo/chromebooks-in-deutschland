@@ -1,22 +1,11 @@
-variable "www_domain_name" {}
-
-variable "root_domain_name" {}
-
-variable "certificate_arn" {}
-
-variable "domains" {}
-
-variable "base_dir" {
-  description = "Base dir"
-  type = string
-  default = "."
-}
 
 # Inspiration: https://medium.com/runatlantis/hosting-our-static-site-over-ssl-with-s3-acm-cloudfront-and-terraform-513b799aec0f
 
 locals {
-  bucket_id = "38456734875-${var.www_domain_name}"
+  bucket_id = "38456734875-${var.www_host_name}.${var.root_domain_name}"
+  origin_id = format("%s.%s", var.www_host_name, var.root_domain_name)
 }
+
 resource "aws_s3_bucket" "website" {
   bucket = local.bucket_id
   acl    = "public-read"
@@ -60,7 +49,7 @@ resource "aws_cloudfront_distribution" "website" {
       origin_access_identity = aws_cloudfront_origin_access_identity.origin_access_identity.cloudfront_access_identity_path
     }
     domain_name = aws_s3_bucket.website.bucket_regional_domain_name
-    origin_id   = var.www_domain_name
+    origin_id   = local.origin_id
   }
 
   enabled             = true
@@ -73,7 +62,7 @@ resource "aws_cloudfront_distribution" "website" {
     allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
     // This needs to match the `origin_id` above.
-    target_origin_id       = var.www_domain_name
+    target_origin_id       = local.origin_id
     min_ttl                = 0
     default_ttl            = 300
     max_ttl                = 31536000

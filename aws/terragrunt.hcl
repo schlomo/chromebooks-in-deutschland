@@ -1,10 +1,3 @@
-skip = true
-
-locals {
-  www_domain_name = "aws.chromebooks-in-deutschland.de"
-  root_domain_name = "chromebooks-in-deutschland.de"
-}
-
 remote_state {
   backend = "s3"
   config = {
@@ -40,27 +33,39 @@ provider "aws" {
 EOF
 }
 
+locals {
+  secrets = yamldecode(sops_decrypt_file(("${get_parent_terragrunt_dir()}/secrets.enc.yaml")))
+}
+
 inputs = {
+  cid_api_key = local.secrets.cid_api_key
   base_dir = "${get_parent_terragrunt_dir()}/.."
 }
 
 terraform {
-  after_hook "cloudrail_after_hook" {
-    commands     = ["xplan"]
+  before_hook "before_hook" {
+    commands     = ["apply", "plan"]
+    execute      = ["chmod", "-R", "o+rX", "${get_parent_terragrunt_dir()}/../functions"]
+  }
 
+  after_hook "cloudrail_after_hook" {
+    commands     = ["plan"]
+
+    # this depends on PWD being the top level dir, very very ugly and not self-explanatory!
     execute      = [
       "docker", 
       "run", 
-      "--rm", 
-      "-v", "${get_env("PWD", "")}:/data", 
+      "--rm", "--pull", "always",
+      "-e", "CLOUDRAIL_API_KEY",
+      "-v", "${get_env("PWD", "")}:${get_env("PWD", "")}", 
+      "-w", "${get_env("PWD", "")}",
       "indeni/cloudrail-cli", 
       "run", 
-      "-d", "${path_relative_to_include()}/",
-      "--tf-plan", "${path_relative_to_include()}/tf.plan",
+      "-d", "aws",
+      "--tf-plan", "aws/tf.plan",
       "--origin", "ci",
       "--build-link", "https://github.com/schlomo/chromebooks-in-deutschland",
-      "--execution-source-identifier", "somebuildnumber - tg module ${path_relative_to_include()}",
-      "--api-key", "${get_env("CLOUDRAIL_API_KEY", "")}",
+      "--execution-source-identifier", "somebuildnumber - tg module aws",
       "--auto-approve"
       ]
   }

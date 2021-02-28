@@ -5,12 +5,6 @@ variable "cid_api_key" {
   sensitive   = true
 }
 
-variable "base_dir" {
-  description = "Base dir"
-  type = string
-  default = "."
-}
-
 # from https://gist.github.com/smithclay/e026b10980214cbe95600b82f67b4958
 
 data "archive_file" "lambda_zip" {

@@ -23,6 +23,25 @@ phases:
         -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
         alpine/terragrunt
         ./plan.sh
+      - export $(
+          docker run --rm 
+          -v $(pwd):$(pwd) -u $(id -u):$(id -g)
+          -w $(pwd)
+          -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
+          mozilla/sops:alpine --verbose -d build_secrets.env
+        )
+      - docker run --rm
+        -e CLOUDRAIL_API_KEY -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
+        -v $(pwd):$(pwd) -u $(id -u):$(id -g)
+        -w $(pwd)
+        indeni/cloudrail-cli
+        run
+        -d aws
+        --tf-plan aws/tf.plan
+        --origin ci
+        --build-link "https://$AWS_REGION.console.aws.amazon.com/codesuite/codebuild/$CODEBUILD_WEBHOOK_ACTOR_ACCOUNT_ID/projects/${CODEBUILD_BUILD_ID//:*}/build/$CODEBUILD_BUILD_ID"
+        --execution-source-identifier "Build $CODEBUILD_BUILD_NUMBER in aws"
+        --auto-approve
       - docker run --rm 
         -v $(pwd):/apps -u $(id -u):$(id -g)
         -w /apps/aws 

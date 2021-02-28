@@ -49,7 +49,7 @@ terraform {
   }
 
   after_hook "cloudrail_after_hook" {
-    commands     = ["plan"]
+    commands     = ["xplan"]
 
     # this depends on PWD being the top level dir, very very ugly and not self-explanatory!
     execute      = [

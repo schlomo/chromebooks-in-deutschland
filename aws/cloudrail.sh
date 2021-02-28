@@ -1,5 +1,5 @@
-#!/bin/sh
-if [ "$(basename $(pwd))" == aws ]; then
+#!/bin/bash
+if [ "$(basename $(pwd))" = aws ]; then
     cd ..
 fi
 exec \

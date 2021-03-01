@@ -6,6 +6,7 @@ AWS_ACCOUNT_ID=$(
     aws sts get-caller-identity --query Account --output text || \
     docker run --rm -e AWS_DEFAULT_REGION -e AWS_CONTAINER_CREDENTIALS_RELATIVE_URI amazon/aws-cli sts get-caller-identity --query Account --output text
 )
+
 exec \
     docker run --rm \
     -e CLOUDRAIL_API_KEY \

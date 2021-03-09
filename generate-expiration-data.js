@@ -15,13 +15,11 @@ const decode = require("decode-html");
 
 const extraExpirationInfo = {
     // This is actually called different, migrate data before removing
-    /*
-         "expiration ID": {
-            "brand": "Brand",
-            "expiration": "2028-01-01T00:00:00.000Z",
-            "model": "Some Chromebook Model"
-        }, 
-        */
+    "Acer Chromebook Spin 512 (R852TN)": {
+        "brand": "Acer",
+        "model": "Chromebook Spin 512 (R852TN)",
+        "expiration": "2028-05-31T22:00:00.000Z"
+      },
 };
 
 function debug(...args) {

@@ -36,6 +36,7 @@ module.exports = {
         "MediaTek MT8173C": { "cores": 4, "frequency": 2.1 },
         "MediaTek MT8183": { "cores": 8, "frequency": 2 },
         "MediaTek P60T": { "cores": 8, "frequency": 2.0 },
+        "Qualcomm Snapdragon 7180c": { "cores": 8, "frequency": 2.4},
         "Rockchip RK3399": { "cores": 6, "frequency": 2 },
     },
 

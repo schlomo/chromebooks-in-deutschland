@@ -12,7 +12,7 @@
     "build": "run-s -sl prep parcel-build",
     "deploy": "run-s -sl build firebase-deploy",
     "docker": "run-s -s clean 'prep:*version' docker-build",
-    "docker-build": "docker build --build-arg VERSION=$(<VERSION) -t schlomo/chromebooks-in-deutschland-standalone .",
+    "docker-build": "docker build --progress plain --build-arg VERSION=$(<VERSION) -t schlomo/chromebooks-in-deutschland-standalone .",
     "test": "mocha",
     "prep": "run-s -sl clean test prep:*",
     "prep:01-icons": "node generate-icon-bundle.js",

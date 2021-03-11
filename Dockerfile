@@ -4,10 +4,11 @@ ADD . /work/
 WORKDIR /work
 ENV NODE_ENV=production
 RUN find .
-RUN yarn --frozen-lockfile && \
-    yarn prep && \
-    grep -v dirty VERSION && \
-    chmod -R o+rX .
+RUN cat .dockerignore
+RUN yarn --frozen-lockfile
+RUN yarn prep
+RUN grep -v dirty VERSION
+RUN chmod -R o+rX .
 
 FROM node:14-alpine
 WORKDIR /work

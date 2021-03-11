@@ -18,7 +18,7 @@ const extraExpirationInfo = {
     "Acer Chromebook Spin 512 (R852TN)": {
         "brand": "Acer",
         "model": "Chromebook Spin 512 (R852TN)",
-        "expiration": "2028-05-31T22:00:00.000Z"
+        "expiration": "2026-05-31T22:00:00.000Z"
       },
 };
 

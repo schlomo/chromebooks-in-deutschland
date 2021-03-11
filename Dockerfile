@@ -3,6 +3,7 @@ ARG VERSION
 ADD . /work/
 WORKDIR /work
 ENV NODE_ENV=production
+RUN find .
 RUN yarn --frozen-lockfile && \
     yarn prep && \
     grep -v dirty VERSION && \

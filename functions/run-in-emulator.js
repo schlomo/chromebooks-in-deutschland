@@ -25,7 +25,7 @@ module.exports = function (admin) {
                 priceData[productProvider] = {};
             }
             var price = Math.random() * 1000;
-            if (price < 20) {
+            if (price < 200) {
                 price = 0;
             } else {
                 price += 200;

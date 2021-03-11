@@ -449,16 +449,23 @@ function showDebugInfo(e) {
 
     // count devices per expiration ID
     let devicesPerExpirationId = {};
+    let devicesWithPricePerExpirationId = {};
     Object.values(deviceData).forEach((entry) => {
         const { expirationId, variant } = entry;
         if (expirationId in devicesPerExpirationId) {
             devicesPerExpirationId[expirationId].push(variant);
         } else {
             devicesPerExpirationId[expirationId] = [variant];
+            devicesWithPricePerExpirationId[expirationId] = 0;
+        }
+        const [price, priceUpdated] = getPriceData(data, entry.productProvider, entry.productId);
+        if (price > 0) {
+            devicesWithPricePerExpirationId[expirationId]++;
         }
     });
 
     console.log("devicesPerExpirationId", devicesPerExpirationId);
+    console.log("devicesWithPricePerExpirationId", devicesWithPricePerExpirationId);
 
     // transform expiration list into list of model by year
     let expirationModelsByYear = {};
@@ -518,7 +525,8 @@ function showDebugInfo(e) {
                 <td>
                     ${id}
                     <span style="float:right">
-                        ${devicesPerExpirationId[id] ?
+                        ${id in devicesWithPricePerExpirationId ? devicesWithPricePerExpirationId[id] + " /": ""}
+                        ${id in devicesPerExpirationId ?
                         devicesPerExpirationId[id].length : ""}
                     </span>
                 </td>

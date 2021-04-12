@@ -1101,6 +1101,28 @@
     "type": "chromebook",
     "variant": "CP513-1H-S0XG"
   },
+  "Acer Chromebook Spin 513 (CP513-1H-S72Y)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Qualcomm Snapdragon 7180c",
+    "disabled": false,
+    "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
+    "extraInfo": "",
+    "flip": true,
+    "id": "Acer Chromebook Spin 513 (CP513-1H-S72Y)",
+    "memory": 4,
+    "model": "Acer Chromebook Spin 513",
+    "productId": "2498166",
+    "productProvider": "geizhals",
+    "screenGlare": true,
+    "screenResolution": "1920x1080",
+    "screenSize": 13.3,
+    "screenTouch": true,
+    "specLink": "https://d.otto.de/files/f9405eeb-abfc-5496-af45-3dd674a49bed.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CP513-1H-S72Y"
+  },
   "Acer Chromebook Spin 513 (CP513-1H-S8PU)": {
     "biometricUnlock": false,
     "brand": "Acer",

@@ -2,9 +2,11 @@ const
     { inspect } = require("util"),
     apiUrl = process.env.CID_API_URL || "http://localhost:5000/api",
     apiKey = process.env.CID_API_KEY || "random_key",
-    axios = require("axios").default;
+    axios = require("axios").default,
+    axiosRetry = require("axios-retry");
 
 axios.defaults.timeout = 3000; // 3 second timeout
+axiosRetry(axios, { shouldResetTimeout: true, retryDelay: axiosRetry.exponentialDelay} );
 
 // require("./httptrace")();
 

@@ -6,9 +6,15 @@ const
     axiosRetry = require("axios-retry");
 
 axios.defaults.timeout = 3000; // 3 second timeout
-axiosRetry(axios, { shouldResetTimeout: true, retryDelay: axiosRetry.exponentialDelay} );
+axiosRetry(axios, { 
+    shouldResetTimeout: true, 
+    retryDelay: axiosRetry.exponentialDelay,
+    retryCondition: () => true // always retry
+} );
 
-// require("./httptrace")();
+if (defined(process.env.CID_HTTP_TRACE)) {
+    require("./httptrace")();
+}
 
 const
     backend = require("./backend"),

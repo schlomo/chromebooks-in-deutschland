@@ -226,6 +226,28 @@
     "type": "chromebook",
     "variant": "14c-ca0430ng"
   },
+  "HP Chromebook x360 14c (14c-cc0455ng)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i5-1135G7",
+    "disabled": false,
+    "expirationId": "HP Chromebook x360 14c",
+    "extraInfo": "256GB, hinterleuchtete Tastatur, USI Stylus optional",
+    "flip": true,
+    "id": "HP Chromebook x360 14c (14c-cc0455ng)",
+    "memory": 8,
+    "model": "Chromebook x360 14c",
+    "productId": "201373768",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": true,
+    "stylus": true,
+    "specLink": "https://gzhls.at/blob/ldb/d/b/8/0/3082a11048101659780f6a125abcdc694d62.pdf",
+    "type": "chromebook",
+    "variant": "14c-cc0455ng"
+  },
   "HP Chromebox G3 (305R0EA)": {
     "biometricUnlock": false,
     "brand": "HP",

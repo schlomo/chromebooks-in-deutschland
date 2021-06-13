@@ -136,7 +136,7 @@
   "Asus Chromebox 4 (90MS0252-M00090)": {
     "biometricUnlock": false,
     "brand": "Asus",
-    "cpu": "Intel Core i5-10210U",
+    "cpu": "Intel Core i7-10510U",
     "disabled": false,
     "expirationId": "Asus Chromebox 4",
     "extraInfo": "128GB",

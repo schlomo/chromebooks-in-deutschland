@@ -19,3 +19,4 @@ venv
 _base.tf
 tf.plan
 output*xml
+.DS_Store

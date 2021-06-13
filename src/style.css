@@ -205,6 +205,15 @@ p {
   margin-right: 0.4em;
 }
 
+#cb_video {
+  float: right;
+}
+
+#cb_video img {
+  width: 10em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
 
 dt {
   font-weight: bold;

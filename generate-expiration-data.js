@@ -14,12 +14,18 @@ const cheerioTableparser = require('cheerio-tableparser');
 const decode = require("decode-html");
 
 const extraExpirationInfo = {
-    // This is actually called different, migrate data before removing
-    "Acer Chromebook Spin 512 (R852TN)": {
+    // Google called this CP514-HH by mistake
+    "Acer Chromebook Spin 514 (CP514-1H)": {
         "brand": "Acer",
-        "model": "Chromebook Spin 512 (R852TN)",
-        "expiration": "2026-05-31T22:00:00.000Z"
-      },
+        "model": "Acer Chromebook Spin 514 (CP514-1H)",
+        "expiration": "2029-05-31T22:00:00.000Z"
+    },
+    // Google doesn't have this one at all
+    "Acer Chromebook Spin 514 (CP514-1HW)": {
+        "brand": "Acer",
+        "model": "Acer Chromebook Spin 514 (CP514-1HW)",
+        "expiration": "2029-05-31T22:00:00.000Z"
+    },
 };
 
 function debug(...args) {

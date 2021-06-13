@@ -6,6 +6,9 @@
     "disabled": false,
     "expirationId": "Asus Chromebook Flip C436",
     "extraInfo": "hinterleuchtete Tastatur, 512GB SSD, USI Stylus optional",
+    "extraLinks": {
+      "CHIP Testbericht": "https://www.chip.de/test/ASUS-Chromebook-Flip-C436FA-E10027-im-Test_183575897.html"
+    },
     "flip": true,
     "id": "Asus Chromebook Flip C436 (C436FA-E10027)",
     "memory": 16,

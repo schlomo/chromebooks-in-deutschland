@@ -2,6 +2,10 @@ module.exports = {
     cpus: {
         "AMD A4 9120C": { "cores": 2, "frequency": 1.6, "burst": 2.4 },
         "AMD A6 9220C": { "cores": 2, "frequency": 1.8, "burst": 2.7 },
+        "AMD Athlon Gold 3150C": { "cores": 2, "frequency": 2.4, "burst": 3.3 },
+        "AMD Athlon Silver 3050C": { "cores": 2, "frequency": 2.3, "burst": 3.2 },
+        "AMD Ryzen 3 3250C": { "cores": 2, "frequency": 2.6, "burst": 3.5 },
+        "AMD Ryzen 5 3500C": { "cores": 4, "frequency": 2.1, "burst": 3.7 },
         "Intel Celeron 3865U": { "cores": 2, "frequency": 1.8 },
         "Intel Celeron 3867U": { "cores": 2, "frequency": 1.8 },
         "Intel Celeron 5205U": { "cores": 2, "frequency": 1.9},
@@ -36,7 +40,8 @@ module.exports = {
         "MediaTek MT8173C": { "cores": 4, "frequency": 2.1 },
         "MediaTek MT8183": { "cores": 8, "frequency": 2 },
         "MediaTek P60T": { "cores": 8, "frequency": 2.0 },
-        "Qualcomm Snapdragon 7180c": { "cores": 8, "frequency": 2.4},
+        "Qualcomm Snapdragon 7180c": { "cores": 8, "frequency": 2.4 },
+        "Qualcomm Snapdragon 7c": { "cores": 8, "frequency": 2.4 },
         "Rockchip RK3399": { "cores": 6, "frequency": 2 },
     },
 

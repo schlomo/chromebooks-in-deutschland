@@ -6,6 +6,11 @@ const glob = require('glob'),
     sortedObject = require("sorted-object")
     ;
 
+const resultFiles = [
+    "functions/generated/chromebooks.json",
+    "src/generated/chromebooks.json"
+];
+
 if (require.main === module) {
     try {
         const chromebookData = jsonMerger.mergeFiles(
@@ -13,12 +18,15 @@ if (require.main === module) {
         );
         
         const sortedCBData = sortedObject(chromebookData);
-        fs.writeFileSync(
-            "functions/generated/chromebooks.json", 
-            JSON.stringify(sortedCBData,null,2)
-        );
         const chromebookCount = Object.keys(sortedCBData).length;
-        console.log(`Generated chromebook device data file with ${chromebookCount} devices.`)
+        resultFiles.forEach((outputFile) => {
+            fs.writeFileSync(
+                outputFile,
+                JSON.stringify(sortedCBData, null, 2)
+            );
+        });
+
+        console.log(`Generated chromebook device data files >${resultFiles.join(", ")}< with ${chromebookCount} devices.`)
     } catch(err) {
         console.error(err);
         process.exit(1);

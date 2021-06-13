@@ -4,7 +4,7 @@ const assert = require("assert");
 
 const { expirationData, expirationTimestamp } = require("./src/generated/expiration-data"),
     { cpus, resolutions } = require("./src/consts"),
-    deviceData = require("./functions/chromebooks.json");
+    deviceData = require("./functions/generated/chromebooks.json");
 
 var errors=0;
 

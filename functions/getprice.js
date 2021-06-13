@@ -3,7 +3,7 @@ const
 
 const 
     backend = require("./backend"),
-    devices = require("./chromebooks.json");
+    devices = require("./generated/chromebooks.json");
 
 try {
     version = require("./generated/version");

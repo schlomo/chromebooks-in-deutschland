@@ -18,7 +18,7 @@ if (defined(process.env.CID_HTTP_TRACE)) {
 
 const
     backend = require("./backend"),
-    devices = require("./chromebooks.json");
+    devices = require("./generated/chromebooks.json");
 
 try {
     version = require("./generated/version");

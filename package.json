@@ -1,40 +1,46 @@
 {
   "name": "chromebooks-in-deutschland",
-  "homepage": "https://github.com/schlomo/chromebooks-in-deutschland",
   "description": "Chromebooks in Deutschland Webseite",
+  "homepage": "https://github.com/schlomo/chromebooks-in-deutschland",
   "repository": {
     "type": "git",
     "url": "https://github.com/schlomo/chromebooks-in-deutschland.git"
   },
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "scripts": {
-    "start": "run-s -s prep firebase-emulators",
-    "clean": "rm -Rf VERSION dist public src/generated/* functions/generated/*",
+    "binary": "run-s -s clean 'prep:*version' 'binary-build:node14:*'",
+    "binary-arm": "run-s -s clean 'prep:*version' 'binary-build:arm'",
+    "binary-build:arm": "pkg --output dist/updateprice.\"$(<VERSION)\".linux-armv7 --targets node12.2.0-linux-armv7 functions/updateprice.js",
+    "binary-build:node14:alpine": "pkg --output dist/updateprice.\"$(<VERSION)\".alpine --targets node14-alpine-x64 --public functions/updateprice.js",
+    "binary-build:node14:linux": "pkg --output dist/updateprice.\"$(<VERSION)\".linux --targets node14-linux-x64 --public functions/updateprice.js",
+    "binary-build:node14:macos": "pkg --output dist/updateprice.\"$(<VERSION)\".macos --targets node14-macos-x64 --public functions/updateprice.js",
     "build": "run-s -sl prep parcel-build",
+    "clean": "rm -Rf VERSION dist public src/generated/* functions/generated/*",
     "deploy": "run-s -sl build firebase-deploy",
     "docker": "run-s -s clean 'prep:*version' docker-build",
     "docker-build": "docker build --progress plain --build-arg VERSION=$(<VERSION) -t schlomo/chromebooks-in-deutschland-standalone .",
-    "test": "mocha",
+    "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",
+    "firebase-emulators": "firebase --project dev emulators:exec 'yarn parcel-watch'",
+    "parcel-build": "parcel build --no-source-maps --out-dir public --log-level 4 src/index.html",
+    "parcel-watch": "parcel watch --out-dir public --log-level 4 src/index.html",
+    "postinstall": "echo Installing Functions && cd functions && yarn --frozen-lockfile && echo OK",
     "prep": "run-s -sl clean test prep:*",
     "prep:01-icons": "node generate-icon-bundle.js",
     "prep:02-version": "node generate-version.js",
     "prep:03-expiration-data": "node generate-expiration-data.js",
-    "prep:04-sort-chromebooks": "jsonsort functions/chromebooks.json",
+    "prep:04-device-data": "node generate-device-data.js",
     "prep:05-validate-data": "node validate-data.js",
-    "parcel-build": "parcel build --no-source-maps --out-dir public --log-level 4 src/index.html",
-    "parcel-watch": "parcel watch --out-dir public --log-level 4 src/index.html",
-    "firebase-emulators": "firebase --project dev emulators:exec 'yarn parcel-watch'",
-    "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",
-    "update-dev-database": "./update-dev-database",
-    "postinstall": "echo Installing Functions && cd functions && yarn --frozen-lockfile && echo OK",
-    "binary": "run-s -s clean 'prep:*version' 'binary-build:node14:*'",
-    "binary-arm": "run-s -s clean 'prep:*version' 'binary-build:arm'",
-    "binary-build:node14:linux": "pkg --output dist/updateprice.\"$(<VERSION)\".linux --targets node14-linux-x64 --public functions/updateprice.js",
-    "binary-build:node14:alpine": "pkg --output dist/updateprice.\"$(<VERSION)\".alpine --targets node14-alpine-x64 --public functions/updateprice.js",
-    "binary-build:node14:macos": "pkg --output dist/updateprice.\"$(<VERSION)\".macos --targets node14-macos-x64 --public functions/updateprice.js",
-    "binary-build:arm": "pkg --output dist/updateprice.\"$(<VERSION)\".linux-armv7 --targets node12.2.0-linux-armv7 functions/updateprice.js"
+    "start": "run-s -s prep firebase-emulators",
+    "test": "mocha",
+    "update-dev-database": "./update-dev-database"
   },
-  "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
-  "license": "CC-BY-SA-4.0",
   "dependencies": {
     "@fontsource/roboto": "^4.1.0",
     "@iconify/iconify": "^1.0.6",
@@ -49,13 +55,15 @@
     "firebase-tools": "^9.3.0",
     "fontsource-roboto": "^4.0.0",
     "git-describe": "^4.0.4",
+    "glob": "^7.1.7",
     "jquery": "^3.5.1",
-    "json-sort-cli": "^1.18.2",
+    "json-merger": "^1.1.6",
     "mocha": "^8.2.1",
     "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.4",
     "pkg": "^4.4.9",
     "select2": "^4.0.13",
+    "sorted-object": "^2.0.1",
     "yarn-run-all": "^3.1.1"
   }
 }

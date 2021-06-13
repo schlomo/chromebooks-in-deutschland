@@ -10,7 +10,7 @@ import Iconify from '@iconify/iconify';
 require("./generated/icon-bundle");
 import { expirationData, expirationTimestamp } from "./generated/expiration-data";
 import { cpus, resolutions } from "./consts";
-import deviceData from "../functions/chromebooks.json";
+import deviceData from "../functions/generated/chromebooks.json";
 
 import jtslogo from "./jtslogo.png";
 

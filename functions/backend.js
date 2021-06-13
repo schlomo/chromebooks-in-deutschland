@@ -1,7 +1,7 @@
 'use strict';
 
 const
-    deviceData = require("./chromebooks.json"),
+    deviceData = require("./generated/chromebooks.json"),
     Promise = require('bluebird'),
     admin = require('firebase-admin'),
     rp = require('request-promise-native'),

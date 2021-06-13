@@ -1,5 +1,5 @@
 const
-    deviceData = require("./chromebooks.json"),
+    deviceData = require("./generated/chromebooks.json"),
     { inspect } = require("util")   ;
 
 module.exports = function (admin) {

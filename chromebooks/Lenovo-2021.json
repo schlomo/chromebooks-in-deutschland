@@ -163,7 +163,7 @@
   "Lenovo ThinkPad C13 Yoga G1 (20UX000E)": {
     "biometricUnlock": true,
     "brand": "Lenovo",
-    "cpu": "AMD Athlon Gold 3150C",
+    "cpu": "AMD Athlon 3150C",
     "disabled": false,
     "expirationId": "Lenovo ThinkPad C13 Yoga Chromebook Enterprise",
     "extraInfo": "hinterleuchtete Tastatur, USI Stylus inklusive",

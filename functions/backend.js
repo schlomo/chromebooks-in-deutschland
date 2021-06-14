@@ -24,25 +24,50 @@ function debug(...args) {
     //console.debug(...args);
 }
 
-function devicesByPriceAge() {
+function devicesByPriceAge(activeFirst=false) {
     // get a list of deviceData entries ordered by the age of their price
+    // select only active devices, e.g. with a price >0
 
     return admin.database().ref('/priceData').once('value').then((snapshot) => {
         var priceData = snapshot.val();
+
+        const oldestDate = new Date(0),
+            newestDate = new Date(); 
         return Object.values(deviceData).sort((a, b) => {
+            // Sort device data by price age, from oldest to newest
+            // missing price data means oldest date to be sorted first
             var a_price_age, b_price_age;
-            // Use Unix Epoch (1970) for missing date info
             try {
                 a_price_age = new Date(priceData[a.productProvider][a.productId][1]);
             } catch (e) {
-                a_price_age = new Date(0);
+                a_price_age = oldestDate;
             }
             try {
                 b_price_age = new Date(priceData[b.productProvider][b.productId][1]);
             } catch (e) {
-                b_price_age = new Date(0);
+                b_price_age = oldestDate;
+            }
+            if (activeFirst) {
+                try {
+                    if (priceData[a.productProvider][a.productId][0] === 0) {
+                        a_price_age = newestDate;
+                    }
+                    if (priceData[b.productProvider][b.productId][0] === 0) {
+                        b_price_age = newestDate;
+                    }
+                // eslint-disable-next-line no-empty
+                } catch (e) { }
             }
             return a_price_age - b_price_age;
+        }).map((entry) => {
+            // reduce device data to items relevant for price update
+            const { productId, productProvider, id } = entry;
+            var price = 0, priceDate = oldestDate;
+            try {
+                [price, priceDate] = priceData[productProvider][productId];
+            // eslint-disable-next-line no-empty
+            } catch (e) {}
+            return { productId, productProvider, id, price, priceDate };
         });
     });
 }
@@ -278,11 +303,13 @@ api.get("/api/data", (req, res) => {
 });
 
 api.get("/api/devicesbypriceage", (req, res) => {
-    return devicesByPriceAge()
+    const random = Math.floor(Math.random() * 10) + 1;
+    // 80% queries should be active first to prioritize the active devices
+    return devicesByPriceAge(random > 2)
         .then((data) => {
-            const first = Number.parseInt(req.query.slice)
-            if (!isNaN(first)) {
-                data = data.slice(0, first);
+            const slice = Number.parseInt(req.query.slice)
+            if (!isNaN(slice)) {
+                data = data.slice(0, slice);
             }
             return res.json(data);
         });

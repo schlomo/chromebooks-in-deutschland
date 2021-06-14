@@ -24,16 +24,15 @@ module.exports = function (admin) {
             if (!(productProvider in priceData)) {
                 priceData[productProvider] = {};
             }
-            var price = Math.random() * 1000;
-            if (price < 200) {
+            const random = Math.random() * 1000;
+            var price = random;
+            if (price < 400) { // ~ 40% without price
                 price = 0;
-            } else {
-                price += 200;
             }
             priceData[productProvider][productId] = [
                 // use random price to also generate random date variation for last price info
-                // as a side effect, the most expensive device has the oldest price info which makes it easy to identify
-                price, new Date(Date.now() - Math.floor(price * 100000)).toISOString()
+                // as a side effect, the most expensive device has the newest price info which makes it easy to identify
+                price, new Date(Date.now() - Math.floor((1000-random) * 100000)).toISOString()
             ]
         });
         admin.database().ref("/").set(

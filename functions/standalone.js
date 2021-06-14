@@ -1,9 +1,12 @@
+'use strict';
+
 const
     admin = require('firebase-admin'),
     { inspect } = require("util");
 
 const backend = require("./backend");
 
+var version;
 try {
     version = require("./generated/version");
 } catch(e) {

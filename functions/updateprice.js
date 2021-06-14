@@ -1,3 +1,5 @@
+'use strict';
+
 const
     { inspect } = require("util"),
     apiUrl = process.env.CID_API_URL || "http://localhost:5000/api",
@@ -12,7 +14,7 @@ axiosRetry(axios, {
     retryCondition: () => true // always retry
 } );
 
-if (defined(process.env.CID_HTTP_TRACE)) {
+if ("CID_HTTP_TRACE" in process.env) {
     require("./httptrace")();
 }
 
@@ -20,10 +22,11 @@ const
     backend = require("./backend"),
     devices = require("./generated/chromebooks.json");
 
+var version = "unknown version";
 try {
     version = require("./generated/version");
 } catch (e) {
-    version = "unknown version";
+    //
 }
 
 function getEntryManual(productProvider, productId) {

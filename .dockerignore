@@ -5,6 +5,7 @@
 !src/*.*
 !test/*.*   
 !hooks/*
+!chromebooks/*
 !*.*
 !*-*
 !LICENSE

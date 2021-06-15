@@ -20,7 +20,7 @@ var last_search_term = undefined;
 var used_device_model_select = undefined;
 var used_device_price_input = undefined;
 
-const jts_search = '1(3|4).*".*FHD.*Intel.*20(26|27|28|29|30|31)';
+const jts_search = '1(3|4).*".*FHD.*(Ryzen|Intel).*20(26|27|28|29|30|31)';
 
 // take state from history API or from URL hash
 const wlhash = window.location.hash.split('#')[1];

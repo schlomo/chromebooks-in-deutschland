@@ -13,7 +13,7 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 * https://iconify.design/docs/icon-bundles/ explains about local icon bundles
 * Agents need keys in the database under `/keys`, emulator creates dummy key for local testing
 * Optimum agent interval seems to be 7 minutes
-* Agent (download pecompiled binary from [Releases](releases/)) can be run like this:
+* Agent (download pecompiled binary from [Releases](../../releases/)) can be run like this:
 
     ```sh
     #!/bin/bash

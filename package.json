@@ -17,10 +17,11 @@
   "scripts": {
     "binary": "run-s -s prep 'binary-build:node14:*'",
     "binary-arm": "run-s -s prep 'binary-build:arm'",
-    "binary-build:arm": "pkg --output dist/updateprice.\"$(<VERSION)\".linux-armv7 --targets node12.2.0-linux-armv7 functions/updateprice.js",
+    "binary-build:arm": "pkg --output dist/updateprice.\"$(<VERSION)\".linux-armv7 --targets node14-linuxstatic-armv7 functions/updateprice.js",
     "binary-build:node14:alpine": "pkg --output dist/updateprice.\"$(<VERSION)\".alpine --targets node14-alpine-x64 --public functions/updateprice.js",
     "binary-build:node14:linux": "pkg --output dist/updateprice.\"$(<VERSION)\".linux --targets node14-linux-x64 --public functions/updateprice.js",
     "binary-build:node14:macos": "pkg --output dist/updateprice.\"$(<VERSION)\".macos --targets node14-macos-x64 --public functions/updateprice.js",
+    "_binary-build:node14:armv7": "pkg --output dist/updateprice.\"$(<VERSION)\".arm --targets node14-linuxstatic-armv7 --public functions/updateprice.js",
     "build": "run-s -sl prep parcel-build",
     "clean": "rm -Rf VERSION dist public src/generated/* functions/generated/*",
     "deploy": "run-s -sl build firebase-deploy",
@@ -43,7 +44,7 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^4.1.0",
-    "@iconify/iconify": "^1.0.6",
+    "@iconify/iconify": "^2.0.1",
     "@iconify/json": "^1.1.175",
     "@iconify/json-tools": "^1.0.8",
     "chai": "^4.2.0",
@@ -58,12 +59,15 @@
     "glob": "^7.1.7",
     "jquery": "^3.5.1",
     "json-merger": "^1.1.6",
-    "mocha": "^8.2.1",
+    "mocha": "^9.0.0",
     "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.4",
-    "pkg": "^4.4.9",
-    "select2": "^4.0.13",
+    "pkg": "^5.2.1",
+    "select2": "^4.1.0-rc.0",
     "sorted-object": "^2.0.1",
     "yarn-run-all": "^3.1.1"
+  },
+  "resolutions": {
+    "pkg/pkg-fetch": "^3.2"
   }
 }

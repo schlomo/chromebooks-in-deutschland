@@ -15,8 +15,8 @@
   ],
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "scripts": {
-    "binary": "run-s -s clean 'prep:*version' 'binary-build:node14:*'",
-    "binary-arm": "run-s -s clean 'prep:*version' 'binary-build:arm'",
+    "binary": "run-s -s prep 'binary-build:node14:*'",
+    "binary-arm": "run-s -s prep 'binary-build:arm'",
     "binary-build:arm": "pkg --output dist/updateprice.\"$(<VERSION)\".linux-armv7 --targets node12.2.0-linux-armv7 functions/updateprice.js",
     "binary-build:node14:alpine": "pkg --output dist/updateprice.\"$(<VERSION)\".alpine --targets node14-alpine-x64 --public functions/updateprice.js",
     "binary-build:node14:linux": "pkg --output dist/updateprice.\"$(<VERSION)\".linux --targets node14-linux-x64 --public functions/updateprice.js",

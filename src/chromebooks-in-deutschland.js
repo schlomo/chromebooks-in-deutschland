@@ -6,7 +6,7 @@ var $ = require('jquery');
 var DataTables = require('datatables.net-dt')();
 var DataTablesResponsive = require('datatables.net-responsive-dt')();
 
-import Iconify from '@iconify/iconify';
+import Iconify from '@iconify/iconify/dist/iconify.without-api.min.js';
 require("./generated/icon-bundle");
 import { expirationData, expirationTimestamp } from "./generated/expiration-data";
 import { cpus, resolutions } from "./consts";

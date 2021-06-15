@@ -35,6 +35,8 @@ const epochDate = new Date(0);
 
 let oldestprice = new Date();
 let newestprice = new Date(0);
+let oldestpriceInactive = new Date();
+let newestpriceInactive = new Date(0);
 
 var screenSizesMap = {};
 var data = {};
@@ -295,11 +297,20 @@ function prepareTableData(rawData) {
             entry.price = price;
             entry.priceUpdated = priceUpdated;
             if (priceUpdated > epochDate) {
-                if (priceUpdated > newestprice) {
-                    newestprice = priceUpdated;
-                }
-                if (priceUpdated < oldestprice) {
-                    oldestprice = priceUpdated;
+                if (price > 0) {
+                    if (priceUpdated > newestprice) {
+                        newestprice = priceUpdated;
+                    }
+                    if (priceUpdated < oldestprice) {
+                        oldestprice = priceUpdated;
+                    }
+                } else {
+                    if (priceUpdated > newestpriceInactive) {
+                        newestpriceInactive = priceUpdated;
+                    }
+                    if (priceUpdated < oldestpriceInactive) {
+                        oldestpriceInactive = priceUpdated;
+                    }
                 }
             }
 
@@ -652,7 +663,10 @@ function stage1setup(tableData) {
             " ",
             $("<span>")
                 .text(priceDateInfo)
-                .attr("title", `${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}`)
+                .attr("title",
+                    `€ ${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}` + "\n" + 
+                    `⊝ ${oldestpriceInactive.toLocaleString()} - ${newestpriceInactive.toLocaleString()}`
+                )
         );
 
     // used device price calculator

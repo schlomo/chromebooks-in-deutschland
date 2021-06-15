@@ -29,7 +29,6 @@ jobs:
       env:
         NODE_ENV: production
     - run: yarn binary
-    - run: yarn binary-arm
     - run: ls -l dist/
     - id: version
       name: Set VERSION

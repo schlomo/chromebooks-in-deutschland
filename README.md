@@ -12,7 +12,8 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 * [Integromat](https://www.integromat.com/) used for email notifications for Cloud Build results based on Push Subscription to web hook from `cloud-build` Pub/Sub topic.
 * https://iconify.design/docs/icon-bundles/ explains about local icon bundles
 * Agents need keys in the database under `/keys`, emulator creates dummy key for local testing
-* Agent can be run like this with a binary:
+* Optimum agent interval seems to be 7 minutes
+* Agent (download pecompiled binary from [Releases](releases/)) can be run like this:
 
     ```sh
     #!/bin/bash
@@ -30,7 +31,7 @@ Please freel free to submit pull requests for features and bugfixes, they will b
         exit 1
     fi
     ```
-    Or like this from source:
+    Or like this from source checkout out to `chromebooks-in-deutschland`:
     ```sh
     #!/bin/bash
     cd "$(dirname "$(readlink -f "$0")")"

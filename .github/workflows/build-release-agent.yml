@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: 14.x
     - name: Setup package build
-      run: apt install -yV --no-install-recommends build-essential devscripts lintian
+      run: sudo apt install -yV --no-install-recommends build-essential devscripts lintian
     - run: yarn --frozen-lockfile
       env:
         NODE_ENV: production

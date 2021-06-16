@@ -25,16 +25,19 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
+    - name: Setup package build
+      run: apt install -yV --no-install-recommends build-essential devscripts lintian
     - run: yarn --frozen-lockfile
       env:
         NODE_ENV: production
     - run: yarn binary
+    - run: yarn deb
     - run: ls -l dist/
     - id: version
       name: Set VERSION
       run: |
         echo "::set-output name=VERSION::$(<VERSION)"
-        grep -v dirty VERSION
+        grep -v dirty VERSION || { git status ; exit 1 ; }
     - name: Upload
       uses: 'actions/upload-artifact@v2'
       with:

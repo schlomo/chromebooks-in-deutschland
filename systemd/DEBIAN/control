@@ -1,0 +1,10 @@
+Package: chromebooks-in-deutschland-service
+Version: 69
+Priority: optional
+Section: misc
+Architecture: all
+Maintainer: Schlomo Schapiro <schlomo+packaging@schapiro.org>
+Depends: docker-ce | docker | docker.io
+Description: chromebooks in deutschland price grabbing service
+ Needs api key in /etc/chromebooks-in-deutschland.env like this
+ CID_API_KEY=...

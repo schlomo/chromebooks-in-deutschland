@@ -1,0 +1,18 @@
+[Unit]
+Description=Update prices for chromebooks in deutschland for %I
+Requires=docker.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/chromebooks-in-deutschland.env
+Environment=IMAGE=schlomo/chromebooks-in-deutschland-standalone:%i
+ExecStartPre=/usr/bin/docker pull --quiet ${IMAGE}
+Environment=HOME=/root
+ProtectHome=tmpfs
+# Using the prod/dev %i parameter also as Docker tag
+ExecStart=/usr/bin/docker run \
+	--rm \
+        -e CID_API_URL=https://%i.chromebooks-in-deutschland.de/api \
+        -e CID_API_KEY \
+        ${IMAGE}
+TimeoutSec=10

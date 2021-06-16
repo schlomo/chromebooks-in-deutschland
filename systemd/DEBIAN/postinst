@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = configure ]; then
+	# apply changed service configs
+	systemctl daemon-reload
+	source /etc/chromebooks-in-deutschland.env
+	if [ "$CID_SERVICE_DEV" ] ; then
+		echo "Also enabling dev"
+		deb-systemd-invoke enable --now chromebooks-in-deutschland-dev.timer
+	fi
+	deb-systemd-invoke enable --now chromebooks-in-deutschland-prod.timer
+
+fi

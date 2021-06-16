@@ -1,0 +1,11 @@
+[Unit]
+Description=Run chromebooks-in-deutschland.service for Prod
+
+[Timer]
+OnCalendar=*:1/7
+AccuracySec=1us
+RandomizedDelaySec=40
+Unit=chromebooks-in-deutschland@prod.service
+
+[Install]
+WantedBy=timers.target

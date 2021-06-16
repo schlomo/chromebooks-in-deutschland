@@ -17,6 +17,8 @@
   "scripts": {
     "binary": "run-s -sl prep binary-build",
     "binary-build": "pkg --no-bytecode --public-packages '*' --output dist/updateprice-\"$(<VERSION)\" --compress GZip --targets node14-alpine-x64,node14-linux-x64,node14-linuxstatic-armv7,node14-windows-x64 --public functions/updateprice.js",
+    "deb": "run-s -sl prep:*version deb-build",
+    "deb-build": "make -C systemd",
     "build": "run-s -sl prep parcel-build",
     "clean": "rm -Rf VERSION dist public src/generated/* functions/generated/*",
     "deploy": "run-s -sl build firebase-deploy",

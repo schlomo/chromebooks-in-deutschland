@@ -11,9 +11,14 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 * Device data is now static JSON, only dynamic data is in database
 * [Integromat](https://www.integromat.com/) used for email notifications for Cloud Build results based on Push Subscription to web hook from `cloud-build` Pub/Sub topic.
 * https://iconify.design/docs/icon-bundles/ explains about local icon bundles
-* Agents need keys in the database under `/keys`, emulator creates dummy key for local testing
+* Lambda function can be tested locally via [SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-using-invoke.html), `pip install aws-sam-cli` in a `venv`
+* Lambda deployment is via [terragrunt](https://terragrunt.gruntwork.io/) and needs [terraform](https://www.terraform.io/) and [sops](https://github.com/mozilla/sops
+
+## Running the Agent
+
+* Agents need keys in the database under `/keys`, emulator uses dummy key for local testing
 * Optimum agent interval seems to be 7 minutes
-* Agent (download pecompiled binary from [Releases](../../releases/)) can be run like this:
+* Agent (download pecompiled binary from [Releases](../../releases/)) can be run like this from a CRON job:
 
     ```sh
     #!/bin/bash
@@ -31,7 +36,9 @@ Please freel free to submit pull requests for features and bugfixes, they will b
         exit 1
     fi
     ```
+
     Or like this from source checkout out to `chromebooks-in-deutschland`:
+
     ```sh
     #!/bin/bash
     cd "$(dirname "$(readlink -f "$0")")"
@@ -47,5 +54,9 @@ Please freel free to submit pull requests for features and bugfixes, they will b
         exit 1
     fi
     ```
-* Lambda function can be tested locally via [SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-using-invoke.html), `pip install aws-sam-cli` in a `venv`
-* Lambda deployment is via [terragrunt](https://terragrunt.gruntwork.io/) and needs [terraform](https://www.terraform.io/) and [sops](https://github.com/mozilla/sops)
+
+* The agent can be also run as a [Docker](https://hub.docker.com/repository/docker/schlomo/chromebooks-in-deutschland-standalone) container. On Debian/Ubuntu simply install the `chromebooks-in-deutschland-service` [Debian package](systemd/) from the [Releases](../../releases/). Make sure to create the configuration file `/etc/chromebooks-in-deutschland.env`. It has to set the API key like this:
+
+  ```sh
+  CID_API_KEY=some-api-key-uuid
+  ```

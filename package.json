@@ -16,7 +16,7 @@
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "scripts": {
     "binary": "run-s -sl prep binary-build",
-    "binary-build": "pkg --no-bytecode --public-packages '*' --output dist/updateprice-\"$(<VERSION)\" --compress GZip --targets node14-alpine-x64,node14-linux-x64,node14-linuxstatic-armv7,node14-windows-x64 --public functions/updateprice.js",
+    "binary-build": "pkg --no-bytecode --public-packages '*' --output dist/updateprice-\"$(<VERSION)\" --compress GZip --targets node14-macos-x64,node14-alpine-x64,node14-linux-x64,node14-linuxstatic-armv7,node14-windows-x64 --public functions/updateprice.js",
     "deb": "run-s -sl prep:*version deb-build",
     "deb-build": "make -C systemd",
     "build": "run-s -sl prep parcel-build",
@@ -65,6 +65,6 @@
     "yarn-run-all": "^3.1.1"
   },
   "resolutions": {
-    "pkg/pkg-fetch": "^3.2"
+    "pkg/pkg-fetch": "^3.2.1"
   }
 }

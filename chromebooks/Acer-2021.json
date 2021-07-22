@@ -221,9 +221,10 @@
     "cpu": "Qualcomm Snapdragon 7180c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
-    "extraInfo": "",
+    "extraInfo": "USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWYEG.001"
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWYEG.001",
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S0XG)",
@@ -236,7 +237,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://gzhls.at/blob/ldb/6/5/0/3/47f001feebd480762a80d2c68dfb27ea8c3f.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1H-S0XG"
   },
@@ -246,7 +247,10 @@
     "cpu": "Qualcomm Snapdragon 7180c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
-    "extraInfo": "hinterleuchtete Tastatur",
+    "extraInfo": "hinterleuchtete Tastatur, USI Stylus optional",
+    "extraLinks":{
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+    },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S6WE)",
     "memory": 4,
@@ -258,7 +262,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://gzhls.at/blob/ldb/4/0/0/2/775bef75346008737c139da33c001107037b.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1H-S6WE"
   },
@@ -268,7 +272,10 @@
     "cpu": "Qualcomm Snapdragon 7180c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
-    "extraInfo": "",
+    "extraInfo": "USI Stylus optional",
+    "extraLinks":{
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+    },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S72Y)",
     "memory": 4,
@@ -280,7 +287,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://d.otto.de/files/f9405eeb-abfc-5496-af45-3dd674a49bed.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1H-S72Y"
   },
@@ -290,9 +297,10 @@
     "cpu": "Qualcomm Snapdragon 7180c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
-    "extraInfo": "",
+    "extraInfo": "USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWZEG.001"
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWZEG.001",
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S8PU)",
@@ -305,7 +313,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://gzhls.at/blob/ldb/4/9/e/3/25f5bfa4bec248180965a2d345554997ac6c.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1H-S8PU"
   },
@@ -315,7 +323,10 @@
     "cpu": "Qualcomm Snapdragon 7c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
-    "extraInfo": "inklusive Chrome Enterprise Upgrade",
+    "extraInfo": "inklusive Chrome Enterprise Upgrade, USI Stylus optional",
+    "extraLinks":{
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+    },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S9SG)",
     "memory": 4,
@@ -327,7 +338,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://www.acer.com/ac/de/DE/content/model/NX.HWZEG.002",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1H-S9SG"
   },
@@ -337,9 +348,10 @@
     "cpu": "Qualcomm Snapdragon 7180c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1HL)",
-    "extraInfo": "128 GB, integriertes LTE-Modem",
+    "extraInfo": "128 GB, integriertes LTE-Modem, USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.AA0EG.001"
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.AA0EG.001",
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1HL-S0EF)",
@@ -352,7 +364,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://gzhls.at/blob/ldb/4/9/e/3/25f5bfa4bec248180965a2d345554997ac6c.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1HL-S0EF"
   },
@@ -362,9 +374,10 @@
     "cpu": "Qualcomm Snapdragon 7180c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1HL)",
-    "extraInfo": "128 GB, integriertes LTE-Modem, inklusive Chrome Enterprise Upgrade",
+    "extraInfo": "128 GB, integriertes LTE-Modem, inklusive Chrome Enterprise Upgrade, USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/professional-model/NX.AA0EG.002"
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/professional-model/NX.AA0EG.002",
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1HL-S7E7)",
@@ -377,7 +390,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://gzhls.at/blob/ldb/d/9/4/4/7826b6da0582aacd5a6098e4848c86402b4a.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1HL-S7E7"
   },
@@ -387,7 +400,10 @@
     "cpu": "Qualcomm Snapdragon 7c",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1HL)",
-    "extraInfo": "128 GB, integriertes LTE-Modem",
+    "extraInfo": "128 GB, integriertes LTE-Modem, USI Stylus optional",
+    "extraLinks":{
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+    },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1HL-S98M)",
     "memory": 8,
@@ -399,7 +415,7 @@
     "screenSize": 13.3,
     "screenTouch": true,
     "specLink": "https://www.acer.com/ac/de/DE/content/model/NX.HX1EG.002",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP513-1HL-S98M"
   },
@@ -409,6 +425,7 @@
     "cpu": "AMD Ryzen 3 3250C",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 514 (CP514-1H)",
+    "extraInfo": "USI Stylus optional",
     "extraLinks": {
       "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HX7EG.001"
     },
@@ -423,7 +440,7 @@
     "screenSize": 14,
     "screenTouch": true,
     "specLink": "https://d.otto.de/files/259031fb-1d9c-5e27-baab-4289b6f801ee.pdf",
-    "stylus": false,
+    "stylus": true,
     "type": "chromebook",
     "variant": "CP514-1H-R79Q"
   },
@@ -433,6 +450,7 @@
     "cpu": "AMD Athlon 3050C",
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 514 (CP514-1H)",
+    "extraInfo": "USI Stylus optional",
     "flip": true,
     "id": "Acer Chromebook Spin 514 (CP514-1H-R9PJ)",
     "memory": 4,

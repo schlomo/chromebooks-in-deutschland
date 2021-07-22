@@ -20,6 +20,7 @@ module.exports = {
         "Intel Core i3-7100U": { "cores": 2, "frequency": 2.4 },
         "Intel Core i3-8130U": { "cores": 2, "frequency": 2.2, "burst": 3.4 },
         "Intel Core i3-10110U": { "cores": 2, "frequency": 2.1, "burst": 4.1 },
+        "Intel Core i3-1115G4": { "cores": 2, "frequency": 3.0, "burst": 4.1 },
         "Intel Core i5-7300U": { "cores": 2, "frequency": 2.6, "burst": 3.5 },
         "Intel Core i5-8200Y": { "cores": 2, "frequency": 1.3, "burst": 3.9 },
         "Intel Core i5-8250U": { "cores": 4, "frequency": 1.6, "burst": 3.4 },

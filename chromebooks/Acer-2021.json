@@ -6,6 +6,9 @@
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 311 (CP311-3H)",
     "extraInfo": "",
+    "extraLinks": {
+      "Review": "https://laptopmedia.com/review/acer-chromebook-spin-311-cp311-3h-review-two-days-of-battery-life-thanks-to-the-arm-soc/"
+    },
     "flip": true,
     "id": "Acer Chromebook Spin 311 (CP311-3H-K2RJ)",
     "memory": 4,
@@ -29,7 +32,8 @@
     "expirationId": "Acer Chromebook Spin 311 (CP311-3H)",
     "extraInfo": "",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HUVEG.007"
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HUVEG.007",
+      "Review": "https://laptopmedia.com/review/acer-chromebook-spin-311-cp311-3h-review-two-days-of-battery-life-thanks-to-the-arm-soc/"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 311 (CP311-3H-K7MM)",
@@ -53,6 +57,9 @@
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 311 (CP311-3H)",
     "extraInfo": "",
+    "extraLinks": {
+      "Review": "https://laptopmedia.com/review/acer-chromebook-spin-311-cp311-3h-review-two-days-of-battery-life-thanks-to-the-arm-soc/"
+    },
     "flip": true,
     "id": "Acer Chromebook Spin 311 (CP311-3H-K95V)",
     "memory": 4,
@@ -223,8 +230,8 @@
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
     "extraInfo": "USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWYEG.001",
-      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review",
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWYEG.001"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S0XG)",
@@ -248,7 +255,7 @@
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
     "extraInfo": "hinterleuchtete Tastatur, USI Stylus optional",
-    "extraLinks":{
+    "extraLinks": {
       "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
@@ -273,7 +280,7 @@
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
     "extraInfo": "USI Stylus optional",
-    "extraLinks":{
+    "extraLinks": {
       "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
@@ -299,8 +306,8 @@
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
     "extraInfo": "USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWZEG.001",
-      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review",
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.HWZEG.001"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1H-S8PU)",
@@ -324,7 +331,7 @@
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1H)",
     "extraInfo": "inklusive Chrome Enterprise Upgrade, USI Stylus optional",
-    "extraLinks":{
+    "extraLinks": {
       "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
@@ -350,8 +357,8 @@
     "expirationId": "Acer Chromebook Spin 513 (CP513-1HL)",
     "extraInfo": "128 GB, integriertes LTE-Modem, USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.AA0EG.001",
-      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review",
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.AA0EG.001"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1HL-S0EF)",
@@ -376,8 +383,8 @@
     "expirationId": "Acer Chromebook Spin 513 (CP513-1HL)",
     "extraInfo": "128 GB, integriertes LTE-Modem, inklusive Chrome Enterprise Upgrade, USI Stylus optional",
     "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/professional-model/NX.AA0EG.002",
-      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
+      "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review",
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/professional-model/NX.AA0EG.002"
     },
     "flip": true,
     "id": "Acer Chromebook Spin 513 (CP513-1HL-S7E7)",
@@ -401,7 +408,7 @@
     "disabled": false,
     "expirationId": "Acer Chromebook Spin 513 (CP513-1HL)",
     "extraInfo": "128 GB, integriertes LTE-Modem, USI Stylus optional",
-    "extraLinks":{
+    "extraLinks": {
       "Android Central: Review": "https://www.androidcentral.com/acer-chromebook-spin-513-review"
     },
     "flip": true,
@@ -471,7 +478,7 @@
     "brand": "Acer",
     "cpu": "AMD Athlon 3050C",
     "disabled": false,
-    "expirationId": "Acer Chromebook Spin 514 (CP514-1H)",
+    "expirationId": "Acer Chromebook Spin 514 (CP514-1W)",
     "extraInfo": "128GB, hinterleuchtete Tastatur, USI Stylus optional",
     "flip": true,
     "id": "Acer Chromebook Spin 514 (CP514-1W-R25B)",
@@ -493,7 +500,7 @@
     "brand": "Acer",
     "cpu": "AMD Athlon 3050C",
     "disabled": false,
-    "expirationId": "Acer Chromebook Spin 514 (CP514-1H)",
+    "expirationId": "Acer Chromebook Spin 514 (CP514-1W)",
     "extraInfo": "hinterleuchtete Tastatur, USI Stylus optional",
     "flip": true,
     "id": "Acer Chromebook Spin 514 (CP514-1W-R4QQ)",
@@ -515,7 +522,7 @@
     "brand": "Acer",
     "cpu": "AMD Athlon 3050C",
     "disabled": false,
-    "expirationId": "Acer Chromebook Spin 514 (CP514-1H)",
+    "expirationId": "Acer Chromebook Spin 514 (CP514-1W)",
     "extraInfo": "inklusive Chrome Enterprise Upgrade, hinterleuchtete Tastatur, USI Stylus optional",
     "flip": true,
     "id": "Acer Chromebook Spin 514 (CP514-1W-R72H)",
@@ -537,7 +544,7 @@
     "brand": "Acer",
     "cpu": "AMD Ryzen 5 3500C",
     "disabled": false,
-    "expirationId": "Acer Chromebook Spin 514 (CP514-1HW)",
+    "expirationId": "Acer Chromebook Spin 514 (CP514-1WH)",
     "extraInfo": "128GB, hinterleuchtete Tastatur, inklusive Chrome Enterprise Upgrade, USI Stylus optional",
     "flip": true,
     "id": "Acer Chromebook Spin 514 (CP514-1WH-R5TJ)",
@@ -559,7 +566,7 @@
     "brand": "Acer",
     "cpu": "AMD Ryzen 5 3500C",
     "disabled": false,
-    "expirationId": "Acer Chromebook Spin 514 (CP514-1HW)",
+    "expirationId": "Acer Chromebook Spin 514 (CP514-1WH)",
     "extraInfo": "128 GB SSD, USI Stylus optional",
     "flip": true,
     "id": "Acer Chromebook Spin 514 (CP514-1WH-R98K)",
@@ -725,5 +732,55 @@
     "stylus": true,
     "type": "chromebook",
     "variant": "CP713-2W-560V"
+  },
+  "Acer Chromebox CXI4 (DT.Z1MEG.001)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron 5205U",
+    "disabled": false,
+    "expirationId": "Acer Chromebox CXI4",
+    "extraInfo": "16GB maximum RAM",
+    "extraLinks": {
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4"
+    },
+    "flip": false,
+    "id": "Acer Chromebox CXI4 (DT.Z1MEG.001)",
+    "memory": 4,
+    "model": "Chromebox CXI4",
+    "productId": "2553986",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "",
+    "screenSize": 0,
+    "screenTouch": false,
+    "specLink": "https://www.acer.com/datasheets/2021/4871/CXI4/DT.Z1MEG.001.html",
+    "stylus": false,
+    "type": "chromebox",
+    "variant": "DT.Z1MEG.001"
+  },
+  "Acer Chromebox CXI4 (DT.Z1SEH.008)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Core i5-10210U",
+    "disabled": false,
+    "expirationId": "Acer Chromebox CXI4",
+    "extraInfo": "256GB SSD, 16GB maximum RAM",
+    "extraLinks": {
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4"
+    },
+    "flip": false,
+    "id": "Acer Chromebox CXI4 (DT.Z1SEH.008)",
+    "memory": 8,
+    "model": "Chromebox CXI4",
+    "productId": "2554015",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "",
+    "screenSize": 0,
+    "screenTouch": false,
+    "specLink": "https://www.acer.com/datasheets/2021/4871/CXI4/DT.Z1SEH.008.html",
+    "stylus": false,
+    "type": "chromebox",
+    "variant": "DT.Z1SEH.008"
   }
 }

@@ -21,16 +21,20 @@ const extraExpirationInfo = {
         "expiration": "2029-05-31T22:00:00.000Z"
     },
     // Google doesn't have this one at all
-    "Acer Chromebook Spin 514 (CP514-1HW)": {
+    "Acer Chromebook Spin 514 (CP514-1WH)": {
         "brand": "Acer",
         "model": "Acer Chromebook Spin 514 (CP514-1HW)",
         "expiration": "2029-05-31T22:00:00.000Z"
     },
 };
 
+
 function debug(...args) {
-    // console.debug(...args);
+    if ("DEBUG" in process.env) {
+        console.debug(...args);
+    }
 }
+
 
 // return string formatted as DB key
 function getDbKey(t) {
@@ -43,7 +47,9 @@ function getDateFromMonthYear(input) {
 }
 
 function extractModels(input) {
-    input = decode(input).replace(/[\s\u{0000A0}]+/ug, " "); // match also unicode spaces
+    input = decode(input)
+        .replace(/[\s\u{0000A0}]+/ug, " ") // match also unicode spaces
+        .replace(".", "_"); // Use _ for . so that model can be used as dict key
     if (
         input.match(/^[^/,()]+$/g) // no special separators
         || input.match(/^.+\([\w- ]+\)$/g) // single word in () at the end

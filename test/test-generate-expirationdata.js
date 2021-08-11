@@ -47,6 +47,11 @@ const testData = [
         input: "Chromebase (22CB25S, 22CV241)",
         result: ["Chromebase (22CB25S)", "Chromebase (22CV241)"],
     },
+    {
+        // . not allowed in keys in JSON dict
+        input: "Chromebase 21.5 inch All-in-One Desktop",
+        result: ["Chromebase 21_5 inch All-in-One Desktop"],
+    },
 ];
 
 describe("generate-expirationdata", function() {

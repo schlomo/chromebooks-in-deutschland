@@ -24,6 +24,12 @@ function debug(...args) {
     //console.debug(...args);
 }
 
+function devicesEnabled() {
+    return Object.values(deviceData).filter((device) => {
+        return !device.disabled;
+    })
+}
+
 function devicesByPriceAge(activeFirst=false) {
     // get a list of deviceData entries ordered by the age of their price
     // select only active devices, e.g. with a price >0
@@ -31,9 +37,9 @@ function devicesByPriceAge(activeFirst=false) {
     return admin.database().ref('/priceData').once('value').then((snapshot) => {
         var priceData = snapshot.val();
 
-        const oldestDate = new Date(0),
-            newestDate = new Date(); 
-        return Object.values(deviceData).sort((a, b) => {
+        const oldestDate = new Date(0), newestDate = new Date();
+        
+        return devicesEnabled().sort((a, b) => {
             // Sort device data by price age, from oldest to newest
             // missing price data means oldest date to be sorted first
             var a_price_age, b_price_age;

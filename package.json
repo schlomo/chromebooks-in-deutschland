@@ -50,7 +50,7 @@
     "datatables.net-dt": "^1.10.21",
     "datatables.net-responsive-dt": "^2.2.5",
     "decode-html": "^2.0.0",
-    "firebase-tools": "^9.3.0",
+    "firebase-tools": "9.16.0",
     "fontsource-roboto": "^4.0.0",
     "git-describe": "^4.0.4",
     "glob": "^7.1.7",

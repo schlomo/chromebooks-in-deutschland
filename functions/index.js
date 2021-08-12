@@ -9,11 +9,13 @@ const backend = require("./backend");
 
 
 const emulator = "FUNCTIONS_EMULATOR" in process.env;
-if (emulator) {
-    require("./run-in-emulator")(admin);
-} else {
+
+const app = emulator ?
+    require("./run-in-emulator")(admin) :
     admin.initializeApp();
-}
+
+console.log("options:", inspect(app.options));
+
 
 exports.test = functions.https.onRequest((_, response) => {
 

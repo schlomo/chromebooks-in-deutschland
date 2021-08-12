@@ -6,7 +6,7 @@ steps:
 # - name: gcr.io/google.com/cloudsdktool/cloud-sdk
 #   entrypoint: gcloud
 #   args: [config, get-value, account]
-- name: node
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: git
   args: [fetch, --unshallow, --tags]
 - name: node

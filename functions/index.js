@@ -14,7 +14,7 @@ const app = emulator ?
     require("./run-in-emulator")(admin) :
     admin.initializeApp();
 
-console.log("options:", inspect(app.options));
+// console.log("options:", inspect(app.options));
 
 
 exports.test = functions.https.onRequest((_, response) => {

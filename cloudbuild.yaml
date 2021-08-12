@@ -3,21 +3,21 @@ options:
   - NODE_ENV=production
 
 steps:
-- name: gcr.io/google.com/cloudsdktool/cloud-sdk
-  entrypoint: gcloud
-  args: [config, get-value, account]
+# - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+#   entrypoint: gcloud
+#   args: [config, get-value, account]
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: git
   args: [fetch, --unshallow, --tags]
-- name: node:14
+- name: node
   entrypoint: yarn
   args: [--frozen-lockfile]
-- name: node:14
+- name: node
   entrypoint: yarn
   args: [deploy]
   env:
   - ENVIRONMENT=${_ENVIRONMENT}
-- name: node:14
+- name: node
   entrypoint: yarn
   args: [update-dev-database]
 

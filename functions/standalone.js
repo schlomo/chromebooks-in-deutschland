@@ -1,8 +1,11 @@
 'use strict';
 
+// standalone updater to run with full Firebase admin access
+
+// CURRENTLY NOT USED!
+
 const
-    admin = require('firebase-admin'),
-    { inspect } = require("util");
+    admin = require('firebase-admin');
 
 const backend = require("./backend");
 
@@ -24,16 +27,17 @@ if (emulator) {
 
 console.log(`Starting standalone ${version} for project >${admin.app().options.projectId}<`);
 
-// eslint throws promise/catch-or-return on the next line and I don't understand why, disable it
-// eslint-disable-next-line
-backend.updateChromebookPriceDataJustOne().then((val) => {
-    return;
-}).catch((error) => {
-    if ("statusCode" in error) {
-        console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`)
-    } else {
-        console.error(error);
-    }
-}).finally(() => {
-    admin.app().delete(); // https://stackoverflow.com/a/44700503/2042547
-});
+
+// eslint-disable-next-line promise/catch-or-return
+backend.updateChromebookPriceDataJustOne()
+    .catch((error) => {
+        if (error.response) {
+            console.error(`ERROR: Got Status Code ${error.response.status} from ${error.config.url}`)
+        } else {
+            console.error(error);
+        }
+    })
+    .finally(() => {
+        admin.app().delete(); // https://stackoverflow.com/a/44700503/2042547
+    });
+

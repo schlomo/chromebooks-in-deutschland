@@ -1,5 +1,7 @@
 
 // this is based on hijack.js from https://blog.bearer.sh/http-api-instrumentation-nodejs/
+// require this to get low-level tracing output
+
 const http = require("http")
 const https = require("https")
 

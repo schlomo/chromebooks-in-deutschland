@@ -1,4 +1,5 @@
-FROM node:14 as builder
+FROM node as builder
+# need Bash for build, hence we don't use Alpine
 ARG VERSION
 ADD . /work/
 WORKDIR /work
@@ -10,7 +11,7 @@ RUN yarn prep
 RUN grep -v dirty VERSION
 RUN chmod -R o+rX .
 
-FROM node:14-alpine
+FROM node:alpine
 WORKDIR /work
 COPY --from=builder /work/functions /work
 VOLUME /config

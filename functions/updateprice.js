@@ -1,5 +1,7 @@
 'use strict';
 
+// update one price entry via API
+
 const
     { inspect } = require("util"),
     apiUrl = process.env.CID_API_URL || "http://localhost:5000/api",
@@ -96,8 +98,10 @@ async function main() {
         .then(console.log)
         .then(0)
         .catch((error) => {
-            if ("statusCode" in error) {
-                console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}:\n${error.statusCode !== 503 ? error.response.body : ""}`);
+            if (error.response) {
+                console.error(`ERROR: Got Status Code ${error.response.status} from ${error.config.url}:\n${error.response.status !== 503 ? error.response.data : ""}`);
+            } else if (error.isAxiosError) {
+                console.error("ERROR: " + error.message);
             } else {
                 console.error(error);
             }
@@ -112,8 +116,8 @@ exports.lambda = async function () {
         .then(updatePrices)
         .then(console.log)
         .catch((error) => {
-            if ("statusCode" in error) {
-                console.error(`ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`);
+            if (error.response) {
+                console.error(`ERROR: Got Status Code ${error.response.status} from ${error.config.url}`);
             } else {
                 console.error(inspect(error));
             }
@@ -121,5 +125,7 @@ exports.lambda = async function () {
 }
 
 if (require.main === module) {
-    main().then(process.exit).catch(console.error);
+    main()
+        .then(process.exit)
+        .catch(console.error);
 }

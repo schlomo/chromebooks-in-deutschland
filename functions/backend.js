@@ -1,17 +1,36 @@
 'use strict';
 
 const
-    deviceData = require("./generated/chromebooks.json"),
-    Promise = require('bluebird'),
-    admin = require('firebase-admin'),
-    rp = require('request-promise-native'),
-    cookiejar = rp.jar(),
-    express = require('express'),
     https = require('https'),
-    httpsAgent = new https.Agent({ keepAlive: true }),
     { inspect } = require("util");
 
-// require("./httptrace")();
+const
+    express = require('express'),
+    admin = require('firebase-admin');
+
+const
+    axios = require('axios').default,
+    axiosCookieJarSupport = require('axios-cookiejar-support').default,
+    tough = require('tough-cookie');
+
+axiosCookieJarSupport(axios);
+axios.defaults.jar = new tough.CookieJar();
+axios.defaults.withCredentials = true;
+axios.defaults.httpsAgent = new https.Agent({
+    keepAlive: true,
+    rejectUnauthorized: false, // Metacomp CA not in standard bundle
+});
+axios.defaults.headers.common = {
+    "User-Agent": "HTTPie/2.3.0",
+    "Accept": "*/*"
+};
+
+if ("CID_HTTP_TRACE" in process.env) {
+    require("./httptrace")();
+}
+
+const
+    deviceData = require("./generated/chromebooks.json");
 
 function msleep(n) {
     Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
@@ -21,7 +40,9 @@ function sleep(n) {
 }
 
 function debug(...args) {
-    //console.debug(...args);
+    if ("CID_DEBUG" in process.env) {
+        console.debug(...args);
+    }
 }
 
 function devicesEnabled() {
@@ -30,7 +51,7 @@ function devicesEnabled() {
     })
 }
 
-function devicesByPriceAge(activeFirst=false) {
+function devicesByPriceAge(activeFirst = false) {
     // get a list of deviceData entries ordered by the age of their price
     // select only active devices, e.g. with a price >0
 
@@ -38,7 +59,7 @@ function devicesByPriceAge(activeFirst=false) {
         var priceData = snapshot.val();
 
         const oldestDate = new Date(0), newestDate = new Date();
-        
+
         return devicesEnabled().sort((a, b) => {
             // Sort device data by price age, from oldest to newest
             // missing price data means oldest date to be sorted first
@@ -61,7 +82,7 @@ function devicesByPriceAge(activeFirst=false) {
                     if (priceData[b.productProvider][b.productId][0] === 0) {
                         b_price_age = newestDate;
                     }
-                // eslint-disable-next-line no-empty
+                    // eslint-disable-next-line no-empty
                 } catch (e) { }
             }
             return a_price_age - b_price_age;
@@ -71,8 +92,8 @@ function devicesByPriceAge(activeFirst=false) {
             var price = 0, priceDate = oldestDate;
             try {
                 [price, priceDate] = priceData[productProvider][productId];
-            // eslint-disable-next-line no-empty
-            } catch (e) {}
+                // eslint-disable-next-line no-empty
+            } catch (e) { }
             return { productId, productProvider, id, price, priceDate };
         });
     });
@@ -86,98 +107,75 @@ updateChromebookPriceData
 */
 
 async function getIdealoPrice(productId) {
-    let options = {
-        uri: `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`,
-        pool: httpsAgent,
-        json: false,
-        jar: cookiejar,
-        headers: {
-            "User-Agent": "HTTPie/2.3.0",
-            "Accept": "*/*"
-        }
-        /*
-        method: "POST",
-        headers: {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36 " + crypto.randomBytes(50).toString("hex")
-        }
-        */
-    };
     msleep(2); // maybe fix for strange DNS lookup issues in Cloud Shell
-    return rp(options).then((body) => {
-        let match = body.match(/<title>.*?([.,0-9]+)\s*?€.*/iu);
-        let price = 0;
-        if (match !== null) {
-            let priceString = match[1].replace(/\./g, "").replace(/,/g, ".");
-            let parsedPrice = parseFloat(priceString);
-            if (!isNaN(parsedPrice)) {
-                price = parsedPrice;
+    const url = `https://www.idealo.de/preisvergleich/OffersOfProduct/${productId}`;
+    return axios
+        .get(url)
+        .then((res) => res.data)
+        .then((body) => {
+            let match = body.match(/<title>.*?([.,0-9]+)\s*?€.*/iu);
+            let price = 0;
+            if (match !== null) {
+                let priceString = match[1].replace(/\./g, "").replace(/,/g, ".");
+                let parsedPrice = parseFloat(priceString);
+                if (!isNaN(parsedPrice)) {
+                    price = parsedPrice;
+                }
             }
-        }
 
-        if (price > 0) {
-            console.log(`Idealo ${productId} = ${price} from ${options.uri}`);
-        } else {
-            let match = body.match(/<title>.*<\/title>/i);
-            console.log(`Idealo ${productId} = 0 from ${options.uri} »${match}«`)
-            price = 0;
-        }
+            if (price > 0) {
+                console.log(`Idealo ${productId} = ${price} from ${url}`);
+            } else {
+                let match = body.match(/<title>.*<\/title>/i);
+                console.log(`Idealo ${productId} = 0 from ${url} »${match}«`)
+                price = 0;
+            }
 
-        return price;
-    });
+            return price;
+        });
     // non-200 codes like 429 go to .catch() upstream
 }
 
 async function getGeizhalsPrice(productId) {
-    let options = {
-        uri: `https://geizhals.de/a${productId}.html`,
-        pool: httpsAgent,
-        json: false,
-        jar: cookiejar,
-        headers: {
-            "User-Agent": "HTTPie/2.3.0",
-            "Accept": "*/*"
-        }
-    };
-    return rp(options).then((body) => {
-        let match = body.match(/<meta property='og:price:amount' content='(.*)'>/);
-        let price = 0;
-        if (match !== null) {
-            let priceString = match[1];
-            let parsedPrice = parseFloat(priceString);
-            if (!isNaN(parsedPrice)) {
-                price = parsedPrice;
+    const url = `https://geizhals.de/a${productId}.html`;
+    return axios
+        .get(url)
+        .then((res) => res.data)
+        .then((body) => {
+            let match = body.match(/<meta property='og:price:amount' content='(.*)'>/);
+            let price = 0;
+            if (match !== null) {
+                let priceString = match[1];
+                let parsedPrice = parseFloat(priceString);
+                if (!isNaN(parsedPrice)) {
+                    price = parsedPrice;
+                }
             }
-        }
 
-        if (price > 0) {
-            console.log(`Geizhals ${productId} = ${price} from ${options.uri}`);
-        } else {
-            let match = body.match(/<meta property='og:price:amount'.*>/);
-            console.log(`Geizhals ${productId} = 0 from ${options.uri} »${match}«`)
-            price = 0;
-        }
+            if (price > 0) {
+                console.log(`Geizhals ${productId} = ${price} from ${url}`);
+            } else {
+                let match = body.match(/<meta property='og:price:amount'.*>/);
+                console.log(`Geizhals ${productId} = 0 from ${url} »${match}«`)
+                price = 0;
+            }
 
-        return price;
-    });
+            return price;
+        });
     // non-200 codes like 429 go to .catch() upstream
 }
 
 async function getMetacompPrice(productId) {
-    let options = {
-        uri: `https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`,
-        pool: httpsAgent,
-        jar: cookiejar,
-        headers: {
-            "User-Agent": "HTTPie/2.3.0",
-            "Accept": "*/*"
-        }
-    };
-    return rp(options).then((rawData) => {
-        debug(rawData);
-        var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
-        debug(`Metacomp ${productId} = ${price}`);
-        return Number(price);
-    });
+    return axios
+        .get(`https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`)
+        .then((res) => res.data)
+        .then((rawData) => {
+            debug(rawData);
+            var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
+            debug(`Metacomp ${productId} = ${price}`);
+            return Number(price);
+        });
+    // non-200 codes like 429 go to .catch() upstream
 }
 
 async function getPrice(entry) {
@@ -191,17 +189,18 @@ async function getPrice(entry) {
         case "metacomp": priceFunction = getMetacompPrice; break;
         default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${productProvider}`);
     }
-    return priceFunction(productId).then((price) => {
-        if (price < 0) {
-            price = 0;
-        }
-        return {
-            productProvider: productProvider,
-            productId: productId,
-            price: price,
-            id: id,
-        }
-    });
+    return priceFunction(productId)
+        .then((price) => {
+            if (price < 0) {
+                price = 0;
+            }
+            return {
+                productProvider: productProvider,
+                productId: productId,
+                price: price,
+                id: id,
+            }
+        });
 }
 
 function makePriceDataEntry(price) {
@@ -222,10 +221,11 @@ async function updateChromebookPriceEntry(entry, onComplete = null) {
         await writePriceEntry(priceData, onComplete);
         return priceData;
     }).catch((error) => {
-        if ("statusCode" in error) {
-            var msg = error.statusCode === 429 ?
-                `Blocked 429 ${error.options.uri}` :
-                `ERROR: Got Status Code ${error.statusCode} from ${error.options.uri}`;
+        // the error here is most likely an axios error object
+        if (error.response) {
+            var msg = error.response.status === 429 ?
+                `Blocked 429 ${error.response.options.uri}` :
+                `ERROR: Got Status Code ${error.response.status} from ${error.config.url}`;
             console.error(msg);
             return msg;
         }

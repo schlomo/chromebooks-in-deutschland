@@ -45,7 +45,8 @@ if (emulator) {
     });
 }
 
-exports.api = functions.region("us-central1") // works only in this region
+exports.api = functions
+    .region("us-central1") // works only in this region
     .https.onRequest(backend.api);
 
 // disabled as it doesn't work (429)

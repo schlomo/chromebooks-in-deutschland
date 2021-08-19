@@ -1,3 +1,5 @@
+// setup for emulator
+
 const
     deviceData = require("./generated/chromebooks.json"),
     { inspect } = require("util");

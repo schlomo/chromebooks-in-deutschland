@@ -9,7 +9,6 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "standalone": "firebase -P dev emulators:exec --only database 'node standalone.js'",
-    "standalone-all": "firebase -P dev emulators:exec --only database 'node standalone-all.js'",
     "updateprice": "firebase -P dev emulators:exec 'node updateprice.js'"
   },
   "engines": {
@@ -17,20 +16,18 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "axios-cookiejar-support": "^1.0.1",
     "axios-retry": "^3.1.9",
-    "bluebird": "^3.7.2",
     "eslint": "^7.32.0",
     "eslint-plugin-promise": "^5.1.0",
     "express": "^4.17.1",
     "firebase-admin": "^9.11.0",
-    "firebase-functions": "^3.15.1",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.8"
+    "firebase-functions": "^3.15.4",
+    "tough-cookie": "^4.0.0"
   },
   "devDependencies": {
-    "browserify": "^17.0.0",
-    "firebase-functions-test": "^0.3.1",
-    "firebase-tools": "^9.16.3",
+    "firebase-functions-test": "^0.3.2",
+    "firebase-tools": "^9.16.5",
     "lambda-local": "^2.0.0"
   },
   "private": true

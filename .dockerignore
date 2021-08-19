@@ -9,6 +9,7 @@
 !*.*
 !*-*
 !LICENSE
+# VERSION is not sent to docker because we set version in Docker build via Docker build arg
 # exclude dotfiles and other junk
 **/.*
 **/*.log

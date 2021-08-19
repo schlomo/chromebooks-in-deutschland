@@ -7,7 +7,11 @@ const
     ;
 
 function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
-    var version = process.env.VERSION || fallback;
+    if (process.env.VERSION) {
+        console.log("Reading version from environment VERSION");
+        return process.env.VERSION;
+    }
+    var version = fallback;
     var dir = __dirname;
     try {
         const git = gitDescribeSync(dir);

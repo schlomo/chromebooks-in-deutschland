@@ -4,8 +4,7 @@ ARG VERSION
 ADD . /work/
 WORKDIR /work
 ENV NODE_ENV=production
-RUN find .
-RUN cat .dockerignore
+RUN find . && cat .dockerignore && env
 RUN yarn --frozen-lockfile
 RUN yarn prep
 RUN grep -v dirty VERSION

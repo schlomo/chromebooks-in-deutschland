@@ -86,7 +86,7 @@ if (debugMode) {
 }
 
 function getIcon(iconName) {
-    return Iconify.getSVG(iconName);
+    return Iconify.renderHTML(iconName, {inline: true});
 }
 
 function screenResToText(res) {

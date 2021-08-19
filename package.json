@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^4.1.0",
-    "@iconify/iconify": "^1",
-    "@iconify/json": "^1.1.356",
+    "@iconify/iconify": "^2.0.3",
+    "@iconify/json": "^1.1.390",
     "@iconify/json-tools": "^1.0.8",
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.3",

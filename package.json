@@ -44,7 +44,7 @@
   "dependencies": {
     "@fontsource/roboto": "^4.1.0",
     "@iconify/iconify": "^2.0.4",
-    "@iconify/json": "^1.1.390",
+    "@iconify/json": "^1.1.395",
     "@iconify/json-tools": "^1.0.8",
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.3",
@@ -52,13 +52,13 @@
     "datatables.net-dt": "^1.10.21",
     "datatables.net-responsive-dt": "^2.2.5",
     "decode-html": "^2.0.0",
-    "firebase-tools": "^9.16.5",
+    "firebase-tools": "^9.16.6",
     "fontsource-roboto": "^4.0.0",
     "git-describe": "^4.1.0",
     "glob": "^7.1.7",
     "jquery": "^3.5.1",
     "json-merger": "^1.1.6",
-    "mocha": "^9.0.0",
+    "mocha": "^9.1.1",
     "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.4",
     "pkg": "^5.2.1",
@@ -67,7 +67,7 @@
     "yarn-run-all": "^3.1.1"
   },
   "resolutions": {
-    "postcss": "^7.0.36",
-    "glob-parent": "^5.1.2"
+    "postcss": "^8.3.6",
+    "glob-parent": "^6.0.1"
   }
 }

@@ -6,6 +6,7 @@ module.exports = {
         "AMD Athlon 3150C": { "cores": 2, "frequency": 2.4, "burst": 3.3 },
         "AMD Ryzen 3 3250C": { "cores": 2, "frequency": 2.6, "burst": 3.5 },
         "AMD Ryzen 5 3500C": { "cores": 4, "frequency": 2.1, "burst": 3.7 },
+        "AMD Ryzen 5 3500U": { "cores": 4, "frequency": 2.1, "burst": 3.7 },
         "Intel Celeron 3865U": { "cores": 2, "frequency": 1.8 },
         "Intel Celeron 3867U": { "cores": 2, "frequency": 1.8 },
         "Intel Celeron 5205U": { "cores": 2, "frequency": 1.9},

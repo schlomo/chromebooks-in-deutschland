@@ -1,10 +1,10 @@
-'use strict';
+import * as jf from 'jsonfile';
+const readJsonFile = jf.default.readFileSync;
 
-const assert = require("assert");
+const { expirationData, expirationTimeStamp } = readJsonFile("./src/generated/expiration-data.json")
 
-const { expirationData, expirationTimestamp } = require("./src/generated/expiration-data"),
-    { cpus, resolutions } = require("./src/consts"),
-    deviceData = require("./src/generated/chromebooks.json");
+import { cpus, resolutions } from "./src/consts.js";
+const deviceData = readJsonFile("./src/generated/chromebooks.json");
 
 var errors=0;
 

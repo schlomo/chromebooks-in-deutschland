@@ -1,8 +1,8 @@
 "use strict";
 
 const output = 'src/generated/icon-bundle.js';
-const fs = require('fs');
-const { Collection } = require('@iconify/json-tools');
+import * as fs from 'fs';
+import { Collection } from '@iconify/json-tools';
 
 let icons = [
     // Few Material Design icons

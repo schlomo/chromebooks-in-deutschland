@@ -7,6 +7,7 @@
     "url": "https://github.com/schlomo/chromebooks-in-deutschland.git"
   },
   "license": "Apache-2.0",
+  "type": "module",
   "licenses": [
     {
       "type": "Apache-2.0",
@@ -44,22 +45,23 @@
   "dependencies": {
     "@fontsource/roboto": "^4.1.0",
     "@iconify/iconify": "^2.0.4",
-    "@iconify/json": "^1.1.395",
+    "@iconify/json": "^1.1.396",
     "@iconify/json-tools": "^1.0.8",
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.3",
     "cheerio-tableparser": "^1.0.1",
     "datatables.net-dt": "^1.10.21",
     "datatables.net-responsive-dt": "^2.2.5",
-    "decode-html": "^2.0.0",
+    "entities": "^3.0.1",
     "firebase-tools": "^9.16.6",
     "fontsource-roboto": "^4.0.0",
     "git-describe": "^4.1.0",
     "glob": "^7.1.7",
     "jquery": "^3.5.1",
     "json-merger": "^1.1.6",
+    "jsonfile": "^6.1.0",
     "mocha": "^9.1.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.0.0",
     "parcel-bundler": "^1.12.4",
     "pkg": "^5.2.1",
     "select2": "^4.1.0-rc.0",
@@ -67,7 +69,7 @@
     "yarn-run-all": "^3.1.1"
   },
   "resolutions": {
-    "postcss": "^8.3.6",
+    "postcss": "^7",
     "glob-parent": "^6.0.1"
   }
 }

@@ -1,28 +1,27 @@
-'use strict';
-
-const glob = require('glob'),
-    jsonMerger = require("json-merger"),
-    fs = require("fs"),
-    sortedObject = require("sorted-object")
-    ;
+import FastGlob from 'fast-glob';
+import { mergeFiles } from 'json-merger';
+import * as jf from 'jsonfile';
+const writeJsonFile = jf.default.writeFileSync;
+import sortedObject from 'sorted-object';
 
 const resultFiles = [
     "functions/generated/chromebooks.json",
     "src/generated/chromebooks.json"
 ];
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
     try {
-        const chromebookData = jsonMerger.mergeFiles(
-            glob.sync('chromebooks/**/*.json')
+        const chromebookData = mergeFiles(
+            FastGlob.sync('chromebooks/**/*.json')
         );
         
         const sortedCBData = sortedObject(chromebookData);
         const chromebookCount = Object.keys(sortedCBData).length;
         resultFiles.forEach((outputFile) => {
-            fs.writeFileSync(
+            writeJsonFile(
                 outputFile,
-                JSON.stringify(sortedCBData, null, 2)
+                sortedCBData,
+                { spaces: 2 }
             );
         });
 

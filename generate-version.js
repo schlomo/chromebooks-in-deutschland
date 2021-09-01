@@ -1,10 +1,11 @@
 const
     outputCSS = "src/generated/version.css",
     outputFile = "VERSION",
-    outputJS = "functions/generated/version.js",
-    { gitDescribeSync } = require("git-describe"),
-    { writeFileSync } = require("fs")
+    outputJS = "functions/generated/version.js"
     ;
+
+import gd from "git-describe";
+import { writeFileSync } from "fs";
 
 function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
     if (process.env.VERSION) {
@@ -12,9 +13,8 @@ function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
         return process.env.VERSION;
     }
     var version = fallback;
-    var dir = __dirname;
     try {
-        const git = gitDescribeSync(dir);
+        const git = gd.gitDescribeSync();
         if (!git.dirty && git.distance == 0) { // releases should have a plain vXX version
             version = git.tag;
         } else {
@@ -22,7 +22,7 @@ function getGitVersion(fallback = "not-git-repo-and-VERSION-not-set") {
         }
     } catch (error) {
         console.warn(error + "\n" +
-            `${dir} is not a git repository, using ${version} as version`);
+            `not a git repository, using ${version} as version`);
     }
     return version;
 }

@@ -1,6 +1,5 @@
-const { expect } = require("chai");
-
-const { extractModels } = require("../generate-expiration-data");
+import { expect } from "chai";
+import { extractModels } from "../generate-expiration-data.js";
 
 const testData = [
     {

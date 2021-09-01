@@ -1,17 +1,17 @@
-'use strict';
-
 // sanity check - how many entries to expect at least?
 const minEntries = 360;
 
-const assert = require("assert").strict;
+import { strict as assert } from 'assert';
+import * as jf from 'jsonfile';
+const writeJsonFile = jf.default.writeFileSync;
 
-const output = "src/generated/expiration-data.js";
+import fetch from 'node-fetch';
+import * as cheerio from 'cheerio';
+import cheerioTableparser from 'cheerio-tableparser';
+import { decodeHTML as decode } from 'entities';
+
+const output = "src/generated/expiration-data.json";
 const url = 'https://support.google.com/chrome/a/answer/6220366?hl=en';
-const fetch = require("node-fetch");
-const { writeFileSync } = require("fs");
-const cheerio = require('cheerio');
-const cheerioTableparser = require('cheerio-tableparser');
-const decode = require("decode-html");
 
 const extraExpirationInfo = {
     // Google called this CP514-HH by mistake
@@ -46,7 +46,7 @@ function getDateFromMonthYear(input) {
     return new Date("1 " + parts[0]).toISOString();
 }
 
-function extractModels(input) {
+export function extractModels(input) {
     input = decode(input)
         .replace(/[\s\u{0000A0}]+/ug, " ") // match also unicode spaces
         .replace(".", "_"); // Use _ for . so that model can be used as dict key
@@ -118,7 +118,6 @@ function getExpirationDataFromSection(html) {
     cheerioTableparser($);
     var rawData = $("table").parsetable(false, false, true);
 
-    // var table = html.split("<tbody>")[1].split("</tbody>")[0];
     var results = [];
 
     rawData[0].forEach((models, index) => {
@@ -133,9 +132,7 @@ function getExpirationDataFromSection(html) {
     return results;
 }
 
-module.exports = { extractModels };
-
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
     fetch(url)
         .then(res => res.text())
         .then((rawData) => {
@@ -168,7 +165,7 @@ if (require.main === module) {
                 expirationData: expirationData,
                 expirationTimestamp: new Date()
             };
-            writeFileSync(output, "module.exports = " + JSON.stringify(result, null, 2) + ";");
+            writeJsonFile(output, result, { spaces: 2});
             console.log(`Wrote ${entryCount} expiration records to >${output}<`);
         }).catch((err) => {
             console.error(err);

@@ -12,47 +12,58 @@ var productIDs = {};
 
 // checks on all devices
 Object.values(deviceData).map(device => {
-    var OK = true;
+    const {
+        brand,
+        cpu,
+        id,
+        model,
+        productId,
+        screenResolution,
+        screenSize,
+        variant,
+        expirationId
+    } = device;
+    
+    var errorDescriptions = [];
 
+    // check that all devices have a consistent ID
+    const desiredId = `${brand} ${model} (${variant})`.replaceAll(".", "-");
+    if (!(id === desiredId)) {
+        errorDescriptions.push(`Mismatched device ID >${id}<\n            B-M-V is >${desiredId}<`);
+    }
     // check that all devices have a valid expiration ID
-    if (! (device.expirationId in expirationData)) {
-        console.error(`Invalid expiration ID >${device.expirationId}<`);
-        OK = false;
+    if (! (expirationId in expirationData)) {
+        errorDescriptions.push(`Invalid expiration ID >${expirationId}<`);
     }
 
     // check that all devices have a unique productID
-    var productId = device.productId;
     if (productId in productIDs) {
-        console.error(`Device has same product ID as ${productIDs[productId].join(", ")}`);
-        productIDs[productId].push(device.id);
-        OK = false;
+        errorDescriptions.push(`Device has same product ID as ${productIDs[productId].join(", ")}`);
+        productIDs[productId].push(id);
     } else {
-        productIDs[productId] = [device.id];
+        productIDs[productId] = [id];
     }
 
     // check that all devices have a known CPU
-    var cpu = device.cpu;
     if (! (cpu in cpus)) {
-        console.error(`Unknown CPU >${cpu}<`);
-        OK = false;
+        errorDescriptions.push(`Unknown CPU >${cpu}<`);
     }
 
     // check that all devices have a known screen resolution
-    if (device.screenSize > 0) {
-        var resolution = device.screenResolution;
-        if (! (resolution in resolutions)) {
-            console.error(`Unknown screen resolution >${resolution}<`);
-            OK = false;
+    if (screenSize > 0) {
+        if (! (screenResolution in resolutions)) {
+            errorDescriptions.push(`Unknown screen resolution >${screenResolution}<`);
         }
     }
 
-    if (! OK) {
-        console.error(`Data:\n${JSON.stringify(device,null,2)}\n`);
+    if (errorDescriptions.length > 0) {
+        console.error(`Device ${id} has errors:\n${errorDescriptions.join("\n")}\nData:\n${JSON.stringify(device,null,2)}\n`);
         errors += 1;
     }
 });
 
 if (errors > 0) {
+    console.log(`ERROR: ${errors} devices have errors`);
     process.exit(1);
 } else {
     console.log(`Data is OK: ${Object.keys(deviceData).length} devices`);

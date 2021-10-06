@@ -5,7 +5,7 @@
     "cpu": "Intel Core i3-10110U",
     "disabled": true,
     "expirationId": "HP Chromebase 21_5 inch All-in-One Desktop",
-    "extraInfo": "256GB",
+    "extraInfo": "256GB SSD, inklusive Bluetooth Tastatur und Maus",
     "flip": true,
     "id": "HP Chromebase 21-5 inch All-in-One Desktop (22-aa0000ng)",
     "memory": 8,
@@ -16,6 +16,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 21.5,
     "screenTouch": true,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07621265.pdf",
     "stylus": false,
     "type": "chromebase",
     "variant": "22-aa0000ng"
@@ -26,9 +27,6 @@
     "cpu": "Intel Celeron N5100",
     "disabled": false,
     "expirationId": "HP Chromebook 11 G9 EE",
-    "extraLinks": {
-      "Datenblatt (Serie)": "https://www.bechtle.com/shop/medias/609e3387497cadb0b8c126cb.pdf"
-    },
     "flip": false,
     "id": "HP Chromebook 11 G9 EE (305W0EA)",
     "memory": 8,
@@ -39,6 +37,7 @@
     "screenResolution": "1366x768",
     "screenSize": 11.6,
     "screenTouch": true,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07015661.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "305W0EA"
@@ -59,7 +58,7 @@
     "screenResolution": "1366x768",
     "screenSize": 11.6,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/1/0/6/3/88f1eb89366acee58f3fd1520d4b25c1fa30.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07005138.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "305T5EA"
@@ -80,7 +79,7 @@
     "screenResolution": "1366x768",
     "screenSize": 11.6,
     "screenTouch": false,
-    "specLink": "https://gzhls.at/blob/ldb/1/0/6/3/88f1eb89366acee58f3fd1520d4b25c1fa30.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07005138.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "305X2EA"
@@ -102,7 +101,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": false,
-    "specLink": "https://gzhls.at/blob/ldb/1/b/2/9/3edd09bc6660b203c5eb167221b5e0d33add.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07025855.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "305X0EA"
@@ -124,31 +123,10 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": false,
-    "specLink": "https://gzhls.at/blob/ldb/1/b/2/9/3edd09bc6660b203c5eb167221b5e0d33add.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07025855.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "305X1EA"
-  },
-  "HP Chromebook 14 G7 (306A4EA)": {
-    "biometricUnlock": false,
-    "brand": "HP",
-    "cpu": "Intel Celeron N4500",
-    "disabled": false,
-    "expirationId": "HP Chromebook 14 G7",
-    "extraInfo": "evtl. französiche Tastatur",
-    "flip": false,
-    "id": "HP Chromebook 14 G7 (306A4EA)",
-    "memory": 4,
-    "model": "Chromebook 14 G7",
-    "productId": "201549040",
-    "productProvider": "idealo",
-    "screenGlare": false,
-    "screenResolution": "1920x1080",
-    "screenSize": 14,
-    "screenTouch": false,
-    "stylus": false,
-    "type": "chromebook",
-    "variant": "306A4EA"
   },
   "HP Chromebook 14b (14b-na0350ng)": {
     "biometricUnlock": true,
@@ -202,7 +180,7 @@
     "expirationId": "HP Chromebook x360 11 G4 EE",
     "extraInfo": "EMR Stylus optional",
     "extraLinks": {
-      "Datenblatt (Serie)": "https://bechtle.com/shop/medias/60a257bb497cadc59c67c379.pdf"
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07025893.pdf"
     },
     "flip": true,
     "id": "HP Chromebook x360 11 G4 EE (305W4EA)",
@@ -227,7 +205,7 @@
     "expirationId": "HP Chromebook x360 11 G4 EE",
     "extraInfo": "EMR Stylus inklusive",
     "extraLinks": {
-      "Datenblatt (Serie)": "https://bechtle.com/shop/medias/60a257bb497cadc59c67c379.pdf"
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07025893.pdf"
     },
     "flip": true,
     "id": "HP Chromebook x360 11 G4 EE (3V419EA)",
@@ -283,6 +261,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07534807.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-ca0005ng"
@@ -304,7 +283,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/7/9/6/b/2a5834fb20b6b21ba6df76742565d7a80d4c.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07609005.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-ca0140ng"
@@ -322,10 +301,11 @@
     "model": "Chromebook x360 14a",
     "productId": "2523106",
     "productProvider": "geizhals",
-    "screenGlare": false,
+    "screenGlare": true,
     "screenResolution": "1366x768",
     "screenSize": 14,
     "screenTouch": true,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07633841.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-ca0217ng"
@@ -347,7 +327,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://d.otto.de/files/75876c15-a063-573c-b04e-3cfa6aca9ef4.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07534801.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-ca0218ng"
@@ -369,7 +349,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/a/0/b/f/44cc30831bef74b81269541ab0c97a3a34d3.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06938784.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-ca0326ng"
@@ -391,7 +371,7 @@
     "screenResolution": "1366x768",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://objects.icecat.biz/objects/mmo_87962717_1611771914_3094_29612.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07002908.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-ca0330ng"
@@ -413,7 +393,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://ssl.www8.hp.com/at/de/products/laptops/product-detail.html?oid=2100829935#!tab=specs",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07648727.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-cb0010ng"
@@ -435,7 +415,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://bilder.baur.de/v1/static/fdeda986288deebd404e44ece06d0c68",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07648730.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14a-cb0030ng"
@@ -446,7 +426,7 @@
     "cpu": "Intel Pentium N6000",
     "disabled": false,
     "expirationId": "HP Chromebook x360 14b",
-    "extraInfo": "128GB, USI Stylus unbestätigt",
+    "extraInfo": "128GB, USI Stylus optional",
     "flip": true,
     "id": "HP Chromebook x360 14b (14b-cb0125ng)",
     "memory": 8,
@@ -457,7 +437,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/e/a/4/5/c94be3746214b7274f6d9ae072e40a9309bb.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07637627.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "14b-cb0125ng"
@@ -468,7 +448,7 @@
     "cpu": "Intel Pentium N6000",
     "disabled": false,
     "expirationId": "HP Chromebook x360 14b",
-    "extraInfo": "128GB, USI Stylus unbestätigt",
+    "extraInfo": "128GB, USI Stylus optional",
     "flip": true,
     "id": "HP Chromebook x360 14b (14b-cb0345ng)",
     "memory": 8,
@@ -479,7 +459,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/2/c/b/f/2fe815a2446155a31871d2d19d5275f8f371.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07077252.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14b-cb0345ng"
@@ -501,7 +481,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/a/9/f/8/6f97f6bb2baed15a4d71e237c16593f0e2d2.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07637629.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14b-cb0430ng"
@@ -526,7 +506,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06926182.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06926182.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0215ng"
@@ -551,7 +531,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943880.pdf",
+    "specLink": "https://www.easynotebooks.de/media/pdf/52/c5/28/5fa91b697419a.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0220ng"
@@ -577,7 +557,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943873.pdf",
+    "specLink": "https://cdn.cnetcontent.com/syndication/feeds/hp/inline-content/KV/7/2/A/3/B/72A3BA83D256A0E61194A414CDFABCA92B53939D_source.PDF",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0241ng"
@@ -602,7 +582,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943881.pdf",
+    "specLink": "https://media.flixcar.com/f360cdn/HP-4992873257-c06943883.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0259ng"
@@ -652,7 +632,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943887.pdf",
+    "specLink": "https://pcb.inc.hp.com/api/catalogs/de-de/nodes/2100016402/dynamic-collateral",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0305ng"
@@ -677,7 +657,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06943890.pdf",
+    "specLink": "https://pcb.inc.hp.com/dc/api/productsheet/de-de/2100016403/pdf/25N75EA.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0333ng"
@@ -728,18 +708,18 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06713827.pdf",
+    "specLink": "https://media.flixcar.com/f360cdn/HP-5032842733-c06713831.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-ca0430ng"
   },
   "HP Chromebook x360 14c (14c-cc0060ng)": {
-    "biometricUnlock": false,
+    "biometricUnlock": true,
     "brand": "HP",
     "cpu": "Intel Core i3-1125G4",
     "disabled": false,
     "expirationId": "HP Chromebook x360 14c",
-    "extraInfo": "256GB, USI Stylus optional",
+    "extraInfo": "256GB SSD, hinterleuchtete Tastatur, USI Stylus optional",
     "flip": true,
     "id": "HP Chromebook x360 14c (14c-cc0060ng)",
     "memory": 8,
@@ -750,7 +730,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://support.hp.com/de-de/document/c07713446",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07538484.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-cc0060ng"
@@ -772,6 +752,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07538487.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-cc0075ng"
@@ -815,7 +796,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://de.ingrammicro.eu/api/cfs/Icecat/PDF.ashx?s=92311395&l=de",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07538486.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-cc0435ng"
@@ -837,7 +818,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/d/b/8/0/3082a11048101659780f6a125abcdc694d62.pdf",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07603966.pdf",
     "stylus": true,
     "type": "chromebook",
     "variant": "14c-cc0455ng"
@@ -912,7 +893,7 @@
     "cpu": "Intel Core i3-10110U",
     "disabled": false,
     "expirationId": "HP Elite c1030 Chromebook Enterprise",
-    "extraInfo": "hinterleuchtete Tastatur, 128GB SSD, USI Stylus optional",
+    "extraInfo": "128GB SSD, hinterleuchtete Tastatur, USI Stylus optional",
     "extraLinks": {
       "HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A1EA&opt=ABD&sel=NTB",
       "Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
@@ -938,7 +919,7 @@
     "cpu": "Intel Core i5-10310U",
     "disabled": false,
     "expirationId": "HP Elite c1030 Chromebook Enterprise",
-    "extraInfo": "hinterleuchtete Tastatur, 256GB SSD, USI Stylus optional",
+    "extraInfo": "256GB SSD, hinterleuchtete Tastatur, USI Stylus optional",
     "extraLinks": {
       "HP Store Details": "https://store.hp.com/GermanyStore/Merch/Product.aspx?id=178A2EA&opt=ABD&sel=NTB",
       "Promevo Vorstellung (Video)": "https://www.youtube.com/watch?v=QUDUx9IlSM8"
@@ -964,7 +945,7 @@
     "cpu": "Intel Core i7-10610U",
     "disabled": false,
     "expirationId": "HP Elite c1030 Chromebook Enterprise",
-    "extraInfo": "hinterleuchtete Tastatur, zuschaltbarer Blickschutz, integriertes LTE-Modem, 256GB SSD, USI Stylus optional",
+    "extraInfo": "256GB SSD, hinterleuchtete Tastatur, zuschaltbarer Blickschutz, integriertes LTE-Modem, USI Stylus optional",
     "extraLinks": {
       "Blickschutz": "https://www.prad.de/hp-erstes-chromebook-mit-speziellem-sichtschutz/",
       "Blickschutz Probleme": "https://www.notebookcheck.net/HP-Spectre-x360-13-with-Sure-View-What-a-way-to-ruin-a-great-laptop.484262.0.html",
@@ -1007,7 +988,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": false,
-    "specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06678014.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "10X57EA"
@@ -1044,7 +1025,7 @@
     "cpu": "Intel Core i7-10610U",
     "disabled": false,
     "expirationId": "HP Pro c640 Chromebook Enterprise",
-    "extraInfo": "hinterleuchtete Tastatur, 128GB",
+    "extraInfo": "128GB, hinterleuchtete Tastatur",
     "extraLinks": {
       "Datenblatt (Serie)": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
       "LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
@@ -1086,7 +1067,7 @@
     "screenResolution": "1920x1080",
     "screenSize": 14,
     "screenTouch": false,
-    "specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06678014.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "10X60EA"
@@ -1099,7 +1080,7 @@
     "expirationId": "HP Pro c640 G2 Chromebook Enterprise",
     "extraInfo": "hinterleuchtete Tastatur, inkl. Chrome Enterprise Upgrade",
     "extraLinks": {
-      "Datenblatt (Serie)": "https://gzhls.at/blob/ldb/f/5/9/8/46c57d12c746eab3e877d43378f044709f1f.pdf"
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07581930.pdf"
     },
     "flip": false,
     "id": "HP Pro c640 G2 Chromebook (32R72EA)",
@@ -1110,10 +1091,35 @@
     "screenGlare": false,
     "screenResolution": "1920x1080",
     "screenSize": 14,
-    "screenTouch": false,
+    "screenTouch": true,
     "stylus": false,
     "type": "chromebook",
     "variant": "32R72EA"
+  },
+  "HP Pro c640 G2 Chromebook (32R73EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i3-1115G4",
+    "disabled": true,
+    "expirationId": "HP Pro c640 G2 Chromebook Enterprise",
+    "extraInfo": "hinterleuchtete Tastatur, inkl. Chrome Enterprise Upgrade",
+    "extraLinks": {
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07581930.pdf"
+    },
+    "flip": false,
+    "id": "HP Pro c640 G2 Chromebook (32R73EA)",
+    "memory": 8,
+    "model": "Pro c640 G2 Chromebook",
+    "productId": "2580636",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": true,
+    "specLink": "https://pcb.inc.hp.com/dc/api/productsheet/de-de/2100865653/pdf/32R73EA.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "32R73EA"
   },
   "HP Pro c645 Chromebook (32S16EA)": {
     "biometricUnlock": true,
@@ -1122,6 +1128,9 @@
     "disabled": false,
     "expirationId": "HP Pro c645 Chromebook",
     "extraInfo": "128GB SSD, hinterleuchtete Tastatur",
+    "extraLinks": {
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06968839.pdf"
+    },
     "flip": false,
     "id": "HP Pro c645 Chromebook (32S16EA)",
     "memory": 16,
@@ -1144,6 +1153,9 @@
     "disabled": false,
     "expirationId": "HP Pro c645 Chromebook",
     "extraInfo": "128GB SSD, hinterleuchtete Tastatur",
+    "extraLinks": {
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06968839.pdf"
+    },
     "flip": false,
     "id": "HP Pro c645 Chromebook (32S17EA)",
     "memory": 8,

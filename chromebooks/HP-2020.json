@@ -1113,5 +1113,27 @@
     "stylus": true,
     "type": "chromebook",
     "variant": "14b-ca0410ng"
+  },
+  "HP Chromebook x360 14b (14b-ca0431ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Pentium N5030",
+    "disabled": false,
+    "expirationId": "HP Chromebook x360 14b-ca0xxx",
+    "extraInfo": "128GB, USI Stylus optional",
+    "flip": true,
+    "id": "HP Chromebook x360 14b (14b-ca0431ng)",
+    "memory": 8,
+    "model": "Chromebook x360 14b",
+    "productId": "201202099",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1366x768",
+    "screenSize": 14,
+    "screenTouch": true,
+    "specLink": "https://gzhls.at/blob/ldb/2/0/9/0/fcbcd7f934dc3aa8aebc4a967bae7caaa4b8.pdf",
+    "stylus": true,
+    "type": "chromebook",
+    "variant": "14b-ca0431ng"
   }
 }

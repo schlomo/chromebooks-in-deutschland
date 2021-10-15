@@ -12,6 +12,12 @@ import { expirationData, expirationTimestamp } from "./generated/expiration-data
 import { cpus, resolutions } from "./consts";
 import deviceData from "./generated/chromebooks.json";
 
+window.cid = {
+    deviceData, expirationData
+};
+
+console.log(window.cid);
+
 import jtslogo from "./jtslogo.png";
 
 var search_field = undefined;

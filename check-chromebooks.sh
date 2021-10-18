@@ -2,14 +2,32 @@
 #
 # read paste from stdin, filter with regex in $1 and check for devices in database file
 #
-regex="$1" ; shift
 
 die() { echo 1>&2 "$*" ; exit 1 ; }
+default_regex_parts=(
+    # Acer
+    'NX\.[A-Z0-9]+\.[0-9][0-9][0-9]'
+    'C[0-9BP]+-[123THLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
+    'C[0-9BPTHLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
+    'C[0-9]+[BPTHLW]+'
+)
+default_regex="$( tr " " "|" <<<"${default_regex_parts[*]}")"
 
-test "$regex" || die "Please give regex as first arg"
+test "$1" = "--help" -o "$1" = "-h" && die "Please give regex as first arg, default: $default_regex"
+
+regex="${1:-$default_regex}"
+
+echo "Paste lines and finish with CTRL-D"
+devices=( 
+    $( 
+        tr -C -d "[:print:]" | \
+        egrep -oi "$regex" | \
+        sort -u
+    ) 
+)
 
 res=()
-while read device foo ; do
+for device in "${devices[@]}"; do
     if grep -q "$device" chromebooks/* ; then
         res+=(" 🟢 $device")
     else

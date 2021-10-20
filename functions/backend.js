@@ -159,19 +159,6 @@ async function getGeizhalsPrice(productId) {
     // non-200 codes like 429 go to .catch() upstream
 }
 
-async function getMetacompPrice(productId) {
-    return axios
-        .get(`https://shop.metacomp.de/Shop-DE/Produkt-1_${productId}`)
-        .then((res) => res.data)
-        .then((rawData) => {
-            debug(rawData);
-            var price = rawData.split('<span class="integerPart">')[1].split('</span>')[0];
-            debug(`Metacomp ${productId} = ${price}`);
-            return Number(price);
-        });
-    // non-200 codes like 429 go to .catch() upstream
-}
-
 async function getPrice(entry) {
     // entry is device entry with id, productProvider, productId
     const { id, productId, productProvider } = entry;
@@ -180,7 +167,6 @@ async function getPrice(entry) {
     switch (productProvider) {
         case "idealo": priceFunction = getIdealoPrice; break;
         case "geizhals": priceFunction = getGeizhalsPrice; break;
-        case "metacomp": priceFunction = getMetacompPrice; break;
         default: throw new Error(`PROVIDER NOT YET IMPLEMENTED: ${productProvider}`);
     }
     return priceFunction(productId)

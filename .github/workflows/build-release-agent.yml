@@ -16,7 +16,7 @@ defaults:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: schlomo/chromebooks-in-deutschland-standalone
+  IMAGE_NAME: ${{ env.REGISTRY }}/${{ env.GITHUB_REPOSITORY }}-standalone
 
 jobs:
   build:
@@ -55,13 +55,6 @@ jobs:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Extract metadata (tags, labels) for Docker
-      id: meta
-      uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-      with:
-        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-    - run: echo "TAGS ${{ steps.meta.outputs.tags }}"
 
     - run: docker images
     - run: docker push --all-tags ${{ env.IMAGE_NAME }}

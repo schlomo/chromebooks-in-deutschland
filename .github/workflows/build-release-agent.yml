@@ -56,33 +56,45 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: docker images
-    - run: docker push --all-tags ${{ env.IMAGE_NAME }}
 
-  release:
-    needs: [build]
-    if: github.event_name == 'push' && contains(github.ref, '/tags/v')
-    name: Upload Release Asset
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - uses: actions/download-artifact@v2
-      with:
-          path: dist
-    - run: ls -lR
-    - run: echo "::set-output name=TAG::${TAG##*/}"
-      name: Set Tag
-      id: tag
+    - name: Make GitHub & Docker Release
+      if: github.event_name == 'push' && contains(github.ref, '/tags/v')
       env:
         TAG: ${{ github.ref }}
-    - run: |
-        echo "TAG: ${{ steps.tag.outputs.TAG }}"
-    - name: Create GitHub Release
-      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TAG: ${{ steps.tag.outputs.TAG }}
       run: |
         gh release create "$TAG" dist/*/*
+        docker tag $IMAGE_NAME $IMAGE_NAME:prod
+
+    - run: |
+        docker images
+        docker push --all-tags $IMAGE_NAME
+
+  # release:
+  #   needs: [build]
+  #   if: github.event_name == 'push' && contains(github.ref, '/tags/v')
+  #   name: Upload Release Asset
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #     with:
+  #       fetch-depth: 0
+  #   - uses: actions/download-artifact@v2
+  #     with:
+  #         path: dist
+  #   - run: ls -lR
+  #   - run: echo "::set-output name=TAG::${TAG##*/}"
+  #     name: Set Tag
+  #     id: tag
+  #     env:
+  #       TAG: ${{ github.ref }}
+  #   - run: |
+  #       echo "TAG: ${{ steps.tag.outputs.TAG }}"
+  #   - name: Create GitHub Release
+  #     env:
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       TAG: ${{ steps.tag.outputs.TAG }}
+  #     run: |
+  #       gh release create "$TAG" dist/*/*
+
 

@@ -18,7 +18,7 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 
 * Agents need keys in the database under `/keys`, emulator uses dummy key for local testing
 * Optimum agent interval seems to be 7 minutes
-* Agent (download pecompiled binary from [Releases](../../releases/)) can be run like this from a CRON job:
+* Agent (download pecompiled binary from [Releases](../../releases/)) can be run with a script like this from a CRON job:
 
     ```sh
     #!/bin/bash
@@ -27,7 +27,7 @@ Please freel free to submit pull requests for features and bugfixes, they will b
     export CID_API_KEY=THE_SECRET_KEY
     export CID_API_URL=https://DOMAIN_NAME/api
 
-    bins=( updateprice*linux )
+    bins=( updateprice*linux* )
     bin=${bins[-1]}
 
     result="$(./$bin)"
@@ -37,7 +37,9 @@ Please freel free to submit pull requests for features and bugfixes, they will b
     fi
     ```
 
-    Or like this from source checkout out to `chromebooks-in-deutschland`:
+    (Make sure that the pattern matches the binaries that you use!)
+
+* Agent (from a source checkout checkout out to `./chromebooks-in-deutschland`) can be run with a script like this:
 
     ```sh
     #!/bin/bash
@@ -55,7 +57,7 @@ Please freel free to submit pull requests for features and bugfixes, they will b
     fi
     ```
 
-* The agent can be also run as a [Docker](https://hub.docker.com/repository/docker/schlomo/chromebooks-in-deutschland-standalone) container. On Debian/Ubuntu simply install the `chromebooks-in-deutschland-service` [Debian package](systemd/) from the [Releases](../../releases/). Make sure to create the configuration file `/etc/chromebooks-in-deutschland.env`. It has to set the API key like this:
+* The agent can be also run as a [Docker](https://github.com/schlomo/chromebooks-in-deutschland/pkgs/container/chromebooks-in-deutschland) container. On Debian/Ubuntu simply install the `chromebooks-in-deutschland-service` [Debian package](systemd/) from the [Releases](../../releases/). Make sure to create the configuration file `/etc/chromebooks-in-deutschland.env`. It has to set the API key like this:
 
   ```sh
   CID_API_KEY=some-api-key-uuid

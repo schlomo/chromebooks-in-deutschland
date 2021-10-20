@@ -10,24 +10,18 @@ const
 
 const
     axios = require('axios').default,
-    axiosCookieJarSupport = require('axios-cookiejar-support').default,
-    tough = require('tough-cookie');
+    //{ wrapper } = require('axios-cookiejar-support'),
+    { CookieJar } = require('tough-cookie'),
+    { HttpsCookieAgent} = require('http-cookie-agent');
 
-axiosCookieJarSupport(axios);
-axios.defaults.jar = new tough.CookieJar();
+const jar = new CookieJar();
 axios.defaults.withCredentials = true;
-axios.defaults.httpsAgent = new https.Agent({
-    keepAlive: true,
-    rejectUnauthorized: false, // Metacomp CA not in standard bundle
-});
+axios.defaults.httpsAgent = new HttpsCookieAgent({ jar });
+
 axios.defaults.headers.common = {
     "User-Agent": "HTTPie/2.3.0",
     "Accept": "*/*"
 };
-
-if ("CID_HTTP_TRACE" in process.env) {
-    require("./httptrace")();
-}
 
 const
     deviceData = require("./generated/chromebooks.json");

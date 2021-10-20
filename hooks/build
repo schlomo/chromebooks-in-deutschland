@@ -1,9 +1,0 @@
-#!/bin/bash
-# https://docs.docker.com/docker-hub/builds/advanced/
-
-set -x
-
-GIT_VERSION=$(git describe --tags --dirty)
-echo "=> Version: $GIT_VERSION"
-
-exec docker build --build-arg VERSION="$GIT_VERSION" -f "$DOCKERFILE_PATH" -t "$IMAGE_NAME" .

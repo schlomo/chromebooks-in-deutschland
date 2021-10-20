@@ -10,6 +10,10 @@ default_regex_parts=(
     'C[0-9BP]+-[123THLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
     'C[0-9BPTHLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
     'C[0-9]+[BPTHLW]+'
+    # Lenovo
+    '[0-9][0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
+    # HP
+    '[1-9][2345][abc]-[abcdn][abcdn][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]ng'
 )
 default_regex="$( tr " " "|" <<<"${default_regex_parts[*]}")"
 

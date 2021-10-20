@@ -16,7 +16,7 @@ defaults:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ env.REGISTRY }}/${{ env.GITHUB_REPOSITORY }}-standalone
+  IMAGE_NAME: $REGISTRY/$GITHUB_REPOSITORY-standalone
 
 jobs:
   build:

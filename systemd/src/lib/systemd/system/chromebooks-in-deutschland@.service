@@ -5,7 +5,7 @@ Requires=docker.service
 [Service]
 Type=oneshot
 EnvironmentFile=/etc/chromebooks-in-deutschland.env
-# Using the prod/dev %i parameter as Docker image tag and hostname selector
+# Using the prod/dev %i parameter as Docker image tag and host selector
 Environment=IMAGE=ghcr.io/schlomo/chromebooks-in-deutschland:%i
 ExecStartPre=/usr/bin/docker pull --quiet ${IMAGE}
 Environment=HOME=/root

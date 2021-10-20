@@ -5,7 +5,7 @@ Requires=docker.service
 [Service]
 Type=oneshot
 EnvironmentFile=/etc/chromebooks-in-deutschland.env
-Environment=IMAGE=schlomo/chromebooks-in-deutschland-standalone:%i
+Environment=IMAGE=ghcr.io/schlomo/chromebooks-in-deutschland:%i
 ExecStartPre=/usr/bin/docker pull --quiet ${IMAGE}
 Environment=HOME=/root
 ProtectHome=tmpfs

@@ -10,19 +10,18 @@ const
     axiosRetry = require("axios-retry");
 
 axios.defaults.timeout = 3000; // 3 second timeout
-axiosRetry(axios, { 
-    shouldResetTimeout: true, 
+axiosRetry(axios, {
+    shouldResetTimeout: true,
     retryDelay: axiosRetry.exponentialDelay,
     retryCondition: () => true // always retry
-} );
+});
 
 if ("CID_HTTP_TRACE" in process.env) {
     require("./httptrace")();
 }
 
 const
-    backend = require("./backend"),
-    devices = require("./generated/chromebooks.json");
+    backend = require("./backend");
 
 var version = "unknown version";
 try {
@@ -34,18 +33,11 @@ try {
 function getEntryManual(productProvider, productId) {
     console.log(`Starting updateprice ${version} for ${productProvider} ${productId}`);
 
-    var [entry] = Object.values(devices).filter((entry) => {
-        return (entry.productId === productId) &&
-            (entry.productProvider === productProvider);
-    });
-
-    if (!entry) {
-        entry = {
-            "id": "Unknown Device",
-            "productProvider": productProvider,
-            "productId": productId
-        };
-    }
+    var entry = {
+        "id": "Manually Provided Device",
+        "productProvider": productProvider,
+        "productId": productId
+    };
     return entry;
 }
 
@@ -84,8 +76,8 @@ async function updatePrices(entries) {
     return axios.post(
         apiUrl + "/price",
         { priceData: entries },
-        { 
-            params: { key: apiKey } , 
+        {
+            params: { key: apiKey },
             headers: { "Content-type": "application/json" }
         }
     ).then(res => res.data);

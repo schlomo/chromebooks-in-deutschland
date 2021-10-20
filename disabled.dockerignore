@@ -2,6 +2,7 @@
 **/*
 # include normal files
 !functions/*.*
+!functions/node_modules
 !src/*.*
 !test/*.*   
 !hooks/*

@@ -11,6 +11,7 @@ RUN grep -v dirty VERSION
 RUN chmod -R o+rX .
 
 FROM node:alpine
+LABEL org.opencontainers.image.source https://github.com/schlomo/chromebooks-in-deutschland
 WORKDIR /work
 COPY --from=builder /work/functions /work
 VOLUME /config

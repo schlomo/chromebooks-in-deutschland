@@ -285,28 +285,6 @@
     "type": "chromebook",
     "variant": "C933L-C87D"
   },
-  "Acer Chromebook 314 (C933LT-P8WA)": {
-    "biometricUnlock": false,
-    "brand": "Acer",
-    "cpu": "Intel Pentium N5030",
-    "disabled": false,
-    "expirationId": "Acer Chromebook 314 (C933LT)",
-    "extraInfo": "integriertes LTE-Modem",
-    "flip": false,
-    "id": "Acer Chromebook 314 (C933LT-P8WA)",
-    "memory": 8,
-    "model": "Chromebook 314",
-    "productId": "200743030",
-    "productProvider": "idealo",
-    "screenGlare": false,
-    "screenResolution": "1920x1080",
-    "screenSize": 14,
-    "screenTouch": true,
-    "specLink": "https://gzhls.at/blob/ldb/6/c/f/2/69690ee0f348bb1f80259da32015047310d9.pdf",
-    "stylus": false,
-    "type": "chromebook",
-    "variant": "C933LT-P8WA"
-  },
   "Acer Chromebook 314 (C933LT-P7SA)": {
     "biometricUnlock": false,
     "brand": "Acer",
@@ -328,6 +306,28 @@
     "stylus": false,
     "type": "chromebook",
     "variant": "C933LT-P7SA"
+  },
+  "Acer Chromebook 314 (C933LT-P8WA)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Pentium N5030",
+    "disabled": false,
+    "expirationId": "Acer Chromebook 314 (C933LT)",
+    "extraInfo": "integriertes LTE-Modem",
+    "flip": false,
+    "id": "Acer Chromebook 314 (C933LT-P8WA)",
+    "memory": 8,
+    "model": "Chromebook 314",
+    "productId": "200743030",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": true,
+    "specLink": "https://gzhls.at/blob/ldb/6/c/f/2/69690ee0f348bb1f80259da32015047310d9.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "C933LT-P8WA"
   },
   "Acer Chromebook 314 (C933T-C0RC)": {
     "biometricUnlock": false,
@@ -358,17 +358,20 @@
     "disabled": false,
     "expirationId": "Acer Chromebook 314 (C933T)",
     "extraInfo": "",
+    "extraLinks": {
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/professional-model/NX.HR4EG.002"
+    },
     "flip": false,
     "id": "Acer Chromebook 314 (C933T-C8MF)",
     "memory": 4,
     "model": "Chromebook 314",
     "productId": "6942025",
     "productProvider": "idealo",
-    "screenGlare": true,
+    "screenGlare": false,
     "screenResolution": "1366x768",
     "screenSize": 14,
     "screenTouch": true,
-    "specLink": "https://www.acer.com/ac/de/DE/content/professional-model/NX.HR4EG.002",
+    "specLink": "https://gzhls.at/blob/ldb/0/2/a/5/d3514316ba8c824c84f2f48f423b145a2828.pdf",
     "stylus": false,
     "type": "chromebook",
     "variant": "C933T-C8MF"
@@ -442,6 +445,31 @@
     "type": "chromebook",
     "variant": "CB314-1H-C6KW"
   },
+  "Acer Chromebook 314 (CB314-1H-C71G)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron N4120",
+    "disabled": false,
+    "expirationId": "Acer Chromebook 314 (CB314-1H)",
+    "extraInfo": "",
+    "extraLinks": {
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.AUDEG.002"
+    },
+    "flip": false,
+    "id": "Acer Chromebook 314 (CB314-1H-C71G)",
+    "memory": 8,
+    "model": "Chromebook 314",
+    "productId": "201507668",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://gzhls.at/blob/ldb/3/3/9/1/fd348929cf47ef65b262b08bdd6415af2e3c.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CB314-1H-C71G"
+  },
   "Acer Chromebook 314 (CB314-1H-C7PS)": {
     "biometricUnlock": false,
     "brand": "Acer",
@@ -463,6 +491,28 @@
     "stylus": false,
     "type": "chromebook",
     "variant": "CB314-1H-C7PS"
+  },
+  "Acer Chromebook 314 (CB314-1H-C7SJ)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron N4100",
+    "disabled": false,
+    "expirationId": "Acer Chromebook 314 (CB314-1H)",
+    "extraInfo": "",
+    "flip": false,
+    "id": "Acer Chromebook 314 (CB314-1H-C7SJ)",
+    "memory": 4,
+    "model": "Chromebook 314",
+    "productId": "6943191",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1366x768",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://gzhls.at/blob/ldb/9/4/f/5/3d9258725b2e4f759efc9c16c3dd0501953c.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CB314-1H-C7SJ"
   },
   "Acer Chromebook 314 (CB314-1H-C8L4)": {
     "biometricUnlock": false,
@@ -489,31 +539,6 @@
     "type": "chromebook",
     "variant": "CB314-1H-C8L4"
   },
-  "Acer Chromebook 314 (CB314-1H-C71G)": {
-    "biometricUnlock": false,
-    "brand": "Acer",
-    "cpu": "Intel Celeron N4120",
-    "disabled": false,
-    "expirationId": "Acer Chromebook 314 (CB314-1H)",
-    "extraInfo": "",
-    "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.AUDEG.002"
-    },
-    "flip": false,
-    "id": "Acer Chromebook 314 (CB314-1H-C71G)",
-    "memory": 8,
-    "model": "Chromebook 314",
-    "productId": "201507668",
-    "productProvider": "idealo",
-    "screenGlare": false,
-    "screenResolution": "1920x1080",
-    "screenSize": 14,
-    "screenTouch": false,
-    "specLink": "https://gzhls.at/blob/ldb/3/3/9/1/fd348929cf47ef65b262b08bdd6415af2e3c.pdf",
-    "stylus": false,
-    "type": "chromebook",
-    "variant": "CB314-1H-C71G"
-  },
   "Acer Chromebook 314 (CB314-1H-P11Q)": {
     "biometricUnlock": false,
     "brand": "Acer",
@@ -535,28 +560,6 @@
     "stylus": false,
     "type": "chromebook",
     "variant": "CB314-1H-P11Q"
-  },
-  "Acer Chromebook 314 (CB314-1H-C7SJ)": {
-    "biometricUnlock": false,
-    "brand": "Acer",
-    "cpu": "Intel Celeron N4100",
-    "disabled": false,
-    "expirationId": "Acer Chromebook 314 (CB314-1H)",
-    "extraInfo": "",
-    "flip": false,
-    "id": "Acer Chromebook 314 (CB314-1H-C7SJ)",
-    "memory": 4,
-    "model": "Chromebook 314",
-    "productId": "6943191",
-    "productProvider": "idealo",
-    "screenGlare": false,
-    "screenResolution": "1366x768",
-    "screenSize": 14,
-    "screenTouch": false,
-    "specLink": "https://gzhls.at/blob/ldb/9/4/f/5/3d9258725b2e4f759efc9c16c3dd0501953c.pdf",
-    "stylus": false,
-    "type": "chromebook",
-    "variant": "CB314-1H-C7SJ"
   },
   "Acer Chromebook 314 (CB314-1HT-C0UJ)": {
     "biometricUnlock": false,
@@ -666,6 +669,29 @@
     "type": "chromebook",
     "variant": "CB315-3H-C0EV"
   },
+  "Acer Chromebook 315 (CB315-3HT-C1DY)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron N4120",
+    "disabled": true,
+    "expirationId": "Acer Chromebook 315 (CB315-3HT)",
+    "extraLinks": {
+      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.ATEEG.004"
+    },
+    "flip": false,
+    "id": "Acer Chromebook 315 (CB315-3HT-C1DY)",
+    "memory": 4,
+    "model": "Chromebook 315",
+    "productId": "7826598347698137465198327465893",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 15.6,
+    "screenTouch": true,
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CB315-3HT-C1DY"
+  },
   "Acer Chromebook 315 (CB315-3HT-C32M)": {
     "biometricUnlock": false,
     "brand": "Acer",
@@ -752,29 +778,6 @@
     "stylus": false,
     "type": "chromebook",
     "variant": "CB315-3HT-C68Z"
-  },
-  "Acer Chromebook 315 (CB315-3HT-C1DY)": {
-    "biometricUnlock": false,
-    "brand": "Acer",
-    "cpu": "Intel Celeron N4120",
-    "disabled": true,
-    "expirationId": "Acer Chromebook 315 (CB315-3HT)",
-    "extraLinks": {
-      "Produkthomepage": "https://www.acer.com/ac/de/DE/content/model/NX.ATEEG.004"
-    },
-    "flip": false,
-    "id": "Acer Chromebook 315 (CB315-3HT-C1DY)",
-    "memory": 4,
-    "model": "Chromebook 315",
-    "productId": "7826598347698137465198327465893",
-    "productProvider": "idealo",
-    "screenGlare": false,
-    "screenResolution": "1920x1080",
-    "screenSize": 15.6,
-    "screenTouch": true,
-    "stylus": false,
-    "type": "chromebook",
-    "variant": "CB315-3HT-C1DY"
   },
   "Acer Chromebook 315 (CB315-3HT-C8AG)": {
     "biometricUnlock": false,

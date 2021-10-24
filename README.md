@@ -59,6 +59,12 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 
 * The agent can be also run as a [Docker](https://github.com/schlomo/chromebooks-in-deutschland/pkgs/container/chromebooks-in-deutschland) container. On Debian/Ubuntu simply install the `chromebooks-in-deutschland-service` [Debian package](systemd/) from the [Releases](../../releases/). Make sure to create the configuration file `/etc/chromebooks-in-deutschland.env`. It has to set the API key like this:
 
-  ```sh
-  CID_API_KEY=some-api-key-uuid
-  ```
+    ```sh
+    CID_API_KEY=some-api-key-uuid
+    ```
+
+    This works on ARM (32/64bit) and X86_64. If you have `curl` and `jq` installed then you can get the URL for the latest DEB package like this:
+
+    ```sh
+    curl -s https://api.github.com/repos/schlomo/chromebooks-in-deutschland/releases | jq -r '.[0].assets | .[] | select(.content_type == "application/x-debian-package").browser_download_url'
+    ```

@@ -78,7 +78,7 @@ jobs:
         context: .
         # Container push only for push, not on PR
         push: ${{ github.event_name == 'push' }} 
-        platforms: linux/amd64,linux/arm,linux/arm64
+        platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         tags: ${{ join(steps.*.outputs.container_tag, ',') }}
   
     - name: Upload build artifacts

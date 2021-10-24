@@ -52,7 +52,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh release create "$TAG" dist/*
-        echo "::set-output name=prod::prod"
+        echo "::set-output name=prod::$IMAGE_NAME:prod"
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
@@ -71,7 +71,7 @@ jobs:
         context: .
         push: true
         platforms: linux/amd64,linux/arm/v7
-        tags: ${{ env.IMAGE_NAME }}:dev,${{ env.IMAGE_NAME }}:${{ steps.version.outputs.VERSION }},${{ env.IMAGE_NAME }}:${{ steps.release.outputs.prod }}
+        tags: ${{ env.IMAGE_NAME }}:dev,${{ env.IMAGE_NAME }}:${{ steps.version.outputs.VERSION }},${{ steps.release.outputs.prod }}
   
     - name: List images
       run: docker images

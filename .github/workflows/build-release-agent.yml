@@ -69,7 +69,7 @@ jobs:
 
     - name: Set dev Container tag
       run: |
-        echo "::set-output name=container_tag::$IMAGE_NAME:dev
+        echo "::set-output name=container_tag::$IMAGE_NAME:dev"
 
     - name: Docker build and push
       uses: docker/build-push-action@v2

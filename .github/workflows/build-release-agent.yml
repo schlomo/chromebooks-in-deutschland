@@ -54,7 +54,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh release create "$TAG" dist/*
-        echo "::set-output name=container_tag::$IMAGE_NAME:prod
+        echo "::set-output name=container_tag::$IMAGE_NAME:prod"
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
@@ -71,13 +71,17 @@ jobs:
       run: |
         echo "::set-output name=container_tag::$IMAGE_NAME:dev"
 
+    - run: |
+        echo "ARRAY: --->${{ steps.*.outputs.container_tag }}<---"
+        echo "JOIN: --->${{ join(steps.*.outputs.container_tag, ',') }}<---"
+
     - name: Docker build and push
       uses: docker/build-push-action@v2
       with:
         context: .
         # Container push only for push, not on PR
         push: ${{ github.event_name == 'push' }} 
-        platforms: linux/amd64,linux/arm/v7
+        platforms: linux/amd64,linux/arm/v6,linux/arm/v7
         tags: ${{ join(steps.*.outputs.container_tag, ',') }}
   
     - name: Upload build artifacts

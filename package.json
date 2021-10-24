@@ -24,7 +24,7 @@
     "clean": "rm -Rf VERSION dist public src/generated/* functions/generated/*",
     "deploy": "run-s -sl build firebase-deploy",
     "docker": "run-s -s clean prep docker-build",
-    "docker-build": "echo Image: ${IMAGE_NAME:=cid} ; docker build --progress plain --build-arg VERSION=$(<VERSION) -t $IMAGE_NAME -t $IMAGE_NAME:$(<VERSION) -t $IMAGE_NAME:dev .",
+    "docker-build": "echo Image: ${IMAGE_NAME:=cid} ; docker build --progress plain -t $IMAGE_NAME -t $IMAGE_NAME:$(<VERSION) -t $IMAGE_NAME:dev .",
     "docker-run": "echo Image: ${IMAGE_NAME:=cid} ; docker run --rm -e CID_API_URL=http://host.docker.internal:5000/api $IMAGE_NAME",
     "updateprice": "cd functions; node updateprice.js",
     "firebase-deploy": "firebase --project ${ENVIRONMENT:-dev} deploy --force --message $(<VERSION)",

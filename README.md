@@ -17,54 +17,65 @@ Please freel free to submit pull requests for features and bugfixes, they will b
 ## Running the Agent
 
 * Agents need keys in the database under `/keys`, emulator uses dummy key for local testing
-* Optimum agent interval seems to be 7 minutes
-* Agent (download pecompiled binary from [Releases](../../releases/)) can be run with a script like this from a CRON job:
+* Optimum agent run interval seems to be 7 minutes
 
-    ```sh
-    #!/bin/bash
-    cd "$(dirname "$(readlink -f "$0")")"
+### Cronjob
 
-    export CID_API_KEY=THE_SECRET_KEY
-    export CID_API_URL=https://DOMAIN_NAME/api
+Agent (download pecompiled binary from [Releases](../../releases/)) can be run with a script like this from a CRON job:
 
-    bins=( updateprice*linux* )
-    bin=${bins[-1]}
+```sh
+#!/bin/bash
+cd "$(dirname "$(readlink -f "$0")")"
 
-    result="$(./$bin)"
-    if ! grep -q "OK: 1" <<<"$result" ; then
-        echo "$result"
-        exit 1
-    fi
-    ```
+export CID_API_KEY=THE_SECRET_KEY
+export CID_API_URL=https://DOMAIN_NAME/api
 
-    (Make sure that the pattern matches the binaries that you use!)
+bins=( updateprice*linux* )
+bin=${bins[-1]}
 
-* Agent (from a source checkout checkout out to `./chromebooks-in-deutschland`) can be run with a script like this:
+result="$(./$bin)"
+if ! grep -q "OK: 1" <<<"$result" ; then
+    echo "$result"
+    exit 1
+fi
+```
 
-    ```sh
-    #!/bin/bash
-    cd "$(dirname "$(readlink -f "$0")")"
+(Make sure that the pattern matches the binaries that you use!)
 
-    export CID_API_KEY=THE_SECRET_KEY
-    export CID_API_URL=https://DOMAIN_NAME/api
+Agent (from a source checkout checkout out to `./chromebooks-in-deutschland`) can be run with a script like this:
 
-    cd chromebooks-in-deutschland/functions
+```sh
+#!/bin/bash
+cd "$(dirname "$(readlink -f "$0")")"
 
-    result="$(node updateprice.js)"
-    if ! grep -q "OK: 1" <<<"$result" ; then
-        echo "$result"
-        exit 1
-    fi
-    ```
+export CID_API_KEY=THE_SECRET_KEY
+export CID_API_URL=https://DOMAIN_NAME/api
 
-* The agent can be also run as a [Docker](https://github.com/schlomo/chromebooks-in-deutschland/pkgs/container/chromebooks-in-deutschland) container. On Debian/Ubuntu simply install the `chromebooks-in-deutschland-service` [Debian package](systemd/) from the [Releases](../../releases/). Make sure to create the configuration file `/etc/chromebooks-in-deutschland.env`. It has to set the API key like this:
+cd chromebooks-in-deutschland/functions
 
-    ```sh
-    CID_API_KEY=some-api-key-uuid
-    ```
+result="$(node updateprice.js)"
+if ! grep -q "OK: 1" <<<"$result" ; then
+    echo "$result"
+    exit 1
+fi
+```
 
-    This works on ARM (32/64bit) and X86_64. If you have `curl` and `jq` installed then you can get the URL for the latest DEB package like this:
+### Systemd Unit and Docker
 
-    ```sh
-    curl -s https://api.github.com/repos/schlomo/chromebooks-in-deutschland/releases | jq -r '.[0].assets | .[] | select(.content_type == "application/x-debian-package").browser_download_url'
-    ```
+The agent can be also run as a [Docker](https://github.com/schlomo/chromebooks-in-deutschland/pkgs/container/chromebooks-in-deutschland) container. On Debian/Ubuntu simply install the `chromebooks-in-deutschland-service` [Debian package](systemd/) from the [Releases](../../releases/). Make sure to create the configuration file `/etc/chromebooks-in-deutschland.env`. It has to set the API key like this:
+
+```sh
+CID_API_KEY=some-api-key-uuid
+```
+
+This works on ARM (32/64bit) and X86_64. If you have `curl` and `jq` installed then you can get the URL for the latest DEB package like this:
+
+```sh
+curl -s https://api.github.com/repos/schlomo/chromebooks-in-deutschland/releases | jq -r '.[0].assets | .[] | select(.content_type == "application/x-debian-package").browser_download_url'
+```
+
+#### Special Use Cases
+
+* On Raspberry Pi 1 consider modifying the unit to have a longer timeout, e.g. 600 seconds, to accomodate longer startup and image pull times.
+* On ODROID C1+ I had to use host networking to get Docker to work on the old 3.10 kernel.
+* If running on SD cards and having enough RAM, consider mounting `/var/lib/docker` on `tmpfs` to reduce the load on the SD card.

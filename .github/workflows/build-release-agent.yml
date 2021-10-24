@@ -68,12 +68,9 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set dev Container tag
+      id: devtag
       run: |
         echo "::set-output name=container_tag::$IMAGE_NAME:dev"
-
-    - run: |
-        echo "ARRAY: --->${{ steps.*.outputs.container_tag }}<---"
-        echo "JOIN: --->${{ join(steps.*.outputs.container_tag, ',') }}<---"
 
     - name: Docker build and push
       uses: docker/build-push-action@v2
@@ -81,7 +78,7 @@ jobs:
         context: .
         # Container push only for push, not on PR
         push: ${{ github.event_name == 'push' }} 
-        platforms: linux/amd64,linux/arm/v6,linux/arm/v7
+        platforms: linux/amd64,linux/arm,linux/arm64
         tags: ${{ join(steps.*.outputs.container_tag, ',') }}
   
     - name: Upload build artifacts

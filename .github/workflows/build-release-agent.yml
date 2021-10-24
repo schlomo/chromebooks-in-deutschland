@@ -38,6 +38,8 @@ jobs:
       name: Check & Set VERSION
       run: |
         echo "::set-output name=VERSION::$(<VERSION)"
+        echo "::set-output name=container_tag::$IMAGE_NAME:$(<VERSION)"
+
         grep -v dirty VERSION || { git status ; exit 1 ; }
 
     - run: yarn binary-build
@@ -52,7 +54,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh release create "$TAG" dist/*
-        echo "::set-output name=prod::$IMAGE_NAME:prod"
+        echo "::set-output name=container_tag::$IMAGE_NAME:prod
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
@@ -65,16 +67,18 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Set dev Container tag
+      run: |
+        echo "::set-output name=container_tag::$IMAGE_NAME:dev
+
     - name: Docker build and push
       uses: docker/build-push-action@v2
       with:
         context: .
-        push: true
+        # Container push only for push, not on PR
+        push: ${{ github.event_name == 'push' }} 
         platforms: linux/amd64,linux/arm/v7
-        tags: ${{ env.IMAGE_NAME }}:dev,${{ env.IMAGE_NAME }}:${{ steps.version.outputs.VERSION }},${{ steps.release.outputs.prod }}
-  
-    - name: List images
-      run: docker images
+        tags: ${{ join(steps.*.outputs.container_tag, ",") }}
   
     - name: Upload build artifacts
       uses: 'actions/upload-artifact@v2'

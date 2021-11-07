@@ -378,7 +378,8 @@ function persistSearch(search_term) {
             history.replaceState(
                 { search: search_term },
                 document.title,
-                window.location.pathname + "#" + encodeURI(search_term)
+                // mask * in URL to not confuse WhatsApp
+                window.location.pathname + "#" + encodeURI(search_term).replaceAll("*","%2A")
             );
             last_search_term = search_term;
         } else {

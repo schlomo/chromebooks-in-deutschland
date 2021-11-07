@@ -17,7 +17,8 @@
   "author": "Schlomo Schapiro <schlomo+chromebooks-in-deutschland@schapiro.org>",
   "scripts": {
     "binary": "run-s -sl prep binary-build",
-    "binary-build": "pkg --no-bytecode --public-packages '*' --output dist/updateprice-\"$(<VERSION)\" --compress GZip --targets node14-macos-x64,node14-alpine-x64,node14-linux-x64,node14-linuxstatic-armv7,node14-windows-x64 --public functions/updateprice.js",
+    "binary-build": "pkg --no-bytecode --public-packages '*' --output dist/updateprice-\"$(<VERSION)\" --compress GZip --targets node16-macos-x64,node16-alpine-x64,node16-linux-x64,node16-windows-x64 --public functions/updateprice.js",
+    "binary-build-armv7": "pkg --no-bytecode --public-packages '*' --output dist/updateprice-\"$(<VERSION)\" --compress GZip --targets node16-linuxstatic-armv7 --public functions/updateprice.js",
     "deb": "run-s -sl prep*version deb-build",
     "deb-build": "make -C systemd",
     "build": "run-s -sl prep parcel-build",
@@ -38,6 +39,7 @@
     "prep-03-expiration-data": "node generate-expiration-data.js",
     "prep-04-device-data": "node generate-device-data.js",
     "prep-05-validate-data": "node validate-data.js",
+    "prep-06-validate-checker": "./check-chromebooks.sh --validate",
     "start": "run-s -s prep firebase-emulators",
     "test": "mocha",
     "update-dev-database": "./update-dev-database"
@@ -45,7 +47,7 @@
   "dependencies": {
     "@fontsource/roboto": "^4.5.1",
     "@iconify/iconify": "^2.0.4",
-    "@iconify/json": "^1.1.417",
+    "@iconify/json": "^1.1.424",
     "@iconify/json-tools": "^1.0.8",
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.3",
@@ -53,7 +55,7 @@
     "datatables.net-dt": "^1.11.3",
     "datatables.net-responsive-dt": "^2.2.5",
     "entities": "^3.0.1",
-    "firebase-tools": "^9.20.0",
+    "firebase-tools": "^9.22.0",
     "fontsource-roboto": "^4.0.0",
     "git-describe": "^4.1.0",
     "glob": "^7.2.0",
@@ -63,7 +65,7 @@
     "mocha": "^9.1.3",
     "node-fetch": "^3.0.0",
     "parcel-bundler": "^1.12.4",
-    "pkg": "^5.3.3",
+    "pkg": "^5.4.1",
     "select2": "^4.1.0-rc.0",
     "sorted-object": "^2.0.1",
     "yarn-run-all": "^3.1.1"

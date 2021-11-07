@@ -179,6 +179,9 @@
     "disabled": false,
     "expirationId": "HP Chromebook x2 11c",
     "extraInfo": "LTE Modem, abnehmbare Tastatur, inklusive USI Stylus",
+    "extraLinks": {
+      "Notebookcheck Review (ähnliches Modell)": "https://www.notebookcheck.com/HP-Chromebook-x2-11-im-Test-Der-Snapdragon-7c-vertraegt-sich-gut-mit-Chrome-OS.574603.0.html"
+    },
     "flip": true,
     "id": "HP Chromebook x2 11 (11-da0050ng)",
     "memory": 4,
@@ -201,6 +204,9 @@
     "disabled": false,
     "expirationId": "HP Chromebook x2 11c",
     "extraInfo": "128GB SSD, LTE Modem, abnehmbare Tastatur, inklusive USI Stylus",
+    "extraLinks": {
+      "Notebookcheck Review (ähnliches Modell)": "https://www.notebookcheck.com/HP-Chromebook-x2-11-im-Test-Der-Snapdragon-7c-vertraegt-sich-gut-mit-Chrome-OS.574603.0.html"
+    },
     "flip": true,
     "id": "HP Chromebook x2 11 (11-da0070ng)",
     "memory": 8,

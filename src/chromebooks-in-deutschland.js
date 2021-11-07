@@ -625,7 +625,7 @@ function stage1setup(tableData) {
                 render: renderExpiration,
             },
         ],
-        order: [[3, "asc"]],
+        order: [[2, "asc"]],
         language: {
             decimal: ",",
             thousands: ".",

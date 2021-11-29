@@ -1026,6 +1026,28 @@
     "type": "chromebook",
     "variant": "14b-ca0250ng"
   },
+  "HP Chromebook x360 14b (14b-ca0255ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Pentium N5030",
+    "disabled": false,
+    "expirationId": "HP Chromebook x360 14b-ca0xxx",
+    "extraInfo": "128GB, USI Stylus optional",
+    "flip": true,
+    "id": "HP Chromebook x360 14b (14b-ca0255ng)",
+    "memory": 8,
+    "model": "Chromebook x360 14b",
+    "productId": "201166135",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": true,
+    "specLink": "https://media.flixcar.com/f360cdn/HP-5084801224-c06932379.pdf",
+    "stylus": true,
+    "type": "chromebook",
+    "variant": "14b-ca0255ng"
+  },  
   "HP Chromebook x360 14b (14b-ca0300ng)": {
     "biometricUnlock": false,
     "brand": "HP",

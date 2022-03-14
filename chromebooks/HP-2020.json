@@ -524,6 +524,56 @@
     "type": "chromebook",
     "variant": "14a-na0415ng"
   },
+  "HP Chromebook 14a (2020) (14a-na1292ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Pentium N6000",
+    "disabled": false,
+    "expirationId": "HP Chromebook 14a",
+    "extraInfo": "128GB",
+    "extraLinks": {
+      "Datenblatt": "http://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07659912"
+    },
+    "flip": false,
+    "id": "HP Chromebook 14a (2020) (14a-na1292ng)",
+    "memory": 8,
+    "model": "Chromebook 14a (2020)",
+    "productId": "201845748",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://support.hp.com/de-de/document/c07802514",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "14a-na1292ng"
+  },
+  "HP Chromebook 14a (2020) (14a-nd0040ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "AMD 3015Ce",
+    "disabled": false,
+    "expirationId": "HP Chromebook 14a",
+    "extraInfo": "128GB",
+    "extraLinks": {
+      "Datenblatt": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07608733"
+    },
+    "flip": false,
+    "id": "HP Chromebook 14a (2020) (14a-nd0040ng)",
+    "memory": 8,
+    "model": "Chromebook 14a (2020)",
+    "productId": "201563676",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://support.hp.com/ch-de/document/c07729500",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "14a-nd0040ng"
+  },
   "HP Chromebook 15 (15-de0000ng)": {
     "biometricUnlock": false,
     "brand": "HP",
@@ -1047,7 +1097,7 @@
     "stylus": true,
     "type": "chromebook",
     "variant": "14b-ca0255ng"
-  },  
+  },
   "HP Chromebook x360 14b (14b-ca0300ng)": {
     "biometricUnlock": false,
     "brand": "HP",

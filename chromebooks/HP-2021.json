@@ -347,6 +347,28 @@
     "type": "chromebook",
     "variant": "14b-nb0060ng"
   },
+  "HP Chromebook 14b (14b-nb0335ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Core i3-1115G4",
+    "disabled": false,
+    "expirationId": "HP Chromebook 14b",
+    "extraInfo": "256GB SSD",
+    "flip": false,
+    "id": "HP Chromebook 14b (14b-nb0335ng)",
+    "memory": 8,
+    "model": "Chromebook 14b",
+    "productId": "201816134",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07758935.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "14b-nb0335ng"
+  },
   "HP Chromebook 14b (14b-nb0415ng)": {
     "biometricUnlock": false,
     "brand": "HP",

@@ -14,7 +14,22 @@ const output = "src/generated/expiration-data.json";
 const url = 'https://support.google.com/chrome/a/answer/6220366?hl=en';
 
 const extraExpirationInfo = {
-// Google doesn't have anything to match 14b-na0432ng which is NOT a x360 device. Came out in 2021 so probably till at least 2028
+    // Lenovo IdeaPad 5 Chromebook (82M8001X) series missing
+    // came out in 2021, so probably at least till 2028
+    "Lenovo IdeaPad 5 Chromebook": {
+        "brand": "Lenovo",
+        "model": "IdeaPad 5 Chromebook",
+        "expiration": "2028-05-31T22:00:00.000Z" // just guessing here
+    },
+    // Lenovo IdeaPad 3 Chromebook 15 (82N40010) series missing
+    // came out in 2021, so probably at least till 2028
+    "Lenovo IdeaPad 3 Chromebook 15": {
+        "brand": "Lenovo",
+        "model": "IdeaPad 3 Chromebook 15",
+        "expiration": "2028-05-31T22:00:00.000Z" // just guessing here
+    },
+    // Google doesn't have anything to match 14b-na0432ng which is NOT a x360 device
+    // Came out in 2021 so probably till at least 2028
     "HP Chromebook 14b": {
         "brand": "HP",
         "model": "Chromebook 14b",

@@ -357,6 +357,28 @@
     "type": "chromebook",
     "variant": "82C1000S"
   },
+  "Lenovo IdeaPad 3 Chromebook (82C1001Y)": {
+    "biometricUnlock": false,
+    "brand": "Lenovo",
+    "cpu": "Intel Celeron N4020",
+    "disabled": false,
+    "expirationId": "Lenovo IdeaPad 3 Chromebook",
+    "extraInfo": "Platinum Grey",
+    "flip": false,
+    "id": "Lenovo IdeaPad 3 Chromebook (82C1001Y)",
+    "memory": 4,
+    "model": "IdeaPad 3 Chromebook",
+    "productId": "201263680",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1366x768",
+    "screenSize": 14,
+    "screenTouch": true,
+    "specLink": "https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14IGL05?M=82C1001YGE",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "82C1001Y"
+  },
   "Lenovo IdeaPad Flex 3 Chromebook (82BB000W)": {
     "biometricUnlock": false,
     "brand": "Lenovo",

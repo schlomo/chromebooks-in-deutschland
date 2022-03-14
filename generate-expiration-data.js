@@ -14,25 +14,7 @@ const output = "src/generated/expiration-data.json";
 const url = 'https://support.google.com/chrome/a/answer/6220366?hl=en';
 
 const extraExpirationInfo = {
-    // Google called this CP514-HH by mistake
-    "Acer Chromebook Spin 514 (CP514-1H)": {
-        "brand": "Acer",
-        "model": "Chromebook Spin 514 (CP514-1H)",
-        "expiration": "2029-05-31T22:00:00.000Z"
-    },
-    // Google doesn't have this one at all
-    "Acer Chromebook Spin 514 (CP514-1WH)": {
-        "brand": "Acer",
-        "model": "Chromebook Spin 514 (CP514-1HW)",
-        "expiration": "2029-05-31T22:00:00.000Z"
-    },
-    // Google doesn't have this one at all, 2W was till 2028 so 3W should be till 2029
-    "Acer Chromebook Spin 713 (CP713-3W)": {
-        "brand": "Acer",
-        "model": "Chromebook Spin 713 (CP713-3W)",
-        "expiration": "2029-05-31T22:00:00.000Z"
-    },
-    // Google doesn't have anything to match 14b-na0432ng which is NOT a x360 device. Came out in 2021 so probably till at least 2028
+// Google doesn't have anything to match 14b-na0432ng which is NOT a x360 device. Came out in 2021 so probably till at least 2028
     "HP Chromebook 14b": {
         "brand": "HP",
         "model": "Chromebook 14b",

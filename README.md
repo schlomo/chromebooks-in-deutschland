@@ -79,3 +79,14 @@ curl -s https://api.github.com/repos/schlomo/chromebooks-in-deutschland/releases
 * On Raspberry Pi 1 consider modifying the unit to have a longer timeout, e.g. 600 seconds, to accomodate longer startup and image pull times.
 * On ODROID C1+ I had to use host networking to get Docker to work on the old 3.10 kernel.
 * If running on SD cards and having enough RAM, consider mounting `/var/lib/docker` on `tmpfs` to reduce the load on the SD card.
+
+## Adding Chromebooks
+
+Chromebooks are described in JSON structures under [chromebooks](chromebooks/). We use one file per vendor and per release year. The files must be sorted alphabetically (use a JSON sort tool for that).
+
+For datasheet we try to link to the vendors original documentation. Sources for that are:
+
+* <https://psref.lenovo.com/>
+* <https://pcb.inc.hp.com/webapp/>
+
+Pull requests with more devices are most welcome!

@@ -54,6 +54,7 @@ export const cpus = {
     "MediaTek P60T": { "cores": 8, "frequency": 2.0 },
     "Qualcomm Snapdragon 7180c": { "cores": 8, "frequency": 2.4 },
     "Qualcomm Snapdragon 7c": { "cores": 8, "frequency": 2.4 },
+    "Qualcomm Snapdragon 7c Gen 2": { "cores": 8, "frequency": 2.55 },
     "Rockchip RK3399": { "cores": 6, "frequency": 2 },
 };
 

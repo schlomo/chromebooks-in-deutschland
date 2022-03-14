@@ -72,13 +72,16 @@ devices=(
     $( input2devices )
 )
 res=()
+let red=0 green=0
 for device in "${devices[@]}"; do
     if grep -q "\"$device\"" chromebooks/* ; then
         res+=(" 🟢 $device")
+        let green++
     else
         res+=(" 🔴 $device")
+        let red++
     fi
 done
-echo -e "\n\n--- RESULT --- ${#res[*]} DEVICES ---"
+echo -e "\n\n--- RESULT --- ${#res[*]} DEVICES --- $red 🔴 $green 🟢"
 IFS=$'\n'
 echo "${res[*]}"

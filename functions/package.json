@@ -12,7 +12,7 @@
     "updateprice": "firebase -P dev emulators:exec 'node updateprice.js'"
   },
   "engines": {
-    "node": "14"
+    "node": "16"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -29,9 +29,6 @@
     "firebase-functions-test": "^0.3.3",
     "firebase-tools": "^9.22.0",
     "lambda-local": "^2.0.0"
-  },
-  "resolutions": {
-    "tar": "^6.1.2"
   },
   "private": true
 }

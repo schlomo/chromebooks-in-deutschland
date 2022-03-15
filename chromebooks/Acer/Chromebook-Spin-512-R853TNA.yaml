@@ -1,0 +1,57 @@
+Acer Chromebook Spin 512 (R853TNA-C0EX):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N5100
+  expirationId: Acer Chromebook Spin 512 (R853TNA)
+  flip: true
+  id: Acer Chromebook Spin 512 (R853TNA-C0EX)
+  memory: 4
+  model: Chromebook Spin 512
+  productId: '2520220'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x912
+  screenSize: 12
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/7/b/b/6/e8ec35ee9b641da96368856dd94aba9cb098.pdf
+  stylus: false
+  type: chromebook
+  variant: R853TNA-C0EX
+Acer Chromebook Spin 512 (R853TNA-C713):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N5100
+  expirationId: Acer Chromebook Spin 512 (R853TNA)
+  flip: true
+  id: Acer Chromebook Spin 512 (R853TNA-C713)
+  memory: 4
+  model: Chromebook Spin 512
+  productId: '2485813'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x912
+  screenSize: 12
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/b/1/8/2/5c86bf4fbb1c2146f649a29b39a541843c4b.pdf
+  stylus: false
+  type: chromebook
+  variant: R853TNA-C713
+Acer Chromebook Spin 512 (R853TNA-P59W):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Pentium N6000
+  expirationId: Acer Chromebook Spin 512 (R853TNA)
+  flip: true
+  id: Acer Chromebook Spin 512 (R853TNA-P59W)
+  memory: 8
+  model: Chromebook Spin 512
+  productId: '2485739'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x912
+  screenSize: 12
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/a/e/a/2/133ea2cd8becfd19fb6e8565fb6beedcf5bc.pdf
+  stylus: false
+  type: chromebook
+  variant: R853TNA-P59W

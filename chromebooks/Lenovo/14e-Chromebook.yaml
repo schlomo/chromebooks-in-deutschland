@@ -1,0 +1,21 @@
+Lenovo 14e Chromebook (81MH0001):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: AMD A4 9120C
+  expirationId: Lenovo 14e Chromebook
+  extraInfo: EMR Stylus optional (Datenblatt unklar)
+  flip: false
+  id: Lenovo 14e Chromebook (81MH0001)
+  memory: 8
+  model: 14e Chromebook
+  productId: '6729121'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: >-
+    http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Chrome_14e%20Education_Datasheet_EN.pdf
+  stylus: true
+  type: chromebook
+  variant: 81MH0001

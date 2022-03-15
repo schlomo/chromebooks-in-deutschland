@@ -1,0 +1,62 @@
+Acer Chromebook Spin 514 (CP514-1W-R25B):
+  biometricUnlock: false
+  brand: Acer
+  cpu: AMD Athlon 3050C
+  expirationId: Acer Chromebook Spin 514 (CP514-1W)
+  extraInfo: 128GB, hinterleuchtete Tastatur, USI Stylus optional
+  flip: true
+  id: Acer Chromebook Spin 514 (CP514-1W-R25B)
+  memory: 8
+  model: Chromebook Spin 514
+  productId: '2480393'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/6/b/b/4/f5cded234adf0e8c5bbc30472dcc21739d3c.pdf
+  stylus: true
+  type: chromebook
+  variant: CP514-1W-R25B
+Acer Chromebook Spin 514 (CP514-1W-R4QQ):
+  biometricUnlock: false
+  brand: Acer
+  cpu: AMD Athlon 3050C
+  expirationId: Acer Chromebook Spin 514 (CP514-1W)
+  extraInfo: hinterleuchtete Tastatur, USI Stylus optional
+  flip: true
+  id: Acer Chromebook Spin 514 (CP514-1W-R4QQ)
+  memory: 8
+  model: Chromebook Spin 514
+  productId: '2484670'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/2/1/1/b/65b361fd29b478e2763013ccd397eb1176d0.pdf
+  stylus: true
+  type: chromebook
+  variant: CP514-1W-R4QQ
+Acer Chromebook Spin 514 (CP514-1W-R72H):
+  biometricUnlock: false
+  brand: Acer
+  cpu: AMD Athlon 3050C
+  expirationId: Acer Chromebook Spin 514 (CP514-1W)
+  extraInfo: >-
+    inklusive Chrome Enterprise Upgrade, hinterleuchtete Tastatur, USI Stylus
+    optional
+  flip: true
+  id: Acer Chromebook Spin 514 (CP514-1W-R72H)
+  memory: 4
+  model: Chromebook Spin 514
+  productId: '2485884'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/3/e/3/e/62dc70928117fe8b7452d9731612d8b8b1a6.pdf
+  stylus: true
+  type: chromebook
+  variant: CP514-1W-R72H

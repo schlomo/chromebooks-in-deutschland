@@ -1,0 +1,20 @@
+Acer Chromebase for Meetings CA24V2 (DQ-Z0ZEG-001):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Core i7-8550U
+  expirationId: Acer Chromebase for Meetings 24V2 (CA24V2)
+  extraInfo: Webcam
+  flip: false
+  id: Acer Chromebase for Meetings CA24V2 (DQ-Z0ZEG-001)
+  memory: 8
+  model: Chromebase for Meetings CA24V2
+  productId: '6861040'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 23.8
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/professional-model/DQ.Z0ZEG.001
+  stylus: false
+  type: chromebase
+  variant: DQ.Z0ZEG.001

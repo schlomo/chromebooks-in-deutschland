@@ -31,6 +31,9 @@ default_regex="$( tr " " "|" <<<"${default_regex_parts[*]}")"
 
 test "$1" = "--help" -o "$1" = "-h" && die "Please give regex as first arg, default: $default_regex"
 
+chromebooks_file=src/generated/chromebooks.json
+
+test -s $chromebooks_file || die "Please run 'yarn prep' first to generate Chromebooks data file"
 validate=""
 
 if test "$1" == "--validate" ; then
@@ -56,7 +59,7 @@ if test "$validate" ; then
             echo "$d <-> $filtered"
             let errors++
         fi
-    done < <( sed -ne '/variant.*:/s/.*"\(.*\)"/\1/p' chromebooks/**/*.json )
+    done < <( sed -ne '/variant.*:/s/.*"\(.*\)"/\1/p' $chromebooks_file )
     if (( errors==0 )) ; then
         echo "OK All $count devices matched by regex"
         exit 0
@@ -74,7 +77,7 @@ devices=(
 res=()
 let red=0 green=0
 for device in "${devices[@]}"; do
-    if grep -q "\"$device\"" chromebooks/**/*.json ; then
+    if grep -q "\"$device\"" $chromebooks_file ; then
         res+=(" 🟢 $device")
         let green++
     else

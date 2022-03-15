@@ -1,0 +1,148 @@
+Acer Chromebook Spin 713 (CP713-3W-31K4):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Core i3-1115G4
+  disabled: true
+  expirationId: Acer Chromebook Spin 713 (CP713-3W)
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    c|net Review (anderes Modell): >-
+      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
+  flip: true
+  id: Acer Chromebook Spin 713 (CP713-3W-31K4)
+  memory: 8
+  model: Chromebook Spin 713
+  productId: '2552567'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 2256x1504
+  screenSize: 13.5
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/2/d/1/0/682edf0e92cf00e47505f782fc1b35d62e57.pdf
+  stylus: true
+  type: chromebook
+  variant: CP713-3W-31K4
+Acer Chromebook Spin 713 (CP713-3W-346G):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i3-1115G4
+  disabled: true
+  expirationId: Acer Chromebook Spin 713 (CP713-3W)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    c|net Review (anderes Modell): >-
+      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
+  flip: true
+  id: Acer Chromebook Spin 713 (CP713-3W-346G)
+  memory: 8
+  model: Chromebook Spin 713
+  productId: '783245628374568237456837246533245'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 2256x1504
+  screenSize: 13.5
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.A6XEG.005
+  stylus: true
+  type: chromebook
+  variant: CP713-3W-346G
+Acer Chromebook Spin 713 (CP713-3W-35CR):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i3-1115G4
+  disabled: true
+  expirationId: Acer Chromebook Spin 713 (CP713-3W)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    c|net Review (anderes Modell): >-
+      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
+  flip: true
+  id: Acer Chromebook Spin 713 (CP713-3W-35CR)
+  memory: 8
+  model: Chromebook Spin 713
+  productId: '2576320'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 2256x1504
+  screenSize: 13.5
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/3/e/d/7/f71e15c9753c13dbe617b7fd49d46379e0f0.pdf
+  stylus: true
+  type: chromebook
+  variant: CP713-3W-35CR
+Acer Chromebook Spin 713 (CP713-3W-56PY):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-1135G7
+  expirationId: Acer Chromebook Spin 713 (CP713-3W)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    c|net Review (anderes Modell): >-
+      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
+  flip: true
+  id: Acer Chromebook Spin 713 (CP713-3W-56PY)
+  memory: 16
+  model: Chromebook Spin 713
+  productId: '201444316'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 2256x1504
+  screenSize: 13.5
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.A6XEG.005
+  stylus: true
+  type: chromebook
+  variant: CP713-3W-56PY
+Acer Chromebook Spin 713 (CP713-3W-57R0):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-1135G7
+  expirationId: Acer Chromebook Spin 713 (CP713-3W)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    c|net Review: >-
+      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
+  flip: true
+  id: Acer Chromebook Spin 713 (CP713-3W-57R0)
+  memory: 8
+  model: Chromebook Spin 713
+  productId: '201465471'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 2256x1504
+  screenSize: 13.5
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.A6XEG.009
+  stylus: true
+  type: chromebook
+  variant: CP713-3W-57R0
+Acer Chromebook Spin 713 (CP713-3W-7296):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i7-1165G7
+  disabled: true
+  expirationId: Acer Chromebook Spin 713 (CP713-3W)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    c|net Review (anderes Modell): >-
+      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
+  flip: true
+  id: Acer Chromebook Spin 713 (CP713-3W-7296)
+  memory: 16
+  model: Chromebook Spin 713
+  productId: '2576321'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 2256x1504
+  screenSize: 13.5
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/6/0/6/3/7ffff7db8861c4736ebf2242e7e6ffbcc16e.pdf
+  stylus: true
+  type: chromebook
+  variant: CP713-3W-7296

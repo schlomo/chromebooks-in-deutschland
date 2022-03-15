@@ -1,0 +1,106 @@
+{
+    "$defs": {
+        "chromebook": {
+            "additionalProperties": false,
+            "properties": {
+                "biometricUnlock": {
+                    "type": "boolean",
+                    "description": "Fingerprint sensor, Face ID ..."
+                },
+                "brand": {
+                    "type": "string"
+                },
+                "cpu": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "expirationId": {
+                    "type": "string"
+                },
+                "extraInfo": {
+                    "type": "string"
+                },
+                "extraLinks": {
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "type": "object"
+                },
+                "flip": {
+                    "type": "boolean"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "memory": {
+                    "type": "number"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "productId": {
+                    "type": "string"
+                },
+                "productProvider": {
+                    "enum": ["idealo", "geizhals"]
+                },
+                "screenGlare": {
+                    "type": "boolean"
+                },
+                "screenResolution": {
+                    "type": "string"
+                },
+                "screenSize": {
+                    "type": "number"
+                },
+                "screenTouch": {
+                    "type": "boolean"
+                },
+                "specLink": {
+                    "type": "string"
+                },
+                "stylus": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "enum": [
+                        "chromebook",
+                        "chromebase",
+                        "chromebox",
+                        "tablet"
+                    ]
+                },
+                "variant": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "biometricUnlock",
+                "brand",
+                "cpu",
+                "expirationId",
+                "flip",
+                "id",
+                "memory",
+                "model",
+                "productId",
+                "productProvider",
+                "screenGlare",
+                "screenResolution",
+                "screenResolution",
+                "screenTouch",
+                "stylus",
+                "type",
+                "variant"
+            ],
+            "type": "object"
+        }
+    },
+    "$id": "chromebooks",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": {
+        "$ref": "#/$defs/chromebook"
+    }
+}

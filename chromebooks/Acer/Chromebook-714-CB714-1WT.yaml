@@ -1,0 +1,59 @@
+Acer Chromebook 714 (CB714-1WT-36MS):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i3-8130U
+  expirationId: Acer Chromebook 714 (CB714-1WT)
+  flip: false
+  id: Acer Chromebook 714 (CB714-1WT-36MS)
+  memory: 8
+  model: Chromebook 714
+  productId: '6578977'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/8/d/e/1/4b5a7da593e393291126c66fa01564833f1e.pdf
+  stylus: false
+  type: chromebook
+  variant: CB714-1WT-36MS
+Acer Chromebook 714 (CB714-1WT-541J):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-8250U
+  expirationId: Acer Chromebook 714 (CB714-1WT)
+  extraInfo: 128GB
+  flip: false
+  id: Acer Chromebook 714 (CB714-1WT-541J)
+  memory: 16
+  model: Chromebook 714
+  productId: '6597503'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/1/3/2/f/6036f4f0518e618993bde0253d062676a617.pdf
+  stylus: false
+  type: chromebook
+  variant: CB714-1WT-541J
+Acer Chromebook 714 (CB714-1WT-59DB):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-8250U
+  expirationId: Acer Chromebook 714 (CB714-1WT)
+  extraInfo: 128GB
+  flip: false
+  id: Acer Chromebook 714 (CB714-1WT-59DB)
+  memory: 8
+  model: Chromebook 714
+  productId: '6650996'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/professional-model/NX.HAWEG.002
+  stylus: false
+  type: chromebook
+  variant: CB714-1WT-59DB

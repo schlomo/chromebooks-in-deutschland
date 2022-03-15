@@ -1,0 +1,66 @@
+Acer Chromebook 317 (CB317-1H-C07R):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N5100
+  expirationId: Acer Chromebook 317
+  extraInfo: 128GB, hinterleuchtete Tastatur
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AQ1EG.001
+  flip: false
+  id: Acer Chromebook 317 (CB317-1H-C07R)
+  memory: 4
+  model: Chromebook 317
+  productId: '201606511'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 17.3
+  screenTouch: false
+  specLink: ''
+  stylus: false
+  type: chromebook
+  variant: CB317-1H-C07R
+Acer Chromebook 317 (CB317-1H-C7H8):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N5100
+  expirationId: Acer Chromebook 317
+  extraInfo: 128GB
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AQ2EG.002
+  flip: false
+  id: Acer Chromebook 317 (CB317-1H-C7H8)
+  memory: 4
+  model: Chromebook 317
+  productId: '201748845'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 17.3
+  screenTouch: false
+  specLink: https://gzhls.at/blob/ldb/5/c/e/4/f25056f77046a98fce05f5baa42b207ea9ba.pdf
+  stylus: false
+  type: chromebook
+  variant: CB317-1H-C7H8
+Acer Chromebook 317 (CB317-1HT-P96U):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Pentium N6000
+  expirationId: Acer Chromebook 317
+  extraInfo: 128GB, hinterleuchtete Tastatur
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AYBEG.001
+  flip: false
+  id: Acer Chromebook 317 (CB317-1HT-P96U)
+  memory: 8
+  model: Chromebook 317
+  productId: '201713989'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 17.3
+  screenTouch: true
+  specLink: ''
+  stylus: false
+  type: chromebook
+  variant: CB317-1HT-P96U

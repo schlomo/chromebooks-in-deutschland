@@ -1,0 +1,21 @@
+Lenovo Chromebook C340-15 (81T9000E):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-8130U
+  expirationId: Lenovo C340-15
+  extraInfo: Mineral Grey
+  flip: true
+  id: Lenovo Chromebook C340-15 (81T9000E)
+  memory: 4
+  model: Chromebook C340-15
+  productId: '6836616'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: >-
+    http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo_Chromebook_C340-15_Datasheet_EN.pdf
+  stylus: false
+  type: chromebook
+  variant: 81T9000E

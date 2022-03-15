@@ -1,5 +1,14 @@
 {
     "github-actions.workflows.pinned.workflows": [
         ".github/workflows/build-release-agent.yml"
-    ]
+    ],
+    "yaml.schemas": {
+        "schema.json": "chromebooks/**/*.yaml"
+    },
+    "json.schemas": [ {
+        "fileMatch": [
+            "chromebooks/**/*.json"
+        ],
+        "url": "./schema.json"
+    }]
 }

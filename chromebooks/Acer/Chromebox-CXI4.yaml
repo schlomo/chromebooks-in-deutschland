@@ -1,0 +1,132 @@
+Acer Chromebox CXI4 (DT-Z1MEG-001):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron 5205U
+  expirationId: Acer Chromebox CXI4
+  extraInfo: 16GB maximum RAM
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4
+  flip: false
+  id: Acer Chromebox CXI4 (DT-Z1MEG-001)
+  memory: 4
+  model: Chromebox CXI4
+  productId: '2553986'
+  productProvider: geizhals
+  screenGlare: false
+  screenResolution: ''
+  screenSize: 0
+  screenTouch: false
+  specLink: https://www.acer.com/datasheets/2021/4871/CXI4/DT.Z1MEG.001.html
+  stylus: false
+  type: chromebox
+  variant: DT.Z1MEG.001
+Acer Chromebox CXI4 (DT-Z1MEH-008):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron 5205U
+  expirationId: Acer Chromebox CXI4
+  extraInfo: 16GB maximum RAM
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4
+  flip: false
+  id: Acer Chromebox CXI4 (DT-Z1MEH-008)
+  memory: 4
+  model: Chromebox CXI4
+  productId: '201523553'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: ''
+  screenSize: 0
+  screenTouch: false
+  specLink: https://www.acer.com/datasheets/2020/4871/CXI4/DT.Z1MEH.008.html
+  stylus: false
+  type: chromebox
+  variant: DT.Z1MEH.008
+Acer Chromebox CXI4 (DT-Z1MEH-009):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron 5205U
+  expirationId: Acer Chromebox CXI4
+  extraInfo: 16GB maximum RAM
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4
+  flip: false
+  id: Acer Chromebox CXI4 (DT-Z1MEH-009)
+  memory: 8
+  model: Chromebox CXI4
+  productId: '201523552'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: ''
+  screenSize: 0
+  screenTouch: false
+  specLink: https://www.acer.com/datasheets/2020/4871/CXI4/DT.Z1MEH.009.html
+  stylus: false
+  type: chromebox
+  variant: DT.Z1MEH.009
+Acer Chromebox CXI4 (DT-Z1MEH-00A):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron 5205U
+  expirationId: Acer Chromebox CXI4
+  extraInfo: 16GB maximum RAM
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4
+  flip: false
+  id: Acer Chromebox CXI4 (DT-Z1MEH-00A)
+  memory: 4
+  model: Chromebox CXI4
+  productId: '201523551'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: ''
+  screenSize: 0
+  screenTouch: false
+  specLink: https://www.acer.com/datasheets/2021/4871/CXI4/DT.Z1MEH.00A.html
+  stylus: false
+  type: chromebox
+  variant: DT.Z1MEH.00A
+Acer Chromebox CXI4 (DT-Z1NEH-004):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Core i3-10110U
+  expirationId: Acer Chromebox CXI4
+  extraInfo: 16GB maximum RAM
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4
+  flip: false
+  id: Acer Chromebox CXI4 (DT-Z1NEH-004)
+  memory: 8
+  model: Chromebox CXI4
+  productId: '201523554'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: ''
+  screenSize: 0
+  screenTouch: false
+  specLink: https://www.acer.com/datasheets/2020/4871/CXI4/DT.Z1NEH.004.html
+  stylus: false
+  type: chromebox
+  variant: DT.Z1NEH.004
+Acer Chromebox CXI4 (DT-Z1SEH-008):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Core i5-10210U
+  expirationId: Acer Chromebox CXI4
+  extraInfo: 256GB SSD, 16GB maximum RAM
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/series/acerchromeboxcxi4
+  flip: false
+  id: Acer Chromebox CXI4 (DT-Z1SEH-008)
+  memory: 8
+  model: Chromebox CXI4
+  productId: '2554015'
+  productProvider: geizhals
+  screenGlare: false
+  screenResolution: ''
+  screenSize: 0
+  screenTouch: false
+  specLink: https://www.acer.com/datasheets/2021/4871/CXI4/DT.Z1SEH.008.html
+  stylus: false
+  type: chromebox
+  variant: DT.Z1SEH.008

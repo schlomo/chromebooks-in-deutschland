@@ -1,0 +1,60 @@
+HP Chromebook x360 11 G3 EE (178B5EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4120
+  expirationId: HP Chromebook x360 11 G3 EE
+  extraInfo: Inkl. Chrome Enterprise Upgrade, 2. Kamera
+  flip: true
+  id: HP Chromebook x360 11 G3 EE (178B5EA)
+  memory: 8
+  model: Chromebook x360 11 G3 EE
+  productId: '2391160'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/8/a/0/e/531fa4ea9a883c5f77221b238fbcb4cee637.pdf
+  stylus: false
+  type: chromebook
+  variant: 178B5EA
+HP Chromebook x360 11 G3 EE (9TV01EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4020
+  expirationId: HP Chromebook x360 11 G3 EE
+  extraInfo: Inkl. Chrome Enterprise Upgrade
+  flip: true
+  id: HP Chromebook x360 11 G3 EE (9TV01EA)
+  memory: 8
+  model: Chromebook x360 11 G3 EE
+  productId: '2231776'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/4/0/0/9/761d9c5df6bfe25cadea128dea1f93ce93d7.pdf
+  stylus: false
+  type: chromebook
+  variant: 9TV01EA
+HP Chromebook x360 11 G3 EE (9TV83EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4120
+  expirationId: HP Chromebook x360 11 G3 EE
+  extraInfo: Inkl. Chrome Enterprise Upgrade
+  flip: true
+  id: HP Chromebook x360 11 G3 EE (9TV83EA)
+  memory: 8
+  model: Chromebook x360 11 G3 EE
+  productId: '2316330'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/6/9/5/7/20f9cd029806d9c8dbfeae9489f51ce6efbc.pdf
+  stylus: false
+  type: chromebook
+  variant: 9TV83EA

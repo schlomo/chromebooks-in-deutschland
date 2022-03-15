@@ -1,0 +1,105 @@
+Lenovo Flex 5 Chromebook (82B8000X):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron 5205U
+  expirationId: Lenovo Flex 5 Chromebook
+  extraInfo: USI Stylus optional
+  extraLinks:
+    Flyer: >-
+      http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf
+  flip: true
+  id: Lenovo Flex 5 Chromebook (82B8000X)
+  memory: 4
+  model: Flex 5 Chromebook
+  productId: '200427888'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B8000XGE
+  stylus: true
+  type: chromebook
+  variant: 82B8000X
+Lenovo Flex 5 Chromebook (82B8000Y):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-10110U
+  expirationId: Lenovo Flex 5 Chromebook
+  extraInfo: hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Flyer: >-
+      http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf
+    LaptopMag Review: https://www.laptopmag.com/reviews/lenovo-flex-5-chromebook-review
+    'Notebookcheck: Übersicht': >-
+      https://www.notebookcheck.com/Lenovo-Chromebook-Flex-5-13-i3-10110U.479196.0.html
+    androidcentral Review: https://www.androidcentral.com/lenovo-flex-5-chromebook-review
+    c|net Review: https://www.cnet.com/reviews/lenovo-chromebook-flex-5-review/
+  flip: true
+  id: Lenovo Flex 5 Chromebook (82B8000Y)
+  memory: 4
+  model: Flex 5 Chromebook
+  productId: '200433273'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B8000YGE
+  stylus: true
+  type: chromebook
+  variant: 82B8000Y
+Lenovo Flex 5 Chromebook (82B80010):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-10210U
+  expirationId: Lenovo Flex 5 Chromebook
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Flyer: >-
+      http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf
+    'Notebookcheck: Testbericht': >-
+      https://www.notebookcheck.com/Lenovo-IdeaPad-Flex-5-Chromebook-13IML05-im-Test-2-in-1-Geraet-mit-optionaler-Stifteingabe.530799.0.html
+    'VoWe: Vorstellung': https://vowe.net/archives/018786.html
+  flip: true
+  id: Lenovo Flex 5 Chromebook (82B80010)
+  memory: 8
+  model: Flex 5 Chromebook
+  productId: '200427889'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B80010GE
+  stylus: true
+  type: chromebook
+  variant: 82B80010
+Lenovo Flex 5 Chromebook (82B80035):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-10110U
+  expirationId: Lenovo Flex 5 Chromebook
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Flyer: >-
+      http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20Ideapad%20Flex%205%20Chromebook%20(13,%2005)_datasheet_EN.pdf
+    'VoWe: Vorstellung': https://vowe.net/archives/018786.html
+  flip: true
+  id: Lenovo Flex 5 Chromebook (82B80035)
+  memory: 8
+  model: Flex 5 Chromebook
+  productId: '200985090'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13IML05?M=82B80035GE
+  stylus: true
+  type: chromebook
+  variant: 82B80035

@@ -1,0 +1,78 @@
+Lenovo ThinkPad C13 Yoga G1 (20UX000E):
+  biometricUnlock: true
+  brand: Lenovo
+  cpu: AMD Athlon 3150C
+  expirationId: Lenovo ThinkPad C13 Yoga Chromebook Enterprise
+  extraInfo: hinterleuchtete Tastatur, USI Stylus inklusive
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_C13_Yoga_Gen_1_Chromebook/ThinkPad_C13_Yoga_Gen_1_Chromebook_Spec.pdf
+    'Netzwelt: Testbericht (andere Ausstattung)': >-
+      https://www.netzwelt.de/lenovo-thinkpad-c13-yoga-chromebook/testbericht.html
+  flip: true
+  id: Lenovo ThinkPad C13 Yoga G1 (20UX000E)
+  memory: 4
+  model: ThinkPad C13 Yoga G1
+  productId: '200986618'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/ThinkPad/ThinkPad_C13_Yoga_Gen_1_Chromebook?M=20UX000EGE
+  stylus: true
+  type: chromebook
+  variant: 20UX000E
+Lenovo ThinkPad C13 Yoga G1 (20UX000F):
+  biometricUnlock: true
+  brand: Lenovo
+  cpu: AMD Ryzen 3 3250C
+  expirationId: Lenovo ThinkPad C13 Yoga Chromebook Enterprise
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus inklusive
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_C13_Yoga_Gen_1_Chromebook/ThinkPad_C13_Yoga_Gen_1_Chromebook_Spec.pdf
+    'Netzwelt: Testbericht': >-
+      https://www.netzwelt.de/lenovo-thinkpad-c13-yoga-chromebook/testbericht.html
+  flip: true
+  id: Lenovo ThinkPad C13 Yoga G1 (20UX000F)
+  memory: 4
+  model: ThinkPad C13 Yoga G1
+  productId: '200986619'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/ThinkPad/ThinkPad_C13_Yoga_Gen_1_Chromebook?M=20UX000FGE
+  stylus: true
+  type: chromebook
+  variant: 20UX000F
+Lenovo ThinkPad C13 Yoga G1 (20UX000G):
+  biometricUnlock: true
+  brand: Lenovo
+  cpu: AMD Ryzen 5 3500C
+  expirationId: Lenovo ThinkPad C13 Yoga Chromebook Enterprise
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus inklusive
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_C13_Yoga_Gen_1_Chromebook/ThinkPad_C13_Yoga_Gen_1_Chromebook_Spec.pdf
+    'Netzwelt: Testbericht (andere Ausstattung)': >-
+      https://www.netzwelt.de/lenovo-thinkpad-c13-yoga-chromebook/testbericht.html
+  flip: true
+  id: Lenovo ThinkPad C13 Yoga G1 (20UX000G)
+  memory: 8
+  model: ThinkPad C13 Yoga G1
+  productId: '200986617'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/ThinkPad/ThinkPad_C13_Yoga_Gen_1_Chromebook?M=20UX000GGE
+  stylus: true
+  type: chromebook
+  variant: 20UX000G

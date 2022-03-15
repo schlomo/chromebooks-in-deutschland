@@ -27,7 +27,8 @@ Object.values(deviceData).map(device => {
     var errorDescriptions = [];
 
     // check that all devices have a consistent ID
-    const desiredId = `${brand} ${model} (${variant})`.replaceAll(".", "-");
+    const brandModelVariant = `${brand} ${model} (${variant})`;
+    const desiredId = brandModelVariant.replaceAll(".", "-");
     if (!(id === desiredId)) {
         errorDescriptions.push(`Mismatched device ID >${id}<\n            B-M-V is >${desiredId}<`);
     }

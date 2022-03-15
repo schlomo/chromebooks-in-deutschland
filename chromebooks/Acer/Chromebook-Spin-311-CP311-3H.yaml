@@ -1,0 +1,70 @@
+Acer Chromebook Spin 311 (CP311-3H-K2RJ):
+  biometricUnlock: false
+  brand: Acer
+  cpu: MediaTek MT8183
+  expirationId: Acer Chromebook Spin 311 (CP311-3H)
+  extraInfo: ''
+  extraLinks:
+    Review: >-
+      https://laptopmedia.com/review/acer-chromebook-spin-311-cp311-3h-review-two-days-of-battery-life-thanks-to-the-arm-soc/
+  flip: true
+  id: Acer Chromebook Spin 311 (CP311-3H-K2RJ)
+  memory: 4
+  model: Chromebook Spin 311
+  productId: '200432465'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.HUVEG.002
+  stylus: false
+  type: chromebook
+  variant: CP311-3H-K2RJ
+Acer Chromebook Spin 311 (CP311-3H-K7MM):
+  biometricUnlock: false
+  brand: Acer
+  cpu: MediaTek MT8183
+  expirationId: Acer Chromebook Spin 311 (CP311-3H)
+  extraInfo: ''
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.HUVEG.007
+    Review: >-
+      https://laptopmedia.com/review/acer-chromebook-spin-311-cp311-3h-review-two-days-of-battery-life-thanks-to-the-arm-soc/
+  flip: true
+  id: Acer Chromebook Spin 311 (CP311-3H-K7MM)
+  memory: 4
+  model: Chromebook Spin 311
+  productId: '201081537'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/1/5/0/4/7ebe17a0f12326cf966648591007b65d6462.pdf
+  stylus: false
+  type: chromebook
+  variant: CP311-3H-K7MM
+Acer Chromebook Spin 311 (CP311-3H-K95V):
+  biometricUnlock: false
+  brand: Acer
+  cpu: MediaTek MT8183
+  expirationId: Acer Chromebook Spin 311 (CP311-3H)
+  extraInfo: ''
+  extraLinks:
+    Review: >-
+      https://laptopmedia.com/review/acer-chromebook-spin-311-cp311-3h-review-two-days-of-battery-life-thanks-to-the-arm-soc/
+  flip: true
+  id: Acer Chromebook Spin 311 (CP311-3H-K95V)
+  memory: 4
+  model: Chromebook Spin 311
+  productId: '200432468'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/9/e/9/3/54ff8917aff118823d246dc8566daf8fe73c.pdf
+  stylus: false
+  type: chromebook
+  variant: CP311-3H-K95V

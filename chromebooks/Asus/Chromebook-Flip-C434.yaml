@@ -1,0 +1,24 @@
+Asus Chromebook Flip C434 (C434TA-AI0264):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core m3-8100Y
+  expirationId: Asus Chromebook Flip C434
+  extraInfo: hinterleuchtete Tastatur
+  extraLinks:
+    'AndroidPIT: Testbericht': https://www.androidpit.de/asus-chromebook-flip-c434-test
+    'Notebookcheck: Detaillierter Testbericht': >-
+      https://www.notebookcheck.com/Asus-Chromebook-Flip-C434TA-im-Test-Lautloses-Convertible-bietet-gute-Ausdauerwerte.448999.0.html
+  flip: true
+  id: Asus Chromebook Flip C434 (C434TA-AI0264)
+  memory: 8
+  model: Chromebook Flip C434
+  productId: '6790240'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/a/c/f/b/71fd009677c61aaf44935a51252f3e99cda0.pdf
+  stylus: false
+  type: chromebook
+  variant: C434TA-AI0264

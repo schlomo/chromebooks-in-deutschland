@@ -1,0 +1,240 @@
+Lenovo IdeaPad 5 Chromebook (82M8001J):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8001J)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: '201769468'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8001JGE
+  stylus: false
+  type: chromebook
+  variant: 82M8001J
+Lenovo IdeaPad 5 Chromebook (82M8001L):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Pentium 7505
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8001L)
+  memory: 4
+  model: IdeaPad 5 Chromebook
+  productId: '201749892'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8001LGE
+  stylus: false
+  type: chromebook
+  variant: 82M8001L
+Lenovo IdeaPad 5 Chromebook (82M8001W):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Pentium 7505
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8001W)
+  memory: 4
+  model: IdeaPad 5 Chromebook
+  productId: '201543296'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8001WGE
+  stylus: false
+  type: chromebook
+  variant: 82M8001W
+Lenovo IdeaPad 5 Chromebook (82M8001X):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8001X)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: '201845522'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8001XGE
+  stylus: false
+  type: chromebook
+  variant: 82M8001X
+Lenovo IdeaPad 5 Chromebook (82M8001Y):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 128GB SSD
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8001Y)
+  memory: 4
+  model: IdeaPad 5 Chromebook
+  productId: '201802329'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8001YGE
+  stylus: false
+  type: chromebook
+  variant: 82M8001Y
+Lenovo IdeaPad 5 Chromebook (82M8002A):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8002A)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: '201789048'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8002AGE
+  stylus: false
+  type: chromebook
+  variant: 82M8002A
+Lenovo IdeaPad 5 Chromebook (82M8002B):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 128GB SSD
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8002B)
+  memory: 4
+  model: IdeaPad 5 Chromebook
+  productId: '201789049'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8002BGE
+  stylus: false
+  type: chromebook
+  variant: 82M8002B
+Lenovo IdeaPad 5 Chromebook (82M8003A):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8003A)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: '201847303'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8003AGE
+  stylus: false
+  type: chromebook
+  variant: 82M8003A
+Lenovo IdeaPad 5 Chromebook (82M8003N):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8003N)
+  memory: 4
+  model: IdeaPad 5 Chromebook
+  productId: '201790556'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8003NGE
+  stylus: false
+  type: chromebook
+  variant: 82M8003N
+Lenovo IdeaPad 5 Chromebook (82M8003P):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 512GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8003P)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: '201707390'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8003PGE
+  stylus: false
+  type: chromebook
+  variant: 82M8003P

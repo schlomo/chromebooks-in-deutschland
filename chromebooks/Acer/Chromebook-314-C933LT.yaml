@@ -1,0 +1,40 @@
+Acer Chromebook 314 (C933LT-P7SA):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Pentium N5030
+  expirationId: Acer Chromebook 314 (C933LT)
+  extraInfo: integriertes LTE-Modem
+  flip: false
+  id: Acer Chromebook 314 (C933LT-P7SA)
+  memory: 8
+  model: Chromebook 314
+  productId: '201464052'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/f/c/c/d/54fda9b7bde0d2f569c3946853fafff97ff7.pdf
+  stylus: false
+  type: chromebook
+  variant: C933LT-P7SA
+Acer Chromebook 314 (C933LT-P8WA):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Pentium N5030
+  expirationId: Acer Chromebook 314 (C933LT)
+  extraInfo: integriertes LTE-Modem
+  flip: false
+  id: Acer Chromebook 314 (C933LT-P8WA)
+  memory: 8
+  model: Chromebook 314
+  productId: '200743030'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/6/c/f/2/69690ee0f348bb1f80259da32015047310d9.pdf
+  stylus: false
+  type: chromebook
+  variant: C933LT-P8WA

@@ -1,0 +1,59 @@
+HP Chromebook x360 11 G2 EE (6MQ96EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4000
+  expirationId: HP Chromebook x360 11 G2 EE
+  extraInfo: Evtl. inklusive EMR stylus - bitte prüfen
+  flip: true
+  id: HP Chromebook x360 11 G2 EE (6MQ96EA)
+  memory: 4
+  model: Chromebook x360 11 G2 EE
+  productId: '2187263'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  stylus: true
+  type: chromebook
+  variant: 6MQ96EA
+HP Chromebook x360 11 G2 EE (6MR40EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4000
+  expirationId: HP Chromebook x360 11 G2 EE
+  extraInfo: ''
+  flip: true
+  id: HP Chromebook x360 11 G2 EE (6MR40EA)
+  memory: 8
+  model: Chromebook x360 11 G2 EE
+  productId: '6681815'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://www8.hp.com/h20195/V2/GetPDF.aspx/4aa7-5093dee.pdf
+  stylus: false
+  type: chromebook
+  variant: 6MR40EA
+HP Chromebook x360 11 G2 EE (6MS14EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4100
+  expirationId: HP Chromebook x360 11 G2 EE
+  extraInfo: ''
+  flip: true
+  id: HP Chromebook x360 11 G2 EE (6MS14EA)
+  memory: 8
+  model: Chromebook x360 11 G2 EE
+  productId: '2240186'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/8/c/e/9/f335f663e9dd4182617498b18b1dd6b51a66.pdf
+  stylus: false
+  type: chromebook
+  variant: 6MS14EA

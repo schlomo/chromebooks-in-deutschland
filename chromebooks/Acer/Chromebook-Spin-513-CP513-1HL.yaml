@@ -1,0 +1,93 @@
+Acer Chromebook Spin 513 (CP513-1HL-S0EF):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Qualcomm Snapdragon 7180c
+  expirationId: Acer Chromebook Spin 513 (CP513-1HL)
+  extraInfo: 128GB, integriertes LTE-Modem, USI Stylus optional
+  extraLinks:
+    'Android Central: Review': https://www.androidcentral.com/acer-chromebook-spin-513-review
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AA0EG.001
+  flip: true
+  id: Acer Chromebook Spin 513 (CP513-1HL-S0EF)
+  memory: 8
+  model: Chromebook Spin 513
+  productId: '201120983'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/4/9/e/3/25f5bfa4bec248180965a2d345554997ac6c.pdf
+  stylus: true
+  type: chromebook
+  variant: CP513-1HL-S0EF
+Acer Chromebook Spin 513 (CP513-1HL-S3ZA):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Qualcomm Snapdragon 7180c
+  expirationId: Acer Chromebook Spin 513 (CP513-1HL)
+  extraInfo: 128GB, integriertes LTE-Modem, USI Stylus optional
+  extraLinks:
+    'Android Central: Review': https://www.androidcentral.com/acer-chromebook-spin-513-review
+    Serienhomepage: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin513
+  flip: true
+  id: Acer Chromebook Spin 513 (CP513-1HL-S3ZA)
+  memory: 8
+  model: Chromebook Spin 513
+  productId: '201840923'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: ''
+  stylus: true
+  type: chromebook
+  variant: CP513-1HL-S3ZA
+Acer Chromebook Spin 513 (CP513-1HL-S7E7):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Qualcomm Snapdragon 7180c
+  expirationId: Acer Chromebook Spin 513 (CP513-1HL)
+  extraInfo: >-
+    128GB, integriertes LTE-Modem, inklusive Chrome Enterprise Upgrade, USI
+    Stylus optional
+  extraLinks:
+    'Android Central: Review': https://www.androidcentral.com/acer-chromebook-spin-513-review
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/professional-model/NX.AA0EG.002
+  flip: true
+  id: Acer Chromebook Spin 513 (CP513-1HL-S7E7)
+  memory: 8
+  model: Chromebook Spin 513
+  productId: '201120984'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/d/9/4/4/7826b6da0582aacd5a6098e4848c86402b4a.pdf
+  stylus: true
+  type: chromebook
+  variant: CP513-1HL-S7E7
+Acer Chromebook Spin 513 (CP513-1HL-S98M):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Qualcomm Snapdragon 7c
+  expirationId: Acer Chromebook Spin 513 (CP513-1HL)
+  extraInfo: 128GB, integriertes LTE-Modem, USI Stylus optional
+  extraLinks:
+    'Android Central: Review': https://www.androidcentral.com/acer-chromebook-spin-513-review
+  flip: true
+  id: Acer Chromebook Spin 513 (CP513-1HL-S98M)
+  memory: 8
+  model: Chromebook Spin 513
+  productId: '201394477'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.HX1EG.002
+  stylus: true
+  type: chromebook
+  variant: CP513-1HL-S98M

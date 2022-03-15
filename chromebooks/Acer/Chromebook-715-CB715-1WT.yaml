@@ -1,0 +1,100 @@
+Acer Chromebook 715 (CB715-1WT-33NB):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i3-8130U
+  expirationId: Acer Chromebook 715 (CB715-1WT)
+  extraInfo: hinterleuchtete Tastatur
+  flip: false
+  id: Acer Chromebook 715 (CB715-1WT-33NB)
+  memory: 8
+  model: Chromebook 715
+  productId: '6597486'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/5/3/3/7/b68b08c9c9b5b814ef61d3167ce451d3f77e.pdf
+  stylus: false
+  type: chromebook
+  variant: CB715-1WT-33NB
+Acer Chromebook 715 (CB715-1WT-3415):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i3-8130U
+  expirationId: Acer Chromebook 715 (CB715-1WT)
+  extraInfo: hinterleuchtete Tastatur, 128GB
+  flip: false
+  id: Acer Chromebook 715 (CB715-1WT-3415)
+  memory: 8
+  model: Chromebook 715
+  productId: '200344204'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.HB1EG.006
+  stylus: false
+  type: chromebook
+  variant: CB715-1WT-3415
+Acer Chromebook 715 (CB715-1WT-37GM):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i3-8130U
+  expirationId: Acer Chromebook 715 (CB715-1WT)
+  extraInfo: hinterleuchtete Tastatur
+  flip: false
+  id: Acer Chromebook 715 (CB715-1WT-37GM)
+  memory: 8
+  model: Chromebook 715
+  productId: '7075233'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: ''
+  stylus: false
+  type: chromebook
+  variant: CB715-1WT-37GM
+Acer Chromebook 715 (CB715-1WT-5368):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-8250U
+  expirationId: Acer Chromebook 715 (CB715-1WT)
+  extraInfo: hinterleuchtete Tastatur, 128GB
+  flip: false
+  id: Acer Chromebook 715 (CB715-1WT-5368)
+  memory: 16
+  model: Chromebook 715
+  productId: '6578991'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: https://at.ingrammicro.eu/content/pdf/865EA69.pdf
+  stylus: false
+  type: chromebook
+  variant: CB715-1WT-5368
+Acer Chromebook 715 (CB715-1WT-56SP):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-8250U
+  expirationId: Acer Chromebook 715 (CB715-1WT)
+  extraInfo: hinterleuchtete Tastatur
+  flip: false
+  id: Acer Chromebook 715 (CB715-1WT-56SP)
+  memory: 8
+  model: Chromebook 715
+  productId: '7075227'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: ''
+  stylus: false
+  type: chromebook
+  variant: CB715-1WT-56SP

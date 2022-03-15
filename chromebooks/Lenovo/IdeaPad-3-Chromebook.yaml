@@ -1,0 +1,377 @@
+Lenovo IdeaPad 3 Chromebook (82C1000Q):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Platinum Grey
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82C1000Q)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '200344255'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14IGL05?M=82C1000QGE
+  stylus: false
+  type: chromebook
+  variant: 82C1000Q
+Lenovo IdeaPad 3 Chromebook (82C1000R):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Abyss Blue
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82C1000R)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '200598389'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14IGL05?M=82C1000RGE
+  stylus: false
+  type: chromebook
+  variant: 82C1000R
+Lenovo IdeaPad 3 Chromebook (82C1000S):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Platinum Grey
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82C1000S)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '200984528'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14IGL05?M=82C1000SGE
+  stylus: false
+  type: chromebook
+  variant: 82C1000S
+Lenovo IdeaPad 3 Chromebook (82C1001Y):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Platinum Grey
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82C1001Y)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '201263680'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14IGL05?M=82C1001YGE
+  stylus: false
+  type: chromebook
+  variant: 82C1001Y
+Lenovo IdeaPad 3 Chromebook (82KN0006):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8183
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: ''
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14M836_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82KN0006)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '201468189'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14M836?M=82KN0006GE
+  stylus: false
+  type: chromebook
+  variant: 82KN0006
+Lenovo IdeaPad 3 Chromebook (82KN0007):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8183
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: ''
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14M836_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82KN0007)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '201468568'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14M836?M=82KN0007GE
+  stylus: false
+  type: chromebook
+  variant: 82KN0007
+Lenovo IdeaPad 3 Chromebook (82KN0022):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8183
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: ''
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14M836_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82KN0022)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '201728988'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14M836?M=82KN0022GE
+  stylus: false
+  type: chromebook
+  variant: 82KN0022
+Lenovo IdeaPad 3 Chromebook (82KN0029):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8183
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: ''
+  extraLinks:
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14M836_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82KN0029)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '201707389'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14M836?M=82KN0029GE
+  stylus: false
+  type: chromebook
+  variant: 82KN0029
+Lenovo IdeaPad 3 Chromebook (82MY0009):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: AMD 3015Ce
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: 128GB
+  extraLinks:
+    'Chromebooks Billiger: Kurztest': >-
+      https://www.chromebooksbilliger.de/chromebook-test-lenovo-ideapad-3-chromebook
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14APO6_Datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82MY0009)
+  memory: 8
+  model: IdeaPad 3 Chromebook
+  productId: '201790548'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14APO6?M=82MY0009GE
+  stylus: false
+  type: chromebook
+  variant: 82MY0009
+Lenovo IdeaPad 3 Chromebook (82MY000G):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: AMD 3015Ce
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: ''
+  extraLinks:
+    'Chromebooks Billiger: Kurztest': >-
+      https://www.chromebooksbilliger.de/chromebook-test-lenovo-ideapad-3-chromebook
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14APO6_Datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82MY000G)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: '201582752'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14APO6?M=82MY000GGE
+  stylus: false
+  type: chromebook
+  variant: 82MY000G
+Lenovo IdeaPad 3 Chromebook (82MY000H):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: AMD 3015Ce
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: 128GB, hinterleuchtete Tastatur
+  extraLinks:
+    'Chromebooks Billiger: Kurztest': >-
+      https://www.chromebooksbilliger.de/chromebook-test-lenovo-ideapad-3-chromebook
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14APO6_Datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82MY000H)
+  memory: 8
+  model: IdeaPad 3 Chromebook
+  productId: '201606183'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14APO6?M=82MY000HGE
+  stylus: false
+  type: chromebook
+  variant: 82MY000H
+Lenovo IdeaPad Flex 3 Chromebook (82BB000W):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Almond
+  flip: true
+  id: Lenovo IdeaPad Flex 3 Chromebook (82BB000W)
+  memory: 4
+  model: IdeaPad Flex 3 Chromebook
+  productId: '200510203'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11IGL05?M=82BB000WGE
+  stylus: false
+  type: chromebook
+  variant: 82BB000W
+Lenovo IdeaPad Flex 3 Chromebook (82BB000X):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Abyss Blue, 128GB
+  flip: true
+  id: Lenovo IdeaPad Flex 3 Chromebook (82BB000X)
+  memory: 8
+  model: IdeaPad Flex 3 Chromebook
+  productId: '200555708'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11IGL05?M=82BB000XGE
+  stylus: false
+  type: chromebook
+  variant: 82BB000X
+Lenovo IdeaPad Flex 3 Chromebook (82BB001K):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Almond, 128GB
+  flip: true
+  id: Lenovo IdeaPad Flex 3 Chromebook (82BB001K)
+  memory: 8
+  model: IdeaPad Flex 3 Chromebook
+  productId: '200922956'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11IGL05?M=82BB001KGE
+  stylus: false
+  type: chromebook
+  variant: 82BB001K
+Lenovo IdeaPad Flex 3 Chromebook (82BB002B):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4020
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Abyss Blue
+  flip: true
+  id: Lenovo IdeaPad Flex 3 Chromebook (82BB002B)
+  memory: 4
+  model: IdeaPad Flex 3 Chromebook
+  productId: '200922951'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11IGL05?M=82BB002BGE
+  stylus: false
+  type: chromebook
+  variant: 82BB002B
+Lenovo IdeaPad Flex 3 Chromebook (82HG0003):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8173C
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Platinum Grey
+  extraLinks:
+    Datenblatt (Serie): https://gzhls.at/blob/ldb/6/c/9/b/6b229f5ddb7ecdd0f9a8e603078ec703343a.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 3 Chromebook (82HG0003)
+  memory: 4
+  model: IdeaPad Flex 3 Chromebook
+  productId: '201062860'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11M735?M=82HG0003GE
+  stylus: false
+  type: chromebook
+  variant: 82HG0003
+Lenovo IdeaPad Flex 3 Chromebook (82HG0004):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8173C
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Platinum Grey
+  extraLinks:
+    Datenblatt (Serie): https://gzhls.at/blob/ldb/6/c/9/b/6b229f5ddb7ecdd0f9a8e603078ec703343a.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 3 Chromebook (82HG0004)
+  memory: 4
+  model: IdeaPad Flex 3 Chromebook
+  productId: '2479387'
+  productProvider: geizhals
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11M735?M=82HG0004GE
+  stylus: false
+  type: chromebook
+  variant: 82HG0004

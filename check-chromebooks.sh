@@ -56,7 +56,7 @@ if test "$validate" ; then
             echo "$d <-> $filtered"
             let errors++
         fi
-    done < <( sed -ne '/variant.*:/s/.*"\(.*\)"/\1/p' chromebooks/*.json )
+    done < <( sed -ne '/variant.*:/s/.*"\(.*\)"/\1/p' chromebooks/**/*.json )
     if (( errors==0 )) ; then
         echo "OK All $count devices matched by regex"
         exit 0
@@ -74,7 +74,7 @@ devices=(
 res=()
 let red=0 green=0
 for device in "${devices[@]}"; do
-    if grep -q "\"$device\"" chromebooks/* ; then
+    if grep -q "\"$device\"" chromebooks/**/*.json ; then
         res+=(" 🟢 $device")
         let green++
     else

@@ -1,0 +1,26 @@
+{
+  "Lenovo Yoga Chromebook C630 (81JX001T)": {
+    "biometricUnlock": false,
+    "brand": "Lenovo",
+    "cpu": "Intel Core i5-8250U",
+    "expirationId": "Lenovo Yoga C630 Chromebook",
+    "extraInfo": "hinterleuchtete Tastatur, 128GB",
+    "extraLinks": {
+      "Notebookcheck: Detaillierter Testbericht": "https://www.notebookcheck.com/Test-Lenovo-Yoga-Chromebook-C630-Convertible.410765.0.html"
+    },
+    "flip": true,
+    "id": "Lenovo Yoga Chromebook C630 (81JX001T)",
+    "memory": 8,
+    "model": "Yoga Chromebook C630",
+    "productId": "6850007",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 15.6,
+    "screenTouch": true,
+    "specLink": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/Yoga_Chromebook_C630_Datasheet_EN.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "81JX001T"
+  }
+}

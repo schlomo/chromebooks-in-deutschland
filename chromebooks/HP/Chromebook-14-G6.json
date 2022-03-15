@@ -1,0 +1,42 @@
+{
+  "HP Chromebook 14 G6 (9TX91EA)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Celeron N4020",
+    "expirationId": "HP Chromebook 14 G6",
+    "flip": false,
+    "id": "HP Chromebook 14 G6 (9TX91EA)",
+    "memory": 4,
+    "model": "Chromebook 14 G6",
+    "productId": "200430180",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/4AA7-6849DEE.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "9TX91EA"
+  },
+  "HP Chromebook 14 G6 (9VX72EA)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Celeron N4120",
+    "expirationId": "HP Chromebook 14 G6",
+    "flip": false,
+    "id": "HP Chromebook 14 G6 (9VX72EA)",
+    "memory": 8,
+    "model": "Chromebook 14 G6",
+    "productId": "200430181",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/4AA7-6849DEE.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "9VX72EA"
+  }
+}

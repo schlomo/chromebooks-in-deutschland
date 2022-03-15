@@ -1,0 +1,22 @@
+{
+  "HP Chromebook 11 G7 EE (6MR41EA)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Celeron N4100",
+    "expirationId": "HP Chromebook 11 G7 EE",
+    "flip": false,
+    "id": "HP Chromebook 11 G7 EE (6MR41EA)",
+    "memory": 4,
+    "model": "Chromebook 11 G7 EE",
+    "productId": "6602755",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1366x768",
+    "screenSize": 11.6,
+    "screenTouch": false,
+    "specLink": "https://xtreme.metacomp.de/Shop/DE/Product/Datasheet/3943/2954012",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "6MR41EA"
+  }
+}

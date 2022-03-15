@@ -1,0 +1,23 @@
+{
+  "Acer ChromeBook 311 (CB311-9HT-C31C)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron N4000",
+    "expirationId": "Acer Chromebook 311 (CB311-9HT)",
+    "extraInfo": "",
+    "flip": false,
+    "id": "Acer ChromeBook 311 (CB311-9HT-C31C)",
+    "memory": 4,
+    "model": "ChromeBook 311",
+    "productId": "6950800",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1366x768",
+    "screenSize": 11.6,
+    "screenTouch": true,
+    "specLink": "https://www.acer.com/ac/de/DE/content/model/NX.HKGEV.001",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CB311-9HT-C31C"
+  }
+}

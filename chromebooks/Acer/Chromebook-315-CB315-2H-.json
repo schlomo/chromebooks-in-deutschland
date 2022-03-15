@@ -1,0 +1,22 @@
+{
+  "Acer Chromebook 315 (CB315-2H-4451)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "AMD A4 9120C",
+    "expirationId": "Acer Chromebook 315 (CB315-2H)",
+    "flip": false,
+    "id": "Acer Chromebook 315 (CB315-2H-4451)",
+    "memory": 4,
+    "model": "Chromebook 315",
+    "productId": "6620163",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1366x768",
+    "screenSize": 15.6,
+    "screenTouch": false,
+    "specLink": "",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "CB315-2H-4451"
+  }
+}

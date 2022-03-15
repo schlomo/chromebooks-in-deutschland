@@ -1,0 +1,23 @@
+{
+  "Acer Chromebook 314 (C933L-C87D)": {
+    "biometricUnlock": false,
+    "brand": "Acer",
+    "cpu": "Intel Celeron N4120",
+    "expirationId": "Acer Chromebook 314 (C933L)",
+    "extraInfo": "integriertes LTE-Modem",
+    "flip": false,
+    "id": "Acer Chromebook 314 (C933L-C87D)",
+    "memory": 4,
+    "model": "Chromebook 314",
+    "productId": "200879986",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://gzhls.at/blob/ldb/4/0/7/9/4912b7895788ae3b070236d71f9aa5ed74eb.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "C933L-C87D"
+  }
+}

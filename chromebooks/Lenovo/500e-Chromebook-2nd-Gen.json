@@ -1,0 +1,23 @@
+{
+  "Lenovo 500e Chromebook 2nd Gen (81MC0009)": {
+    "biometricUnlock": false,
+    "brand": "Lenovo",
+    "cpu": "Intel Celeron N4100",
+    "expirationId": "Lenovo 500e Chromebook 2nd Gen",
+    "extraInfo": "2. Kamera, EMR Stylus inklusive",
+    "flip": true,
+    "id": "Lenovo 500e Chromebook 2nd Gen (81MC0009)",
+    "memory": 8,
+    "model": "500e Chromebook 2nd Gen",
+    "productId": "6720891",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1366x768",
+    "screenSize": 11.6,
+    "screenTouch": true,
+    "specLink": "http://psref.lenovo.com/syspool/Sys/PDF/datasheet/lenovo_500e_chromebook_2nd_gen_datasheet_EN.pdf",
+    "stylus": true,
+    "type": "chromebook",
+    "variant": "81MC0009"
+  }
+}

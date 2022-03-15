@@ -1,0 +1,23 @@
+{
+  "HP Chromebook x360 11MK G3 EE (305U8EA)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "MediaTek MT8183",
+    "expirationId": "HP Chromebook x360 11MK G3 EE",
+    "extraInfo": "Inkl. Chrome Enterprise Upgrade, 2. Kamera",
+    "flip": true,
+    "id": "HP Chromebook x360 11MK G3 EE (305U8EA)",
+    "memory": 4,
+    "model": "Chromebook x360 11MK G3 EE",
+    "productId": "201450052",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1366x768",
+    "screenSize": 11.6,
+    "screenTouch": true,
+    "specLink": "https://gzhls.at/blob/ldb/d/e/1/e/5b86cc52d29276098c6f5c6e812e58d77e50.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "305U8EA"
+  }
+}

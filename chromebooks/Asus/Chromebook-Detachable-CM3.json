@@ -1,0 +1,50 @@
+{
+  "Asus Chromebook Detachable CM3000 (CM3000DVA-HT0011)": {
+    "biometricUnlock": false,
+    "brand": "Asus",
+    "cpu": "MediaTek MT8183",
+    "expirationId": "Asus Chromebook Detachable CM3",
+    "extraInfo": "abnehmbare Tastatur, USI Stylus inklusive",
+    "extraLinks": {
+      "Tabletblog Testbericht": "https://www.tabletblog.de/asus-chromebook-cm3-test/"
+    },
+    "flip": true,
+    "id": "Asus Chromebook Detachable CM3000 (CM3000DVA-HT0011)",
+    "memory": 4,
+    "model": "Chromebook Detachable CM3000",
+    "productId": "201195202",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1920x1080",
+    "screenSize": 10.5,
+    "screenTouch": true,
+    "specLink": "https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Detachable-CM3-CM3000/techspec/",
+    "stylus": true,
+    "type": "chromebook",
+    "variant": "CM3000DVA-HT0011"
+  },
+  "Asus Chromebook Detachable CM3000 (CM3000DVA-HT0012)": {
+    "biometricUnlock": false,
+    "brand": "Asus",
+    "cpu": "MediaTek MT8183",
+    "expirationId": "Asus Chromebook Detachable CM3",
+    "extraInfo": "128GB, abnehmbare Tastatur, USI Stylus inklusive",
+    "extraLinks": {
+      "Tabletblog Testbericht": "https://www.tabletblog.de/asus-chromebook-cm3-test/"
+    },
+    "flip": true,
+    "id": "Asus Chromebook Detachable CM3000 (CM3000DVA-HT0012)",
+    "memory": 4,
+    "model": "Chromebook Detachable CM3000",
+    "productId": "201485670",
+    "productProvider": "idealo",
+    "screenGlare": true,
+    "screenResolution": "1920x1080",
+    "screenSize": 10.5,
+    "screenTouch": true,
+    "specLink": "https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Detachable-CM3-CM3000/techspec/",
+    "stylus": true,
+    "type": "chromebook",
+    "variant": "CM3000DVA-HT0012"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "HP Pro c640 G2 Chromebook (32R72EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i5-1145G7",
+    "disabled": true,
+    "expirationId": "HP Pro c640 G2 Chromebook Enterprise",
+    "extraInfo": "hinterleuchtete Tastatur, inkl. Chrome Enterprise Upgrade",
+    "extraLinks": {
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07581930.pdf"
+    },
+    "flip": false,
+    "id": "HP Pro c640 G2 Chromebook (32R72EA)",
+    "memory": 8,
+    "model": "Pro c640 G2 Chromebook",
+    "productId": "2580731",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": true,
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "32R72EA"
+  },
+  "HP Pro c640 G2 Chromebook (32R73EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i3-1115G4",
+    "disabled": true,
+    "expirationId": "HP Pro c640 G2 Chromebook Enterprise",
+    "extraInfo": "hinterleuchtete Tastatur, inkl. Chrome Enterprise Upgrade",
+    "extraLinks": {
+      "Datenblatt (Serie)": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07581930.pdf"
+    },
+    "flip": false,
+    "id": "HP Pro c640 G2 Chromebook (32R73EA)",
+    "memory": 8,
+    "model": "Pro c640 G2 Chromebook",
+    "productId": "2580636",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": true,
+    "specLink": "https://pcb.inc.hp.com/dc/api/productsheet/de-de/2100865653/pdf/32R73EA.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "32R73EA"
+  }
+}

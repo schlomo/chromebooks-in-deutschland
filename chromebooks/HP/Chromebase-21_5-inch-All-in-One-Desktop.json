@@ -1,0 +1,23 @@
+{
+  "HP Chromebase 21-5 inch All-in-One Desktop (22-aa0000ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "Intel Core i3-10110U",
+    "expirationId": "HP Chromebase 21_5 inch All-in-One Desktop",
+    "extraInfo": "256GB SSD, inklusive Bluetooth Tastatur und Maus",
+    "flip": true,
+    "id": "HP Chromebase 21-5 inch All-in-One Desktop (22-aa0000ng)",
+    "memory": 8,
+    "model": "Chromebase 21.5 inch All-in-One Desktop",
+    "productId": "201534623",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 21.5,
+    "screenTouch": true,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c07621265.pdf",
+    "stylus": false,
+    "type": "chromebase",
+    "variant": "22-aa0000ng"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "HP Chromebook 11A G8 EE (2D338EA)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "AMD A4 9120C",
+    "expirationId": "HP Chromebook 11A G8 EE",
+    "flip": false,
+    "id": "HP Chromebook 11A G8 EE (2D338EA)",
+    "memory": 4,
+    "model": "Chromebook 11A G8 EE",
+    "productId": "200786622",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1366x768",
+    "screenSize": 11.6,
+    "screenTouch": false,
+    "specLink": "https://gzhls.at/blob/ldb/c/a/a/d/be4726b5b3087528cb1e78f0c79a3f11c3d0.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "2D338EA"
+  }
+}

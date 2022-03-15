@@ -1,0 +1,42 @@
+{
+  "HP Chromebook 14 (2019) (14-db0003ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "AMD A6 9220C",
+    "expirationId": "HP Chromebook 14-db0xxx",
+    "flip": false,
+    "id": "HP Chromebook 14 (2019) (14-db0003ng)",
+    "memory": 4,
+    "model": "Chromebook 14 (2019)",
+    "productId": "6602517",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06294353.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "14-db0003ng"
+  },
+  "HP Chromebook 14 (2019) (14-db0004ng)": {
+    "biometricUnlock": false,
+    "brand": "HP",
+    "cpu": "AMD A4 9120C",
+    "expirationId": "HP Chromebook 14-db0xxx",
+    "flip": false,
+    "id": "HP Chromebook 14 (2019) (14-db0004ng)",
+    "memory": 4,
+    "model": "Chromebook 14 (2019)",
+    "productId": "200530075",
+    "productProvider": "idealo",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://www8.hp.com/h20195/v2/GetPDF.aspx/c06713866.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "14-db0004ng"
+  }
+}

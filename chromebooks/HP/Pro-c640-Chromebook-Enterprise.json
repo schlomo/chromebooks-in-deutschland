@@ -1,0 +1,103 @@
+{
+  "HP Pro c640 Chromebook Enterprise (10X57EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i3-10110U",
+    "expirationId": "HP Pro c640 Chromebook Enterprise",
+    "extraInfo": "hinterleuchtete Tastatur",
+    "extraLinks": {
+      "LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+      "androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+    },
+    "flip": false,
+    "id": "HP Pro c640 Chromebook Enterprise (10X57EA)",
+    "memory": 8,
+    "model": "Pro c640 Chromebook Enterprise",
+    "productId": "2315370",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06678014.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "10X57EA"
+  },
+  "HP Pro c640 Chromebook Enterprise (10X58EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i5-10310U",
+    "expirationId": "HP Pro c640 Chromebook Enterprise",
+    "extraInfo": "hinterleuchtete Tastatur",
+    "extraLinks": {
+      "LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+      "androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+    },
+    "flip": false,
+    "id": "HP Pro c640 Chromebook Enterprise (10X58EA)",
+    "memory": 8,
+    "model": "Pro c640 Chromebook Enterprise",
+    "productId": "2315362",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "10X58EA"
+  },
+  "HP Pro c640 Chromebook Enterprise (10X59EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i7-10610U",
+    "expirationId": "HP Pro c640 Chromebook Enterprise",
+    "extraInfo": "128GB, hinterleuchtete Tastatur",
+    "extraLinks": {
+      "Datenblatt (Serie)": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c06678014",
+      "LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+      "androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+    },
+    "flip": false,
+    "id": "HP Pro c640 Chromebook Enterprise (10X59EA)",
+    "memory": 16,
+    "model": "Pro c640 Chromebook Enterprise",
+    "productId": "2315367",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://gzhls.at/blob/ldb/9/0/c/1/cb086f7bca88d5b74c181d30593f278bdcbc.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "10X59EA"
+  },
+  "HP Pro c640 Chromebook Enterprise (10X60EA)": {
+    "biometricUnlock": true,
+    "brand": "HP",
+    "cpu": "Intel Core i5-10310U",
+    "expirationId": "HP Pro c640 Chromebook Enterprise",
+    "extraInfo": "hinterleuchtete Tastatur, 128GB",
+    "extraLinks": {
+      "LaptopMag Review": "https://www.laptopmag.com/reviews/hp-pro-c640-chrome-enterprise-review",
+      "androidcentral Review": "https://www.androidcentral.com/hp-pro-c640-chromebook-enterprise-review"
+    },
+    "flip": false,
+    "id": "HP Pro c640 Chromebook Enterprise (10X60EA)",
+    "memory": 16,
+    "model": "Pro c640 Chromebook Enterprise",
+    "productId": "2315265",
+    "productProvider": "geizhals",
+    "screenGlare": false,
+    "screenResolution": "1920x1080",
+    "screenSize": 14,
+    "screenTouch": false,
+    "specLink": "https://h20195.www2.hp.com/v2/getpdf.aspx/c06678014.pdf",
+    "stylus": false,
+    "type": "chromebook",
+    "variant": "10X60EA"
+  }
+}

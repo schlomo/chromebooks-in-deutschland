@@ -30,5 +30,8 @@
     "firebase-tools": "^9.22.0",
     "lambda-local": "^2.0.0"
   },
+  "resolutions": {
+    "follow-redirects": "^1.14.7"
+  },
   "private": true
 }

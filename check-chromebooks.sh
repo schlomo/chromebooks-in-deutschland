@@ -7,6 +7,8 @@
 # jq -r '.[].variant' chromebooks/*.json | wc -l -> count all variants
 # jq -r '.[].variant' chromebooks/*.json | ./check-chromebooks.sh -> should find all devices
 
+shopt -s globstar
+
 die() { echo 1>&2 "$*" ; exit 1 ; }
 default_regex_parts=(
     # Acer
@@ -31,9 +33,6 @@ default_regex="$( tr " " "|" <<<"${default_regex_parts[*]}")"
 
 test "$1" = "--help" -o "$1" = "-h" && die "Please give regex as first arg, default: $default_regex"
 
-chromebooks_file=src/generated/chromebooks.json
-
-test -s $chromebooks_file || die "Please run 'yarn prep' first to generate Chromebooks data file"
 validate=""
 
 if test "$1" == "--validate" ; then
@@ -50,6 +49,9 @@ function input2devices {
 }
 
 if test "$validate" ; then
+    chromebooks_file=src/generated/chromebooks.json
+    test -s $chromebooks_file || die "Please run 'yarn prep' first to generate Chromebooks data file"
+
     errors=0
     count=0
     while read -r d ; do
@@ -77,7 +79,7 @@ devices=(
 res=()
 let red=0 green=0
 for device in "${devices[@]}"; do
-    if grep -q "\"$device\"" $chromebooks_file ; then
+    if grep -q "$device" chromebooks/**/*.yaml ; then
         res+=(" 🟢 $device")
         let green++
     else

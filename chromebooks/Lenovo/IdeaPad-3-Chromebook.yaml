@@ -1,3 +1,6 @@
+# We know and ignore these devices:
+# Lenovo IdeaPad 3 Chromebook 11 (82BA0007UK)
+
 Lenovo IdeaPad 3 Chromebook (82C1000Q):
   biometricUnlock: false
   brand: Lenovo

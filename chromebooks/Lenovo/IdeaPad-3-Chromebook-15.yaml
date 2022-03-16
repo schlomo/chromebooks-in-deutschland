@@ -3,15 +3,14 @@ Lenovo IdeaPad 3 Chromebook 15 (82N4000F):
   brand: Lenovo
   cpu: Intel Celeron N4500
   expirationId: Lenovo IdeaPad 3 Chromebook 15
-  extraInfo: ''
+  extraInfo: ""
   extraLinks:
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 3 Chromebook 15 (82N4000F)
   memory: 4
   model: IdeaPad 3 Chromebook 15
-  productId: '201826566'
+  productId: "201826566"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -26,15 +25,14 @@ Lenovo IdeaPad 3 Chromebook 15 (82N4000X):
   brand: Lenovo
   cpu: Intel Celeron N4500
   expirationId: Lenovo IdeaPad 3 Chromebook 15
-  extraInfo: ''
+  extraInfo: ""
   extraLinks:
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 3 Chromebook 15 (82N4000X)
   memory: 4
   model: IdeaPad 3 Chromebook 15
-  productId: '201716366'
+  productId: "201716366"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -51,13 +49,12 @@ Lenovo IdeaPad 3 Chromebook 15 (82N4000Y):
   expirationId: Lenovo IdeaPad 3 Chromebook 15
   extraInfo: 128GB
   extraLinks:
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 3 Chromebook 15 (82N4000Y)
   memory: 8
   model: IdeaPad 3 Chromebook 15
-  productId: '201674732'
+  productId: "201674732"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -74,13 +71,12 @@ Lenovo IdeaPad 3 Chromebook 15 (82N40010):
   expirationId: Lenovo IdeaPad 3 Chromebook 15
   extraInfo: 128GB
   extraLinks:
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 3 Chromebook 15 (82N40010)
   memory: 8
   model: IdeaPad 3 Chromebook 15
-  productId: '201669211'
+  productId: "201669211"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -90,3 +86,25 @@ Lenovo IdeaPad 3 Chromebook 15 (82N40010):
   stylus: false
   type: chromebook
   variant: 82N40010
+Lenovo IdeaPad 3 Chromebook 15 (82N40017):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4500
+  expirationId: Lenovo IdeaPad 3 Chromebook 15
+  extraInfo: ""
+  extraLinks:
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook 15 (82N40017)
+  memory: 4
+  model: IdeaPad 3 Chromebook 15
+  productId: "201838163"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_15IJL6?M=82N40017GE
+  stylus: false
+  type: chromebook
+  variant: 82N40017

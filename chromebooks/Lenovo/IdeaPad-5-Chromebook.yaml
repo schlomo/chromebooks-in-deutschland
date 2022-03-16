@@ -1,3 +1,7 @@
+# Ignored devices:
+#
+# Lenovo IdeaPad 5 Chromebook 14 82M80017FR
+
 Lenovo IdeaPad 5 Chromebook (82M8001J):
   biometricUnlock: false
   brand: Lenovo
@@ -5,14 +9,13 @@ Lenovo IdeaPad 5 Chromebook (82M8001J):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 256GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8001J)
   memory: 8
   model: IdeaPad 5 Chromebook
-  productId: '201769468'
+  productId: "201769468"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -29,14 +32,13 @@ Lenovo IdeaPad 5 Chromebook (82M8001L):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8001L)
   memory: 4
   model: IdeaPad 5 Chromebook
-  productId: '201749892'
+  productId: "201749892"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -53,14 +55,13 @@ Lenovo IdeaPad 5 Chromebook (82M8001W):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8001W)
   memory: 4
   model: IdeaPad 5 Chromebook
-  productId: '201543296'
+  productId: "201543296"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -77,14 +78,13 @@ Lenovo IdeaPad 5 Chromebook (82M8001X):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 256GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8001X)
   memory: 8
   model: IdeaPad 5 Chromebook
-  productId: '201845522'
+  productId: "201845522"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -101,14 +101,13 @@ Lenovo IdeaPad 5 Chromebook (82M8001Y):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 128GB SSD
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8001Y)
   memory: 4
   model: IdeaPad 5 Chromebook
-  productId: '201802329'
+  productId: "201802329"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -125,14 +124,13 @@ Lenovo IdeaPad 5 Chromebook (82M8002A):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 256GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8002A)
   memory: 8
   model: IdeaPad 5 Chromebook
-  productId: '201789048'
+  productId: "201789048"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -149,14 +147,13 @@ Lenovo IdeaPad 5 Chromebook (82M8002B):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 128GB SSD
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8002B)
   memory: 4
   model: IdeaPad 5 Chromebook
-  productId: '201789049'
+  productId: "201789049"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -173,14 +170,13 @@ Lenovo IdeaPad 5 Chromebook (82M8003A):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 256GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8003A)
   memory: 8
   model: IdeaPad 5 Chromebook
-  productId: '201847303'
+  productId: "201847303"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -197,14 +193,13 @@ Lenovo IdeaPad 5 Chromebook (82M8003N):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8003N)
   memory: 4
   model: IdeaPad 5 Chromebook
-  productId: '201790556'
+  productId: "201790556"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -221,14 +216,13 @@ Lenovo IdeaPad 5 Chromebook (82M8003P):
   expirationId: Lenovo IdeaPad 5 Chromebook
   extraInfo: 512GB SSD, hinterleuchtete Tastatur
   extraLinks:
-    'Cyberport: Testbericht (Video, andere Ausstattung)': https://www.youtube.com/watch?v=6NolY9BCRKk
-    Flyer: >-
-      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
   flip: false
   id: Lenovo IdeaPad 5 Chromebook (82M8003P)
   memory: 8
   model: IdeaPad 5 Chromebook
-  productId: '201707390'
+  productId: "201707390"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080

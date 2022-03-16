@@ -1,14 +1,34 @@
+HP Chromebook 14 G7 (305W8EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N5100
+  expirationId: HP Chromebook 14 G7
+  extraInfo: inklusive Chrome Enterprise Upgrade
+  flip: false
+  id: HP Chromebook 14 G7 (305W8EA)
+  memory: 4
+  model: Chromebook 14 G7
+  productId: "201622893"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c06978061.pdf
+  stylus: false
+  type: chromebook
+  variant: 305W8EA
 HP Chromebook 14 G7 (305X0EA):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N5100
   expirationId: HP Chromebook 14 G7
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: HP Chromebook 14 G7 (305X0EA)
   memory: 8
   model: Chromebook 14 G7
-  productId: '201367729'
+  productId: "201367729"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -23,12 +43,12 @@ HP Chromebook 14 G7 (305X1EA):
   brand: HP
   cpu: Intel Celeron N5100
   expirationId: HP Chromebook 14 G7
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: HP Chromebook 14 G7 (305X1EA)
   memory: 4
   model: Chromebook 14 G7
-  productId: '2514237'
+  productId: "2514237"
   productProvider: geizhals
   screenGlare: false
   screenResolution: 1920x1080

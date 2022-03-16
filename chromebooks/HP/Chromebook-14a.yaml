@@ -7,7 +7,7 @@ HP Chromebook 14a (2020) (14a-na0010ng):
   id: HP Chromebook 14a (2020) (14a-na0010ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200245376'
+  productId: "200245376"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1366x768
@@ -26,7 +26,7 @@ HP Chromebook 14a (2020) (14a-na0012ng):
   id: HP Chromebook 14a (2020) (14a-na0012ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200335864'
+  productId: "200335864"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -45,7 +45,7 @@ HP Chromebook 14a (2020) (14a-na0016ng):
   id: HP Chromebook 14a (2020) (14a-na0016ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '201160601'
+  productId: "201160601"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -64,7 +64,7 @@ HP Chromebook 14a (2020) (14a-na0025ng):
   id: HP Chromebook 14a (2020) (14a-na0025ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200245377'
+  productId: "200245377"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1366x768
@@ -83,7 +83,7 @@ HP Chromebook 14a (2020) (14a-na0030ng):
   id: HP Chromebook 14a (2020) (14a-na0030ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200504249'
+  productId: "200504249"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -102,7 +102,7 @@ HP Chromebook 14a (2020) (14a-na0031ng):
   id: HP Chromebook 14a (2020) (14a-na0031ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '201166423'
+  productId: "201166423"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -112,6 +112,25 @@ HP Chromebook 14a (2020) (14a-na0031ng):
   stylus: false
   type: chromebook
   variant: 14a-na0031ng
+HP Chromebook 14a (2020) (14a-na0214ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4020
+  expirationId: HP Chromebook 14a
+  flip: false
+  id: HP Chromebook 14a (2020) (14a-na0214ng)
+  memory: 4
+  model: Chromebook 14a (2020)
+  productId: "201623144"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 14
+  screenTouch: false
+  specLink: https://support.hp.com/de-de/document/c07723546
+  stylus: false
+  type: chromebook
+  variant: 14a-na0214ng
 HP Chromebook 14a (2020) (14a-na0215ng):
   biometricUnlock: false
   brand: HP
@@ -121,7 +140,7 @@ HP Chromebook 14a (2020) (14a-na0215ng):
   id: HP Chromebook 14a (2020) (14a-na0215ng)
   memory: 8
   model: Chromebook 14a (2020)
-  productId: '200288395'
+  productId: "200288395"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -140,7 +159,7 @@ HP Chromebook 14a (2020) (14a-na0216ng):
   id: HP Chromebook 14a (2020) (14a-na0216ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200892190'
+  productId: "200892190"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -160,7 +179,7 @@ HP Chromebook 14a (2020) (14a-na0218ng):
   id: HP Chromebook 14a (2020) (14a-na0218ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200892184'
+  productId: "200892184"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -179,7 +198,7 @@ HP Chromebook 14a (2020) (14a-na0220ng):
   id: HP Chromebook 14a (2020) (14a-na0220ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '201485664'
+  productId: "201485664"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -198,7 +217,7 @@ HP Chromebook 14a (2020) (14a-na0240ng):
   id: HP Chromebook 14a (2020) (14a-na0240ng)
   memory: 8
   model: Chromebook 14a (2020)
-  productId: '200518604'
+  productId: "200518604"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -218,7 +237,7 @@ HP Chromebook 14a (2020) (14a-na0245ng):
   id: HP Chromebook 14a (2020) (14a-na0245ng)
   memory: 8
   model: Chromebook 14a (2020)
-  productId: '201465312'
+  productId: "201465312"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -237,7 +256,7 @@ HP Chromebook 14a (2020) (14a-na0290ng):
   id: HP Chromebook 14a (2020) (14a-na0290ng)
   memory: 8
   model: Chromebook 14a (2020)
-  productId: '201027594'
+  productId: "201027594"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -256,7 +275,7 @@ HP Chromebook 14a (2020) (14a-na0300ng):
   id: HP Chromebook 14a (2020) (14a-na0300ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200709112'
+  productId: "200709112"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -274,7 +293,7 @@ HP Chromebook 14a (2020) (14a-na0305ng):
   id: HP Chromebook 14a (2020) (14a-na0305ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200986231'
+  productId: "200986231"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -292,7 +311,7 @@ HP Chromebook 14a (2020) (14a-na0315ng):
   id: HP Chromebook 14a (2020) (14a-na0315ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200504254'
+  productId: "200504254"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1366x768
@@ -311,7 +330,7 @@ HP Chromebook 14a (2020) (14a-na0415ng):
   id: HP Chromebook 14a (2020) (14a-na0415ng)
   memory: 4
   model: Chromebook 14a (2020)
-  productId: '200438264'
+  productId: "200438264"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -333,7 +352,7 @@ HP Chromebook 14a (2020) (14a-na1292ng):
   id: HP Chromebook 14a (2020) (14a-na1292ng)
   memory: 8
   model: Chromebook 14a (2020)
-  productId: '201845748'
+  productId: "201845748"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -355,7 +374,7 @@ HP Chromebook 14a (2020) (14a-nd0040ng):
   id: HP Chromebook 14a (2020) (14a-nd0040ng)
   memory: 8
   model: Chromebook 14a (2020)
-  productId: '201563676'
+  productId: "201563676"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080

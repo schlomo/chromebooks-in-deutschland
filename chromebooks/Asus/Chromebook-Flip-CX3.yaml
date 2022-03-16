@@ -1,0 +1,20 @@
+Asus Chromebook Flip CX3 (CX3400FMA-EC0097):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core i3-1110G4
+  expirationId: Asus Chromebook Flip CX3
+  extraInfo: 128GB, hinterleuchtete Tastatur, USI Stylus optional
+  flip: true
+  id: Asus Chromebook Flip CX3 (CX3400FMA-EC0097)
+  memory: 8
+  model: Chromebook Flip CX3
+  productId: '201801178'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-CX3-CX3400-11th-Gen-Intel/techspec/
+  stylus: true
+  type: chromebook
+  variant: CX3400FMA-EC0097

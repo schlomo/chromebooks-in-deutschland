@@ -3,18 +3,18 @@ Acer Chromebook 314 (CB314-1H-C1WK):
   brand: Acer
   cpu: Intel Celeron N4120
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C1WK)
   memory: 4
   model: Chromebook 314
-  productId: '200709095'
+  productId: "200709095"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: false
-  specLink: ''
+  specLink: ""
   stylus: false
   type: chromebook
   variant: CB314-1H-C1WK
@@ -23,14 +23,14 @@ Acer Chromebook 314 (CB314-1H-C2KX):
   brand: Acer
   cpu: Intel Celeron N4020
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   extraLinks:
     Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.HPYEG.006
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C2KX)
   memory: 4
   model: Chromebook 314
-  productId: '200477221'
+  productId: "200477221"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -40,17 +40,36 @@ Acer Chromebook 314 (CB314-1H-C2KX):
   stylus: false
   type: chromebook
   variant: CB314-1H-C2KX
+Acer Chromebook 314 (CB314-1H-C3M8):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N4120
+  expirationId: Acer Chromebook 314 (CB314-1H)
+  flip: false
+  id: Acer Chromebook 314 (CB314-1H-C3M8)
+  memory: 8
+  model: Chromebook 314
+  productId: "201795244"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://gzhls.at/blob/ldb/a/e/4/d/b5f91a9cc1d5ab0ac44e2145c10853c39faa.pdf
+  stylus: false
+  type: chromebook
+  variant: CB314-1H-C3M8
 Acer Chromebook 314 (CB314-1H-C6KW):
   biometricUnlock: false
   brand: Acer
   cpu: Intel Celeron N4100
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C6KW)
   memory: 4
   model: Chromebook 314
-  productId: '6973317'
+  productId: "6973317"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -65,14 +84,14 @@ Acer Chromebook 314 (CB314-1H-C71G):
   brand: Acer
   cpu: Intel Celeron N4120
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   extraLinks:
     Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AUDEG.002
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C71G)
   memory: 8
   model: Chromebook 314
-  productId: '201507668'
+  productId: "201507668"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -87,12 +106,12 @@ Acer Chromebook 314 (CB314-1H-C7PS):
   brand: Acer
   cpu: Intel Celeron N4020
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C7PS)
   memory: 4
   model: Chromebook 314
-  productId: '201429375'
+  productId: "201429375"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -107,12 +126,12 @@ Acer Chromebook 314 (CB314-1H-C7SJ):
   brand: Acer
   cpu: Intel Celeron N4100
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C7SJ)
   memory: 4
   model: Chromebook 314
-  productId: '6943191'
+  productId: "6943191"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1366x768
@@ -127,14 +146,14 @@ Acer Chromebook 314 (CB314-1H-C8L4):
   brand: Acer
   cpu: Intel Celeron N4120
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   extraLinks:
     Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AUDEG.001
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C8L4)
   memory: 4
   model: Chromebook 314
-  productId: '201507667'
+  productId: "201507667"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -149,18 +168,18 @@ Acer Chromebook 314 (CB314-1H-C8XR):
   brand: Acer
   cpu: Intel Celeron N4020
   expirationId: Acer Chromebook 314 (CB314-1H)
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: Acer Chromebook 314 (CB314-1H-C8XR)
   memory: 4
   model: Chromebook 314
-  productId: '201814651'
+  productId: "201814651"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: false
-  specLink: ''
+  specLink: ""
   stylus: false
   type: chromebook
   variant: CB314-1H-C8XR
@@ -174,7 +193,7 @@ Acer Chromebook 314 (CB314-1H-P11Q):
   id: Acer Chromebook 314 (CB314-1H-P11Q)
   memory: 8
   model: Chromebook 314
-  productId: '201507669'
+  productId: "201507669"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080

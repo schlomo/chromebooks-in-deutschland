@@ -1,0 +1,44 @@
+Lenovo IdeaPad Flex 3i Chromebook (82N3000R):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4500
+  expirationId: Lenovo IdeaPad Flex 3i Chromebook	
+  extraInfo: 128GB
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_3_CB_11IJL6_Datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 3i Chromebook (82N3000R)
+  memory: 4
+  model: IdeaPad Flex 3i Chromebook
+  productId: "201731730"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11IJL6?M=82N3000RGE
+  stylus: false
+  type: chromebook
+  variant: 82N3000R
+Lenovo IdeaPad Flex 3i Chromebook (82N3000E):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Pentium N6000
+  expirationId: Lenovo IdeaPad Flex 3i Chromebook	
+  extraInfo: 128GB
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_3_CB_11IJL6_Datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 3i Chromebook (82N3000E)
+  memory: 8
+  model: IdeaPad Flex 3i Chromebook
+  productId: "201551245"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_3_CB_11IJL6?M=82N3000EGE
+  stylus: false
+  type: chromebook
+  variant: 82N3000E

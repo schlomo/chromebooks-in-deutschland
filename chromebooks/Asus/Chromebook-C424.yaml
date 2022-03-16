@@ -1,0 +1,19 @@
+Asus Chromebook C424 (C424MA-EB0074):
+  biometricUnlock: false
+  brand: Asus
+  cpu:  Intel Pentium N5030
+  expirationId: Asus Chromebook C424
+  flip: false
+  id: Asus Chromebook C424 (C424MA-EB0074)
+  memory: 4
+  model: Chromebook C424
+  productId: "201694378"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-C424/techspec/
+  stylus: false
+  type: chromebook
+  variant: C424MA-EB0074

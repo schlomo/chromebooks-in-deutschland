@@ -7,7 +7,7 @@ Acer Chromebook Spin 512 (R853TA-C9VY):
   id: Acer Chromebook Spin 512 (R853TA-C9VY)
   memory: 4
   model: Chromebook Spin 512
-  productId: '2535418'
+  productId: "2535418"
   productProvider: geizhals
   screenGlare: true
   screenResolution: 1366x912
@@ -17,3 +17,24 @@ Acer Chromebook Spin 512 (R853TA-C9VY):
   stylus: false
   type: chromebook
   variant: R853TA-C9VY
+Acer Chromebook Spin 512 (R853TA-P05L):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Pentium N6000
+  expirationId: Acer Chromebook Spin 512 (R853TA)
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/professional-model/NX.AA8EG.001
+  flip: true
+  id: Acer Chromebook Spin 512 (R853TA-P05L)
+  memory: 8
+  model: Chromebook Spin 512
+  productId: "201668276"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x912
+  screenSize: 12
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/0/7/b/6/c1cf843622277fe3d3de2ea23029d9e5c961.pdf
+  stylus: false
+  type: chromebook
+  variant: R853TA-P05L

@@ -1,0 +1,38 @@
+Acer Chromebook 314 (CB314-2H-K92Z):
+  biometricUnlock: false
+  brand: Acer
+  cpu: MediaTek MT8183
+  expirationId: Acer Chromebook 314 (CB314-2H)
+  flip: false
+  id: Acer Chromebook 314 (CB314-2H-K92Z)
+  memory: 4
+  model: Chromebook 314
+  productId: "201795257"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://gzhls.at/blob/ldb/7/a/1/d/cf8b7ee8407e1adb99f0fe8af44f776015be.pdf
+  stylus: false
+  type: chromebook
+  variant: CB314-2H-K92Z
+Acer Chromebook 314 (CB314-2H-K18A):
+  biometricUnlock: false
+  brand: Acer
+  cpu: MediaTek MT8183
+  expirationId: Acer Chromebook 314 (CB314-2H)
+  flip: false
+  id: Acer Chromebook 314 (CB314-2H-K18A)
+  memory: 4
+  model: Chromebook 314
+  productId: "201795263"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://d.otto.de/files/f28f6ae9-ebac-5387-bae7-6d6a0274242c.pdf
+  stylus: false
+  type: chromebook
+  variant: CB314-2H-K18A

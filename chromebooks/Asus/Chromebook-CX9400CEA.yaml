@@ -1,0 +1,20 @@
+Asus Chromebook CX9 (CX1700) (CX9400CEA-KC0055):
+  biometricUnlock: true
+  brand: Asus
+  cpu: Intel Core i7-1165G7
+  expirationId: Asus Chromebook CX9400CEA
+  extraInfo: 256GB, hinterleuchtete Tastatur
+  flip: false
+  id: Asus Chromebook CX9 (CX1700) (CX9400CEA-KC0055)
+  memory: 16
+  model: Chromebook CX9 (CX1700)
+  productId: '201797963'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://www.asus.com/de/Laptops/For-Work/Chromebook/ASUS-Chromebook-CX9-CX9400-11th-Gen-Intel/techspec/
+  stylus: false
+  type: chromebook
+  variant: CX9400CEA-KC0055

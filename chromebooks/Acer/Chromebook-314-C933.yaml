@@ -1,17 +1,35 @@
 # Ignore
 # Acer Chromebook 314 C933-C8VE italian
 
+Acer Chromebook 314 (C933-C4NJ):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N4120
+  expirationId: Acer Chromebook 314 (C933)
+  flip: false
+  id: Acer Chromebook 314 (C933-C4NJ)
+  memory: 4
+  model: Chromebook 314
+  productId: "201795254"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: C933-C4NJ
 Acer Chromebook 314 (C933-C5R4):
   biometricUnlock: false
   brand: Acer
   cpu: Intel Celeron N4120
   expirationId: Acer Chromebook 314 (C933)
-  extraInfo: ''
+  extraInfo: ""
   flip: false
   id: Acer Chromebook 314 (C933-C5R4)
   memory: 8
   model: Chromebook 314
-  productId: '201043139'
+  productId: "201043139"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -31,7 +49,7 @@ Acer Chromebook 314 (C933-C64M):
   id: Acer Chromebook 314 (C933-C64M)
   memory: 8
   model: Chromebook 314
-  productId: '201464049'
+  productId: "201464049"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080

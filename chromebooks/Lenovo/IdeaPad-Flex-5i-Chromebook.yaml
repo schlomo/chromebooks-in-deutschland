@@ -1,42 +1,88 @@
+Lenovo IdeaPad Flex 5i Chromebook (82M70019):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad Flex 5i Chromebook
+  extraInfo: 512GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 5i Chromebook (82M70019)
+  memory: 8
+  model: IdeaPad Flex 5i Chromebook
+  productId: "201696438"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70019GE
+  stylus: true
+  type: chromebook
+  variant: 82M70019
 Lenovo IdeaPad Flex 5i Chromebook (82M7000Y):
   biometricUnlock: false
   brand: Lenovo
   cpu: Intel Pentium 7505
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7000Y)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201729005'
+  productId: "201729005"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7000YGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7000YGE
   stylus: true
   type: chromebook
   variant: 82M7000Y
+Lenovo IdeaPad Flex 5i Chromebook (82M7000X):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad Flex 5i Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 5i Chromebook (82M7000X)
+  memory: 8
+  model: IdeaPad Flex 5i Chromebook
+  productId: "201669124"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7000XGE
+  stylus: true
+  type: chromebook
+  variant: 82M7000X
 Lenovo IdeaPad Flex 5i Chromebook (82M70016):
   biometricUnlock: false
   brand: Lenovo
   cpu: Intel Pentium 7505
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M70016)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201620979'
+  productId: "201620979"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70016GE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70016GE
   stylus: true
   type: chromebook
   variant: 82M70016
@@ -46,39 +92,63 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70017):
   cpu: Intel Core i3-1115G4
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M70017)
   memory: 8
   model: IdeaPad Flex 5i Chromebook
-  productId: '201604288'
+  productId: "201604288"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70017GE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70017GE
   stylus: true
   type: chromebook
   variant: 82M70017
+Lenovo IdeaPad Flex 5i Chromebook (82M70018):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad Flex 5i Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 5i Chromebook (82M70018)
+  memory: 8
+  model: IdeaPad Flex 5i Chromebook
+  productId: "201699801"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70018GE
+  stylus: true
+  type: chromebook
+  variant: 82M70018
 Lenovo IdeaPad Flex 5i Chromebook (82M7001J):
   biometricUnlock: false
   brand: Lenovo
   cpu: Intel Pentium 7505
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: USI Stylus inklusive
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7001J)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201464098'
+  productId: "201464098"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001JGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001JGE
   stylus: true
   type: chromebook
   variant: 82M7001J
@@ -88,18 +158,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001L):
   cpu: Intel Pentium 7505
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7001L)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201569909'
+  productId: "201569909"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001LGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001LGE
   stylus: true
   type: chromebook
   variant: 82M7001L
@@ -109,18 +180,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001M):
   cpu: Intel Core i3-1115G4
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7001M)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201464096'
+  productId: "201464096"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001MGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001MGE
   stylus: true
   type: chromebook
   variant: 82M7001M
@@ -130,18 +202,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001V):
   cpu: Intel Pentium 7505
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: Hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7001V)
   memory: 8
   model: IdeaPad Flex 5i Chromebook
-  productId: '201665969'
+  productId: "201665969"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001VGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7001VGE
   stylus: true
   type: chromebook
   variant: 82M7001V
@@ -151,18 +224,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70027):
   cpu: Intel Core i3-1115G4
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 256GB SSD, OLED Bildschirm, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M70027)
   memory: 8
   model: IdeaPad Flex 5i Chromebook
-  productId: '201688549'
+  productId: "201688549"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70027GE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70027GE
   stylus: true
   type: chromebook
   variant: 82M70027
@@ -172,18 +246,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70028):
   cpu: Intel Core i5-1135G7
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 256GB SSD, OLED Bildschirm, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M70028)
   memory: 8
   model: IdeaPad Flex 5i Chromebook
-  productId: '201688548'
+  productId: "201688548"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70028GE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70028GE
   stylus: true
   type: chromebook
   variant: 82M70028
@@ -193,18 +268,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70029):
   cpu: Intel Pentium 7505
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M70029)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201665970'
+  productId: "201665970"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70029GE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M70029GE
   stylus: true
   type: chromebook
   variant: 82M70029
@@ -214,18 +290,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7002A):
   cpu: Intel Core i3-1115G4
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7002A)
   memory: 4
   model: IdeaPad Flex 5i Chromebook
-  productId: '201665972'
+  productId: "201665972"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7002AGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7002AGE
   stylus: true
   type: chromebook
   variant: 82M7002A
@@ -235,18 +312,19 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7002K):
   cpu: Intel Core i3-1115G4
   expirationId: Lenovo IdeaPad Flex 5i Chromebook
   extraInfo: 256GB SSD, OLED Bildschirm, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
   flip: true
   id: Lenovo IdeaPad Flex 5i Chromebook (82M7002K)
   memory: 8
   model: IdeaPad Flex 5i Chromebook
-  productId: '201802452'
+  productId: "201802452"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 13.3
   screenTouch: true
-  specLink: >-
-    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7002KGE
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Flex_5_CB_13ITL6?M=82M7002KGE
   stylus: true
   type: chromebook
   variant: 82M7002K

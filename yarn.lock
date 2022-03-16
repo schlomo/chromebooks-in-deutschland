@@ -2694,11 +2694,6 @@ commander@^5.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
   integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
 
-commander@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.npmjs.org/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
-  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
-
 commander@~2.13.0:
   version "2.13.0"
   resolved "https://registry.npmjs.org/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
@@ -3895,11 +3890,6 @@ escodegen@~1.9.0:
     optionator "^0.8.1"
   optionalDependencies:
     source-map "~0.6.1"
-
-esprima@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/esprima/-/esprima-1.2.2.tgz#76a0fd66fcfe154fd292667dc264019750b1657b"
-  integrity sha1-dqD9Zvz+FU/SkmZ9wmQBl1CxZXs=
 
 esprima@^3.1.3:
   version "3.1.3"
@@ -5819,7 +5809,7 @@ js-yaml@4.1.0, js-yaml@^4.0.0, js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-js-yaml@^3.10.0, js-yaml@^3.13.1, js-yaml@^3.7.0:
+js-yaml@^3.10.0, js-yaml@^3.13.1, js-yaml@^3.6.1, js-yaml@^3.7.0:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
@@ -5886,19 +5876,6 @@ json-buffer@3.0.0:
   resolved "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
   integrity sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=
 
-json-merger@^1.1.6:
-  version "1.1.7"
-  resolved "https://registry.npmjs.org/json-merger/-/json-merger-1.1.7.tgz#7aab4690f9735e395b9c907fcdf04c7127719b47"
-  integrity sha512-B0k+roIIiZ/vkKkhQQlDf986fFJN5nYn+G6o+zAy7NtRtkFud2GlqsTHl88RA7v4eGKgVQ2sjowSCKbKlCWEKA==
-  dependencies:
-    commander "^7.2.0"
-    fs-extra "^9.1.0"
-    js-yaml "^4.1.0"
-    json-ptr "^3.0.0"
-    jsonpath "^1.1.1"
-    lodash.range "^3.2.0"
-    vm2 "^3.9.5"
-
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
@@ -5917,11 +5894,6 @@ json-ptr@^2.2.0:
   integrity sha512-w9f6/zhz4kykltXMG7MLJWMajxiPj0q+uzQPR1cggNAE/sXoq/C5vjUb/7QNcC3rJsVIIKy37ALTXy1O+3c8QQ==
   dependencies:
     tslib "^2.2.0"
-
-json-ptr@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/json-ptr/-/json-ptr-3.1.0.tgz#374f5122716d555226f5675ae097ac115a0efc64"
-  integrity sha512-KMsG905wFbHHTnvd66MHCNo0E43UPalKt2zQUbBtWrDYKk/3vE/4u8lfWDdIyPEoMXxOFJO1lsBs6xPBXKxeVw==
 
 json-schema-traverse@^0.3.0:
   version "0.3.1"
@@ -5987,15 +5959,6 @@ jsonparse@^1.2.0:
   version "1.3.1"
   resolved "https://registry.npmjs.org/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
   integrity sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
-
-jsonpath@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/jsonpath/-/jsonpath-1.1.1.tgz#0ca1ed8fb65bb3309248cc9d5466d12d5b0b9901"
-  integrity sha512-l6Cg7jRpixfbgoWgkrl77dgEj8RPvND0wMH6TwQmi9Qs4TFfS9u5cUFnbeKTwj5ga5Y3BTGGNI28k117LJ009w==
-  dependencies:
-    esprima "1.2.2"
-    static-eval "2.0.2"
-    underscore "1.12.1"
 
 jsonwebtoken@^8.5.1:
   version "8.5.1"
@@ -6256,15 +6219,15 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
 lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.npmjs.org/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
-
-lodash.range@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/lodash.range/-/lodash.range-3.2.0.tgz#f461e588f66683f7eadeade513e38a69a565a15d"
-  integrity sha1-9GHliPZmg/fq3q3lE+OKaaVloV0=
 
 lodash.snakecase@^4.1.1:
   version "4.1.1"
@@ -6494,6 +6457,14 @@ merge-source-map@1.0.4:
   integrity sha1-pd5GU42uhNQRTMXqArR3KmNGcB8=
   dependencies:
     source-map "^0.5.6"
+
+merge-yaml@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/merge-yaml/-/merge-yaml-1.1.0.tgz#4d0a72c27abbd54ffd266d48a1ea910869209489"
+  integrity sha512-SBNEC9hh6Ibxrwv7DUpmVObjTrSaHeO9VTbbZ0rIIzMi/BfYXYYikj/aSgXwsCWQyaUIGsE2wZsgc5sLr/Tn3Q==
+  dependencies:
+    js-yaml "^3.6.1"
+    lodash.merge "^4.6.2"
 
 merge2@^1.2.3, merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
@@ -9131,13 +9102,6 @@ stack-trace@0.0.x:
   resolved "https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
   integrity sha1-VHxws0fo0ytOEI6hoqFZ5f3eGcA=
 
-static-eval@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/static-eval/-/static-eval-2.0.2.tgz#2d1759306b1befa688938454c546b7871f806a42"
-  integrity sha512-N/D219Hcr2bPjLxPiV+TQE++Tsmrady7TqAJugLy7Xk1EumfDWS/f5dtBbkRCGE7wKKXuYockQoj8Rm2/pVKyg==
-  dependencies:
-    escodegen "^1.8.1"
-
 static-eval@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/static-eval/-/static-eval-2.1.0.tgz#a16dbe54522d7fa5ef1389129d813fd47b148014"
@@ -9835,11 +9799,6 @@ uncss@^0.17.3:
     postcss-selector-parser "6.0.2"
     request "^2.88.0"
 
-underscore@1.12.1:
-  version "1.12.1"
-  resolved "https://registry.npmjs.org/underscore/-/underscore-1.12.1.tgz#7bb8cc9b3d397e201cf8553336d262544ead829e"
-  integrity sha512-hEQt0+ZLDVUMhebKxL4x1BTtDY7bavVofhZ9KZ4aI26X9SRaE+Y3m83XUL1UP2jn8ynjndwCCpEHdUG+9pP1Tw==
-
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
@@ -10148,7 +10107,7 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vm2@^3.9.5, vm2@^3.9.8:
+vm2@^3.9.8:
   version "3.9.9"
   resolved "https://registry.npmjs.org/vm2/-/vm2-3.9.9.tgz#c0507bc5fbb99388fad837d228badaaeb499ddc5"
   integrity sha512-xwTm7NLh/uOjARRBs8/95H0e8fT3Ukw5D/JJWhxMbhKzNh1Nu981jQKvkep9iKYNxzlVrdzD0mlBGkDKZWprlw==

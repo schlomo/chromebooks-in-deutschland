@@ -1,3 +1,23 @@
+HP Chromebook x360 14b (14b-cb0315ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Pentium N6000
+  expirationId: HP Chromebook x360 14b
+  extraInfo: 128GB, USI Stylus optional
+  flip: true
+  id: HP Chromebook x360 14b (14b-cb0315ng)
+  memory: 8
+  model: Chromebook x360 14b
+  productId: '201768906'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://support.hp.com/at-de/document/c07902162
+  stylus: true
+  type: chromebook
+  variant: 14b-cb0315ng
 HP Chromebook x360 14b (14b-cb0020ng):
   biometricUnlock: false
   brand: HP

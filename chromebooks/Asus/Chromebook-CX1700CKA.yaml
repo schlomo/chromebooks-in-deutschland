@@ -8,14 +8,13 @@ Asus Chromebook CX1 (CX1700) (CX1700CKA-BX0034):
   id: Asus Chromebook CX1 (CX1700) (CX1700CKA-BX0034)
   memory: 4
   model: Chromebook CX1 (CX1700)
-  productId: '201859223'
+  productId: "201859223"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1600x900
   screenSize: 17.3
   screenTouch: false
-  specLink: >-
-    https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-CX1-CX1700/techspec/
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-CX1-CX1700/techspec/
   stylus: false
   type: chromebook
   variant: CX1700CKA-BX0034
@@ -29,14 +28,13 @@ Asus Chromebook CX1 (CX1700) (CX1700CKA-BX0035):
   id: Asus Chromebook CX1 (CX1700) (CX1700CKA-BX0035)
   memory: 8
   model: Chromebook CX1 (CX1700)
-  productId: '201782823'
+  productId: "201782823"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1600x900
   screenSize: 17.3
   screenTouch: false
-  specLink: >-
-    https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-CX1-CX1700/techspec/
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-CX1-CX1700/techspec/
   stylus: false
   type: chromebook
   variant: CX1700CKA-BX0035

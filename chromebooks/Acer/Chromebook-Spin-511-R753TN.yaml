@@ -1,13 +1,34 @@
+Acer Chromebook Spin 511 (R753TN-C3ZS):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N5100
+  expirationId: Acer Chromebook Spin 511 (R753TN)
+  extraInfo: inklusive Chrome Enterprise Upgrade, USI Stylus optional
+  flip: true
+  id: Acer Chromebook Spin 511 (R753TN-C3ZS)
+  memory: 8
+  model: Chromebook Spin 511
+  productId: "201622442"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://www.jb-computer.de/media/pdf/37/b2/41/Acer_R753TN-C3ZS_-_NX-A90EG-006_-_DE.pdf
+  stylus: true
+  type: chromebook
+  variant: R753TN-C3ZS
 Acer Chromebook Spin 511 (R753TN-C60T):
   biometricUnlock: false
   brand: Acer
   cpu: Intel Celeron N5100
   expirationId: Acer Chromebook Spin 511 (R753TN)
+  extraInfo: USI Stylus optional
   flip: true
   id: Acer Chromebook Spin 511 (R753TN-C60T)
   memory: 4
   model: Chromebook Spin 511
-  productId: '2520231'
+  productId: "2520231"
   productProvider: geizhals
   screenGlare: true
   screenResolution: 1366x768
@@ -22,17 +43,18 @@ Acer Chromebook Spin 511 (R753TN-C6NQ):
   brand: Acer
   cpu: Intel Celeron N5100
   expirationId: Acer Chromebook Spin 511 (R753TN)
+  extraInfo: USI Stylus optional
   flip: true
   id: Acer Chromebook Spin 511 (R753TN-C6NQ)
   memory: 8
   model: Chromebook Spin 511
-  productId: '2484650'
+  productId: "2484650"
   productProvider: geizhals
   screenGlare: true
   screenResolution: 1366x768
   screenSize: 11.6
   screenTouch: true
-  specLink: https://gzhls.at/blob/ldb/a/1/a/f/aabdd649328eebb5da3a9a6165f3029f7284.pdf
+  specLink: https://www.jb-computer.de/media/pdf/1d/96/8a/Acer_R753TN-C6NQ_-_NX-A90EG-002_-_DE.pdf
   stylus: true
   type: chromebook
   variant: R753TN-C6NQ
@@ -41,11 +63,12 @@ Acer Chromebook Spin 511 (R753TN-C6TK):
   brand: Acer
   cpu: Intel Celeron N5100
   expirationId: Acer Chromebook Spin 511 (R753TN)
+  extraInfo: USI Stylus optional
   flip: true
   id: Acer Chromebook Spin 511 (R753TN-C6TK)
   memory: 4
   model: Chromebook Spin 511
-  productId: '2484666'
+  productId: "2484666"
   productProvider: geizhals
   screenGlare: true
   screenResolution: 1366x768

@@ -1,5 +1,5 @@
 import FastGlob from 'fast-glob';
-import { mergeFiles } from 'json-merger';
+import mergeYaml from 'merge-yaml';
 import * as jf from 'jsonfile';
 const writeJsonFile = jf.default.writeFileSync;
 import * as writeYamlFile from 'write-yaml-file';
@@ -13,12 +13,12 @@ const resultFiles = [
 
 if (import.meta.url === `file://${process.argv[1]}`) {
     try {
-        const chromebookData = mergeFiles(
-            FastGlob.sync('chromebooks/**/*.yaml')
-        );
+        const
+            files = FastGlob.sync('chromebooks/**/*.yaml'),
+            chromebookData = mergeYaml(files),
+            sortedCBData = sortedObject(chromebookData),
+            chromebookCount = Object.keys(sortedCBData).length;
 
-        const sortedCBData = sortedObject(chromebookData);
-        const chromebookCount = Object.keys(sortedCBData).length;
         resultFiles.forEach((outputFile) => {
             writeJsonFile(
                 outputFile,

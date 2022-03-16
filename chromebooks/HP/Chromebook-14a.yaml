@@ -1,3 +1,23 @@
+HP Chromebook 14a (2020) (14a-na0019ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4020
+  expirationId: HP Chromebook 14a
+  extraInfo: 128GB
+  flip: false
+  id: HP Chromebook 14a (2020) (14a-na0019ng)
+  memory: 8
+  model: Chromebook 14a (2020)
+  productId: "201563674"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://support.hp.com/de-de/document/c07060972
+  stylus: false
+  type: chromebook
+  variant: 14a-na0019ng
 HP Chromebook 14a (2020) (14a-na0010ng):
   biometricUnlock: false
   brand: HP
@@ -384,3 +404,22 @@ HP Chromebook 14a (2020) (14a-nd0040ng):
   stylus: false
   type: chromebook
   variant: 14a-nd0040ng
+HP Chromebook 14a (2020) (14a-nd0020ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: AMD 3015Ce
+  expirationId: HP Chromebook 14a
+  flip: false
+  id: HP Chromebook 14a (2020) (14a-nd0020ng)
+  memory: 4
+  model: Chromebook 14a (2020)
+  productId: "201563675"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://support.hp.com/at-de/document/c07729498
+  stylus: false
+  type: chromebook
+  variant: 14a-nd0020ng

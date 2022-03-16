@@ -1,14 +1,16 @@
+# HP Chromebook x360 11 G3 MK 305T8EA polish/dutch (not clear)
+
 HP Chromebook x360 11MK G3 EE (305U8EA):
   biometricUnlock: false
   brand: HP
   cpu: MediaTek MT8183
   expirationId: HP Chromebook x360 11MK G3 EE
-  extraInfo: Inkl. Chrome Enterprise Upgrade, 2. Kamera
+  extraInfo: inkl. Chrome Enterprise Upgrade, 2. Kamera
   flip: true
   id: HP Chromebook x360 11MK G3 EE (305U8EA)
   memory: 4
   model: Chromebook x360 11MK G3 EE
-  productId: '201450052'
+  productId: "201450052"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1366x768

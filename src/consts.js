@@ -38,6 +38,7 @@ export const cpus = {
     "Intel Core i5-8350U": { "cores": 4, "frequency": 1.7, "burst": 3.6 },
     "Intel Core i7-10510U": { "cores": 4, "frequency": 1.8, "burst": 4.9 },
     "Intel Core i7-10610U": { "cores": 4, "frequency": 1.8, "burst": 4.9 },
+    "Intel Core i7-1160G7": { "cores": 4, "frequency": 2.1, "burst": 4.4 },
     "Intel Core i7-1165G7": { "cores": 4, "frequency": 2.8, "burst": 4.7 },
     "Intel Core i7-8550U": { "cores": 4, "frequency": 1.8, "burst": 4 },
     "Intel Core i7-8650U": { "cores": 4, "frequency": 1.9, "burst": 4.2 },

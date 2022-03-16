@@ -1,6 +1,7 @@
-# We know and ignore these devices:
-# Lenovo IdeaPad 3 Chromebook 11 82BA0007UK
-# Lenovo IdeaPad 3 Chromebook 11 82BA0006UK
+# Lenovo IdeaPad 3 Chromebook 11 82BA0007UK english
+# Lenovo IdeaPad 3 Chromebook 11 82BA0006UK english
+# 82BB002BGE is 0195042721317
+#
 Lenovo IdeaPad 3 Chromebook (82C1000Q):
   biometricUnlock: false
   brand: Lenovo
@@ -89,6 +90,28 @@ Lenovo IdeaPad 3 Chromebook (82C1001Y):
   stylus: false
   type: chromebook
   variant: 82C1001Y
+Lenovo IdeaPad 3 Chromebook (82H4000A):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: AMD A6 9220C
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraInfo: Platinum Grey
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_11AST5_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82H4000A)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: "201103842"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_11AST5?M=82H4000AGE
+  stylus: false
+  type: chromebook
+  variant: 82H4000A
 Lenovo IdeaPad 3 Chromebook (82KN0006):
   biometricUnlock: false
   brand: Lenovo
@@ -222,28 +245,6 @@ Lenovo IdeaPad 3 Chromebook (82MY0009):
   stylus: false
   type: chromebook
   variant: 82MY0009
-Lenovo IdeaPad 3 Chromebook (82MY000Q):
-  biometricUnlock: false
-  brand: Lenovo
-  cpu: AMD 3015Ce
-  expirationId: Lenovo IdeaPad 3 Chromebook
-  extraLinks:
-    "Chromebooks Billiger: Kurztest": https://www.chromebooksbilliger.de/chromebook-test-lenovo-ideapad-3-chromebook
-    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14APO6_Datasheet_EN.pdf
-  flip: false
-  id: Lenovo IdeaPad 3 Chromebook (82MY000Q)
-  memory: 4
-  model: IdeaPad 3 Chromebook
-  productId: "201734469"
-  productProvider: idealo
-  screenGlare: false
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: true
-  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14APO6?M=82MY000QGE
-  stylus: false
-  type: chromebook
-  variant: 82MY000Q
 Lenovo IdeaPad 3 Chromebook (82MY000G):
   biometricUnlock: false
   brand: Lenovo
@@ -290,6 +291,28 @@ Lenovo IdeaPad 3 Chromebook (82MY000H):
   stylus: false
   type: chromebook
   variant: 82MY000H
+Lenovo IdeaPad 3 Chromebook (82MY000Q):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: AMD 3015Ce
+  expirationId: Lenovo IdeaPad 3 Chromebook
+  extraLinks:
+    "Chromebooks Billiger: Kurztest": https://www.chromebooksbilliger.de/chromebook-test-lenovo-ideapad-3-chromebook
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14APO6_Datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook (82MY000Q)
+  memory: 4
+  model: IdeaPad 3 Chromebook
+  productId: "201734469"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_14APO6?M=82MY000QGE
+  stylus: false
+  type: chromebook
+  variant: 82MY000Q
 Lenovo IdeaPad Flex 3 Chromebook (82BB000W):
   biometricUnlock: false
   brand: Lenovo

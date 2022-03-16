@@ -1,3 +1,6 @@
+# Acer Chromebook 15 (CB315) 315 CB315-3H-C7JF italian
+# Acer Chromebook 15 (CB315) CB315-3H-C417 french
+
 Acer Chromebook 315 (CB315-3H-C0EV):
   biometricUnlock: false
   brand: Acer
@@ -7,7 +10,7 @@ Acer Chromebook 315 (CB315-3H-C0EV):
   id: Acer Chromebook 315 (CB315-3H-C0EV)
   memory: 4
   model: Chromebook 315
-  productId: '200348455'
+  productId: "200348455"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -17,3 +20,22 @@ Acer Chromebook 315 (CB315-3H-C0EV):
   stylus: false
   type: chromebook
   variant: CB315-3H-C0EV
+Acer Chromebook 315 (CB315-3H-C9GC):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N4020
+  expirationId: Acer Chromebook 315 (CB315-3H)
+  flip: false
+  id: Acer Chromebook 315 (CB315-3H-C9GC)
+  memory: 4
+  model: Chromebook 315
+  productId: "201306615"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: false
+  specLink: https://www.acer.com/ac/de/DE/content/model/NX.ATDEG.001
+  stylus: false
+  type: chromebook
+  variant: CB315-3H-C9GC

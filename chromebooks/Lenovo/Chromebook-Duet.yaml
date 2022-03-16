@@ -1,4 +1,6 @@
 # Lenovo IdeaPad Duet Chromebook (Wifi) ZA6F0025GB english
+# Lenovo IdeaPad Duet ZA6F0022SE swedish
+# Lenovo Chromebook Duet (ZA6F0014) is 195477019010
 
 Lenovo Chromebook Duet (ZA6F0014):
   biometricUnlock: false
@@ -10,6 +12,7 @@ Lenovo Chromebook Duet (ZA6F0014):
     "Chromebookz: Testbericht": https://chromebookz.de/lenovo-ideapad-duet-test-review-video/
     "DER SPIEGEL: Acht Jahre Notebook für 330 Euro (Testbericht)": https://www.spiegel.de/netzwelt/gadgets/lenovo-ideapad-duet-chromebook-im-test-acht-jahre-notebook-fuer-330-euro-a-cada3394-9a9e-428c-9a45-5d9e9e19f187
     "VoWe: Das Schnuckelchen": https://vowe.net/archives/018564.html
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20IdeaPad%20Duet%20Chromebook_new_datasheet_EN.pdf
   flip: true
   id: Lenovo Chromebook Duet (ZA6F0014)
   memory: 4
@@ -20,10 +23,60 @@ Lenovo Chromebook Duet (ZA6F0014):
   screenResolution: 1920x1080
   screenSize: 10.1
   screenTouch: true
-  specLink: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20IdeaPad%20Duet%20Chromebook_new_datasheet_EN.pdf
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Duet_Chromebook?M=ZA6F0014DE
   stylus: true
   type: chromebook
   variant: ZA6F0014
+Lenovo Chromebook Duet (ZA6F0062):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek P60T
+  expirationId: Lenovo Chromebook Duet
+  extraInfo: Tastatur abnehmbar, USI Stylus inklusive
+  extraLinks:
+    "Chromebookz: Testbericht": https://chromebookz.de/lenovo-ideapad-duet-test-review-video/
+    "DER SPIEGEL: Acht Jahre Notebook für 330 Euro (Testbericht)": https://www.spiegel.de/netzwelt/gadgets/lenovo-ideapad-duet-chromebook-im-test-acht-jahre-notebook-fuer-330-euro-a-cada3394-9a9e-428c-9a45-5d9e9e19f187
+    "VoWe: Das Schnuckelchen": https://vowe.net/archives/018564.html
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20IdeaPad%20Duet%20Chromebook_new_datasheet_EN.pdf
+  flip: true
+  id: Lenovo Chromebook Duet (ZA6F0062)
+  memory: 4
+  model: Chromebook Duet
+  productId: "201064853"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 10.1
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Duet_Chromebook?M=ZA6F0062DE
+  stylus: true
+  type: chromebook
+  variant: ZA6F0062
+Lenovo Chromebook Duet (ZA6F0064):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek P60T
+  expirationId: Lenovo Chromebook Duet
+  extraInfo: 128GB, Tastatur abnehmbar, USI Stylus inklusive
+  extraLinks:
+    "Chromebookz: Testbericht": https://chromebookz.de/lenovo-ideapad-duet-test-review-video/
+    "DER SPIEGEL: Acht Jahre Notebook für 330 Euro (Testbericht)": https://www.spiegel.de/netzwelt/gadgets/lenovo-ideapad-duet-chromebook-im-test-acht-jahre-notebook-fuer-330-euro-a-cada3394-9a9e-428c-9a45-5d9e9e19f187
+    "VoWe: Das Schnuckelchen": https://vowe.net/archives/018564.html
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20IdeaPad%20Duet%20Chromebook_new_datasheet_EN.pdf
+  flip: true
+  id: Lenovo Chromebook Duet (ZA6F0064)
+  memory: 4
+  model: Chromebook Duet
+  productId: "201200047"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 10.1
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Duet_Chromebook?M=ZA6F0064DE
+  stylus: true
+  type: chromebook
+  variant: ZA6F0064
 Lenovo Chromebook Duet (ZA6F0026):
   biometricUnlock: false
   brand: Lenovo
@@ -34,6 +87,7 @@ Lenovo Chromebook Duet (ZA6F0026):
     "Chromebookz: Testbericht": https://chromebookz.de/lenovo-ideapad-duet-test-review-video/
     "DER SPIEGEL: Acht Jahre Notebook für 330 Euro (Testbericht)": https://www.spiegel.de/netzwelt/gadgets/lenovo-ideapad-duet-chromebook-im-test-acht-jahre-notebook-fuer-330-euro-a-cada3394-9a9e-428c-9a45-5d9e9e19f187
     "VoWe: Das Schnuckelchen": https://vowe.net/archives/018564.html
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20IdeaPad%20Duet%20Chromebook_new_datasheet_EN.pdf
   flip: true
   id: Lenovo Chromebook Duet (ZA6F0026)
   memory: 4
@@ -44,7 +98,7 @@ Lenovo Chromebook Duet (ZA6F0026):
   screenResolution: 1920x1080
   screenSize: 10.1
   screenTouch: true
-  specLink: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/Lenovo%20IdeaPad%20Duet%20Chromebook_new_datasheet_EN.pdf
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Duet_Chromebook?M=ZA6F0026DE
   stylus: true
   type: chromebook
   variant: ZA6F0026

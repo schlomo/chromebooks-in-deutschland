@@ -1,0 +1,20 @@
+Asus ChromeBook Flip CX5 (CX5400FMA-AI0078):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core i7-1160G7
+  expirationId: Asus Chromebook Flip CX5400
+  extraInfo: 512GB, hinterleuchtete Tastatur, inklusive USI Stylus
+  flip: true
+  id: Asus ChromeBook Flip CX5 (CX5400FMA-AI0078)
+  memory: 16
+  model: ChromeBook Flip CX5
+  productId: '201614130'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-CX5-CX5400/techspec/
+  stylus: true
+  type: chromebook
+  variant: CX5400FMA-AI0078

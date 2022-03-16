@@ -1,3 +1,24 @@
+
+Asus Chromebook Flip C433 (C433TA-AJ0140):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core m3-8100Y
+  expirationId: Asus Chromebook Flip C433
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur
+  flip: true
+  id: Asus Chromebook Flip C433 (C433TA-AJ0140)
+  memory: 8
+  model: Chromebook Flip C433
+  productId: "201092349"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
+  stylus: false
+  type: chromebook
+  variant: C433TA-AJ0140
 Asus Chromebook Flip C433 (C433TA-AJ0057):
   biometricUnlock: false
   brand: Asus
@@ -10,7 +31,7 @@ Asus Chromebook Flip C433 (C433TA-AJ0057):
   id: Asus Chromebook Flip C433 (C433TA-AJ0057)
   memory: 8
   model: Chromebook Flip C433
-  productId: '6986516'
+  productId: "6986516"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
@@ -25,19 +46,18 @@ Asus Chromebook Flip C433 (C433TA-AJ0139):
   brand: Asus
   cpu: Intel Core i5-8200Y
   expirationId: Asus Chromebook Flip C433
-  extraInfo: hinterleuchtete Tastatur, 128GB
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur
   flip: true
   id: Asus Chromebook Flip C433 (C433TA-AJ0139)
   memory: 8
   model: Chromebook Flip C433
-  productId: '200335870'
+  productId: "200335870"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: true
-  specLink: >-
-    https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
   stylus: false
   type: chromebook
   variant: C433TA-AJ0139
@@ -51,14 +71,13 @@ Asus Chromebook Flip C433 (C433TA-AJ0156):
   id: Asus Chromebook Flip C433 (C433TA-AJ0156)
   memory: 8
   model: Chromebook Flip C433
-  productId: '200608500'
+  productId: "200608500"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: true
-  specLink: >-
-    https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
   stylus: false
   type: chromebook
   variant: C433TA-AJ0156
@@ -72,14 +91,13 @@ Asus Chromebook Flip C433 (C433TA-AJ0199):
   id: Asus Chromebook Flip C433 (C433TA-AJ0199)
   memory: 8
   model: Chromebook Flip C433
-  productId: '200818189'
+  productId: "200818189"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: true
-  specLink: >-
-    https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
   stylus: false
   type: chromebook
   variant: C433TA-AJ0199
@@ -88,19 +106,18 @@ Asus Chromebook Flip C433 (C433TA-AJ0228):
   brand: Asus
   cpu: Intel Core m3-8100Y
   expirationId: Asus Chromebook Flip C433
-  extraInfo: hinterleuchtete Tastatur, 128GB
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur
   flip: true
   id: Asus Chromebook Flip C433 (C433TA-AJ0228)
   memory: 8
   model: Chromebook Flip C433
-  productId: '200896060'
+  productId: "200896060"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: true
-  specLink: >-
-    https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-C433/techspec/
   stylus: false
   type: chromebook
   variant: C433TA-AJ0228

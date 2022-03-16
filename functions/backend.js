@@ -246,7 +246,7 @@ const api = express()
 api.get("/api/data", (req, res) => {
 
     // count calls & record search string if given
-    const today = new Date().toISOString().substr(0, 10);
+    const today = new Date().toISOString().substring(0, 10);
     var statisticsTodayRef = admin.database().ref(`/statistics/${today}`);
     statisticsTodayRef.transaction((statistics) => {
         // If statistics/$today has never been set, it will be `null`.

@@ -1,0 +1,40 @@
+Acer Chromebook Spin 513 (R841T-S512):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Qualcomm Snapdragon 7180c
+  expirationId: Acer Chromebook Spin 513 (CP513-1H)
+  extraInfo: hinterleuchtete Tastatur, inklusive Chrome Enterprise Upgrade, USI Stylus optional
+  flip: true
+  id: Acer Chromebook Spin 513 (R841T-S512)
+  memory: 4
+  model: Chromebook Spin 513
+  productId: "201551821"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://www.jb-computer.de/media/pdf/ff/4e/af/Acer_R841T-S512_-_NX-AA5EG-003_-_DE.pdf
+  stylus: true
+  type: chromebook
+  variant: R841T-S512
+Acer Chromebook Spin 513 (R841T-S9FZ):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Qualcomm Snapdragon 7180c
+  expirationId: Acer Chromebook Spin 513 (CP513-1H)
+  extraInfo: hinterleuchtete Tastatur, USI Stylus optional
+  flip: true
+  id: Acer Chromebook Spin 513 (R841T-S9FZ)
+  memory: 4
+  model: Chromebook Spin 513
+  productId: "201551822"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://cdn-assets.playox.de/media/pdf/8e/a6/81/16996203_1.pdf
+  stylus: true
+  type: chromebook
+  variant: R841T-S9FZ

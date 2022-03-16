@@ -1,3 +1,5 @@
+# Acer Chromebook Spin 713 (CP713-3W-35CR) is NX.A6XEG.006
+
 Acer Chromebook Spin 713 (CP713-3W-31K4):
   biometricUnlock: false
   brand: Acer
@@ -6,14 +8,13 @@ Acer Chromebook Spin 713 (CP713-3W-31K4):
   expirationId: Acer Chromebook Spin 713 (CP713-3W)
   extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   extraLinks:
-    c|net Review (anderes Modell): >-
-      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    c|net Review (anderes Modell): https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
     Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
   flip: true
   id: Acer Chromebook Spin 713 (CP713-3W-31K4)
   memory: 8
   model: Chromebook Spin 713
-  productId: '2552567'
+  productId: "2552567"
   productProvider: geizhals
   screenGlare: true
   screenResolution: 2256x1504
@@ -31,14 +32,13 @@ Acer Chromebook Spin 713 (CP713-3W-346G):
   expirationId: Acer Chromebook Spin 713 (CP713-3W)
   extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   extraLinks:
-    c|net Review (anderes Modell): >-
-      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    c|net Review (anderes Modell): https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
     Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
   flip: true
   id: Acer Chromebook Spin 713 (CP713-3W-346G)
   memory: 8
   model: Chromebook Spin 713
-  productId: '783245628374568237456837246533245'
+  productId: "783245628374568237456837246533245"
   productProvider: idealo
   screenGlare: true
   screenResolution: 2256x1504
@@ -56,15 +56,14 @@ Acer Chromebook Spin 713 (CP713-3W-35CR):
   expirationId: Acer Chromebook Spin 713 (CP713-3W)
   extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   extraLinks:
-    c|net Review (anderes Modell): >-
-      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    c|net Review (anderes Modell): https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
     Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
   flip: true
   id: Acer Chromebook Spin 713 (CP713-3W-35CR)
   memory: 8
   model: Chromebook Spin 713
-  productId: '2576320'
-  productProvider: geizhals
+  productId: "201507672"
+  productProvider: idealo
   screenGlare: true
   screenResolution: 2256x1504
   screenSize: 13.5
@@ -80,14 +79,13 @@ Acer Chromebook Spin 713 (CP713-3W-56PY):
   expirationId: Acer Chromebook Spin 713 (CP713-3W)
   extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   extraLinks:
-    c|net Review (anderes Modell): >-
-      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    c|net Review (anderes Modell): https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
     Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
   flip: true
   id: Acer Chromebook Spin 713 (CP713-3W-56PY)
   memory: 16
   model: Chromebook Spin 713
-  productId: '201444316'
+  productId: "201444316"
   productProvider: idealo
   screenGlare: true
   screenResolution: 2256x1504
@@ -104,14 +102,13 @@ Acer Chromebook Spin 713 (CP713-3W-57R0):
   expirationId: Acer Chromebook Spin 713 (CP713-3W)
   extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   extraLinks:
-    c|net Review: >-
-      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    c|net Review: https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
     Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
   flip: true
   id: Acer Chromebook Spin 713 (CP713-3W-57R0)
   memory: 8
   model: Chromebook Spin 713
-  productId: '201465471'
+  productId: "201465471"
   productProvider: idealo
   screenGlare: true
   screenResolution: 2256x1504
@@ -129,14 +126,13 @@ Acer Chromebook Spin 713 (CP713-3W-7296):
   expirationId: Acer Chromebook Spin 713 (CP713-3W)
   extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   extraLinks:
-    c|net Review (anderes Modell): >-
-      https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
+    c|net Review (anderes Modell): https://www.cnet.com/tech/computing/acer-chromebook-spin-713-review-next-step-in-the-evolution-of-chromebooks/
     Übersicht über Serie: https://www.acer.com/ac/de/DE/content/series/acerchromebookspin713cp7133w
   flip: true
   id: Acer Chromebook Spin 713 (CP713-3W-7296)
   memory: 16
   model: Chromebook Spin 713
-  productId: '2576321'
+  productId: "2576321"
   productProvider: geizhals
   screenGlare: true
   screenResolution: 2256x1504

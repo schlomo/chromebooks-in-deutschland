@@ -3,18 +3,38 @@ Acer Chromebook Spin 311 (CP311-2H-C7BG):
   brand: Acer
   cpu: Intel Celeron N4100
   expirationId: Acer Chromebook Spin 311 (CP311-2H)
-  extraInfo: ''
   flip: true
   id: Acer Chromebook Spin 311 (CP311-2H-C7BG)
   memory: 4
   model: Chromebook Spin 311
-  productId: '6950804'
+  productId: "6950804"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1366x768
   screenSize: 11.6
   screenTouch: true
-  specLink: https://www.acer.com/ac/de/DE/content/professional-model/NX.HKKEG.001
+  specLink: https://gzhls.at/blob/ldb/1/a/6/2/de89e86d48906995b8d758e700c9d0296881.pdf
   stylus: false
   type: chromebook
   variant: CP311-2H-C7BG
+Acer Chromebook Spin 311 (CP311-2H-C8M1):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N4020
+  expirationId: Acer Chromebook Spin 311 (CP311-2H)
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.HKKEV.003
+  flip: true
+  id: Acer Chromebook Spin 311 (CP311-2H-C8M1)
+  memory: 4
+  model: Chromebook Spin 311
+  productId: "201306637"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/a/8/6/8/6ecd48341674b04302608d37f97c321f7762.pdf
+  stylus: false
+  type: chromebook
+  variant: CP311-2H-C8M1

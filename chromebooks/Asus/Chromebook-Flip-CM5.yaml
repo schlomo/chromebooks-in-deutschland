@@ -5,7 +5,7 @@ Asus Chromebook Flip CM5 (CM5500FDA-E60002):
   expirationId: Asus Chromebook Flip CM5
   extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
   flip: true
-  id: Asus Chromebook Flip CM5 (CM5500FDA-E60003)
+  id: Asus Chromebook Flip CM5 (CM5500FDA-E60002)
   memory: 8
   model: Chromebook Flip CM5
   productId: "201583859"
@@ -17,7 +17,7 @@ Asus Chromebook Flip CM5 (CM5500FDA-E60002):
   specLink: https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-CM5-CM5500/techspec/
   stylus: true
   type: chromebook
-  variant: CM5500FDA-E60003
+  variant: CM5500FDA-E60002
 Asus Chromebook Flip CM5 (CM5500FDA-E60003):
   biometricUnlock: false
   brand: Asus

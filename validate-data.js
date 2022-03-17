@@ -11,7 +11,8 @@ var errors=0;
 var productIDs = {};
 
 // checks on all devices
-Object.values(deviceData).map(device => {
+for (const key in deviceData) {
+    const device = deviceData[key];
     const {
         brand,
         cpu,
@@ -26,11 +27,16 @@ Object.values(deviceData).map(device => {
     
     var errorDescriptions = [];
 
+    // check that they key and id match
+    if (!(key === id)) {
+        errorDescriptions.push(`Mismatched key >${key}< and id >${id}<`);
+    }
+
     // check that all devices have a consistent ID
     const brandModelVariant = `${brand} ${model} (${variant})`;
     const desiredId = brandModelVariant.replaceAll(".", "-");
-    if (!(id === desiredId)) {
-        errorDescriptions.push(`Mismatched device ID >${id}<\n            B-M-V is >${desiredId}<`);
+    if (!(key === desiredId)) {
+        errorDescriptions.push(`Mismatched device key >${id}<\n            B-M-V is >${desiredId}<`);
     }
     // check that all devices have a valid expiration ID
     if (! (expirationId in expirationData)) {
@@ -58,10 +64,10 @@ Object.values(deviceData).map(device => {
     }
 
     if (errorDescriptions.length > 0) {
-        console.error(`Device ${id} has errors:\n${errorDescriptions.join("\n")}\nData:\n${JSON.stringify(device,null,2)}\n`);
+        console.error(`Device ${key} has errors:\n${errorDescriptions.join("\n")}\nData:\n${JSON.stringify(device,null,2)}\n`);
         errors += 1;
     }
-});
+};
 
 if (errors > 0) {
     console.log(`ERROR: ${errors} devices have errors`);

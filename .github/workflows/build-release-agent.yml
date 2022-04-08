@@ -87,7 +87,7 @@ jobs:
         tags: ${{ join(steps.*.outputs.container_tag, ',') }}
   
     - name: Upload build artifacts
-      uses: 'actions/upload-artifact@v2'
+      uses: 'actions/upload-artifact@v3'
       with:
           path: dist/*
           name: chromebooks-in-deutschland-${{ steps.version.outputs.VERSION }}

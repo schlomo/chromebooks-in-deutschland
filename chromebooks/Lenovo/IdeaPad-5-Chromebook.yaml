@@ -1,7 +1,6 @@
 # Ignored devices:
 #
 # Lenovo IdeaPad 5 Chromebook 14 82M80017FR
-
 Lenovo IdeaPad 5 Chromebook (82M8001J):
   biometricUnlock: false
   brand: Lenovo
@@ -25,6 +24,31 @@ Lenovo IdeaPad 5 Chromebook (82M8001J):
   stylus: false
   type: chromebook
   variant: 82M8001J
+
+Lenovo IdeaPad 5 Chromebook (82M8001K):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 512GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8001K)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: "201924385"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8001KGE
+  stylus: false
+  type: chromebook
+  variant: 82M8001K
+
 Lenovo IdeaPad 5 Chromebook (82M8001L):
   biometricUnlock: false
   brand: Lenovo
@@ -48,6 +72,7 @@ Lenovo IdeaPad 5 Chromebook (82M8001L):
   stylus: false
   type: chromebook
   variant: 82M8001L
+
 Lenovo IdeaPad 5 Chromebook (82M8001W):
   biometricUnlock: false
   brand: Lenovo
@@ -71,6 +96,7 @@ Lenovo IdeaPad 5 Chromebook (82M8001W):
   stylus: false
   type: chromebook
   variant: 82M8001W
+
 Lenovo IdeaPad 5 Chromebook (82M8001X):
   biometricUnlock: false
   brand: Lenovo
@@ -94,6 +120,7 @@ Lenovo IdeaPad 5 Chromebook (82M8001X):
   stylus: false
   type: chromebook
   variant: 82M8001X
+
 Lenovo IdeaPad 5 Chromebook (82M8001Y):
   biometricUnlock: false
   brand: Lenovo
@@ -117,6 +144,7 @@ Lenovo IdeaPad 5 Chromebook (82M8001Y):
   stylus: false
   type: chromebook
   variant: 82M8001Y
+
 Lenovo IdeaPad 5 Chromebook (82M8002A):
   biometricUnlock: false
   brand: Lenovo
@@ -140,6 +168,7 @@ Lenovo IdeaPad 5 Chromebook (82M8002A):
   stylus: false
   type: chromebook
   variant: 82M8002A
+
 Lenovo IdeaPad 5 Chromebook (82M8002B):
   biometricUnlock: false
   brand: Lenovo
@@ -163,6 +192,79 @@ Lenovo IdeaPad 5 Chromebook (82M8002B):
   stylus: false
   type: chromebook
   variant: 82M8002B
+
+Lenovo IdeaPad 5 Chromebook (82M8002Y):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M8002Y)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: "201917707"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M8002YGE
+  stylus: false
+  type: chromebook
+  variant: 82M8002Y
+
+Lenovo IdeaPad 5 Chromebook (82M80030):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i3-1115G4
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M80030)
+  memory: 8
+  model: IdeaPad 5 Chromebook
+  productId: "201917711"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M80030GE
+  stylus: false
+  type: chromebook
+  variant: 82M80030
+
+Lenovo IdeaPad 5 Chromebook (82M80031):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Pentium 7505
+  expirationId: Lenovo IdeaPad 5 Chromebook
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    "Cyberport: Testbericht (Video, andere Ausstattung)": https://www.youtube.com/watch?v=6NolY9BCRKk
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_5_CB_14ITL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 5 Chromebook (82M80031)
+  memory: 4
+  model: IdeaPad 5 Chromebook
+  productId: "201917694"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_5_CB_14ITL6?M=82M80031GE
+  stylus: false
+  type: chromebook
+  variant: 82M80031
+
 Lenovo IdeaPad 5 Chromebook (82M8003A):
   biometricUnlock: false
   brand: Lenovo
@@ -186,6 +288,7 @@ Lenovo IdeaPad 5 Chromebook (82M8003A):
   stylus: false
   type: chromebook
   variant: 82M8003A
+
 Lenovo IdeaPad 5 Chromebook (82M8003N):
   biometricUnlock: false
   brand: Lenovo
@@ -209,6 +312,7 @@ Lenovo IdeaPad 5 Chromebook (82M8003N):
   stylus: false
   type: chromebook
   variant: 82M8003N
+
 Lenovo IdeaPad 5 Chromebook (82M8003P):
   biometricUnlock: false
   brand: Lenovo

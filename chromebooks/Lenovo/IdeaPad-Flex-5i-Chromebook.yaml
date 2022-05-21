@@ -20,6 +20,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7000X):
   stylus: true
   type: chromebook
   variant: 82M7000X
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7000Y):
   biometricUnlock: false
   brand: Lenovo
@@ -42,6 +43,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7000Y):
   stylus: true
   type: chromebook
   variant: 82M7000Y
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70016):
   biometricUnlock: false
   brand: Lenovo
@@ -64,6 +66,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70016):
   stylus: true
   type: chromebook
   variant: 82M70016
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70017):
   biometricUnlock: false
   brand: Lenovo
@@ -86,6 +89,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70017):
   stylus: true
   type: chromebook
   variant: 82M70017
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70018):
   biometricUnlock: false
   brand: Lenovo
@@ -108,6 +112,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70018):
   stylus: true
   type: chromebook
   variant: 82M70018
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70019):
   biometricUnlock: false
   brand: Lenovo
@@ -130,6 +135,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70019):
   stylus: true
   type: chromebook
   variant: 82M70019
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7001J):
   biometricUnlock: false
   brand: Lenovo
@@ -152,6 +158,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001J):
   stylus: true
   type: chromebook
   variant: 82M7001J
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7001L):
   biometricUnlock: false
   brand: Lenovo
@@ -174,6 +181,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001L):
   stylus: true
   type: chromebook
   variant: 82M7001L
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7001M):
   biometricUnlock: false
   brand: Lenovo
@@ -196,6 +204,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001M):
   stylus: true
   type: chromebook
   variant: 82M7001M
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7001V):
   biometricUnlock: false
   brand: Lenovo
@@ -218,6 +227,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7001V):
   stylus: true
   type: chromebook
   variant: 82M7001V
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70027):
   biometricUnlock: false
   brand: Lenovo
@@ -240,6 +250,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70027):
   stylus: true
   type: chromebook
   variant: 82M70027
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70028):
   biometricUnlock: false
   brand: Lenovo
@@ -262,6 +273,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70028):
   stylus: true
   type: chromebook
   variant: 82M70028
+
 Lenovo IdeaPad Flex 5i Chromebook (82M70029):
   biometricUnlock: false
   brand: Lenovo
@@ -284,6 +296,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M70029):
   stylus: true
   type: chromebook
   variant: 82M70029
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7002A):
   biometricUnlock: false
   brand: Lenovo
@@ -306,6 +319,7 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7002A):
   stylus: true
   type: chromebook
   variant: 82M7002A
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7002K):
   biometricUnlock: false
   brand: Lenovo
@@ -328,6 +342,30 @@ Lenovo IdeaPad Flex 5i Chromebook (82M7002K):
   stylus: true
   type: chromebook
   variant: 82M7002K
+
+Lenovo IdeaPad Flex 5i Chromebook (82M7002Y):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Core i5-1135G7
+  expirationId: Lenovo IdeaPad Flex 5i Chromebook
+  extraInfo: 512GB SSD, OLED, hinterleuchtete Tastatur, USI Stylus optional
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_Flex_5_CB_13ITL6_datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 5i Chromebook (82M7002Y)
+  memory: 8
+  model: IdeaPad Flex 5i Chromebook
+  productId: "201899551"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IP_Flex_5_Chrome_13ITL6?M=82M7002YGE
+  stylus: true
+  type: chromebook
+  variant: 82M7002Y
+
 Lenovo IdeaPad Flex 5i Chromebook (82M7004D):
   biometricUnlock: false
   brand: Lenovo

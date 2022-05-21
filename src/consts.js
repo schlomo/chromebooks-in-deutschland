@@ -21,6 +21,7 @@ export const cpus = {
     "Intel Celeron N4120": { "cores": 4, "frequency": 1.1, "burst": 2.6 },
     "Intel Celeron N4500": { "cores": 2, "frequency": 1.1, "burst": 2.8 },
     "Intel Celeron N5100": { "cores": 4, "frequency": 1.1, "burst": 2.8 },
+    "Intel Celeron N6000": { "cores": 4, "frequency": 1.1, "burst": 3.3 },
     "Intel Core i3-10110U": { "cores": 2, "frequency": 2.1, "burst": 4.1 },
     "Intel Core i3-1110G4": { "cores": 2, "frequency": 2.5, "burst": 3.9 },
     "Intel Core i3-1115G4": { "cores": 2, "frequency": 3.0, "burst": 4.1 },
@@ -69,6 +70,7 @@ export const resolutions = {
     "1920x1080": "FHD",
     "1920x1200": "FHD 16:10",
     "1920x1280": "FHD 3:2",
+    "2000x1200": "FHD 5:3",
     "2160x1440": "2K 3:2",
     "2256x1504": ">2K 3:2",
 };

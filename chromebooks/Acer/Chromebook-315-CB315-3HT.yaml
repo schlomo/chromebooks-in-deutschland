@@ -10,7 +10,7 @@ Acer Chromebook 315 (CB315-3HT-C1DY):
   id: Acer Chromebook 315 (CB315-3HT-C1DY)
   memory: 4
   model: Chromebook 315
-  productId: '7826598347698137465198327465893'
+  productId: "201674744"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -19,6 +19,7 @@ Acer Chromebook 315 (CB315-3HT-C1DY):
   stylus: false
   type: chromebook
   variant: CB315-3HT-C1DY
+
 Acer Chromebook 315 (CB315-3HT-C32M):
   biometricUnlock: false
   brand: Acer
@@ -28,16 +29,17 @@ Acer Chromebook 315 (CB315-3HT-C32M):
   id: Acer Chromebook 315 (CB315-3HT-C32M)
   memory: 4
   model: Chromebook 315
-  productId: '201044253'
+  productId: "201044253"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
   screenSize: 15.6
   screenTouch: true
-  specLink: ''
+  specLink: ""
   stylus: false
   type: chromebook
   variant: CB315-3HT-C32M
+
 Acer Chromebook 315 (CB315-3HT-C47Q):
   biometricUnlock: false
   brand: Acer
@@ -47,7 +49,7 @@ Acer Chromebook 315 (CB315-3HT-C47Q):
   id: Acer Chromebook 315 (CB315-3HT-C47Q)
   memory: 4
   model: Chromebook 315
-  productId: '7004123'
+  productId: "7004123"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -57,6 +59,7 @@ Acer Chromebook 315 (CB315-3HT-C47Q):
   stylus: false
   type: chromebook
   variant: CB315-3HT-C47Q
+
 Acer Chromebook 315 (CB315-3HT-C4GR):
   biometricUnlock: false
   brand: Acer
@@ -66,7 +69,7 @@ Acer Chromebook 315 (CB315-3HT-C4GR):
   id: Acer Chromebook 315 (CB315-3HT-C4GR)
   memory: 4
   model: Chromebook 315
-  productId: '200454020'
+  productId: "200454020"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -76,6 +79,29 @@ Acer Chromebook 315 (CB315-3HT-C4GR):
   stylus: false
   type: chromebook
   variant: CB315-3HT-C4GR
+
+Acer Chromebook 315 (CB315-3HT-C4RU):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N4120
+  disabled: true
+  expirationId: Acer Chromebook 315 (CB315-3HT)
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AUJEG.003
+  flip: false
+  id: Acer Chromebook 315 (CB315-3HT-C4RU)
+  memory: 4
+  model: Chromebook 315
+  productId: "201929533"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  stylus: false
+  type: chromebook
+  variant: CB315-3HT-C4RU
+
 Acer Chromebook 315 (CB315-3HT-C68Z):
   biometricUnlock: false
   brand: Acer
@@ -87,7 +113,7 @@ Acer Chromebook 315 (CB315-3HT-C68Z):
   id: Acer Chromebook 315 (CB315-3HT-C68Z)
   memory: 4
   model: Chromebook 315
-  productId: '201507671'
+  productId: "201507671"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -97,6 +123,28 @@ Acer Chromebook 315 (CB315-3HT-C68Z):
   stylus: false
   type: chromebook
   variant: CB315-3HT-C68Z
+
+Acer Chromebook 315 (CB315-3HT-C74D):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Celeron N4120
+  disabled: true
+  expirationId: Acer Chromebook 315 (CB315-3HT)
+  extraInfo: 128GB
+  flip: false
+  id: Acer Chromebook 315 (CB315-3HT-C74D)
+  memory: 4
+  model: Chromebook 315
+  productId: "201924340"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  stylus: false
+  type: chromebook
+  variant: CB315-3HT-C74D
+
 Acer Chromebook 315 (CB315-3HT-C8AG):
   biometricUnlock: false
   brand: Acer
@@ -108,7 +156,7 @@ Acer Chromebook 315 (CB315-3HT-C8AG):
   id: Acer Chromebook 315 (CB315-3HT-C8AG)
   memory: 4
   model: Chromebook 315
-  productId: '201548026'
+  productId: "201548026"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -117,6 +165,7 @@ Acer Chromebook 315 (CB315-3HT-C8AG):
   stylus: false
   type: chromebook
   variant: CB315-3HT-C8AG
+
 Acer Chromebook 315 (CB315-3HT-P297):
   biometricUnlock: false
   brand: Acer
@@ -127,7 +176,7 @@ Acer Chromebook 315 (CB315-3HT-P297):
   id: Acer Chromebook 315 (CB315-3HT-P297)
   memory: 8
   model: Chromebook 315
-  productId: '7000075'
+  productId: "7000075"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -137,6 +186,7 @@ Acer Chromebook 315 (CB315-3HT-P297):
   stylus: false
   type: chromebook
   variant: CB315-3HT-P297
+
 Acer Chromebook 315 (CB315-3HT-P51T):
   biometricUnlock: false
   brand: Acer
@@ -149,7 +199,7 @@ Acer Chromebook 315 (CB315-3HT-P51T):
   id: Acer Chromebook 315 (CB315-3HT-P51T)
   memory: 8
   model: Chromebook 315
-  productId: '201507670'
+  productId: "201507670"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -159,6 +209,7 @@ Acer Chromebook 315 (CB315-3HT-P51T):
   stylus: false
   type: chromebook
   variant: CB315-3HT-P51T
+
 Acer Chromebook 315 (CB315-3HT-P6Y1):
   biometricUnlock: false
   brand: Acer
@@ -171,7 +222,7 @@ Acer Chromebook 315 (CB315-3HT-P6Y1):
   id: Acer Chromebook 315 (CB315-3HT-P6Y1)
   memory: 8
   model: Chromebook 315
-  productId: '201548027'
+  productId: "201548027"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -180,6 +231,7 @@ Acer Chromebook 315 (CB315-3HT-P6Y1):
   stylus: false
   type: chromebook
   variant: CB315-3HT-P6Y1
+
 Acer Chromebook 315 (CB315-3HT-P7DU):
   biometricUnlock: false
   brand: Acer
@@ -192,7 +244,7 @@ Acer Chromebook 315 (CB315-3HT-P7DU):
   id: Acer Chromebook 315 (CB315-3HT-P7DU)
   memory: 8
   model: Chromebook 315
-  productId: '201197200'
+  productId: "201197200"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080

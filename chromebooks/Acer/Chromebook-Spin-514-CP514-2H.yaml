@@ -8,7 +8,7 @@ Acer Chromebook Spin 514 (CP514-2H-30GW):
   id: Acer Chromebook Spin 514 (CP514-2H-30GW)
   memory: 8
   model: Chromebook Spin 514
-  productId: '201824918'
+  productId: "201824918"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
@@ -17,6 +17,7 @@ Acer Chromebook Spin 514 (CP514-2H-30GW):
   stylus: true
   type: chromebook
   variant: CP514-2H-30GW
+
 Acer Chromebook Spin 514 (CP514-2H-30U2):
   biometricUnlock: false
   brand: Acer
@@ -27,7 +28,7 @@ Acer Chromebook Spin 514 (CP514-2H-30U2):
   id: Acer Chromebook Spin 514 (CP514-2H-30U2)
   memory: 8
   model: Chromebook Spin 514
-  productId: '201824919'
+  productId: "201824919"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080
@@ -36,6 +37,28 @@ Acer Chromebook Spin 514 (CP514-2H-30U2):
   stylus: true
   type: chromebook
   variant: CP514-2H-30U2
+
+Acer Chromebook Spin 514 (CP514-2H-39T1):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Core i3-1110G4
+  expirationId: Acer Chromebook Spin 514 (CP514-2H)
+  extraInfo: 128GB SSD, hinterleuchtete Tastatur, USI Stylus optional
+  flip: true
+  id: Acer Chromebook Spin 514 (CP514-2H-39T1)
+  memory: 8
+  model: Chromebook Spin 514
+  productId: "201913704"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/4/f/c/a/01155d560b197e7d0d5fdb2be9510565de98.pdf
+  stylus: true
+  type: chromebook
+  variant: CP514-2H-39T1
+
 Acer Chromebook Spin 514 (CP514-2H-53K9):
   biometricUnlock: false
   brand: Acer
@@ -46,7 +69,7 @@ Acer Chromebook Spin 514 (CP514-2H-53K9):
   id: Acer Chromebook Spin 514 (CP514-2H-53K9)
   memory: 8
   model: Chromebook Spin 514
-  productId: '201824917'
+  productId: "201824917"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1920x1080

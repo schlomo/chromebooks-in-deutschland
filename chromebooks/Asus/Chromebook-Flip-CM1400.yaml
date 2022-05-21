@@ -1,0 +1,19 @@
+Asus Chromebook Flip CM1400 (CM1400FXA-EC0016):
+  biometricUnlock: false
+  brand: Asus
+  cpu: AMD 3015Ce
+  expirationId: Asus Chromebook Flip CM1400FXA
+  flip: true
+  id: Asus Chromebook Flip CM1400 (CM1400FXA-EC0016)
+  memory: 4
+  model: Chromebook Flip CM1400
+  productId: "201927454"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-CM1-CM1400/techspec/
+  stylus: false
+  type: chromebook
+  variant: CM1400FXA-EC0016

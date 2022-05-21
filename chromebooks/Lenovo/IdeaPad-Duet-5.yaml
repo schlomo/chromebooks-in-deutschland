@@ -2,6 +2,33 @@
 # 82QS000R is 8116372C 8116372L Lenovo IdeaPad Duet 5 13 0196118116372
 # 82QS0012 is 8151892C 8151892L Lenovo IdeaPad Duet 5 13 0196118151892
 
+Lenovo IdeaPad Duet 5 (82QS0027):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Qualcomm Snapdragon 7c Gen 2
+  expirationId: Lenovo IdeaPad Duet 5
+  extraInfo: 256GB, OLED Bildschirm, Tastatur abnehmbar, USI Stylus optional
+  extraLinks:
+    'Chrome Unboxed: Review': https://chromeunboxed.com/lenovo-chromebook-duet-5-review/
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad%20Duet%205%20CB_datasheet_EN.pdf
+    'Notebookcheck: Testbericht': >-
+      https://www.notebookcheck.com/Test-Lenovo-IdeaPad-Duet-5-Chromebook-OLED-in-super-preiswert.593332.0.html
+  flip: true
+  id: Lenovo IdeaPad Duet 5 (82QS0027)
+  memory: 8
+  model: IdeaPad Duet 5
+  productId: '201939130'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 13.3
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_Duet_5_CB_13Q7C6?M=82QS0027GE
+  stylus: true
+  type: chromebook
+  variant: 82QS0027
 Lenovo IdeaPad Duet 5 (82QS000R):
   biometricUnlock: false
   brand: Lenovo

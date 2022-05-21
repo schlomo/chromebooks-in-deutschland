@@ -1,6 +1,5 @@
 # Links to overview pages
 # CB515-1WAc CB515-1WCh
-
 Acer Chromebook 515 (CB515-1W-36N4):
   biometricUnlock: true
   brand: Acer
@@ -13,7 +12,7 @@ Acer Chromebook 515 (CB515-1W-36N4):
   id: Acer Chromebook 515 (CB515-1W-36N4)
   memory: 8
   model: Chromebook 515
-  productId: '201819208'
+  productId: "201819208"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1920x1080
@@ -23,3 +22,26 @@ Acer Chromebook 515 (CB515-1W-36N4):
   stylus: false
   type: chromebook
   variant: CB515-1W-36N4
+
+Acer Chromebook 515 (CB515-1W-55JD):
+  biometricUnlock: true
+  brand: Acer
+  cpu: Intel Core i5-1135G7
+  expirationId: Acer Chromebook 515 (CB515-1W)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    Produkthomepage: https://www.acer.com/ac/de/DE/content/model/NX.AYGEG.002
+  flip: false
+  id: Acer Chromebook 515 (CB515-1W-55JD)
+  memory: 8
+  model: Chromebook 515
+  productId: "201943050"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: false
+  specLink: http://media.cancom.de/attachments/5/c/5ce84640-5478-cd42-9fed-8dacf82d4f42.pdf
+  stylus: false
+  type: chromebook
+  variant: CB515-1W-55JD

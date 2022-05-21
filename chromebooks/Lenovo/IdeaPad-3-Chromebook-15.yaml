@@ -20,6 +20,7 @@ Lenovo IdeaPad 3 Chromebook 15 (82N4000F):
   stylus: false
   type: chromebook
   variant: 82N4000F
+
 Lenovo IdeaPad 3 Chromebook 15 (82N4000X):
   biometricUnlock: false
   brand: Lenovo
@@ -42,6 +43,7 @@ Lenovo IdeaPad 3 Chromebook 15 (82N4000X):
   stylus: false
   type: chromebook
   variant: 82N4000X
+
 Lenovo IdeaPad 3 Chromebook 15 (82N4000Y):
   biometricUnlock: false
   brand: Lenovo
@@ -64,6 +66,7 @@ Lenovo IdeaPad 3 Chromebook 15 (82N4000Y):
   stylus: false
   type: chromebook
   variant: 82N4000Y
+
 Lenovo IdeaPad 3 Chromebook 15 (82N40010):
   biometricUnlock: false
   brand: Lenovo
@@ -86,6 +89,30 @@ Lenovo IdeaPad 3 Chromebook 15 (82N40010):
   stylus: false
   type: chromebook
   variant: 82N40010
+
+Lenovo IdeaPad 3 Chromebook 15 (82N40016):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N6000
+  expirationId: Lenovo IdeaPad 3 Chromebook 15
+  extraInfo: 128GB
+  extraLinks:
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook 15 (82N40016)
+  memory: 8
+  model: IdeaPad 3 Chromebook 15
+  productId: "201838159"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_15IJL6?M=82N40016GE
+  stylus: false
+  type: chromebook
+  variant: 82N40016
+
 Lenovo IdeaPad 3 Chromebook 15 (82N40017):
   biometricUnlock: false
   brand: Lenovo
@@ -108,3 +135,26 @@ Lenovo IdeaPad 3 Chromebook 15 (82N40017):
   stylus: false
   type: chromebook
   variant: 82N40017
+
+Lenovo IdeaPad 3 Chromebook 15 (82N4001A):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N6000
+  expirationId: Lenovo IdeaPad 3 Chromebook 15
+  extraInfo: 128GB
+  extraLinks:
+    Flyer: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_15IJL6_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad 3 Chromebook 15 (82N4001A)
+  memory: 8
+  model: IdeaPad 3 Chromebook 15
+  productId: "201924384"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IdeaPad_3_CB_15IJL6?M=82N4001AGE
+  stylus: false
+  type: chromebook
+  variant: 82N4001A

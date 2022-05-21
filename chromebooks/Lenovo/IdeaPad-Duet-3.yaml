@@ -1,0 +1,28 @@
+# EAN
+
+Lenovo IdeaPad Duet 3 (82T6000J):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Qualcomm Snapdragon 7c Gen 2
+  expirationId: Lenovo Chromebook Duet 3
+  extraInfo: 128GB, Tastatur abnehmbar, USI Stylus optional
+  extraLinks:
+    "tom's guide: Review": https://www.tomsguide.com/reviews/lenovo-duet-3
+    Flyer: >-
+      https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad%20Duet%203%20Chrome%2011Q727_datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Duet 3 (82T6000J)
+  memory: 4
+  model: IdeaPad Duet 3
+  productId: '201946916'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 2000x1200
+  screenSize: 11
+  screenTouch: true
+  specLink: >-
+    https://psref.lenovo.com/Detail/IdeaPad/IP_Duet_3_Chrome_11Q727?M=82T6000JGE
+  stylus: true
+  type: chromebook
+  variant: 82T6000J
+  

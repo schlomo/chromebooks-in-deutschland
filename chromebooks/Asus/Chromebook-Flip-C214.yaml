@@ -8,17 +8,17 @@ Asus Chromebook Flip C214 (C214MA-BU0128):
   id: Asus Chromebook Flip C214 (C214MA-BU0128)
   memory: 4
   model: Chromebook Flip C214
-  productId: '6837959'
+  productId: "6837959"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1366x768
   screenSize: 11.6
   screenTouch: true
-  specLink: >-
-    https://www.asus.com/de/2-in-1-PCs/ASUS-Chromebook-Flip-C214MA/specifications/
+  specLink: https://www.asus.com/de/2-in-1-PCs/ASUS-Chromebook-Flip-C214MA/specifications/
   stylus: true
   type: chromebook
   variant: C214MA-BU0128
+
 Asus Chromebook Flip C214 (C214MA-BU0132):
   biometricUnlock: false
   brand: Asus
@@ -29,17 +29,17 @@ Asus Chromebook Flip C214 (C214MA-BU0132):
   id: Asus Chromebook Flip C214 (C214MA-BU0132)
   memory: 4
   model: Chromebook Flip C214
-  productId: '7009800'
+  productId: "7009800"
   productProvider: idealo
   screenGlare: false
   screenResolution: 1366x768
   screenSize: 11.6
   screenTouch: true
-  specLink: >-
-    https://www.asus.com/de/2-in-1-PCs/ASUS-Chromebook-Flip-C214MA/specifications/
+  specLink: https://www.asus.com/de/2-in-1-PCs/ASUS-Chromebook-Flip-C214MA/specifications/
   stylus: true
   type: chromebook
   variant: C214MA-BU0132
+
 Asus Chromebook Flip C214 (C214MA-BW0163):
   biometricUnlock: false
   brand: Asus
@@ -50,7 +50,7 @@ Asus Chromebook Flip C214 (C214MA-BW0163):
   id: Asus Chromebook Flip C214 (C214MA-BW0163)
   memory: 4
   model: Chromebook Flip C214
-  productId: '6986518'
+  productId: "6986518"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1366x768
@@ -60,6 +60,7 @@ Asus Chromebook Flip C214 (C214MA-BW0163):
   stylus: true
   type: chromebook
   variant: C214MA-BW0163
+
 Asus Chromebook Flip C214 (C214MA-BW0262):
   biometricUnlock: false
   brand: Asus
@@ -70,7 +71,7 @@ Asus Chromebook Flip C214 (C214MA-BW0262):
   id: Asus Chromebook Flip C214 (C214MA-BW0262)
   memory: 4
   model: Chromebook Flip C214
-  productId: '200847111'
+  productId: "200847111"
   productProvider: idealo
   screenGlare: true
   screenResolution: 1366x768
@@ -80,3 +81,24 @@ Asus Chromebook Flip C214 (C214MA-BW0262):
   stylus: true
   type: chromebook
   variant: C214MA-BW0262
+
+Asus Chromebook Flip C214 (C214MA-BW0552):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Celeron N4020
+  expirationId: Asus Chromebook Flip C214
+  extraInfo: EMR Stylus optional
+  flip: true
+  id: Asus Chromebook Flip C214 (C214MA-BW0552)
+  memory: 4
+  model: Chromebook Flip C214
+  productId: "201915123"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://www.asus.com/de/2-in-1-PCs/ASUS-Chromebook-Flip-C214MA/specifications/
+  stylus: true
+  type: chromebook
+  variant: C214MA-BW0552

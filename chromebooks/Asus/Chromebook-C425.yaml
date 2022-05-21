@@ -1,23 +1,5 @@
-Asus Chromebook C425 (C425TA-H50081):
-  biometricUnlock: false
-  brand: Asus
-  cpu: Intel Core m3-8100Y
-  expirationId: Asus Chromebook C425
-  extraInfo: hinterleuchtete Tastatur
-  flip: false
-  id: Asus Chromebook C425 (C425TA-H50081)
-  memory: 8
-  model: Chromebook C425
-  productId: "200344274"
-  productProvider: idealo
-  screenGlare: false
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: false
-  specLink: https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-C425/techspec/
-  stylus: false
-  type: chromebook
-  variant: C425TA-H50081
+# C425TA-AJ0211 french
+
 Asus Chromebook C425 (C425TA-AJ0293):
   biometricUnlock: false
   brand: Asus
@@ -38,6 +20,70 @@ Asus Chromebook C425 (C425TA-AJ0293):
   stylus: false
   type: chromebook
   variant: C425TA-AJ0293
+
+Asus Chromebook C425 (C425TA-AJ0326):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core m3-8100Y
+  expirationId: Asus Chromebook C425
+  extraInfo: hinterleuchtete Tastatur
+  flip: false
+  id: Asus Chromebook C425 (C425TA-AJ0326)
+  memory: 8
+  model: Chromebook C425
+  productId: "201900238"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-C425/techspec/
+  stylus: false
+  type: chromebook
+  variant: C425TA-AJ0326
+
+Asus Chromebook C425 (C425TA-AJ0327):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core i5-8200Y
+  expirationId: Asus Chromebook C425
+  extraInfo: hinterleuchtete Tastatur
+  flip: false
+  id: Asus Chromebook C425 (C425TA-AJ0327)
+  memory: 8
+  model: Chromebook C425
+  productId: "201900232"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-C425/techspec/
+  stylus: false
+  type: chromebook
+  variant: C425TA-AJ0327
+
+Asus Chromebook C425 (C425TA-H50081):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Core m3-8100Y
+  expirationId: Asus Chromebook C425
+  extraInfo: hinterleuchtete Tastatur
+  flip: false
+  id: Asus Chromebook C425 (C425TA-H50081)
+  memory: 8
+  model: Chromebook C425
+  productId: "200344274"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://www.asus.com/Laptops/For-Home/Chromebook/ASUS-Chromebook-C425/techspec/
+  stylus: false
+  type: chromebook
+  variant: C425TA-H50081
+
 Asus Chromebook C425 (C425TA-H50125):
   biometricUnlock: false
   brand: Asus
@@ -58,6 +104,7 @@ Asus Chromebook C425 (C425TA-H50125):
   stylus: false
   type: chromebook
   variant: C425TA-H50125
+
 Asus Chromebook C425 (C425TA-H50181):
   biometricUnlock: false
   brand: Asus

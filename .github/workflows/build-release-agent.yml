@@ -31,7 +31,7 @@ jobs:
       with:
         node-version: 16.x
     - name: Setup package build
-      run: sudo apt install -yV --no-install-recommends build-essential devscripts lintian
+      run: sudo apt update -y && sudo apt install -yV --no-install-recommends build-essential devscripts lintian
     - run: yarn --frozen-lockfile
     - run: yarn prep
     - id: version

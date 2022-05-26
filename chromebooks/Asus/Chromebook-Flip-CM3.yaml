@@ -1,3 +1,24 @@
+Asus Chromebook Flip 12 CM3 (90NX03H1-M00180):
+  biometricUnlock: false
+  brand: Asus
+  cpu: MediaTek MT8183
+  expirationId: Asus Chromebook Flip CM3
+  extraInfo: 128GB, USI Stylus optional
+  flip: true
+  id: Asus Chromebook Flip 12 CM3 (90NX03H1-M00180)
+  memory: 8
+  model: Chromebook Flip 12 CM3
+  productId: "201942617"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x912
+  screenSize: 12
+  screenTouch: true
+  specLink: https://www.asus.com/de/Laptops/For-Home/Chromebook/ASUS-Chromebook-Flip-CM3-CM3200/techspec/
+  stylus: true
+  type: chromebook
+  variant: 90NX03H1-M00180
+
 Asus Chromebook Flip 12 CM3 (CM3200FVA-HW0006):
   biometricUnlock: false
   brand: Asus
@@ -18,6 +39,7 @@ Asus Chromebook Flip 12 CM3 (CM3200FVA-HW0006):
   stylus: true
   type: chromebook
   variant: CM3200FVA-HW0006
+
 Asus Chromebook Flip 12 CM3 (CM3200FVA-HW0007):
   biometricUnlock: false
   brand: Asus

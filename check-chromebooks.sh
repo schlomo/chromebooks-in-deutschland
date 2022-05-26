@@ -17,8 +17,9 @@ default_regex_parts=(
     'C[0-9BPTHLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
     'C[0-9]+[BPTHLW]+'
     'R[0-9][0-9][0-9][A-Z]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # R853TNA-C0EX
+    'R[0-9][0-9][0-9][A-Z]+-[A-Z0-9][A-Z0-9][A-Z0-9]' # R852TN-C1Y which is is an Idealo error for R852TN-C1YV :-(
     # Asus
-    '90MS[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]-M[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # 90MS01B1-M00080
+    '90[MN][SX][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]-M[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # 90MS01B1-M00080
     'C[MX][0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CM5500FDA-E60003
     'CT[0-9][0-9][0-9][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CT100PA-AW0035
     'C[0-9][0-9][0-9][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # C425TA-H50125

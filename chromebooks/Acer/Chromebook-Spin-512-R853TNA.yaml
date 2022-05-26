@@ -1,3 +1,8 @@
+# R853TNA-P7LA is NX.A92EG.004
+# R853TNA-C713 is NX.A92EG.003
+# R853TNA-P59W is NX.A92EG.002
+# R853TNA-C0EX is NX.A92EG.001
+
 Acer Chromebook Spin 512 (R853TNA-C0EX):
   biometricUnlock: false
   brand: Acer
@@ -18,6 +23,7 @@ Acer Chromebook Spin 512 (R853TNA-C0EX):
   stylus: true
   type: chromebook
   variant: R853TNA-C0EX
+
 Acer Chromebook Spin 512 (R853TNA-C713):
   biometricUnlock: false
   brand: Acer
@@ -38,6 +44,7 @@ Acer Chromebook Spin 512 (R853TNA-C713):
   stylus: true
   type: chromebook
   variant: R853TNA-C713
+
 Acer Chromebook Spin 512 (R853TNA-P59W):
   biometricUnlock: false
   brand: Acer
@@ -58,6 +65,7 @@ Acer Chromebook Spin 512 (R853TNA-P59W):
   stylus: true
   type: chromebook
   variant: R853TNA-P59W
+
 Acer Chromebook Spin 512 (R853TNA-P7LA):
   biometricUnlock: false
   brand: Acer

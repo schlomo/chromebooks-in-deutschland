@@ -28,13 +28,6 @@ const extraExpirationInfo = {
         "model": "IdeaPad 3 Chromebook 15",
         "expiration": "2028-05-31T22:00:00.000Z" // just guessing here
     },
-    // Google doesn't have anything to match 14b-na0432ng which is NOT a x360 device
-    // Came out in 2021 so probably till at least 2028
-    "HP Chromebook 14b": {
-        "brand": "HP",
-        "model": "Chromebook 14b",
-        "expiration": "2028-05-31T22:00:00.000Z" // just guessing here
-    },
 };
 
 
@@ -57,12 +50,14 @@ function getDateFromMonthYear(input) {
 
 export function extractModels(input) {
     input = decode(input)
+        .trim()
         .replace(/[\s\u{0000A0}]+/ug, " ") // match also unicode spaces
         .replace(".", "_"); // Use _ for . so that model can be used as dict key
     if (
         input.match(/^[^/,()]+$/g) // no special separators
-        || input.match(/^.+\([\w- ]+\)$/g) // single word in () at the end
+        || input.match(/^.*\([\w- ]+\)$/g) // single word in () at the end
     ) {
+        input = input.replace(/\s*\(/, " (") // ensure that there is exactly 1 blank before (
         debug("  Single: " + input);
         return [input];
     }

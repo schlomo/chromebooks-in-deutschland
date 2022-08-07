@@ -1,0 +1,101 @@
+
+HP Chromebook 14b (14b-nb0010ng):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Pentium 7505
+  expirationId: HP Chromebook 14b-nb0
+  extraInfo: Fingerabdruckleser unklar
+  flip: false
+  id: HP Chromebook 14b (14b-nb0010ng)
+  memory: 4
+  model: Chromebook 14b
+  productId: '201563673'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07638587
+  stylus: false
+  type: chromebook
+  variant: 14b-nb0010ng
+HP Chromebook 14b (14b-nb0030ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Core i3-1115G4
+  expirationId: HP Chromebook 14b-nb0
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  flip: false
+  id: HP Chromebook 14b (14b-nb0030ng)
+  memory: 8
+  model: Chromebook 14b
+  productId: '201623213'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07638588
+  stylus: false
+  type: chromebook
+  variant: 14b-nb0030ng
+HP Chromebook 14b (14b-nb0060ng):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Core i5-1135G7
+  expirationId: HP Chromebook 14b-nb0
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur, Fingerabdruckleser unklar
+  flip: false
+  id: HP Chromebook 14b (14b-nb0060ng)
+  memory: 8
+  model: Chromebook 14b
+  productId: '201624491'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 14
+  screenTouch: false
+  specLink: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07638633
+  stylus: false
+  type: chromebook
+  variant: 14b-nb0060ng
+HP Chromebook 14b (14b-nb0335ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Core i3-1115G4
+  expirationId: HP Chromebook 14b-nb0
+  extraInfo: 256GB SSD
+  flip: false
+  id: HP Chromebook 14b (14b-nb0335ng)
+  memory: 8
+  model: Chromebook 14b
+  productId: '201816134'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07758935.pdf
+  stylus: false
+  type: chromebook
+  variant: 14b-nb0335ng
+HP Chromebook 14b (14b-nb0415ng):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Pentium 7505
+  expirationId: HP Chromebook 14b-nb0
+  extraInfo: ''
+  flip: false
+  id: HP Chromebook 14b (14b-nb0415ng)
+  memory: 4
+  model: Chromebook 14b
+  productId: '201520191'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07638591
+  stylus: false
+  type: chromebook
+  variant: 14b-nb0415ng

@@ -2,7 +2,7 @@ HP Chromebook x360 14b (14b-ca0000ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4000
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0000ng)
@@ -22,7 +22,7 @@ HP Chromebook x360 14b (14b-ca0215ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0215ng)
@@ -42,7 +42,7 @@ HP Chromebook x360 14b (14b-ca0250ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5000
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0250ng)
@@ -62,7 +62,7 @@ HP Chromebook x360 14b (14b-ca0255ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5030
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0255ng)
@@ -82,7 +82,7 @@ HP Chromebook x360 14b (14b-ca0300ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4000
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0300ng)
@@ -102,7 +102,7 @@ HP Chromebook x360 14b (14b-ca0305ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0305ng)
@@ -122,7 +122,7 @@ HP Chromebook x360 14b (14b-ca0320ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5000
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0320ng)
@@ -143,7 +143,7 @@ HP Chromebook x360 14b (14b-ca0410ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0410ng)
@@ -163,7 +163,7 @@ HP Chromebook x360 14b (14b-ca0431ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5030
-  expirationId: HP Chromebook x360 14b-ca0xxx
+  expirationId: HP Chromebook x360 14b-ca0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-ca0431ng)

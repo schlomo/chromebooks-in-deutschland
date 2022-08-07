@@ -2,7 +2,7 @@ HP Chromebook x360 14c (14c-ca0215ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium 6405U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -24,7 +24,7 @@ HP Chromebook x360 14c (14c-ca0220ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium 6405U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -46,7 +46,7 @@ HP Chromebook x360 14c (14c-ca0241ng):
   biometricUnlock: true
   brand: HP
   cpu: Intel Core i3-10110U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: 128GB, USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -70,7 +70,7 @@ HP Chromebook x360 14c (14c-ca0259ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Core i5-10210U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: 128GB, USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -92,7 +92,7 @@ HP Chromebook x360 14c (14c-ca0290ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Core i3-10110U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: 128GB, USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -114,7 +114,7 @@ HP Chromebook x360 14c (14c-ca0305ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium 6405U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -137,7 +137,7 @@ HP Chromebook x360 14c (14c-ca0333ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Core i3-10110U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -159,7 +159,7 @@ HP Chromebook x360 14c (14c-ca0350ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Core i5-10210U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: 128GB, USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -181,7 +181,7 @@ HP Chromebook x360 14c (14c-ca0430ng):
   biometricUnlock: true
   brand: HP
   cpu: Intel Core i3-10110U
-  expirationId: HP Chromebook x360 14c
+  expirationId: HP Chromebook x360 14c-ca0
   extraInfo: 128GB, USI Stylus optional
   extraLinks:
     Chrome Unboxed Review: https://chromeunboxed.com/hp-chromebook-x360-14c-review-solid-upgrade/
@@ -200,103 +200,3 @@ HP Chromebook x360 14c (14c-ca0430ng):
   stylus: true
   type: chromebook
   variant: 14c-ca0430ng
-HP Chromebook x360 14c (14c-cc0060ng):
-  biometricUnlock: true
-  brand: HP
-  cpu: Intel Core i3-1125G4
-  expirationId: HP Chromebook x360 14c
-  extraInfo: 256GB SSD, hinterleuchtete Tastatur, USI Stylus optional
-  flip: true
-  id: HP Chromebook x360 14c (14c-cc0060ng)
-  memory: 8
-  model: Chromebook x360 14c
-  productId: '201496197'
-  productProvider: idealo
-  screenGlare: true
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: true
-  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07538484.pdf
-  stylus: true
-  type: chromebook
-  variant: 14c-cc0060ng
-HP Chromebook x360 14c (14c-cc0075ng):
-  biometricUnlock: true
-  brand: HP
-  cpu: Intel Core i5-1135G7
-  expirationId: HP Chromebook x360 14c
-  extraInfo: 256GB, hinterleuchtete Tastatur, USI Stylus optional
-  flip: true
-  id: HP Chromebook x360 14c (14c-cc0075ng)
-  memory: 8
-  model: Chromebook x360 14c
-  productId: '201532506'
-  productProvider: idealo
-  screenGlare: true
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: true
-  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07538487.pdf
-  stylus: true
-  type: chromebook
-  variant: 14c-cc0075ng
-HP Chromebook x360 14c (14c-cc0355ng):
-  biometricUnlock: false
-  brand: HP
-  cpu: Intel Core i3-1125G4
-  expirationId: HP Chromebook x360 14c
-  extraInfo: 128GB, USI Stylus optional
-  flip: true
-  id: HP Chromebook x360 14c (14c-cc0355ng)
-  memory: 8
-  model: Chromebook x360 14c
-  productId: '201479905'
-  productProvider: idealo
-  screenGlare: true
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: true
-  specLink: https://support.hp.com/de-de/document/c07506676
-  stylus: true
-  type: chromebook
-  variant: 14c-cc0355ng
-HP Chromebook x360 14c (14c-cc0435ng):
-  biometricUnlock: true
-  brand: HP
-  cpu: Intel Core i3-1125G4
-  expirationId: HP Chromebook x360 14c
-  extraInfo: 128GB, hinterleuchtete Tastatur, USI Stylus optional
-  flip: true
-  id: HP Chromebook x360 14c (14c-cc0435ng)
-  memory: 8
-  model: Chromebook x360 14c
-  productId: '201496183'
-  productProvider: idealo
-  screenGlare: true
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: true
-  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07538486.pdf
-  stylus: true
-  type: chromebook
-  variant: 14c-cc0435ng
-HP Chromebook x360 14c (14c-cc0455ng):
-  biometricUnlock: true
-  brand: HP
-  cpu: Intel Core i5-1135G7
-  expirationId: HP Chromebook x360 14c
-  extraInfo: 256GB, hinterleuchtete Tastatur, USI Stylus optional
-  flip: true
-  id: HP Chromebook x360 14c (14c-cc0455ng)
-  memory: 8
-  model: Chromebook x360 14c
-  productId: '201373768'
-  productProvider: idealo
-  screenGlare: true
-  screenResolution: 1920x1080
-  screenSize: 14
-  screenTouch: true
-  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07603966.pdf
-  stylus: true
-  type: chromebook
-  variant: 14c-cc0455ng

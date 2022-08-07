@@ -2,7 +2,7 @@ HP Chromebook x360 14a (14a-ca0005ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0005ng)
@@ -23,7 +23,7 @@ HP Chromebook x360 14a (14a-ca0025ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5030
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: 128GB
   flip: true
   id: HP Chromebook x360 14a (14a-ca0025ng)
@@ -44,7 +44,7 @@ HP Chromebook x360 14a (14a-ca0140ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5030
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0140ng)
@@ -65,7 +65,7 @@ HP Chromebook x360 14a (14a-ca0217ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0217ng)
@@ -86,7 +86,7 @@ HP Chromebook x360 14a (14a-ca0218ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5030
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0218ng)
@@ -107,7 +107,7 @@ HP Chromebook x360 14a (14a-ca0219ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0219ng)
@@ -128,7 +128,7 @@ HP Chromebook x360 14a (14a-ca0326ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4020
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0326ng)
@@ -149,7 +149,7 @@ HP Chromebook x360 14a (14a-ca0330ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N5030
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-ca0330ng)
@@ -170,7 +170,7 @@ HP Chromebook x360 14a (14a-cb0010ng):
   biometricUnlock: false
   brand: HP
   cpu: AMD 3015Ce
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: ""
   flip: true
   id: HP Chromebook x360 14a (14a-cb0010ng)
@@ -191,7 +191,7 @@ HP Chromebook x360 14a (14a-cb0030ng):
   biometricUnlock: false
   brand: HP
   cpu: AMD 3015Ce
-  expirationId: HP Chromebook x360 14a
+  expirationId: HP Chromebook x360 14a-ca0
   extraInfo: 128GB
   flip: true
   id: HP Chromebook x360 14a (14a-cb0030ng)

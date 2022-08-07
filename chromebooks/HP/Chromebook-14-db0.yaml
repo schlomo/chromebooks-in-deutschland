@@ -2,7 +2,7 @@ HP Chromebook 14 (2019) (14-db0003ng):
   biometricUnlock: false
   brand: HP
   cpu: AMD A6 9220C
-  expirationId: HP Chromebook 14-db0xxx
+  expirationId: HP Chromebook 14-db0
   flip: false
   id: HP Chromebook 14 (2019) (14-db0003ng)
   memory: 4
@@ -21,7 +21,7 @@ HP Chromebook 14 (2019) (14-db0004ng):
   biometricUnlock: false
   brand: HP
   cpu: AMD A4 9120C
-  expirationId: HP Chromebook 14-db0xxx
+  expirationId: HP Chromebook 14-db0
   flip: false
   id: HP Chromebook 14 (2019) (14-db0004ng)
   memory: 4

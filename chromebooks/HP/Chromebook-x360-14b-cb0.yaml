@@ -2,7 +2,7 @@ HP Chromebook x360 14b (14b-cb0315ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N6000
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0315ng)
@@ -22,7 +22,7 @@ HP Chromebook x360 14b (14b-cb0020ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N6000
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0020ng)
@@ -42,7 +42,7 @@ HP Chromebook x360 14b (14b-cb0021ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N4500
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0021ng)
@@ -62,7 +62,7 @@ HP Chromebook x360 14b (14b-cb0030ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N6000
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0030ng)
@@ -82,7 +82,7 @@ HP Chromebook x360 14b (14b-cb0125ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N6000
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0125ng)
@@ -102,7 +102,7 @@ HP Chromebook x360 14b (14b-cb0345ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N6000
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0345ng)
@@ -122,7 +122,7 @@ HP Chromebook x360 14b (14b-cb0430ng):
   biometricUnlock: false
   brand: HP
   cpu: Intel Pentium N6000
-  expirationId: HP Chromebook x360 14b
+  expirationId: HP Chromebook x360 14b-cb0
   extraInfo: 128GB, USI Stylus optional
   flip: true
   id: HP Chromebook x360 14b (14b-cb0430ng)

@@ -2,7 +2,7 @@ Asus Chromebox 4 (90MS0252-M00040):
   biometricUnlock: false
   brand: Asus
   cpu: Intel Celeron 5205U
-  expirationId: Asus Chromebox 4
+  expirationId: Asus Chromebox 4 (CN66)
   flip: false
   id: Asus Chromebox 4 (90MS0252-M00040)
   memory: 4
@@ -22,7 +22,7 @@ Asus Chromebox 4 (90MS0252-M00060):
   biometricUnlock: false
   brand: Asus
   cpu: Intel Core i3-10110U
-  expirationId: Asus Chromebox 4
+  expirationId: Asus Chromebox 4 (CN66)
   extraInfo: 128GB
   flip: false
   id: Asus Chromebox 4 (90MS0252-M00060)
@@ -43,7 +43,7 @@ Asus Chromebox 4 (90MS0252-M00070):
   biometricUnlock: false
   brand: Asus
   cpu: Intel Core i5-10210U
-  expirationId: Asus Chromebox 4
+  expirationId: Asus Chromebox 4 (CN66)
   extraInfo: 128GB
   flip: false
   id: Asus Chromebox 4 (90MS0252-M00070)
@@ -64,7 +64,7 @@ Asus Chromebox 4 (90MS0252-M00090):
   biometricUnlock: false
   brand: Asus
   cpu: Intel Core i7-10510U
-  expirationId: Asus Chromebox 4
+  expirationId: Asus Chromebox 4 (CN66)
   extraInfo: 128GB
   flip: false
   id: Asus Chromebox 4 (90MS0252-M00090)

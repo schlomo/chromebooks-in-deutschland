@@ -45,6 +45,9 @@
     "test": "mocha",
     "update-dev-database": "./update-dev-database"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
     "@fontsource/roboto": "^4.5.1",
     "@iconify/iconify": "^2.0.4",

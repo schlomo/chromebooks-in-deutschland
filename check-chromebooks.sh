@@ -21,7 +21,7 @@ default_regex_parts=(
     # Asus
     '90[MN][SX][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]-M[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # 90MS01B1-M00080
     'C[MX][0-9][0-9][0-9][0-9][A-Z][A-Z][0-9][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CM3200FM1A-HW0017
-    'C[MX][0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CM5500FDA-E60003
+    'C[MRX][0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CR1100FKA-BP0023
     'CT[0-9][0-9][0-9][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CT100PA-AW0035
     'C[0-9][0-9][0-9][A-Z][A-Z]-[A-Z][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # C425TA-H50125
     # Lenovo
@@ -30,6 +30,8 @@ default_regex_parts=(
     '[1-9][2345][abc]-[abcdn][abcdn][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]ng' # 14b-cb0030ng
     '[1-9][12345]-[abcdn][abcden][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]ng' # 14-cb0030ng
     '[1-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]EA' # 305R0EA
+    # Samsung
+    '[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # XE345XDA-KA1DE
 )
 default_regex="$( tr " " "|" <<<"${default_regex_parts[*]}")"
 

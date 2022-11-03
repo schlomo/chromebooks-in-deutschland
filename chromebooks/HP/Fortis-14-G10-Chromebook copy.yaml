@@ -1,0 +1,21 @@
+HP Fortis 14 G10 Chromebook (4L1G7EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Pentium N6000
+  expirationId: HP Fortis 14 G10 Chromebook
+  extraInfo: 128GB
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c08012010.pdf
+  flip: false
+  id: HP Fortis 14 G10 Chromebook (4L1G7EA)
+  memory: 8
+  model: Fortis 14 G10 Chromebook
+  productId: '202135932'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: 4L1G7EA

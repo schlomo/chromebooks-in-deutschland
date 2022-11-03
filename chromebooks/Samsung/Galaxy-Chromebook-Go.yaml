@@ -1,0 +1,22 @@
+Samsung Galaxy Chromebook Go (XE345XDA-KA1DE):
+  biometricUnlock: false
+  brand: Samsung
+  cpu: Intel Celeron N4500
+  expirationId: Samsung Galaxy Chromebook Go
+  extraLinks:
+    Review (Techradar): https://www.techradar.com/reviews/samsung-galaxy-chromebook-go
+  extraInfo: integriertes LTE Modem
+  flip: false
+  id: Samsung Galaxy Chromebook Go (XE345XDA-KA1DE)
+  memory: 4
+  model: Galaxy Chromebook Go
+  productId: '201715917'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 14
+  screenTouch: false
+  specLink: https://www.samsung.com/de/computers/chromebook/galaxy-chromebook-go-lte-14inch-celeron-4gb-64gb-xe345xda-ka1de/
+  stylus: false
+  type: chromebook
+  variant: XE345XDA-KA1DE

@@ -1,6 +1,7 @@
 # EAN
 # 82QS000R is 8116372B 8116372C 8116372L Lenovo IdeaPad Duet 5 13 0196118116372
 # 82QS0012 is 8151892a 8151892C 8151892L Lenovo IdeaPad Duet 5 13 0196118151892
+# 82QS002X is Spanish
 
 Lenovo IdeaPad Duet 5 (82QS000R):
   biometricUnlock: false

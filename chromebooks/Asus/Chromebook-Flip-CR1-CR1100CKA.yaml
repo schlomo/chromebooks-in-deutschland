@@ -1,0 +1,40 @@
+# 90NX03V1-M00400 / CR1100CKA-GJ0040 is French
+
+Asus Chromebook CR1 (CR1100CKA-GJ0012):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Celeron N4500
+  expirationId: Asus Chromebook CR1 (CR1100CKA)
+  flip: true
+  id: Asus Chromebook CR1 (CR1100CKA-GJ0012)
+  memory: 4
+  model: Chromebook CR1
+  productId: "201837577"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: CR1100CKA-GJ0012
+
+Asus Chromebook CR1 (CR1100CKA-GJ0013):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Celeron N4500
+  expirationId: Asus Chromebook CR1 (CR1100CKA)
+  flip: true
+  id: Asus Chromebook CR1 (CR1100CKA-GJ0013)
+  memory: 4
+  model: Chromebook CR1
+  productId: "201837414"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: false
+  specLink: https://gzhls.at/blob/ldb/b/c/f/6/920b32bca4e2ab836997f671cedd2b055846.pdf
+  stylus: false
+  type: chromebook
+  variant: CR1100CKA-GJ0013

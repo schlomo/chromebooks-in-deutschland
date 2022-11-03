@@ -1,0 +1,45 @@
+HP Elite Dragonfly Chromebook (5Q7H3EA):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Core i5-1245U
+  expirationId: HP Elite Dragonfly Chromebook
+  extraInfo: 256 GB SSD, inklusive Chrome Enterprise Upgrade, integrierter HP Sure View Blickschutz, hinterleuchtete Tastatur, USI Stylus inklusive
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c08204218.pdf
+    Review (PCMag): https://www.pcmag.com/reviews/hp-elite-dragonfly-chromebook
+  flip: true
+  id: HP Elite Dragonfly Chromebook (5Q7H3EA)
+  memory: 16
+  model: Elite Dragonfly Chromebook
+  productId: "202076264"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1280
+  screenSize: 13.5
+  screenTouch: true
+  stylus: true
+  type: chromebook
+  variant: 5Q7H3EA
+
+HP Elite Dragonfly Chromebook (5Q7H4EA):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Core i7-1265U
+  expirationId: HP Elite Dragonfly Chromebook
+  extraInfo: 256 GB SSD, inklusive Chrome Enterprise Upgrade, integrierter HP Sure View Blickschutz, hinterleuchtete Tastatur, USI Stylus inklusive
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c08204218.pdf
+    Review (anderes Modell): https://www.pcmag.com/reviews/hp-elite-dragonfly-chromebook
+  flip: true
+  id: HP Elite Dragonfly Chromebook (5Q7H4EA)
+  memory: 16
+  model: Elite Dragonfly Chromebook
+  productId: "202065333"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1280
+  screenSize: 13.5
+  screenTouch: true
+  stylus: true
+  type: chromebook
+  variant: 5Q7H4EA

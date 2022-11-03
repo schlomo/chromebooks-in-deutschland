@@ -1,0 +1,44 @@
+Asus Chromebook Flip CR1 (CR1100FKA-BP0022):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Celeron N4500
+  expirationId: Asus Chromebook Flip CR1 (CR1100FKA)
+  extraLinks:
+    Datenblatt (Serie): https://www.asus.com/de/laptops/for-home/chromebook/asus-chromebook-flip-cr1-cr1100/techspec/
+  flip: true
+  id: Asus Chromebook Flip CR1 (CR1100FKA-BP0022)
+  memory: 4
+  model: Chromebook Flip CR1
+  productId: '201667721'
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/1/6/5/f/39e6113274acd490af52f6aa11d5a6437bff.pdf
+  stylus: false
+  type: chromebook
+  variant: CR1100FKA-BP0022
+
+Asus Chromebook Flip CR1 (CR1100FKA-BP0023):
+  biometricUnlock: false
+  brand: Asus
+  cpu: Intel Celeron N4500
+  expirationId: Asus Chromebook Flip CR1 (CR1100FKA)
+  extraInfo: USI Stylus evtl. unterstützt
+  extraLinks:
+    Datenblatt (Serie): https://www.asus.com/de/laptops/for-home/chromebook/asus-chromebook-flip-cr1-cr1100/techspec/
+  flip: true
+  id: Asus Chromebook Flip CR1 (CR1100FKA-BP0023)
+  memory: 4
+  model: Chromebook Flip CR1
+  productId: "201837365"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1366x768
+  screenSize: 11.6
+  screenTouch: true
+  specLink: https://gzhls.at/blob/ldb/1/6/5/f/39e6113274acd490af52f6aa11d5a6437bff.pdf
+  stylus: true
+  type: chromebook
+  variant: CR1100FKA-BP0023

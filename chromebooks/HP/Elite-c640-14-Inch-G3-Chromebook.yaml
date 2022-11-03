@@ -1,0 +1,65 @@
+HP Elite c640 14 Inch G3 Chromebook Enterprise (5Q7H0EA):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Core i3-1215U
+  expirationId: HP Elite c640 14 Inch G3 Chromebook Enterprise
+  extraInfo: 256 GB SSD, inklusive Chrome Enterprise Upgrade, hinterleuchtete Tastatur, integrierter HP Sure View-Blickschutz
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c08199571.pdf
+  flip: false
+  id: HP Elite c640 14 Inch G3 Chromebook Enterprise (5Q7H0EA)
+  memory: 8
+  model: Elite c640 14 Inch G3 Chromebook Enterprise
+  productId: "2829093"
+  productProvider: geizhals
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: 5Q7H0EA
+
+HP Elite c640 14 Inch G3 Chromebook Enterprise (5Q7H1EA):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Core i5-1235U
+  expirationId: HP Elite c640 14 Inch G3 Chromebook Enterprise
+  extraInfo: 256 GB SSD, inklusive Chrome Enterprise Upgrade, hinterleuchtete Tastatur, integrierter HP Sure View-Blickschutz
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c08199571.pdf
+  flip: false
+  id: HP Elite c640 14 Inch G3 Chromebook Enterprise (5Q7H1EA)
+  memory: 8
+  model: Elite c640 14 Inch G3 Chromebook Enterprise
+  productId: "2829450"
+  productProvider: geizhals
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: 5Q7H1EA
+
+HP Elite c640 14 Inch G3 Chromebook Enterprise (5Q7M2EA):
+  biometricUnlock: true
+  brand: HP
+  cpu: Intel Core i5-1245U
+  expirationId: HP Elite c640 14 Inch G3 Chromebook Enterprise
+  extraInfo: 256 GB SSD, inklusive Chrome Enterprise Upgrade, hinterleuchtete Tastatur
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c08199571.pdf
+  flip: false
+  id: HP Elite c640 14 Inch G3 Chromebook Enterprise (5Q7M2EA)
+  memory: 8
+  model: Elite c640 14 Inch G3 Chromebook Enterprise
+  productId: "2829452"
+  productProvider: geizhals
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: 5Q7M2EA

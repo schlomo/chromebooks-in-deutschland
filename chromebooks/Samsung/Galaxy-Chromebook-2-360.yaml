@@ -1,0 +1,44 @@
+Samsung Galaxy Chromebook 2 360 (XE520QEA-KF1DE):
+  biometricUnlock: false
+  brand: Samsung
+  cpu: Intel Celeron N4500
+  expirationId: Samsung Galaxy Chromebook 2 360
+  extraLinks:
+    Review (Chip): https://www.chip.de/test/samsung-chromebook-2-360-im-test_233733
+  flip: true
+  id: Samsung Galaxy Chromebook 2 360 (XE520QEA-KF1DE)
+  memory: 4
+  model: Galaxy Chromebook 2 360
+  productId: '202011411'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 2560x1600
+  screenSize: 12.4
+  screenTouch: true
+  specLink: https://www.samsung.com/de/computers/chromebook/galaxy-chromebook-2-360-12inch-celeron-4gb-64gb-xe520qea-kf1de/
+  stylus: false
+  type: chromebook
+  variant: XE520QEA-KF1DE
+
+Samsung Galaxy Chromebook 2 360 (XE525QEA-KF1DE):
+  biometricUnlock: false
+  brand: Samsung
+  cpu: Intel Celeron N4500
+  expirationId: Samsung Galaxy Chromebook 2 360
+  extraLinks:
+    Review (Chip): https://www.chip.de/test/samsung-chromebook-2-360-im-test_233733
+  extraInfo: integriertes LTE Modem
+  flip: true
+  id: Samsung Galaxy Chromebook 2 360 (XE525QEA-KF1DE)
+  memory: 4
+  model: Galaxy Chromebook 2 360
+  productId: '202024887'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 2560x1600
+  screenSize: 12.4
+  screenTouch: true
+  specLink: https://www.samsung.com/de/computers/chromebook/galaxy-chromebook-2-360-lte-12inch-celeron-4gb-64gb-xe525qea-kf1de/
+  stylus: false
+  type: chromebook
+  variant: XE525QEA-KF1DE

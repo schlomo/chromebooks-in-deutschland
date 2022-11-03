@@ -20,3 +20,26 @@ Lenovo IdeaPad Flex 3i Chromebook (82T30007):
   stylus: false
   type: chromebook
   variant: 82T30007
+
+Lenovo IdeaPad Flex 3i Chromebook (82T30008):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: Intel Celeron N4500
+  expirationId: Lenovo Flex 3i Chromebook 15”
+  extraInfo: 128GB
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad%20Flex%203%20Chrome%2015IJL7_datasheet_EN.pdf
+  flip: true
+  id: Lenovo IdeaPad Flex 3i Chromebook (82T30008)
+  memory: 4
+  model: IdeaPad Flex 3i Chromebook
+  productId: "202064741"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 15.6
+  screenTouch: true
+  specLink: https://psref.lenovo.com/Detail/IdeaPad/IP_Flex_3_Chrome_15IJL7?M=82T30008GE
+  stylus: false
+  type: chromebook
+  variant: 82T30008

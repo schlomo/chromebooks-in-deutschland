@@ -1,9 +1,13 @@
+# 336P3EA is Windows
+
 HP Chromebook 14 G7 (305W8EA):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N5100
   expirationId: HP Chromebook 14 G7
   extraInfo: inklusive Chrome Enterprise Upgrade
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c06978061.pdf
   flip: false
   id: HP Chromebook 14 G7 (305W8EA)
   memory: 4
@@ -18,11 +22,14 @@ HP Chromebook 14 G7 (305W8EA):
   stylus: false
   type: chromebook
   variant: 305W8EA
+
 HP Chromebook 14 G7 (305X0EA):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N5100
   expirationId: HP Chromebook 14 G7
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c06978061.pdf
   extraInfo: ""
   flip: false
   id: HP Chromebook 14 G7 (305X0EA)
@@ -34,16 +41,17 @@ HP Chromebook 14 G7 (305X0EA):
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: false
-  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07025855.pdf
   stylus: false
   type: chromebook
   variant: 305X0EA
+
 HP Chromebook 14 G7 (305X1EA):
   biometricUnlock: false
   brand: HP
   cpu: Intel Celeron N5100
   expirationId: HP Chromebook 14 G7
-  extraInfo: ""
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c06978061.pdf
   flip: false
   id: HP Chromebook 14 G7 (305X1EA)
   memory: 4
@@ -54,7 +62,27 @@ HP Chromebook 14 G7 (305X1EA):
   screenResolution: 1920x1080
   screenSize: 14
   screenTouch: false
-  specLink: https://h20195.www2.hp.com/v2/getpdf.aspx/c07025855.pdf
   stylus: false
   type: chromebook
   variant: 305X1EA
+
+HP Chromebook 14 G7 (3V441EA):
+  biometricUnlock: false
+  brand: HP
+  cpu: Intel Celeron N4500
+  expirationId: HP Chromebook 14 G7
+  extraLinks:
+    Datenblatt (Serie): https://h20195.www2.hp.com/v2/getpdf.aspx/c06978061.pdf
+  flip: false
+  id: HP Chromebook 14 G7 (3V441EA)
+  memory: 4
+  model: Chromebook 14 G7
+  productId: "201635013"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1366x768
+  screenSize: 14
+  screenTouch: false
+  stylus: false
+  type: chromebook
+  variant: 3V441EA

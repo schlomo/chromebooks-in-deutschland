@@ -2398,13 +2398,13 @@ cfb@~1.0.2:
     printj "~1.1.2"
 
 chai@^4.2.0:
-  version "4.3.7"
-  resolved "https://registry.npmjs.org/chai/-/chai-4.3.7.tgz#ec63f6df01829088e8bf55fca839bcd464a8ec51"
-  integrity sha512-HLnAzZ2iupm25PlN0xFreAlBA5zaBSv3og0DdeGA4Ar6h6rJ3A0rolRUKJhSF2V10GZKDgWF/VmAEsNWjCRB+A==
+  version "4.3.6"
+  resolved "https://registry.npmjs.org/chai/-/chai-4.3.6.tgz#ffe4ba2d9fa9d6680cc0b370adae709ec9011e9c"
+  integrity sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==
   dependencies:
     assertion-error "^1.1.0"
     check-error "^1.0.2"
-    deep-eql "^4.1.2"
+    deep-eql "^3.0.1"
     get-func-name "^2.0.0"
     loupe "^2.3.1"
     pathval "^1.1.1"
@@ -3297,35 +3297,35 @@ data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-datatables.net-dt@>=1.12.1, datatables.net-dt@^1.11.3:
-  version "1.13.1"
-  resolved "https://registry.npmjs.org/datatables.net-dt/-/datatables.net-dt-1.13.1.tgz#c3e31c8ae85dabe6895e740f6fbe0ed2e8276c39"
-  integrity sha512-J5ul/Y+Hpyfh8y02DKwgbmUij4e4R6bstnx4iYvY7FV2b2XuCP0Qow/Uuc0gtxDHSz2bTsoeRHqg4teoGftVDg==
+datatables.net-dt@>=1.11.3, datatables.net-dt@^1.11.3:
+  version "1.12.1"
+  resolved "https://registry.npmjs.org/datatables.net-dt/-/datatables.net-dt-1.12.1.tgz#43aa00adb1ea9a3adbffae4a0b6baf56ec74ccd9"
+  integrity sha512-HYsHbSYqOqlgsgjKMH/kkCB5455t51GmmtXRxgnDMRbjPLEIKo5CZmAlUe5mdD/RVPRtAUaj5K3SDlkEZ1bUmw==
   dependencies:
-    datatables.net ">=1.12.1"
+    datatables.net ">=1.11.3"
     jquery ">=1.7"
 
 datatables.net-responsive-dt@^2.2.5:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/datatables.net-responsive-dt/-/datatables.net-responsive-dt-2.4.0.tgz#3643dce268aee9300cc81feaa142b38bb728d30d"
-  integrity sha512-502XCfZrcsgS9SMc8XwJB9VvEc5NyHnJ3qNEksbHlKQ+3+2YW5E3iVek1IFwVLM+yWfRFFvCrzP6T21FuRAAwA==
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/datatables.net-responsive-dt/-/datatables.net-responsive-dt-2.3.0.tgz#7e6b9c020ed1f51e26082f4b6fda376a7cf7fab0"
+  integrity sha512-yE7+fG2QlJ8hpyCrWQ4mVBg2qAXwTqGcJG3el1xng+OZilFFr2VDSCCyPuyvoQ6qvGidnNqwn15rNOZwhOpL7Q==
   dependencies:
-    datatables.net-dt ">=1.12.1"
-    datatables.net-responsive ">=2.3.0"
+    datatables.net-dt ">=1.11.3"
+    datatables.net-responsive ">=2.2.9"
     jquery ">=1.7"
 
-datatables.net-responsive@>=2.3.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/datatables.net-responsive/-/datatables.net-responsive-2.4.0.tgz#91658679483e3ef6cda8b9bc5c1b7eff076a8e70"
-  integrity sha512-Acws4aEPJZX/+CQsXpuDBHfrwgl3XxWEc/zlsnJCXE/GGbqjVAtQt7SM6EBcdReMv1FbyWUlF/Uw+de11NT46A==
+datatables.net-responsive@>=2.2.9:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/datatables.net-responsive/-/datatables.net-responsive-2.3.0.tgz#2b8d894af5456f8c8a320eeac5e837a24d84e033"
+  integrity sha512-QA5QsD1sJQRQ7/IFi3rSd33O84f/Augz2KnaehjfuEANtK4KeC9Lbkut5tPuuMcK4jOpQPOOPYTbmfrt+tfh9w==
   dependencies:
-    datatables.net ">=1.12.1"
+    datatables.net ">=1.11.3"
     jquery ">=1.7"
 
-datatables.net@>=1.12.1:
-  version "1.13.1"
-  resolved "https://registry.npmjs.org/datatables.net/-/datatables.net-1.13.1.tgz#199f7cb63f4536c135e161f95254212835a1c130"
-  integrity sha512-cX5dDHsbVdLLYKsWOSE0MvuGUcV88zU5dZ/taK2puJV6F9Fw0CFsP3+U/kr+qpDSFOBLWISRyM4Q9wWWovPTNg==
+datatables.net@>=1.11.3:
+  version "1.12.1"
+  resolved "https://registry.npmjs.org/datatables.net/-/datatables.net-1.12.1.tgz#3e625e49a3341f605b0efb519fae94e37b278f24"
+  integrity sha512-e6XAMUoV41JdQPS/r9YRfRcmTPcCVvyZbWI+xog1Zg+kjVliMQbEkvWK5XFItmi64Cvwg+IqsZbTUJ1KSY3umA==
   dependencies:
     jquery ">=1.7"
 
@@ -3417,10 +3417,10 @@ decompress-response@^4.2.0:
   dependencies:
     mimic-response "^2.0.0"
 
-deep-eql@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/deep-eql/-/deep-eql-4.1.2.tgz#270ceb902f87724077e6f6449aed81463f42fc1c"
-  integrity sha512-gT18+YW4CcW/DBNTwAmqTtkJh7f9qqScu2qFVlx7kCoeY9tlBu9cUcr7+I+Z/noG8INehS3xQgLpTtd/QUTn4w==
+deep-eql@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/deep-eql/-/deep-eql-3.0.1.tgz#dfc9404400ad1c8fe023e7da1df1c147c4b444df"
+  integrity sha512-+QeIQyN5ZuO+3Uk5DYh6/1eKO0m0YmJFGNmFHGACpf1ClL1nmlV/p4gNgbl2pJGxgXb4faqo6UE+M5ACEMyVcw==
   dependencies:
     type-detect "^4.0.0"
 
@@ -6376,9 +6376,9 @@ long@^5.0.0:
   integrity sha512-GKSNGeNAtw8IryjjkhZxuKB3JzlcLTwjtiQCHKvqQet81I93kXslhDQruGI/QsddO83mcDToBVy7GqGS/zYf/A==
 
 loupe@^2.3.1:
-  version "2.3.6"
-  resolved "https://registry.npmjs.org/loupe/-/loupe-2.3.6.tgz#76e4af498103c532d1ecc9be102036a21f787b53"
-  integrity sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==
+  version "2.3.4"
+  resolved "https://registry.npmjs.org/loupe/-/loupe-2.3.4.tgz#7e0b9bffc76f148f9be769cb1321d3dcf3cb25f3"
+  integrity sha512-OvKfgCC2Ndby6aSTREl5aCCPTNIzlDfQZvZxNUrBrihDhL3xcrYegTblhmEiCrg2kKQz4XsFIaemE5BF4ybSaQ==
   dependencies:
     get-func-name "^2.0.0"
 
@@ -6929,9 +6929,9 @@ node-fetch@^2.6.1, node-fetch@^2.6.6, node-fetch@^2.6.7:
     whatwg-url "^5.0.0"
 
 node-fetch@^3.0.0:
-  version "3.3.0"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-3.3.0.tgz#37e71db4ecc257057af828d523a7243d651d91e4"
-  integrity sha512-BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==
+  version "3.2.10"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-3.2.10.tgz#e8347f94b54ae18b57c9c049ef641cef398a85c8"
+  integrity sha512-MhuzNwdURnZ1Cp4XTazr69K0BTizsBroX7Zx3UgDSVcZYKF/6p0CBe4EUb/hLqmzVhl0UpYfgRljQ4yxE+iCxA==
   dependencies:
     data-uri-to-buffer "^4.0.0"
     fetch-blob "^3.1.4"

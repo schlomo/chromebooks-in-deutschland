@@ -37,6 +37,7 @@ export const cpus = {
     "Intel Core i5-1135G7": { "cores": 4, "frequency": 2.4, "burst": 4.2 },
     "Intel Core i5-1145G7": { "cores": 4, "frequency": 1.1, "burst": 4.4 },
     "Intel Core i5-1235U": { "cores": 10, "frequency": 1.3, "burst": 4.4 },
+    "Intel Core i5-1240P": { "cores": 12, "frequency": 1.7, "burst": 4.4 },
     "Intel Core i5-1245U": { "cores": 10, "frequency": 1.6, "burst": 4.4 },
     "Intel Core i5-7300U": { "cores": 2, "frequency": 2.6, "burst": 3.5 },
     "Intel Core i5-8200Y": { "cores": 2, "frequency": 1.3, "burst": 3.9 },

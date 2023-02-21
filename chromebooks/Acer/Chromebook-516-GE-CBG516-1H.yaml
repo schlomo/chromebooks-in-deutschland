@@ -1,0 +1,22 @@
+Acer Chromebook 516 GE (CBG516-1H-53SL):
+  biometricUnlock: false
+  brand: Acer
+  cpu: Intel Core i5-1240P
+  expirationId: Acer Chromebook 516 GE (CBG516-1H)
+  extraInfo: 256GB SSD, hinterleuchtete Tastatur
+  extraLinks:
+    Produkthomepage: https://www.acer.com/de-de/chromebooks/acer-chromebook-516-ge-cbg516-1h
+  flip: false
+  id: Acer Chromebook 516 GE (CBG516-1H-53SL)
+  memory: 16
+  model: Chromebook 516 GE
+  productId: '202215703'
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 2560x1600
+  screenSize: 16
+  screenTouch: false
+  specLink: https://gzhls.at/blob/ldb/7/4/1/6/12ece9f6a738c21cfd1d65ddf222d08f6ef0.pdf
+  stylus: false
+  type: chromebook
+  variant: CBG516-1H-53SL

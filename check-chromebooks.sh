@@ -16,6 +16,7 @@ default_regex_parts=(
     'C[0-9BP]+-[12349NTHLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
     'C[0-9BPTHLW]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]'
     'C[0-9]+[BPTHLW]+'
+    'CBG[0-9][0-9][0-9]-1H-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # CBG516-1H
     'R[0-9][0-9][0-9][A-Z]+-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]' # R853TNA-C0EX
     'R[0-9][0-9][0-9][A-Z]+-[A-Z0-9][A-Z0-9][A-Z0-9]' # R852TN-C1Y which is is an Idealo error for R852TN-C1YV :-(
     # Asus

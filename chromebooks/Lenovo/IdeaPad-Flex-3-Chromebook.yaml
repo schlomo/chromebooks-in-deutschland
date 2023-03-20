@@ -1,3 +1,6 @@
+# 82KN001JMX
+# 82KN001VMX
+
 Lenovo IdeaPad Flex 3 Chromebook (82KM0006):
   biometricUnlock: false
   brand: Lenovo
@@ -82,3 +85,24 @@ Lenovo IdeaPad Flex 3 Chromebook (82KM0013):
   stylus: false
   type: chromebook
   variant: 82KM0013
+Lenovo IdeaPad Flex 3 Chromebook (82KN0037):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8183
+  expirationId: Lenovo IdeaPad Flex 3 Chromebook
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/
+  flip: false
+  id: Lenovo IdeaPad Flex 3 Chromebook (82KN0037)
+  memory: 4
+  model: IdeaPad Flex 3 Chromebook
+  productId: "202289085"
+  productProvider: idealo
+  screenGlare: true
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: true
+  specLink: ""
+  stylus: false
+  type: chromebook
+  variant: 82KN0037

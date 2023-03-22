@@ -82,11 +82,12 @@ curl -s https://api.github.com/repos/schlomo/chromebooks-in-deutschland/releases
 
 ## Adding Chromebooks
 
-Chromebooks are described in JSON structures under [chromebooks](chromebooks/). We use one file per vendor and per release year. The files must be sorted alphabetically (use a JSON sort tool for that).
+Chromebooks are described in YAML files under [chromebooks](chromebooks/). We use one file per Chromebook model (to easily remove old data). The files must be sorted alphabetically (use a YAML sort tool for that). The filename reflects the Chromebook model name without the vendor as defined by the expiration data.
 
 For datasheet we try to link to the vendors original documentation. Sources for that are:
 
-* <https://psref.lenovo.com/>
-* <https://pcb.inc.hp.com/webapp/>
+* <https://psref.lenovo.com/> - put the full variant code (including GE at the end) into the search box
+* <https://pcb.inc.hp.com/webapp/> - select the Germany catalog and search for the variant, sometimes the devices are listed only under their HP model code which must be "guessed" from other sources.
+* A web search for "data sheet VARIANT pdf" or "tech spec VARIANT pdf" can also lead to useful spec sheets
 
 Pull requests with more devices are most welcome!

@@ -98,11 +98,32 @@ Lenovo IdeaPad Flex 3 Chromebook (82KN0037):
   model: IdeaPad Flex 3 Chromebook
   productId: "202289085"
   productProvider: idealo
-  screenGlare: true
+  screenGlare: false
   screenResolution: 1920x1080
   screenSize: 14
-  screenTouch: true
-  specLink: https://psref.lenovo.com/syspool/TempFile/cache/4F0D684B-CCC0-43B2-992F-3548E78A83CF/IdeaPad_3_Chrome_14M836_82KN0037GE.pdf
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad_3_Chrome_14M836?M=82KN0037GE
   stylus: false
   type: chromebook
   variant: 82KN0037
+Lenovo IdeaPad Flex 3 Chromebook (82KN0038):
+  biometricUnlock: false
+  brand: Lenovo
+  cpu: MediaTek MT8183
+  expirationId: Lenovo IdeaPad Flex 3 Chromebook
+  extraLinks:
+    Datenblatt (Serie): https://psref.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad_3_CB_14M836_datasheet_EN.pdf
+  flip: false
+  id: Lenovo IdeaPad Flex 3 Chromebook (82KN0038)
+  memory: 4
+  model: IdeaPad Flex 3 Chromebook
+  productId: "202336554"
+  productProvider: idealo
+  screenGlare: false
+  screenResolution: 1920x1080
+  screenSize: 14
+  screenTouch: false
+  specLink: https://psref.lenovo.com/Detail/IdeaPad_3_Chrome_14M836?M=82KN0038GE
+  stylus: false
+  type: chromebook
+  variant: 82KN0038

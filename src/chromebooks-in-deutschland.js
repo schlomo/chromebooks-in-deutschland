@@ -379,7 +379,7 @@ function persistSearch(search_term) {
                 { search: search_term },
                 document.title,
                 // mask * in URL to not confuse WhatsApp
-                window.location.pathname + "#" + encodeURI(search_term).replaceAll("*","%2A")
+                window.location.pathname + "#" + encodeURI(search_term).replaceAll("*", "%2A")
             );
             last_search_term = search_term;
         } else {
@@ -543,16 +543,16 @@ function showDebugInfo(e) {
                 <td>
                     ${id}
                     <span style="float:right">
-                        ${id in devicesWithPricePerExpirationId ? devicesWithPricePerExpirationId[id] + " /": ""}
+                        ${id in devicesWithPricePerExpirationId ? devicesWithPricePerExpirationId[id] + " /" : ""}
                         ${id in devicesPerExpirationId ?
-                        devicesPerExpirationId[id].length : ""}
+                    devicesPerExpirationId[id].length : ""}
                     </span>
                 </td>
                 <td>
                     ${devicesPerExpirationId[id] ?
-                        devicesPerExpirationId[id].sort()
-                            .join("<br>") :
-                        "&circleddash;"}
+                    devicesPerExpirationId[id].sort()
+                        .join("<br>") :
+                    "&circleddash;"}
                 </td>
                 <td>
                     <a target="_blank" 
@@ -671,7 +671,7 @@ function stage1setup(tableData) {
             $("<span>")
                 .text(priceDateInfo)
                 .attr("title",
-                    `€ ${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}` + "\n" + 
+                    `€ ${oldestprice.toLocaleString()} - ${newestprice.toLocaleString()}` + "\n" +
                     `⊝ ${oldestpriceInactive.toLocaleString()} - ${newestpriceInactive.toLocaleString()}`
                 )
         );
@@ -794,6 +794,11 @@ function stage2setup(settings) {
     });
 
     search_field.on("input", searchInputChangedHandler);
+
+    // move "need help" to be visible for searches, too
+    const needHelp = $("#needhelp");
+    needHelp.remove();
+    $("#chromebooks_filter").after(needHelp);
 }
 
 function scrollToElement(jump) {

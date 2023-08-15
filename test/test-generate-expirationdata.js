@@ -47,6 +47,10 @@ const testData = [
     result: ["Chromebase (22CB25S)", "Chromebase (22CV241)"],
   },
   {
+    input: "Chromebook 311(C723,C723-TCO)",
+    result: ["Chromebook 311 (C723)", "Chromebook 311 (C723-TCO)"],
+  },
+  {
     // . not allowed in keys in JSON dict
     input: "Chromebase 21.5 inch All-in-One Desktop",
     result: ["Chromebase 21_5 inch All-in-One Desktop"],

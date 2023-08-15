@@ -106,9 +106,10 @@ export function extractModels(input) {
         }
     }
 
-    const matches = input.match(/^(.+) \((.+)\)$/); // something (part1/part2)
+    const matches = input.match(/^(.+)\((.+)\)$/); // something (part1/part2) with or without space before (
     if (matches) {
-        const [_, prefix, parts] = matches;
+        let [_, prefix, parts] = matches;
+        prefix = prefix.trim(); // don't care if there was a space between model and (
         debug("  Prefix and parts:", prefix, parts);
         return parts.split(/[ ,\/]+/g).map(part => prefix + " (" + part + ")");
     }

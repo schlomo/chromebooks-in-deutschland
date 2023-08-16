@@ -6,8 +6,7 @@ var $ = require('jquery');
 var DataTables = require('datatables.net-dt')();
 var DataTablesResponsive = require('datatables.net-responsive-dt')();
 
-import Iconify from '@iconify/iconify/dist/iconify.without-api.min.js';
-require("./generated/icon-bundle");
+import { icons } from "./icons";
 import { expirationData, expirationTimestamp } from "./generated/expiration-data";
 import { cpus, resolutions } from "./consts";
 import deviceData from "./generated/chromebooks.json";
@@ -91,10 +90,6 @@ if (debugMode) {
     var debug = (...args) => { };
 }
 
-function getIcon(iconName) {
-    return Iconify.renderHTML(iconName);
-}
-
 function screenResToText(res) {
     if (res in resolutions) {
         return resolutions[res];
@@ -169,7 +164,7 @@ var renderModel = function (model, type, row) {
                 .attr("href", getProductLink(row))
                 .attr("title", `Angebote für ${model}`)
                 .attr("target", "_blank")
-                .html(getIcon("mdi-cart-outline"))
+                .html(icons["mdi-cart-outline"])
                 .attr("rel", "external noopener")
         ];
         if (row.specLink && row.specLink.startsWith("http")) {
@@ -178,7 +173,7 @@ var renderModel = function (model, type, row) {
                     .attr("href", row.specLink)
                     .attr("title", `Technische Spezifikation für ${model}`)
                     .attr("target", "_blank")
-                    .html(getIcon("mdi-information-outline"))
+                    .html(icons["mdi-information-outline"])
                     .attr("rel", "external noopener")
             );
         }
@@ -190,7 +185,7 @@ var renderModel = function (model, type, row) {
                     .addClass("extralinks")
                     .attr("title", `Weitere Links für ${model}`)
                     .attr("data-extralinks", JSON.stringify(row.extraLinks))
-                    .html(getIcon("mdi-link"))
+                    .html(icons["mdi-link"])
             )
             for (const text in row.extraLinks) {
                 let url = row.extraLinks[text];

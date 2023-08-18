@@ -59,7 +59,7 @@
     "fontsource-roboto": "^4.0.0",
     "git-describe": "^4.1.0",
     "glob": "^7.2.0",
-    "jquery": "^3.5.1",
+    "jquery": "^3.7.0",
     "jsonfile": "^6.1.0",
     "merge-yaml": "^1.1.0",
     "mocha": "^9.1.3",

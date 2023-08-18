@@ -2,9 +2,10 @@
 
 import "./style.css";
 
-var $ = require('jquery');
-var DataTables = require('datatables.net-dt')();
-var DataTablesResponsive = require('datatables.net-responsive-dt')();
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+import DataTable from 'datatables.net-dt';
+import 'datatables.net-responsive-dt';
 
 import { icons } from "./icons";
 import { expirationData, expirationTimestamp } from "./generated/expiration-data";

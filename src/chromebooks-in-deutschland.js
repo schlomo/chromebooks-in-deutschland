@@ -3,8 +3,11 @@
 import "./style.css";
 
 import $ from 'jquery';
-window.$ = window.jQuery = $;
-import DataTable from 'datatables.net-dt';
+
+import select2 from 'select2';
+select2($);
+
+import 'datatables.net-dt';
 import 'datatables.net-responsive-dt';
 
 import { icons } from "./icons";
@@ -673,17 +676,12 @@ function stage1setup(tableData) {
         );
 
     // used device price calculator
-    // model selector fills with data only when needed
-    var used_device_form = $('#used_device_form')
-    used_device_form.one("mouseover", (e) => {
-        require('select2')();
-        used_device_model_select.append(
-            Object.keys(expirationData).map((entry) => {
-                return $("<option>").text(entry)
-            })).select2();
-    });
     used_device_model_select = $('#used_device_model')
-        .on("change", handleUsedDevice);
+    .on("change", handleUsedDevice);
+    used_device_model_select.append(
+        Object.keys(expirationData).map((entry) => {
+            return $("<option>").text(entry)
+        })).select2();
     used_device_price_input = $('#used_device_price')
         .on("propertychange keyup paste input", handleUsedDevice);
 

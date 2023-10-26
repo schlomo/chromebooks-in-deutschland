@@ -9,7 +9,7 @@ const
     axios = require("axios").default,
     axiosRetry = require("axios-retry");
 
-axios.defaults.timeout = 3000; // 3 second timeout
+axios.defaults.timeout = (process.env.CID_AXIOS_TIMEOUT || 10) * 1000; // 10 second timeout by default
 axiosRetry(axios, {
     shouldResetTimeout: true,
     retryDelay: axiosRetry.exponentialDelay,

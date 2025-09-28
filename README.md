@@ -1,3 +1,5 @@
+# ARCHIVED - legacy dead code
+
 # Chromebooks in Deutschland
 
 Sources for the website https://chromebooks-in-deutschland.de/
